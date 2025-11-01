@@ -37,7 +37,7 @@
 					/obj/item/reagent_containers/food/snacks/fish,
 					/obj/item/organ)
 
-	base_intents = list(/datum/intent/simple/nautilus_lash, /*/datum/intent/simple/bite*/)
+	base_intents = list(/datum/intent/simple/nautilus_lash)
 	attack_sound = list('sound/vo/mobs/vw/attack (1).ogg','sound/vo/mobs/vw/attack (2).ogg','sound/vo/mobs/vw/attack (3).ogg','sound/vo/mobs/vw/attack (4).ogg')
 	melee_damage_lower = 15
 	melee_damage_upper = 20
@@ -60,12 +60,14 @@
 	stat_attack = UNCONSCIOUS
 	remains_type = /obj/effect/decal/remains/nautilus
 	body_eater = TRUE
+
+	buckle_lying = TRUE
 	max_buckled_mobs = 4
 
 	ai_controller = /datum/ai_controller/nautilus
 	dendor_taming_chance = DENDOR_TAME_PROB_NONE
 
-	var/wrestling_bonus = SKILL_LEVEL_JOURNEYMAN
+	var/wrestling_bonus = SKILL_LEVEL_MASTER
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Initialize()
 	. = ..()
@@ -146,26 +148,6 @@
 
 
 
-/*/mob/living/simple_animal/hostile/retaliate/nautilus/user_unbuckle_mob(mob/living/M, mob/user)
-	if(isdead(src))
-		..()
-		return
-	if(isliving(user))
-		var/mob/living/L = user
-		var/time2mount = CLAMP((L.STASTR), 1, 99)
-		user.changeNext_move(CLICK_CD_RAPID)
-		if(user != M)
-			if(prob(time2mount))
-				..()
-			else
-				user.visible_message("<span class='warning'>[user] tries to pull [M] free of [src]!</span>")
-				user.client?.move_delay = world.time + 20
-			return
-		if(prob(time2mount))
-			..()
-		else
-			user.visible_message("<span class='warning'>[user] tries to break free of [src]!</span>")
-*/
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/get_wrestling_bonuses()
 	return wrestling_bonus
@@ -184,6 +166,8 @@
 	item_damage_type = "slash"
 
 
+
+
 /datum/action/cooldown/mob_cooldown/nautilus_grab
 	name = "Grab"
 	button_icon = 'icons/effects/effects.dmi'
@@ -198,16 +182,16 @@
 	if(!isliving(owner) || owner.buckled_mobs?.Find(target) > 0)
 		return FALSE
 
+	owner.cmode = 1
 	var/mob/living/victim = target
 	var/dist = get_dist(owner, victim)
 	if(dist > 1)
 		return FALSE
 
-	owner.visible_message(span_boldwarning("[owner] wraps their tentacles around [victim]!"))
-
 	var/mob/living/L = owner
-	if(L.start_pulling(victim, accurate = TRUE))
-		owner.buckle_mob(victim, TRUE, check_loc = FALSE)
+	if(L.start_pulling(victim, suppress_message = TRUE, accurate = TRUE))
+		owner.visible_message(span_boldwarning("[owner] wraps their tentacles around [victim]!"))
+		victim.buckle_mob(owner, TRUE, check_loc = FALSE)
 		victim.Immobilize(constrict_duration)
 
 	//victim.apply_damage(constrict_damage, BRUTE, "chest")

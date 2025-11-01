@@ -504,6 +504,7 @@
 				O.sublimb_grabbed = used_limb
 			O.icon_state = zone_selected
 			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+				O.forceMove(src)
 				src.contents += O
 			else
 				put_in_hands(O)
@@ -524,6 +525,7 @@
 				O.sublimb_grabbed = M.simple_limb_hit(zone_selected)
 
 			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+				O.forceMove(src)
 				src.contents += O
 			else
 				put_in_hands(O)
@@ -545,6 +547,7 @@
 		O.grabbed = AM
 		O.grabbee = src
 		if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+			O.forceMove(src)
 			src.contents += O
 		else
 			src.put_in_hands(O)

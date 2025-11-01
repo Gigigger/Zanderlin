@@ -237,6 +237,8 @@ F
 #define BB_MINOTAUR_LAST_SPECIAL_ATTACK "minotaur_last_special"
 #define BB_MINOTAUR_ENRAGE_BONUS "minotaur_enrage"
 
+#define BB_BUCKLED_TARGETS "buckled_targets"
+
 #define BB_FLESH_IS_REGENERATING "flesh_regenerating"
 #define BB_FLESH_FRENZY_ACTIVE "flesh_frenzy"
 #define BB_FLESH_HUNGER "flesh_hunger"
