@@ -32,8 +32,8 @@
 	head_butcher = /obj/item/natural/head/volf
 
 	armor = 12
-	health = 450
-	maxHealth = 450
+	health = 500
+	maxHealth = 500
 	food_type = list(/obj/item/reagent_containers/food/snacks/meat/mince,
 					/obj/item/reagent_containers/food/snacks/fish,
 					/obj/item/organ)
