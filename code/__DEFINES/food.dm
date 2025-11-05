@@ -48,3 +48,6 @@
 #define CULINARY_FAVOURITE_DRINK "Favourite Drink"
 #define CULINARY_HATED_FOOD "Hated Food"
 #define CULINARY_HATED_DRINK "Hated Drink"
+#define CULINARY_RANDOM_PREFERENCES "Random Preferences"
+#define FAVOURITE_FOOD_TRIUMPH "Favourite Food Triumph"
+#define FAVOURITE_DRINK_TRIUMPH "Favourite Drink Triumph"

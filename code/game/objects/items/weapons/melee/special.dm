@@ -279,7 +279,12 @@
 	. = ..()						//+3 force, +50 int, +1 def, make silver
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
-
+/obj/item/weapon/katar/abyssor
+	name = "barotrauma"
+	desc = "A gift from a creature of the sea. The claw is sharpened to a wicked edge."
+	icon_state = "abyssorclaw"
+	force = 24 //Less damage, Original was 27, But more integrity in exchange.
+	max_integrity = 250
 
 /datum/intent/knuckles/strike
 	name = "punch"
@@ -348,3 +353,9 @@
 /obj/item/weapon/knuckles/psydon/Initialize(mapload)
 	. = ..()							//+3 force, +50 int, +1 def, make silver
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
+
+/obj/item/weapon/knuckles/eora
+	name = "close caress"
+	desc = "Some times call for a more intimate approach."
+	icon_state = "eoraknuckle"
+	force = 24

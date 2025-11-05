@@ -178,7 +178,7 @@ GLOBAL_LIST_INIT(learnable_songst3, (list(/datum/action/cooldown/spell/undirecte
 
 	for(var/datum/action/cooldown/spell/undirected/song/knownsong as anything in actions)
 		if(knownsong.type == item.type)
-			to_chat(span_warning("You already know this one!"))
+			to_chat(src, span_warning("You already know this one!"))
 			return
 	var/datum/action/cooldown/spell/undirected/song/new_song = new item
 	add_spell(new_song)

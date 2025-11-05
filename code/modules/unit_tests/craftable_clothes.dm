@@ -61,8 +61,8 @@ abstract types are automatically excluded.
 		/obj/item/clothing/armor/cuirass/fluted, //eh
 		/obj/item/clothing/armor/medium/scale/inqcoat/armored, //upgrade
 		/obj/item/clothing/armor/brigandine/light, //basetype,
-		/obj/item/clothing/armor/plate/full/fluted, //basetype
-		/obj/item/clothing/armor/plate/full/fluted/ornate/ordinator, //inqport
+		/obj/item/clothing/armor/plate/fluted/ornate, //basetype
+		/obj/item/clothing/armor/plate/fluted/ornate/ordinator, //inqport
 		/obj/item/clothing/armor/plate/fluted,
 		/obj/item/clothing/cloak/templar, //base type
 

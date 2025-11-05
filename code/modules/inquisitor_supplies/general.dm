@@ -285,6 +285,26 @@
 
 
 // ✤ EQUIPMENT ✤ BELONGS HERE! JUST BELOW!
+/datum/inqports/equipment/puffer
+	name = "1 Puffer, 4 lead bullets and powder flask"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/puffer
+	marquescost = 16
+	maximum = 1
+
+/obj/structure/closet/crate/chest/inqcrate/equipment/puffer/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/pistol(src)
+	new /obj/item/storage/belt/pouch/bullets(src)
+	new /obj/item/reagent_containers/glass/bottle/aflask(src)
+
+/datum/inqports/equipment/lantern
+	name = "3 Iron Lamptern"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/lantern
+	marquescost = 16
+
+/obj/structure/closet/crate/chest/inqcrate/equipment/lantern/PopulateContents()
+	new /obj/item/flashlight/flare/torch/lantern(src)
+	new /obj/item/flashlight/flare/torch/lantern(src)
+	new /obj/item/flashlight/flare/torch/lantern(src)
 
 /datum/inqports/equipment/psydonthorns
 	name = "1 Psydonian Thorns"
@@ -305,6 +325,11 @@
 	name = "1 Grenzelhoftian Leather Satchel"
 	item_type = /obj/item/storage/backpack/satchel/otavan
 	marquescost = 8
+
+/datum/inqports/equipment/surgerybag
+	name = "1 Surgery Bag"
+	item_type = /obj/item/storage/backpack/satchel/surgbag
+	marquescost = 16
 
 /datum/inqports/equipment/psysack
 	name = "1 Identity Concealer"

@@ -456,6 +456,8 @@ SUBSYSTEM_DEF(gamemode)
 
 	check_roundstart_gods_rankings()
 
+	initialize_culinary_globals()
+
 	pick_chronicle_stats()
 
 	. = ..()
@@ -506,6 +508,10 @@ SUBSYSTEM_DEF(gamemode)
 		update_crew_infos()
 		next_storyteller_process = world.time + STORYTELLER_WAIT_TIME
 		current_storyteller.process(STORYTELLER_WAIT_TIME * 0.1)
+
+/datum/controller/subsystem/gamemode/proc/initialize_culinary_globals()
+	GLOB.selectable_foods = get_global_selectable_foods()
+	GLOB.selectable_drinks = get_global_selectable_drinks()
 
 /// Gets the number of antagonists the antagonist injection events will stop rolling after.
 /datum/controller/subsystem/gamemode/proc/get_antag_cap()
@@ -793,9 +799,9 @@ SUBSYSTEM_DEF(gamemode)
 			delay = (4 MINUTES) //default to 4 minutes if the delay isn't defined.
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(reopen_roundstart_suicide_roles)), delay)
 
-	refresh_alive_stats()
 	handle_post_setup_roundstart_events()
 	handle_post_setup_points()
+	refresh_alive_stats()
 	roundstart_event_view = FALSE
 	return TRUE
 
@@ -1096,20 +1102,20 @@ SUBSYSTEM_DEF(gamemode)
 	var/list/dat = list()
 	if(current_storyteller)
 		dat += "Storyteller: [current_storyteller.name]"
-		dat += "<BR>Repetition penalty multiplier: [current_storyteller.event_repetition_multiplier]"
-		dat += "<BR>Cost variance: [current_storyteller.cost_variance]"
+		dat += "<BR>Repetition Penalty Multiplier: [current_storyteller.event_repetition_multiplier]"
+		dat += "<BR>Cost Variance: [current_storyteller.cost_variance]"
 		if(current_storyteller.tag_multipliers)
-			dat += "<BR>Tag multipliers:"
+			dat += "<BR>Tag Multipliers: "
 			for(var/tag in current_storyteller.tag_multipliers)
-				dat += "[tag]:[current_storyteller.tag_multipliers[tag]] | "
+				dat += "[tag]: [current_storyteller.tag_multipliers[tag]] | "
 		current_storyteller.calculate_weights(statistics_track_page)
 	else
 		dat += "Storyteller: None<BR>Weight and chance statistics will be inaccurate due to the present lack of a storyteller."
-	dat += "<BR><a href='byond://?src=[REF(src)];panel=stats;action=set_roundstart'[roundstart_event_view ? "class='linkOn'" : ""]>Roundstart Events</a> Forced Roundstart events will use rolled points, and are guaranteed to trigger (even if the used points are not enough)"
-	dat += "<BR>Avg. event intervals: "
+	dat += "<BR><a href='byond://?src=[REF(src)];panel=stats;action=set_roundstart'[roundstart_event_view ? "class='linkOn'" : ""]>Show Roundstart Events</a> Forced Roundstart events will use rolled points, and are guaranteed to trigger (even if the used points are not enough)"
+	dat += "<BR>Average Event Intervals: "
 	for(var/track in event_tracks)
 		if(last_point_gains[track])
-			var/est_time = round(point_thresholds[track] / last_point_gains[track] / STORYTELLER_WAIT_TIME * 40 / 6) / 10
+			var/est_time = round((point_thresholds[track] / last_point_gains[track]) * (STORYTELLER_WAIT_TIME / (1 MINUTES)), 1)
 			dat += "[track]: ~[est_time] m. | "
 	dat += "<HR>"
 	for(var/track in EVENT_PANEL_TRACKS)
@@ -1169,7 +1175,7 @@ SUBSYSTEM_DEF(gamemode)
 		dat += "<td>[event.earliest_start / (1 MINUTES)] m.</td>" //Minimum time
 		dat += "<td>[assoc_spawn_weight[event] ? "Yes" : "No"]</td>" //Can happen?
 		dat += "<td>[event.return_failure_string(active_players)]</td>" //Why can't happen?
-		var/weight_string = "(new.[event.calculated_weight] /raw.[event.weight])"
+		var/weight_string = "(New: [event.calculated_weight] / Raw: [event.weight])"
 		if(assoc_spawn_weight[event])
 			var/percent = round((event.calculated_weight / total_weight) * 100)
 			weight_string = "[percent]% - [weight_string]"
@@ -1195,7 +1201,7 @@ SUBSYSTEM_DEF(gamemode)
 					for(var/storyteller_type in storytellers)
 						var/datum/storyteller/storyboy = storytellers[storyteller_type]
 						name_list[storyboy.name] = storyboy.type
-					var/new_storyteller_name = input(usr, "Choose new storyteller (circumvents voted one):", "Storyteller")  as null|anything in name_list
+					var/new_storyteller_name = input(usr, "Choose a new Storyteller (Circumvents voted one):", "Storyteller")  as null|anything in name_list
 					if(!new_storyteller_name)
 						message_admins("[key_name_admin(usr)] has cancelled picking a Storyteller.")
 						return
@@ -1218,7 +1224,7 @@ SUBSYSTEM_DEF(gamemode)
 							var/new_value = input(usr, "New value:", "Set new value") as num|null
 							if(isnull(new_value) || new_value < 0)
 								return
-							message_admins("[key_name_admin(usr)] set roundstart pts multiplier for [track] track to [new_value].")
+							message_admins("[key_name_admin(usr)] set roundstart point multiplier for [track] track to [new_value].")
 							roundstart_point_multipliers[track] = new_value
 						if("min_pop")
 							var/new_value = input(usr, "New value:", "Set new value") as num|null
@@ -1481,6 +1487,8 @@ SUBSYSTEM_DEF(gamemode)
 		STATS_ALIVE_HARPIES,
 		STATS_ALIVE_TRITONS,
 		STATS_ALIVE_MEDICATORS,
+		STATS_ALIVE_HALFLINGS,
+		STATS_FOREIGNERS,
 	)
 
 	for(var/stat_name in statistics_to_clear)
@@ -1513,8 +1521,11 @@ SUBSYSTEM_DEF(gamemode)
 	var/lowest_endurance
 
 	for(var/client/client in GLOB.clients)
-		if(roundstart)
-			GLOB.patron_follower_counts[client.prefs.selected_patron.name]++
+		if(roundstart && istype(client?.mob, /mob/dead/new_player))
+			var/mob/dead/new_player/player = client.mob
+			if(player.ready == PLAYER_READY_TO_PLAY)
+				GLOB.patron_follower_counts[client.prefs.selected_patron.name]++
+
 		var/mob/living/living = client.mob
 		if(!istype(living))
 			continue
@@ -1572,6 +1583,8 @@ SUBSYSTEM_DEF(gamemode)
 				record_round_statistic(STATS_ALIVE_TRADESMEN)
 			if(!human_mob.is_literate())
 				record_round_statistic(STATS_ILLITERATES)
+			if(HAS_TRAIT(human_mob, TRAIT_FOREIGNER))
+				record_round_statistic(STATS_FOREIGNERS)
 			if(human_mob.has_flaw(/datum/charflaw/clingy))
 				record_round_statistic(STATS_CLINGY_PEOPLE)
 			if(human_mob.has_flaw(/datum/charflaw/addiction/alcoholic))
@@ -1595,7 +1608,7 @@ SUBSYSTEM_DEF(gamemode)
 				if(human_mob.IsWedded() || member.children.len > 0)
 					record_round_statistic(STATS_MARRIED)
 
-			// species
+			// Species
 			if(istiefling(human_mob))
 				record_round_statistic(STATS_ALIVE_TIEFLINGS)
 			if(ishumannorthern(human_mob))
@@ -1626,6 +1639,8 @@ SUBSYSTEM_DEF(gamemode)
 				record_round_statistic(STATS_ALIVE_TRITONS)
 			if(ismedicator(human_mob))
 				record_round_statistic(STATS_ALIVE_MEDICATORS)
+			if(ishalfling(human_mob))
+				record_round_statistic(STATS_ALIVE_HALFLINGS)
 
 			// Chronicle statistics
 
@@ -1735,6 +1750,11 @@ SUBSYSTEM_DEF(gamemode)
 				set_chronicle_stat(CHRONICLE_STATS_LEAST_ENDURANT_PERSON, human_mob, "TIRED", "#a8a0a0", "[human_mob.STAEND] endurance")
 
 	force_set_round_statistic(STATS_MAMMONS_HELD, total_wealth)
+
+	var/total_bank_wealth = 0
+	for(var/account_name in SStreasury.bank_accounts)
+		total_bank_wealth += SStreasury.bank_accounts[account_name]
+	force_set_round_statistic(STATS_MAMMONS_IN_BANK, total_bank_wealth)
 
 	var/list/potential_passers = current_valid_humans.Copy()
 	var/list/beautiful_candidates = list()

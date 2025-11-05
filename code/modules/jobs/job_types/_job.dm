@@ -352,6 +352,19 @@
 	if(length(advclass_cat_rolls))
 		spawned.hugboxify_for_class_selection()
 
+	if(spawned.culinary_preferences[CULINARY_RANDOM_PREFERENCES])
+		var/obj/item/food_instance = spawned.culinary_preferences[CULINARY_FAVOURITE_FOOD]
+		var/datum/reagent/consumable/drink_instance = spawned.culinary_preferences[CULINARY_FAVOURITE_DRINK]
+		var/obj/item/hated_food_instance = spawned.culinary_preferences[CULINARY_HATED_FOOD]
+		var/datum/reagent/consumable/hated_drink_instance = spawned.culinary_preferences[CULINARY_HATED_DRINK]
+
+		bordered_message(spawned, list(
+			"Your favourite food is <span style='color: green;'>[capitalize(initial(food_instance.name))]</span>",
+			"Your favourite drink is <span style='color: green;'>[capitalize(initial(drink_instance.name))]</span>",
+			"Your most hated food is <span style='color: red;'>[capitalize(initial(hated_food_instance.name))]</span>",
+			"Your most hated drink is <span style='color: red;'>[capitalize(initial(hated_drink_instance.name))]</span>",
+		))
+
 	if(job_flags & JOB_SHOW_IN_CREDITS)
 		START_PROCESSING(SScrediticons, player_client)
 

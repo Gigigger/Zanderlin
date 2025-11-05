@@ -713,8 +713,8 @@
 	reach = 2
 
 /obj/item/weapon/polearm/woodstaff/naledi
-	name = "naledian warstaff"
-	desc = "A staff carrying the crescent moon of Psydon's knowledge, as well as the black and gold insignia of the war scholars."
+	name = "psydonian warstaff"
+	desc = "A staff carrying the black and gold insignia of the war scholars."
 	icon_state = "naledistaff"
 	possible_item_intents = list(/datum/intent/spear/bash)
 	gripped_intents = list(/datum/intent/spear/bash/ranged,/datum/intent/mace/smash/wood/ranged)

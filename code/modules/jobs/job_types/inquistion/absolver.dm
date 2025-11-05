@@ -5,7 +5,7 @@
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	total_positions = 1 // THE ONE.
 	spawn_positions = 1
-	allowed_races = list(SPEC_ID_HUMEN)
+	allowed_races = list(SPEC_ID_HUMEN, SPEC_ID_AASIMAR)
 	allowed_patrons = list(/datum/patron/psydon) //You MUST have a Psydonite character to start. Just so people don't get japed into Oops Suddenly Psydon!
 	tutorial = "The Oratorium claims you are naught more than a 'cleric', but you know the truth; you are a sacrificial lamb. Your hands, unmarred through prayer and pacifism, have been gifted with the power to manipulate blood - to siphon away the wounds of others, so that you may endure in their stead. Let your censer's light shepherd the Inquisitor's retinue forth, lest they're led astray by wrath and temptation."
 	selection_color = JCOLOR_INQUISITION
@@ -48,6 +48,7 @@
 		/datum/skill/labor/fishing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE, // they need this so Psydon's Grace works
 	)
 
 
@@ -59,6 +60,9 @@
 		var/mob/living/carbon/human/H = L
 		H.grant_language(/datum/language/oldpsydonic)
 		H.verbs |= /mob/living/carbon/human/proc/view_inquisition
+		if(H.dna?.species.id == SPEC_ID_HUMEN)
+			H.dna.species.native_language = "Old Psydonic"
+			H.dna.species.accent_language = H.dna.species.get_accent(H.dna.species.native_language)
 
 /datum/outfit/job/absolver/pre_equip(mob/living/carbon/human/H)
 	..()

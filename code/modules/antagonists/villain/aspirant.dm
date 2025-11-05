@@ -10,7 +10,7 @@
 
 /datum/antagonist/aspirant
 	name = "Aspirant"
-	roundend_category = "aspirant"
+	roundend_category = "Aspirant"
 	antagpanel_category = "Aspirant"
 	job_rank = ROLE_ASPIRANT
 	show_name_in_check_antagonists = TRUE

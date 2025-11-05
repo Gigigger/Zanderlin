@@ -5,7 +5,7 @@
 
 /datum/antagonist/maniac
 	name = "Maniac"
-	roundend_category = "maniacs"
+	roundend_category = "Maniacs"
 	antagpanel_category = "Maniac"
 	antag_memory = "<b>Recently I've been visited by a lot of VISIONS. They're all about another WORLD, ANOTHER life. I will do EVERYTHING to know the TRUTH, and return to the REAL world.</b>"
 	job_rank = ROLE_MANIAC

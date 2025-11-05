@@ -44,7 +44,6 @@
 	)
 
 
-	H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
 	H.add_spell(/datum/action/cooldown/spell/vicious_mockery)
 	if(H.mind)
 		var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman", "Psyaltery", "Flute")

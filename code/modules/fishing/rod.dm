@@ -247,6 +247,8 @@
 					break
 			if(kill_fish)
 				fish.set_status(FISH_DEAD, silent = TRUE)
+		record_round_statistic(STATS_FISH_CAUGHT)
+		record_featured_stat(FEATURED_STATS_FISHERS, user)
 
 	qdel(baited)
 	baited = null

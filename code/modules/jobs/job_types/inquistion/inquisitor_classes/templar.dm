@@ -5,7 +5,6 @@
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/job/psydoniantemplar
 	category_tags = list(CTAG_INQUISITION)
-	cmode_music = 'sound/music/templarofpsydonia.ogg'
 
 	jobstats = list(
 		STATKEY_STR = 2,
@@ -24,7 +23,6 @@
 		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE
 	)
@@ -86,27 +84,27 @@
 		if("Psydonic Longsword")
 			H.put_in_hands(new /obj/item/weapon/sword/long/psydon(H), TRUE)
 			H.put_in_hands(new /obj/item/weapon/scabbard/sword(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4, TRUE)
 		if("Psydonic War Axe")
 			H.put_in_hands(new /obj/item/weapon/axe/psydon(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4, TRUE)
 		if("Psydonic Whip")
 			H.put_in_hands(new /obj/item/weapon/whip/psydon(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4, TRUE)
 		if("Psydonic Flail")
 			H.put_in_hands(new /obj/item/weapon/flail/psydon(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4, TRUE)
 		if("Psydonic Mace")
 			H.put_in_hands(new /obj/item/weapon/mace/goden/psydon(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4, TRUE)
 		if("Psydonic Spear + Handmace")
 			H.put_in_hands(new /obj/item/weapon/polearm/spear/psydon(H), TRUE)
 			H.put_in_hands(new /obj/item/weapon/mace/cudgel/psy(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/polearms, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/polearms, 4, 4, TRUE)
 		if("Psydonic Poleaxe + Shortsword")
 			H.put_in_hands(new /obj/item/weapon/greataxe/psy(H), TRUE)
 			H.put_in_hands(new /obj/item/weapon/sword/short/psy(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4, TRUE)
 
 /datum/outfit/job/psydoniantemplar/post_equip(mob/living/carbon/human/H, visuals_only)
 	. = ..()

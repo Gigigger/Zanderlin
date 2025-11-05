@@ -159,8 +159,12 @@
 			H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
 			ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 		if(/datum/patron/psydon, /datum/patron/psydon/progressive)
-			head = /obj/item/clothing/head/helmet/heavy/bucket/gold
 			wrists = /obj/item/clothing/neck/psycross/g
+			armor = /obj/item/clothing/armor/cuirass/fluted
+			cloak = /obj/item/clothing/cloak/psydontabard
+			gloves = /obj/item/clothing/gloves/chain/psydon
+			shoes = /obj/item/clothing/shoes/psydonboots
+			head = /obj/item/clothing/head/helmet/heavy/psydonhelm
 			H.cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 			H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 			H.grant_language(/datum/language/oldpsydonic)
@@ -233,8 +237,10 @@
 			var/obj/item/weapon/knife/dagger/steel/dirk/baotha/L = new(get_turf(src))
 			H.equip_to_appropriate_slot(L)
 		if(/datum/patron/psydon, /datum/patron/psydon/progressive)
-			var/obj/item/weapon/sword/long/greatsword/psydon/P = new(get_turf(src))
+			var/obj/item/weapon/sword/long/psydon/P = new(get_turf(src))
 			H.equip_to_appropriate_slot(P)
+			var/obj/item/weapon/scabbard/sword/L = new(get_turf(src))
+			H.equip_to_appropriate_slot(L)
 		else
 			var/obj/item/weapon/sword/long/greatsword/psydon/P = new(get_turf(src))
 			H.equip_to_appropriate_slot(P)

@@ -30,7 +30,8 @@
 		TRAIT_FORAGER,
 		TRAIT_STEELHEARTED,
 		TRAIT_KNOWBANDITS,
-		TRAIT_INQUISITION
+		TRAIT_INQUISITION,
+		TRAIT_BLACKBAGGER,
 	)
 
 	jobstats = list(
@@ -51,7 +52,7 @@
 	beltl =  /obj/item/weapon/sword/short
 	l_hand = /obj/item/weapon/whip // Great length, they don't need to be next to a person to help in apprehending them.
 	pants = /obj/item/clothing/pants/trou/leather
-	backpack_contents = list(/obj/item/storage/keyring/adept = 1, /obj/item/weapon/knife/dagger/silver/psydon = 1)
+	backpack_contents = list(/obj/item/storage/keyring/adept = 1, /obj/item/weapon/knife/dagger/silver/psydon = 1, /obj/item/clothing/head/inqarticles/blackbag = 1, /obj/item/inqarticles/garrote = 1,)
 
 	if(H.dna?.species)
 		H.dna.species.soundpack_m = new /datum/voicepack/male/knight() // We're going with gentleman-thief here.

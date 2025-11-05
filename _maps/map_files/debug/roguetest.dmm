@@ -1112,6 +1112,9 @@
 	},
 /turf/open/floor/cobblerock,
 /area/rogue/outdoors/mountains/decap)
+"eh" = (
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "ek" = (
 /obj/machinery/light/fueled/torchholder/hotspring/standing{
 	pixel_x = 15
@@ -1899,6 +1902,12 @@
 	},
 /turf/open/floor/tile/kitchen,
 /area/rogue/indoors/town/manor)
+"qQ" = (
+/obj/structure/lever/hidden/keep{
+	redstone_id = "hd2"
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "qZ" = (
 /turf/closed/mineral/random/high,
 /area/rogue/outdoors/mountains/decap)
@@ -1993,6 +2002,9 @@
 /obj/structure/well,
 /turf/open/water,
 /area/rogue/outdoors)
+"sM" = (
+/turf/open/floor/tile/masonic/inverted,
+/area/rogue/under/town/basement)
 "sZ" = (
 /obj/structure/essence_node/rare,
 /turf/open/floor/tile/bfloorz,
@@ -2095,6 +2107,13 @@
 	},
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"uq" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/open/floor/tile/masonic/inverted,
+/area/rogue/under/town/basement)
 "us" = (
 /obj/structure/table/wood{
 	dir = 4;
@@ -2108,9 +2127,6 @@
 /obj/structure/carpet,
 /turf/open/floor/tile/checkeralt,
 /area/rogue/indoors/town/manor)
-"uB" = (
-/turf/closed/wall/mineral/decorstone,
-/area/rogue)
 "uL" = (
 /obj/structure/hotspring/border/two,
 /turf/open/floor/cobblerock,
@@ -2176,6 +2192,10 @@
 /obj/item/reagent_containers/glass/carafe/water,
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"wX" = (
+/obj/machinery/light/fueled/wallfire/candle,
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "wY" = (
 /obj/structure/flora/sakura{
 	pixel_y = -13
@@ -2243,6 +2263,14 @@
 /obj/structure/bridge_stakes,
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"xN" = (
+/obj/effect/mapping_helpers/secret_door_creator/keep{
+	redstone_id = "hd2";
+	floor_turf = /turf/open/floor/tile/masonic/inverted;
+	override_floor = 1
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "yr" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/dirt/road,
@@ -2751,6 +2779,11 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor)
+"GN" = (
+/obj/structure/table/wood/crafted,
+/obj/item/reagent_containers/powder/ozium,
+/turf/open/floor/tile/masonic/inverted,
+/area/rogue/under/town/basement)
 "GO" = (
 /obj/effect/landmark/start/adventurerlate,
 /obj/machinery/light/fueled/wallfire/candle,
@@ -2799,6 +2832,12 @@
 /obj/effect/temp_visual/wave_up,
 /turf/open/floor/tile/bfloorz,
 /area/rogue/indoors)
+"HF" = (
+/obj/structure/lever/hidden/keep{
+	redstone_id = "hd3"
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "HK" = (
 /obj/structure/hotspring/border/two,
 /obj/machinery/light/fueled/torchholder/hotspring/standing{
@@ -2845,6 +2884,12 @@
 	},
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"IQ" = (
+/obj/structure/lever/hidden/keep{
+	redstone_id = "hd1"
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "IR" = (
 /obj/structure/rotation_piece{
 	dir = 8
@@ -2952,6 +2997,14 @@
 	},
 /turf/open/floor/dirt,
 /area/rogue/outdoors)
+"Lj" = (
+/obj/effect/mapping_helpers/secret_door_creator/keep{
+	redstone_id = "hd3";
+	override_floor = 1;
+	floor_turf = /turf/open/floor/tile/masonic/inverted
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "Lm" = (
 /mob/living/simple_animal/hostile/retaliate/trufflepig/male{
 	name = "GENERIC BLOCKER TESTER"
@@ -3007,6 +3060,12 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/outdoors)
+"MF" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/indoors/town/manor)
 "MG" = (
 /obj/structure/gearbox,
 /turf/open/floor/dirt,
@@ -3056,6 +3115,12 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors)
+"OV" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/tile/masonic/inverted,
+/area/rogue/under/town/basement)
 "OZ" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/wood,
@@ -3098,6 +3163,11 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"Qp" = (
+/obj/structure/table/wood/crafted,
+/obj/item/paper/scroll/keep_plans,
+/turf/open/floor/tile/masonic/inverted,
+/area/rogue/under/town/basement)
 "Qq" = (
 /obj/structure/bars,
 /turf/open/floor/churchbrick,
@@ -3172,6 +3242,21 @@
 	},
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
+"SU" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/blocks/stonered/tiny,
+/area/rogue/outdoors)
+"SV" = (
+/obj/effect/mapping_helpers/secret_door_creator/keep{
+	redstone_id = "hd1";
+	override_floor = 1;
+	floor_turf = /turf/open/floor/tile/masonic/inverted
+	},
+/turf/closed/wall/mineral/decorstone,
+/area/rogue/under/town/basement)
 "SZ" = (
 /obj/structure/hotspring/border/ten,
 /turf/open/floor/dirt/road,
@@ -18829,14 +18914,14 @@ as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 as
 as
 at
@@ -18875,9 +18960,9 @@ at
 at
 at
 at
-ac
-ac
-ac
+as
+as
+as
 ac
 ac
 ac
@@ -19086,14 +19171,14 @@ as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 as
 as
 at
@@ -19125,16 +19210,16 @@ Zs
 at
 at
 as
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+eh
+eh
+eh
+eh
+eh
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -19345,12 +19430,12 @@ WL
 WL
 WL
 WL
+MF
 WL
 WL
 WL
-ac
-ac
-ac
+WL
+WL
 ac
 ac
 at
@@ -19382,16 +19467,16 @@ Zs
 as
 as
 as
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+Qp
+sM
+sM
+sM
+uq
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -19605,10 +19690,10 @@ Ve
 hC
 hC
 WL
+Ft
+Ft
 WL
-WL
-WL
-WL
+SU
 vr
 IE
 at
@@ -19639,16 +19724,16 @@ at
 at
 at
 at
-at
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+GN
+sM
+eh
+SV
+IQ
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -19896,16 +19981,16 @@ Wr
 Wr
 QN
 ai
-at
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+sM
+sM
+sM
+xN
+sM
+sM
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -20153,16 +20238,16 @@ ai
 Wr
 ai
 Wr
-at
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+sM
+OV
+qQ
+Lj
+HF
+wX
+as
+as
+as
 ac
 ac
 ac
@@ -20410,16 +20495,16 @@ QN
 QN
 ai
 QN
-at
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+sM
+sM
+sM
+sM
+sM
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -20667,16 +20752,16 @@ tk
 QN
 ai
 ai
-at
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+eh
+eh
+eh
+eh
+eh
+eh
+eh
+as
+as
+as
 ac
 ac
 ac
@@ -20931,9 +21016,9 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
+as
+as
+as
 ac
 ac
 ac
@@ -21188,9 +21273,9 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
+as
+as
+as
 ac
 ac
 ac
@@ -21445,9 +21530,9 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
+as
+as
+as
 ac
 ac
 ac
@@ -84371,8 +84456,8 @@ Uv
 Uv
 Uv
 Uv
-uB
-Uv
+Uo
+Uo
 Uv
 Uv
 Uv
@@ -84627,9 +84712,9 @@ Uv
 Uv
 Uv
 Uv
-uB
+Uo
 Uv
-uB
+Uo
 Uv
 Uv
 Uv
@@ -84885,7 +84970,7 @@ Uv
 Uv
 Uv
 Uv
-uB
+Uo
 Uv
 Uv
 Uv

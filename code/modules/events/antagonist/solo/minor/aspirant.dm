@@ -2,7 +2,9 @@
 	name = "Aspirant"
 	tags = list(
 		TAG_ZIZO,
+		TAG_BAOTHA,
 		TAG_VILLAIN,
+		TAG_COMBAT,
 	)
 	antag_datum = /datum/antagonist/aspirant
 	roundstart = TRUE

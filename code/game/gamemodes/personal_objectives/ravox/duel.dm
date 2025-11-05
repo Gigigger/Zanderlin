@@ -59,7 +59,7 @@
 		qdel(src)
 
 	if(challenger_mob.surrendering || challenger_mob.incapacitated(IGNORE_GRAB))
-		challenged_mob.visible_message(span_notice("[challenged_mob] defeats [challenged_mob] in the honor duel!"))
+		challenged_mob.visible_message(span_notice("[challenged_mob] defeats [challenger_mob] in the honor duel!"))
 		finish_duel(challenger_mob, challenged_mob)
 		return
 	else if(challenged_mob.surrendering || challenged_mob.incapacitated(IGNORE_GRAB))

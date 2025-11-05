@@ -1,6 +1,6 @@
 /datum/antagonist/zizocultist
 	name = "Zizoid Lackey"
-	roundend_category = "zizoid cultists"
+	roundend_category = "Zizoid Cultists"
 	antagpanel_category = "Zizoid Cult"
 	job_rank = ROLE_ZIZOIDCULTIST
 	antag_hud_type = ANTAG_HUD_ZIZOID

@@ -163,7 +163,7 @@
 		return
 
 	// This is bad :(
-	if(slot == ITEM_SLOT_SHOES)
+	if(slot & ITEM_SLOT_SHOES)
 		source.remove_status_effect(/datum/status_effect/buff/free_feet)
 	else if(!source.shoes)
 		source.apply_status_effect(/datum/status_effect/buff/free_feet)

@@ -454,4 +454,4 @@
 	"Amoroso" = 'sound/instruments/psyaltery (7).ogg',
 	"Lupian's Lullaby" = 'sound/instruments/psyaltery (8).ogg',
 	"White Wine Before Breakfast" = 'sound/instruments/psyaltery (9).ogg',
-	"Chevalier de Naledi" = 'sound/instruments/psyaltery (10).ogg')
+	"Chevalier de Valeur" = 'sound/instruments/psyaltery (10).ogg')

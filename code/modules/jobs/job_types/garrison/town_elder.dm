@@ -111,7 +111,6 @@
 
 	H.add_spell(/datum/action/cooldown/spell/vicious_mockery)
 	H.add_spell(/datum/action/cooldown/spell/bardic_inspiration)
-
 	H.change_stat(STATKEY_STR, -1)
 	H.change_stat(STATKEY_PER, 2)
 	H.change_stat(STATKEY_END, 1)

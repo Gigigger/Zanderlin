@@ -33,7 +33,7 @@
 	if(bounty_poster == "Kingsfield Expanse")
 		GLOB.outlawed_players += H.real_name
 	else
-		GLOB.excommunicated_players += H.real_name
+		GLOB.heretical_players += H.real_name
 
 /datum/job/advclass/wretch
 	abstract_type = /datum/job/advclass/wretch

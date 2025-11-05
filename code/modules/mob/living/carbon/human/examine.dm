@@ -483,7 +483,13 @@
 		msg += msg_list.Join(" ")
 
 	//Fire/water stacks
-	if(fire_stacks + divine_fire_stacks > 0)
+	if(on_fire)
+		var/fire_text = "[m1] on fire!"
+		if(user.has_flaw(/datum/charflaw/addiction/pyromaniac))
+			fire_text += span_boldred(" IT'S BEAUTIFUL!")
+			user.sate_addiction()
+		msg += fire_text
+	else if(fire_stacks + divine_fire_stacks > 0)
 		msg += "[m1] covered in something flammable."
 	else if(fire_stacks < 0 && !on_fire)
 		msg += "[m1] soaked."

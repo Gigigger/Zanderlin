@@ -53,6 +53,11 @@
 	stress_change = -5
 	desc = span_green("I feel soothed.")
 
+/datum/stress_event/blessed/permanent
+	timer = INFINITY
+	stress_change = -5
+	desc = span_green("I feel soothed.")
+
 /datum/stress_event/triumph
 	timer = 60 MINUTES
 	stress_change = -10

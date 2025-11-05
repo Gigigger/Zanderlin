@@ -35,7 +35,8 @@
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/firearms = SKILL_LEVEL_EXPERT,
 	)
 
 /datum/outfit/job/inquisitor/inspector/pre_equip(mob/living/carbon/human/H)
@@ -65,19 +66,22 @@
 		/obj/item/paper/inqslip/arrival/inq = 1,
 		)
 
-	var/weapons = list("Retribution (Rapier)", "Daybreak (Whip)", "Sanctum (Halberd)")
+	var/weapons = list("Retribution (Rapier)", "Daybreak (Whip)", "Sanctum (Halberd)", "The Forgotten Blade")
 	var/weapon_choice = input(H,"CHOOSE YOUR RELIQUARY PIECE.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
 		if("Retribution (Rapier)")
 			H.put_in_hands(new /obj/item/weapon/sword/rapier/psy/relic(H), TRUE)
 			H.equip_to_slot_or_del(new /obj/item/weapon/scabbard/sword, ITEM_SLOT_BELT_L, TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4, TRUE)
 		if("Daybreak (Whip)")
 			H.put_in_hands(new /obj/item/weapon/whip/antique/psywhip(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4)
-		if("S (Halberd)")
+			H.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4, TRUE)
+		if("Sanctum (Halberd)")
 			H.put_in_hands(new /obj/item/weapon/polearm/halberd/psydon/relic(H), TRUE)
-			H.clamped_adjust_skillrank(/datum/skill/combat/polearms, 4, 4)
+			H.clamped_adjust_skillrank(/datum/skill/combat/polearms, 4, 4, TRUE)
+		if("The Forgotten Blade")
+			H.put_in_hands(new /obj/item/weapon/sword/long/forgotten(H), TRUE)
+			H.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4, TRUE)
 
 /datum/outfit/job/inquisitor/inspector/post_equip(mob/living/carbon/human/H, visuals_only)
 	. = ..()

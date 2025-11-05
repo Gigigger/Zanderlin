@@ -6,11 +6,15 @@
 	spawn_positions = 1
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = list(SPEC_ID_HUMEN, SPEC_ID_DWARF)		//Not been around long enough to be inquisitor, brand new race to the world.
+	allowed_races = list(\
+		SPEC_ID_HUMEN,\
+		SPEC_ID_DWARF,\
+	)
 	allowed_patrons = list(/datum/patron/psydon) //You MUST have a Psydonite character to start. Just so people don't get japed into Oops Suddenly Psydon!
 	tutorial = "This is the week. All your lessons have led to this moment. Your students follow you with eager steps and breathless anticipation. You’re to observe their hunt, and see if they can banish the evils haunting Psydonia, and rise up to become true inquisitors. A guide to them, a monster to others. You are the thing that goes bump in the night."
-	cmode_music = 'sound/music/inquisitorcombat.ogg'
+	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 	selection_color = JCOLOR_INQUISITION
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 
 	outfit = /datum/outfit/job/inquisitor
 	display_order = JDO_PURITAN
@@ -40,7 +44,17 @@
 		H?.hud_used?.bloodpool?.name = "Psydon's Grace: [H.bloodpool]"
 		H?.hud_used?.bloodpool?.desc = "Devotion: [H.bloodpool]/[H.maxbloodpool]"
 		H.maxbloodpool = 1000
+		var/prev_real_name = H.real_name
+		var/prev_name = H.name
+		var/honorary = "Herr Prafekt"
+		if(H.gender == FEMALE)
+			honorary = "Frau Prafekt"
+		H.real_name = "[honorary] [prev_real_name]"
+		H.name = "[honorary] [prev_name]"
 
+		if(H.dna?.species.id == SPEC_ID_HUMEN)
+			H.dna.species.native_language = "Old Psydonic"
+			H.dna.species.accent_language = H.dna.species.get_accent(H.dna.species.native_language)
 ////Classic Inquisitor with a much more underground twist. Use listening devices, sneak into places to gather evidence, track down suspicious individuals. Has relatively the same utility stats as Confessor, but fulfills a different niche in terms of their combative job as the head honcho.
 
 ///The dirty, violent side of the Inquisition. Meant for confrontational, conflict-driven situations as opposed to simply sneaking around and asking questions. Templar with none of the miracles, but with all the muscles and more.

@@ -79,11 +79,10 @@
 	close_sound = 'sound/items/book_close.ogg'
 	sellprice = 0
 
-/obj/structure/closet/crate/chest/wicker/random_soilson/Initialize()
+/obj/structure/closet/crate/chest/wicker/random_soilson/PopulateContents()
 	for(var/i = 1 to rand(5, 8))
 		var/obj/item/neuFarm/seed/random = pick(subtypesof(/obj/item/neuFarm/seed) - /obj/item/neuFarm/seed/mixed_seed)
-		new random (get_turf(src))
-	. = ..()
+		new random (src)
 
 /obj/structure/closet/crate/chest/neu
 	name = "sturdy oak chest"
@@ -120,11 +119,9 @@
 	sellprice = 6
 
 //a chest with a corpse in it
-/obj/structure/closet/crate/chest/neu_iron/corpse/Initialize()
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human/species/rousman(get_turf(src))
+/obj/structure/closet/crate/chest/neu_iron/corpse/PopulateContents()
+	var/mob/living/carbon/human/H = new /mob/living/carbon/human/species/rousman(src)
 	H.cure_husk()
 	H.update_body()
 	H.update_body_parts()
-	H.death(TRUE) //Kills the new mob
-	H.forceMove(src)
-	. = ..()
+	H.death(TRUE)

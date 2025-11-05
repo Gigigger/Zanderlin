@@ -6,7 +6,7 @@
 #define STATS_ALIVE_RAKSHARI "alive_rakshari"
 #define STATS_ALIVE_AASIMAR "alive_aasimar"
 #define STATS_ALIVE_HOLLOWKINS "alive_hollowkins"
-#define STATS_ALIVE_MEDICATORS "alive_medicators"
+#define STATS_ALIVE_HALFLINGS "alive_halflings"
 #define STATS_VAMPIRES "vampires"
 #define STATS_ALIVE_GARRISON "alive_garrison"
 #define STATS_ALIVE_CLERGY "alive_clergy"
@@ -35,6 +35,7 @@
 #define STATS_TRADE_VALUE_IMPORTED "trade_imported"
 #define STATS_GOLDFACE_VALUE_SPENT "goldface_spent"
 #define STATS_PURITY_VALUE_SPENT "purity_spent"
+#define STATS_HEADEATER_EXPORTS "headeater_exports"
 #define STATS_TAXES_EVADED "taxes_evaded"
 #define STATS_NOBLE_INCOME_TOTAL "noble_income_total"
 #define STATS_DIRECT_TREASURY_TRANSFERS "direct_treasury_transfers"
@@ -44,9 +45,11 @@
 #define STATS_STOCKPILE_REVENUE "stockpile_revenue"
 #define STATS_PEDDLER_REVENUE "peddler_revenue"
 #define STATS_MAMMONS_HELD "mammons_held"
+#define STATS_MAMMONS_IN_BANK "mammons_in_bank"
 #define STATS_MAMMONS_DEPOSITED "mammons_deposited"
 #define STATS_MAMMONS_WITHDRAWN "mammons_withdrawn"
 #define STATS_STARTING_TREASURY "starting_treasury"
+#define STATS_FOREIGNERS "alive_foreigners"
 
 // Influence related statistics
 
@@ -90,6 +93,7 @@
 #define STATS_ANIMALS_BRED "animals_bred"
 #define STATS_FOOD_ROTTED "food_rotted"
 #define STATS_LUX_REVIVALS "lux_revivals"
+#define STATS_ALIVE_MEDICATORS "alive_medicators"
 
 // Dendor
 #define STATS_TREES_CUT "trees_cut"
@@ -253,6 +257,7 @@ GLOBAL_LIST_INIT(vanderlin_round_stats, list(
 	STATS_ALIVE_HARPIES = 0,
 	STATS_ALIVE_TRITONS = 0,
 	STATS_ALIVE_MEDICATORS = 0,
+	STATS_ALIVE_HALFLINGS = 0,
 	STATS_PEOPLE_DROWNED = 0,
 	STATS_MANA_SPENT = 0,
 	STATS_WATER_CONSUMED  = 0,
@@ -298,6 +303,7 @@ GLOBAL_LIST_INIT(vanderlin_round_stats, list(
 	STATS_TRADE_VALUE_IMPORTED = 0,
 	STATS_GOLDFACE_VALUE_SPENT = 0,
 	STATS_PURITY_VALUE_SPENT = 0,
+	STATS_HEADEATER_EXPORTS = 0,
 	STATS_TAXES_EVADED = 0,
 	STATS_NOBLE_INCOME_TOTAL = 0,
 	STATS_DIRECT_TREASURY_TRANSFERS = 0,
@@ -307,10 +313,12 @@ GLOBAL_LIST_INIT(vanderlin_round_stats, list(
 	STATS_STOCKPILE_REVENUE = 0,
 	STATS_PEDDLER_REVENUE = 0,
 	STATS_MAMMONS_HELD = 0,
+	STATS_MAMMONS_IN_BANK = 0,
 	STATS_MAMMONS_DEPOSITED = 0,
 	STATS_MAMMONS_WITHDRAWN = 0,
 	STATS_STARTING_TREASURY = 0,
 	STATS_HUNTED_PEOPLE = 0,
+	STATS_FOREIGNERS = 0,
 ))
 
 GLOBAL_LIST_EMPTY(patron_follower_counts)
@@ -368,12 +376,12 @@ GLOBAL_LIST_INIT(featured_stats, list(
 	),
 	FEATURED_STATS_SLURS = list(
 		"name" = "TOP Slurs",
-		"color" = "#6e56bd",
+		"color" = "#5c5ac7",
 		"entries" = list()
 	),
 	FEATURED_STATS_SPECIESISTS = list(
 		"name" = "TOP Speciesists",
-		"color" = "#b153dd",
+		"color" = "#986ee6",
 		"entries" = list()
 	),
 	FEATURED_STATS_MINERS = list(
@@ -543,7 +551,7 @@ GLOBAL_LIST_EMPTY(chronicle_stats)
 	sortTim(entries, GLOBAL_PROC_REF(cmp_stat_count_desc))
 
 	var/list/result = list()
-	for(var/i in 1 to min(14, entries.len))
+	for(var/i in 1 to min(15, entries.len))
 		var/list/entry = entries[i]
 		var/rounded_count = round(entry["count"])
 		result += "[i]. [entry["name"]] - [rounded_count]"
@@ -562,7 +570,7 @@ GLOBAL_LIST_EMPTY(chronicle_stats)
 	sortTim(entries, GLOBAL_PROC_REF(cmp_stat_count_desc))
 
 	var/list/result = list()
-	for(var/i in 1 to min(14, entries.len))
+	for(var/i in 1 to min(15, entries.len))
 		var/list/entry = entries[i]
 		var/rounded_count = round(entry["count"])
 		result += "[i]. [entry["name"]] - [rounded_count]"

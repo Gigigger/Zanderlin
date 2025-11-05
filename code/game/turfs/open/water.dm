@@ -426,15 +426,16 @@
 				adjust_originate_watervolume(-2)
 			playsound(user, pick(wash), 100, FALSE)
 
-			//handle hygiene
-			if(isliving(user))
-				var/mob/living/hygiene_target = user
-				var/list/equipped_items = hygiene_target.get_equipped_items()
-				if(length(equipped_items) > 0)
-					to_chat(user, span_notice("I could probably clean myself faster if I weren't wearing clothes..."))
-					hygiene_target.adjust_hygiene(HYGIENE_GAIN_CLOTHED * cleanliness_factor)
-				else
-					hygiene_target.adjust_hygiene(HYGIENE_GAIN_UNCLOTHED * cleanliness_factor)
+			L.ExtinguishMob()
+			//handle hygiene and clean off alcohol
+			var/list/equipped_items = L.get_equipped_items()
+			if(length(equipped_items) > 0)
+				to_chat(user, span_notice("I could probably clean myself faster if I weren't wearing clothes..."))
+				L.adjust_hygiene(HYGIENE_GAIN_CLOTHED * cleanliness_factor)
+				L.adjust_fire_stacks(-4)
+			else
+				L.adjust_hygiene(HYGIENE_GAIN_UNCLOTHED * cleanliness_factor)
+				L.adjust_fire_stacks(-2)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /turf/open/water/attackby_secondary(obj/item/item2wash, mob/user, params)

@@ -4,9 +4,9 @@
 	faction = "Station"
 	total_positions = 2 // TWO GOONS!!
 	spawn_positions = 2
-	allowed_races = list(SPEC_ID_HUMEN, SPEC_ID_DWARF)
+	allowed_races = RACES_PLAYER_GRENZ
 	bypass_lastclass = TRUE
-
+	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 	allowed_patrons = list(
 		/datum/patron/psydon
 	)
@@ -46,3 +46,7 @@
 		H?.hud_used?.bloodpool?.name = "Psydon's Grace: [H.bloodpool]"
 		H?.hud_used?.bloodpool?.desc = "Devotion: [H.bloodpool]/[H.maxbloodpool]"
 		H.maxbloodpool = 1000
+
+		if(H.dna?.species.id == SPEC_ID_HUMEN)
+			H.dna.species.native_language = "Old Psydonic"
+			H.dna.species.accent_language = H.dna.species.get_accent(H.dna.species.native_language)
