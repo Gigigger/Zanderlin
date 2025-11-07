@@ -48,9 +48,8 @@
 		return
 	var/canReach = need_los || living_pawn.Adjacent(target) || living_pawn.CanReach(target)  //Check adjacency first because (probably) cheaper
 	if ((range > maximum_distance) || (ready_to_attack) || !canReach) // next attack ready or target too far for us
-		if(!canReach) //living_pawn.a_intent.reach if we can't reach then move into melee - possibly on a corner
-			minimum_distance = 1
-		controller.queue_behavior(/datum/ai_behavior/pursue_to_range, target_key, minimum_distance)
+		var/pursueDist = canReach ? minimum_distance : 1 //living_pawn.a_intent.reach if we can't reach then move into melee - possibly on a corner
+		controller.queue_behavior(/datum/ai_behavior/pursue_to_range, target_key, pursueDist)
 		return
 
 /datum/ai_planning_subtree/spacing/cover_minimum_distance

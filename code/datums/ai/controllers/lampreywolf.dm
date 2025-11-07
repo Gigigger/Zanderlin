@@ -13,7 +13,7 @@
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/pet_planning,
 		/datum/ai_planning_subtree/aggro_find_target,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree/lampreywolf,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree/opportunistic_watcher,
 		/datum/ai_planning_subtree/spacing/lampreywolf, // this helps with move targets
 		)
 
@@ -32,15 +32,13 @@
 	set_blackboard_key(BB_BASIC_MOB_FLEEING, FALSE)
 	idle_behavior = null
 
+
 /datum/ai_planning_subtree/spacing/lampreywolf
-	minimum_distance = 2
+	minimum_distance = 3
 	/// How far away will we allow our target to get?
 	maximum_distance = 6
-	need_los = TRUE
+	//need_los = TRUE
 
 /datum/ai_planning_subtree/spacing/lamprey_volf/SelectBehaviors(datum/ai_controller/controller, seconds_per_tick)
 	. = ..()
 	return SUBTREE_RETURN_FINISH_PLANNING
-
-/datum/ai_planning_subtree/basic_melee_attack_subtree/lampreywolf
-	end_planning = FALSE

@@ -1956,10 +1956,6 @@
 	},
 /turf/closed/wall/mineral/decorstone,
 /area/rogue/under/town/basement)
-"qS" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf,
-/turf/open/floor/cobblerock,
-/area/rogue/under/town/basement)
 "qZ" = (
 /turf/closed/mineral/random/high,
 /area/rogue/outdoors/mountains/decap)
@@ -4978,7 +4974,7 @@ Gw
 Gw
 Nx
 Nx
-qS
+Gw
 Gw
 Gw
 Gw
@@ -6263,7 +6259,7 @@ Nx
 Nx
 Gw
 Gw
-qS
+Gw
 Gw
 Gw
 eX
