@@ -673,7 +673,10 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		var/mob/living/carbon/human/human_owner = owner
 		armor = human_owner.check_crit_armor(src, bclass)
 
-	if(!armor)
+	// Ass code we need diseases
+	if(!armor && werewolf_infection_timer)
+		deltimer(werewolf_infection_timer)
+		werewolf_infection_timer = null
 		werewolf_infect_attempt()
 
 	var/upper_clamp = ARTERY_LIMB_BLEEDRATE

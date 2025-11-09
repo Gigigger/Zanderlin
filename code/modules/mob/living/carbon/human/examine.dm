@@ -167,7 +167,7 @@
 			else
 				. += span_green("A fellow triton")
 
-		if(HAS_TRAIT(src, TRAIT_FISHFACE) && !HAS_TRAIT(user, TRAIT_FISHFACE))
+		if(ishuman(user) && HAS_TRAIT(src, TRAIT_FISHFACE) && !HAS_TRAIT(user, TRAIT_FISHFACE))
 			var/mob/living/carbon/human/H = user
 			if(H.age == AGE_CHILD)
 				. += span_userdanger("IT'S A HORRIBLE MONSTER!!!")

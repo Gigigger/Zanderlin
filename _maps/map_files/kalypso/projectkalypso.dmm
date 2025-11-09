@@ -298,7 +298,6 @@
 /area/rogue/outdoors)
 "bB" = (
 /mob/living/simple_animal/hostile/retaliate/chicken{
-	icon_state = "chicken_black";
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -1245,7 +1244,6 @@
 	icon_state = "tundragrass2"
 	},
 /mob/living/simple_animal/hostile/retaliate/chicken{
-	icon_state = "chicken_white";
 	pixel_x = -3;
 	pixel_y = 1
 	},

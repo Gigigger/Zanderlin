@@ -2583,7 +2583,6 @@
 	desc = "Stone Coffin holding the remains of a Ravox Saint";
 	name = "Saint's coffin"
 	},
-/obj/item/weapon/mace/goden/steel/ravox,
 /obj/item/clothing/head/flowercrown/salvia,
 /obj/item/clothing/neck/psycross/silver/ravox,
 /turf/open/floor/tile/masonic/spiral,
