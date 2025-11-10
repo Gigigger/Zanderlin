@@ -7268,8 +7268,8 @@
 "dYv" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /obj/structure/table/wood/plain_alt,
-/obj/item/reagent_containers/glass/bottle/teapot/random,
-/obj/item/reagent_containers/glass/bottle/teapot/random,
+/obj/item/reagent_containers/glass/carafe/teapot/clay,
+/obj/item/reagent_containers/glass/carafe/teapot/clay,
 /obj/item/reagent_containers/glass/cup/clay,
 /obj/item/reagent_containers/glass/cup/clay,
 /obj/item/reagent_containers/glass/cup/clay,
@@ -12556,23 +12556,23 @@
 /area/rogue/indoors/town)
 "gSo" = (
 /obj/structure/rack/shelf/biggest,
-/obj/item/reagent_containers/glass/bottle/glazed_teapot/tea{
+/obj/item/reagent_containers/glass/carafe/teapot/tea{
 	pixel_x = 10;
 	pixel_y = 9
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = -6;
 	pixel_y = -4
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = -6;
 	pixel_y = -4
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = -6;
 	pixel_y = -4
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = -6;
 	pixel_y = -4
 	},
@@ -19759,8 +19759,8 @@
 	dir = 1;
 	icon_state = "longtable"
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teacup,
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy,
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = 11;
 	pixel_y = 10
 	},
@@ -22809,7 +22809,7 @@
 /area/rogue/under/town/basement)
 "mTy" = (
 /obj/structure/rack/shelf/biggest,
-/obj/item/reagent_containers/glass/bottle/teapot,
+/obj/item/reagent_containers/glass/carafe/teapot/clay,
 /obj/item/reagent_containers/glass/cup/clay_mug,
 /obj/item/reagent_containers/glass/cup/clay_mug,
 /obj/item/reagent_containers/glass/cup/clay,
@@ -28682,7 +28682,7 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
-/obj/item/reagent_containers/glass/bottle/glazed_teapot/tea{
+/obj/item/reagent_containers/glass/carafe/teapot/tea{
 	pixel_x = 10;
 	pixel_y = 9
 	},

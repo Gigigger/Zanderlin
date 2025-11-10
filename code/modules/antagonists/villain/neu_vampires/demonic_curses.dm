@@ -204,7 +204,8 @@
 				to_chat(owner, span_userdanger("The family curse compels me to consume this!"))
 				target_food.attack(owner, owner)
 		else
-			to_chat(owner, span_userdanger("I hunger for anything to satisfy this cursed bloodline!"))
+			if(!owner.has_stress_type(/datum/stress_event/cursed_hunger))
+				to_chat(owner, span_userdanger("I hunger for anything to satisfy this cursed bloodline!"))
 			owner.add_stress(/datum/stress_event/cursed_hunger)
 
 /datum/status_effect/demonic_pride

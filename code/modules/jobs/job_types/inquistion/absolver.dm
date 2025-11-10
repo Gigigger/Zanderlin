@@ -15,6 +15,7 @@
 	min_pq = 3 // Low potential for grief. A pacifist by trade. Also needs to know wtf a PSYDON is.
 	give_bank_account = 15
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
+	antag_role = /datum/antagonist/purishep
 
 	traits = list(
 		TRAIT_NOPAINSTUN,

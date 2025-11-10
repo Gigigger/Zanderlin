@@ -249,5 +249,86 @@
                 "sound": "The absolver now has the inquisitor's combat music."
             }
         ]
+    },
+    "2025-11-10": {
+        "Sockssq": [
+            {
+                "rscadd": "horse tail for hollowkins"
+            },
+            {
+                "rscadd": "skunk tail for hollowkins"
+            },
+            {
+                "rscadd": "cow tail for hollowkins"
+            },
+            {
+                "rscadd": "deer tail for hollowkins"
+            },
+            {
+                "bugfix": "clippings in rabbits tail and wag animation"
+            },
+            {
+                "bugfix": "clippings in bat long and bat short tail"
+            },
+            {
+                "bugfix": "clippings in bat long tail and bat short tail wag animation"
+            },
+            {
+                "bugfix": "clippings in fox 2 tail"
+            }
+        ],
+        "Draggeru": [
+            {
+                "map": "Updated the Old Church in Vanderlin (the map)"
+            },
+            {
+                "map": "added small trinkets to the keep and the inn"
+            }
+        ],
+        "KevinfromHP": [
+            {
+                "rscadd": "New Special roll: The Glutton. Monarch only... and their family."
+            },
+            {
+                "bugfix": "random teacup stuff"
+            }
+        ],
+        "Bloo4420": [
+            {
+                "image": "Added green brazier"
+            }
+        ],
+        "Arkatos": [
+            {
+                "rscadd": "Added a new communal triumph buy - Exotic Tastes."
+            }
+        ],
+        "Somniworld": [
+            {
+                "rscadd": "Borrowed time now gets it's own spell icon, yay."
+            }
+        ],
+        "YellowHarlequin": [
+            {
+                "rscadd": "5 new facial hairs, 3 new hairs"
+            },
+            {
+                "rscadd": "Rakshari eye sprites"
+            },
+            {
+                "bugfix": "Eyebrows not being colorable"
+            },
+            {
+                "image": "Added dmis for Triton and Rakshari hairs"
+            },
+            {
+                "spellcheck": "Changed typo of \\\"browsz\\\" to \\\"brows\\\""
+            }
+        ],
+        "Rannoooo": [
+            {
+                "rscadd": "Brings back the old forest guard subclass Forest Brawler with some slight tweaks to encourage aggression."
+            }
+        ]
     }
 }

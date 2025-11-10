@@ -60,7 +60,7 @@
 "aj" = (
 /obj/structure/table/wood/fancy,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/glass/bottle/glazed_teapot/tea,
+/obj/item/reagent_containers/glass/carafe/teapot/tea,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/ship)
 "al" = (
@@ -4486,7 +4486,7 @@
 /obj/structure/table/wood/fancy,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/glass/bottle/glazed_teacup{
+/obj/item/reagent_containers/glass/cup/teacup/fancy{
 	pixel_x = 5;
 	pixel_y = 2
 	},
