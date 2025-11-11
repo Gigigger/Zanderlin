@@ -54,7 +54,7 @@
 					choice = /obj/item/flashlight/flare/torch/lantern/psycenser
 			to_chat(user, span_info("I have chosen the relic, may HE guide my hand."))
 			var/obj/structure/closet/crate/chest/inqreliquary/realchest = new /obj/structure/closet/crate/chest/inqreliquary(get_turf(src))
-			realchest.PopulateContents()
+			realchest.populate_contents()
 			choice = new choice(realchest)
 			qdel(src)
 

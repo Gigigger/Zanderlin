@@ -330,5 +330,32 @@
                 "rscadd": "Brings back the old forest guard subclass Forest Brawler with some slight tweaks to encourage aggression."
             }
         ]
+    },
+    "2025-11-11": {
+        "Sivra": [
+            {
+                "balance": "Adds aggressive and higher grab check to harpy flight ability."
+            }
+        ],
+        "snowyseshi": [
+            {
+                "rscadd": "Added inquisition antag datum to inquisition"
+            }
+        ],
+        "NotDeirun": [
+            {
+                "bugfix": "Fixes cooked apple griddle cakes and raw poison berry/raisin griddle cakes being uncraftable"
+            }
+        ],
+        "Somniworld": [
+            {
+                "rscadd": "New helmet for Baothan paladins, sprite by me."
+            }
+        ],
+        "TheMrGlasses": [
+            {
+                "balance": "Adds more traits to increase briar survivability on certain Dendor paths"
+            }
+        ]
     }
 }

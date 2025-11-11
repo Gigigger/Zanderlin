@@ -266,7 +266,7 @@
 	icon_state = "osatchel"
 	item_state = "osatchel"
 
-/obj/item/storage/backpack/satchel/mule/PopulateContents()
+/obj/item/storage/backpack/satchel/mule/populate_contents()
 	for(var/i in 1 to 3)
 		switch(rand(1,4))
 			if(1)
