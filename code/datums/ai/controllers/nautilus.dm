@@ -13,7 +13,7 @@
 
 		/datum/ai_planning_subtree/no_target_hide,
 	)
-	idle_behavior = /datum/idle_behavior/nothing
+	idle_behavior = /datum/idle_behavior/idle_hide
 
 
 /datum/ai_planning_subtree/simple_find_target/nautilus

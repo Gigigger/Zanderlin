@@ -22,9 +22,6 @@
 
 	health = 70
 	maxHealth = 70
-	food_type = list(/obj/item/reagent_containers/food/snacks,
-					/obj/item/bodypart,
-					/obj/item/organ)
 
 	base_intents = list(/datum/intent/simple/bite)
 	attack_sound = 'sound/combat/wooshes/punch/punchwoosh (2).ogg'
@@ -54,12 +51,9 @@
 
 	ai_controller = /datum/ai_controller/trogfish
 
-	food_type = list(
-		/obj/item/reagent_containers/food/snacks/cheddarslice,
-		/obj/item/reagent_containers/food/snacks/cheese_wedge,
-		/obj/item/reagent_containers/food/snacks/cheddar,
-		/obj/item/reagent_containers/food/snacks/cheese,
-	)
+	food_type = list(/obj/item/reagent_containers/food/snacks,
+					/obj/item/bodypart,
+					/obj/item/organ)
 	tame_chance = 25
 	bonus_tame_chance = 15
 

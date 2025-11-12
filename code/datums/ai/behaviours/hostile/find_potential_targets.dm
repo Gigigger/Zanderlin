@@ -172,7 +172,6 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 /datum/ai_behavior/find_potential_targets/troll
 	vision_range = 7
 
-
 /datum/ai_behavior/find_potential_targets/ambush/finish_action(datum/ai_controller/controller, succeeded, ...)
 	. = ..()
 	if (succeeded)
@@ -181,8 +180,11 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 			var/mob/living/simple_animal/mob = controller.pawn
 			mob.ambush()
 
+/datum/ai_behavior/find_potential_targets/ambush/hermitcrab
+	vision_range = 0
+
 /datum/ai_behavior/find_potential_targets/ambush/mimic
 	vision_range = 1
 
 /datum/ai_behavior/find_potential_targets/ambush/nautilus
-	vision_range = 6
+	vision_range = 4
