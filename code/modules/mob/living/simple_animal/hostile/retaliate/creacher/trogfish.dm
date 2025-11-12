@@ -114,7 +114,6 @@
 			if(iswallturf(T))
 				T.take_damage(1500, BURN, "acid", 0) // there's no acid processing for turfs so this is what i'm doin for now
 
-		//explosion(epicenter, 0, 2, 3, flash_range = 0, flame_range = 0, hotspot_range = 0, smoke = TRUE)
 		var/datum/reagents/R = new(100, NO_REACT)
 		R.add_reagent(burst_liquid, 80)
 		chem_splash(epicenter, burst_range, list(R, reagents), threatscale = src.threat_scale)

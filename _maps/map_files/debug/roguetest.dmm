@@ -83,21 +83,6 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
-"ar" = (
-/obj/structure/lootable_structure/grain_barrel{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/structure/lootable_structure/powder_sack{
-	pixel_y = -6;
-	pixel_x = -10;
-	layer = 3.2
-	},
-/obj/structure/lootable_structure/mining_cache{
-	pixel_x = 3
-	},
-/turf/open/floor/grass/yel,
-/area/rogue/outdoors)
 "as" = (
 /turf/closed/basic,
 /area)
@@ -110,10 +95,6 @@
 	},
 /turf/open/floor/cobblerock,
 /area/rogue/outdoors/mountains/decap)
-"av" = (
-/obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/grass/yel,
-/area/rogue/outdoors)
 "aw" = (
 /obj/structure/hotspring,
 /turf/open/floor/cobblerock,
@@ -181,6 +162,7 @@
 /obj/item/clothing/armor/chainmail/hauberk,
 /obj/item/clothing/armor/chainmail/hauberk,
 /obj/item/clothing/armor/chainmail/hauberk,
+/obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "aD" = (
@@ -248,6 +230,7 @@
 	},
 /obj/item/clothing/head/helmet/heavy/crusader,
 /obj/item/clothing/head/helmet/heavy/crusader/t,
+/obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "aL" = (
@@ -270,7 +253,7 @@
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "aP" = (
-/obj/machinery/light/fueled/firebowl,
+/obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "aQ" = (
@@ -301,11 +284,23 @@
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "aT" = (
+/obj/structure/lootable_structure/grain_barrel{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/structure/lootable_structure/powder_sack{
+	pixel_y = -6;
+	pixel_x = -10;
+	layer = 3.2
+	},
+/obj/structure/lootable_structure/mining_cache{
+	pixel_x = 3
+	},
 /obj/structure/lootable_structure/fish_barrel{
 	pixel_x = 11;
 	layer = 3.0
 	},
-/turf/closed/mineral/bedrock,
+/turf/open/floor/grass/yel,
 /area/rogue/outdoors)
 "aU" = (
 /turf/open/floor/cobblerock/alt,
@@ -391,17 +386,6 @@
 /obj/item/clothing/pants/tights,
 /turf/open/floor/carpet,
 /area/rogue/indoors)
-"bf" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/turf/open/floor/carpet,
-/area/rogue/indoors)
 "bg" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -421,6 +405,7 @@
 /obj/item/clothing/shoes/boots,
 /obj/item/clothing/shoes/boots,
 /obj/item/clothing/shoes/boots,
+/obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet,
 /area/rogue/indoors)
 "bi" = (
@@ -748,7 +733,6 @@
 /obj/item/weapon/sword/long/greatsword,
 /obj/item/weapon/sword/long/greatsword,
 /obj/item/weapon/sword/long/greatsword,
-/obj/item/key/lord,
 /turf/open/floor/cobble,
 /area/rogue/indoors)
 "bX" = (
@@ -758,7 +742,6 @@
 	},
 /obj/item/weapon/flail/sflail,
 /obj/item/weapon/flail/sflail,
-/obj/item/key/lord,
 /turf/open/floor/cobble,
 /area/rogue/indoors)
 "bY" = (
@@ -992,16 +975,6 @@
 /area/rogue/outdoors/mountains/decap)
 "cM" = (
 /obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/cobble,
-/area/rogue/indoors)
-"cN" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/weapon/polearm/eaglebeak/lucerne,
-/obj/item/weapon/polearm/eaglebeak/lucerne,
-/obj/item/weapon/polearm/eaglebeak/lucerne,
 /turf/open/floor/cobble,
 /area/rogue/indoors)
 "cO" = (
@@ -2483,6 +2456,14 @@
 	},
 /turf/open/floor/dirt,
 /area/rogue/outdoors)
+"Am" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/machinery/light/fueled/wallfire/candle,
+/turf/open/floor/carpet,
+/area/rogue/indoors)
 "An" = (
 /obj/structure/hotspring/border/six,
 /turf/open/floor/cobblerock,
@@ -2856,6 +2837,12 @@
 /obj/structure/carpet/green,
 /turf/open/floor/blocks,
 /area/rogue/indoors/town/manor)
+"FW" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/carpet,
+/area/rogue/indoors)
 "FX" = (
 /obj/structure/hotspring/border/thirteen,
 /turf/open/floor/cobblerock,
@@ -3099,6 +3086,11 @@
 	},
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors)
+"Ku" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/grass/yel,
+/area/rogue/outdoors)
 "Ky" = (
 /obj/structure/stairs/d{
 	dir = 8
@@ -3252,6 +3244,18 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
+/area/rogue/indoors)
+"Oj" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/obj/machinery/light/fueled/wallfire/candle/l,
+/turf/open/floor/carpet,
 /area/rogue/indoors)
 "OV" = (
 /obj/machinery/light/fueled/wallfire/candle{
@@ -3503,6 +3507,16 @@
 /obj/structure/roguetent/preopen,
 /turf/open/floor/dirt,
 /area/rogue/outdoors/mountains/decap)
+"TW" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/weapon/polearm/eaglebeak/lucerne,
+/obj/item/weapon/polearm/eaglebeak/lucerne,
+/obj/item/weapon/polearm/eaglebeak/lucerne,
+/turf/closed/wall/mineral/stone,
+/area/rogue/indoors)
 "Ua" = (
 /turf/open/water/river{
 	dir = 4
@@ -72582,18 +72596,18 @@ uF
 uF
 wN
 XY
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
 Uv
 Uv
 Uv
@@ -72839,17 +72853,17 @@ uF
 wN
 wN
 XY
-Uv
-Uv
-Uv
-Uv
-Uv
 ax
+am
+am
+cM
+am
 ax
-ax
-ax
-ax
-ax
+bP
+bS
+bS
+bS
+TW
 ax
 Uv
 Uv
@@ -73097,14 +73111,14 @@ wN
 sr
 XY
 ax
-ax
-ax
-ax
-ax
-ax
-bt
 am
-cN
+zZ
+bU
+am
+am
+am
+am
+am
 am
 bW
 ax
@@ -73356,10 +73370,10 @@ XY
 ax
 am
 am
-cM
+lV
 am
 ax
-bu
+bt
 am
 bK
 am
@@ -73611,12 +73625,12 @@ ax
 ax
 ax
 ax
-am
-zZ
-am
-am
-am
-am
+ax
+ax
+ax
+ax
+ax
+bu
 am
 bL
 am
@@ -73862,21 +73876,21 @@ oQ
 Da
 XY
 ax
-aP
+aD
 aH
 aK
 aN
 aR
-ax
-am
-am
-lV
-am
+aW
+ba
+Oj
+bi
+bl
 ax
 bw
 am
 bM
-bU
+am
 ca
 ax
 Uv
@@ -74124,16 +74138,16 @@ aI
 aI
 aI
 aI
-ax
-ax
-ax
-ax
-ax
+aI
+aI
+aI
+aI
+aI
 ax
 bx
 am
 bN
-bU
+am
 cb
 ax
 Uv
@@ -74376,16 +74390,16 @@ oQ
 Da
 XY
 ax
-aD
+Am
 aI
 aI
 aI
 aI
-aW
-ba
-bf
-bi
-bl
+aI
+aI
+aI
+aI
+aI
 ax
 by
 am
@@ -74639,10 +74653,10 @@ aD
 aD
 aI
 aI
+aD
+aD
 aI
-aI
-aI
-aI
+FW
 ax
 bz
 am
@@ -74896,8 +74910,8 @@ aD
 aD
 aI
 aI
-aI
-aI
+aD
+aD
 aI
 aI
 ax
@@ -75140,7 +75154,7 @@ XY
 XY
 XY
 oQ
-XY
+oQ
 oQ
 XY
 XY
@@ -75152,11 +75166,11 @@ aI
 aD
 aD
 aI
-aD
-aD
-aD
-aD
-aD
+aI
+aX
+bj
+aI
+aI
 ax
 bB
 am
@@ -75393,7 +75407,7 @@ Uo
 at
 at
 at
-at
+QN
 QN
 jC
 QN
@@ -75409,11 +75423,11 @@ aI
 aD
 aD
 aI
-aX
+aI
 bb
 bg
-bj
-aD
+aI
+FW
 ax
 bC
 am
@@ -75659,7 +75673,7 @@ qc
 jC
 Qi
 QN
-ar
+QN
 ax
 aC
 aI
@@ -76176,7 +76190,7 @@ QN
 QN
 ax
 aE
-aI
+aP
 aI
 aP
 aS
@@ -76692,8 +76706,8 @@ QN
 QN
 yr
 Wr
-Qi
-av
+Ku
+QN
 qc
 QN
 ky
