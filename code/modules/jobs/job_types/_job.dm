@@ -11,7 +11,8 @@
 	var/datum/job/parent_job
 	/// When joining the round, this text will be shown to the player.
 	var/tutorial = null
-
+	/// Id for the Job.
+	var/id
 	//Bitflags for the job
 	var/flag = NONE
 	var/department_flag = NONE
@@ -453,7 +454,14 @@
 
 /mob/living/carbon/human/dress_up_as_job(datum/job/equipping, visual_only = FALSE)
 	dna.species.pre_equip_species_outfit(equipping, src, visual_only)
-	var/datum/outfit/chosen_outfit = (gender == FEMALE && equipping.outfit_female) ? equipping.outfit_female : equipping.outfit
+
+	var/datum/outfit/chosen_outfit
+	var/datum/outfit/outfit_check = (gender == FEMALE && equipping.outfit_female) ? equipping.outfit_female : equipping.outfit
+	if(ispath(outfit_check, /datum/outfit))
+		chosen_outfit = outfit_check
+	else
+		chosen_outfit = GLOB.custom_outfits[outfit_check]
+
 	equipOutfit(chosen_outfit, visual_only)
 
 //If the configuration option is set to require players to be logged as old enough to play certain jobs, then this proc checks that they are, otherwise it just returns 1
@@ -576,3 +584,193 @@
 
 /datum/job/proc/get_total_positions(latejoin)
 	return latejoin ? total_positions : spawn_positions
+
+/datum/job/proc/get_json_data()
+	var/list/data = list()
+
+	data["job_type"] = type
+	data["title"] = title
+	data["f_title"] = f_title
+	data["enabled"] = enabled
+	data["spawn_positions"] = spawn_positions
+	data["cmode_music"] = cmode_music
+	data["antag_role"] = antag_role
+	data["faction"] = faction
+	data["total_positions"] = total_positions
+	data["tutorial"] = tutorial
+	data["selection_color"] = selection_color
+	data["minimal_player_age"] = minimal_player_age
+	data["exp_requirements"] = exp_requirements
+	data["exp_type"] = exp_type
+	data["paycheck"] = paycheck
+	data["paycheck_department"] = paycheck_department
+	data["display_order"] = display_order
+	data["job_flags"] = job_flags
+	data["allowed_sexes"] = allowed_sexes
+	data["allowed_races"] = allowed_races
+	data["min_pq"] = min_pq
+	data["give_bank_account"] = give_bank_account
+	data["can_random"] = can_random
+	data["always_show_on_latechoices"] = always_show_on_latechoices
+	data["same_job_respawn_delay"] = same_job_respawn_delay
+	data["job_reopens_slots_on_death"] = job_reopens_slots_on_death
+	data["is_foreigner"] = is_foreigner
+	data["is_recognized"] = is_recognized
+	data["shows_in_list"] = shows_in_list
+	data["can_have_apprentices"] = can_have_apprentices
+	data["max_apprentices"] = max_apprentices
+	data["apprentice_name"] = apprentice_name
+	data["magic_user"] = magic_user
+	data["noble_income"] = noble_income
+	data["job_bitflag"] = job_bitflag
+	data["id"] = id
+
+	if(length(skills))
+		var/list/skill_map = list()
+		for(var/skill_path in skills)
+			var/level = skills[skill_path]
+			skill_map[skill_path] = level
+		data["skills"] = skill_map
+	if(length(trainable_skills))
+		data["trainable_skills"] = trainable_skills.Copy()
+	if(length(advclass_cat_rolls))
+		data["advclass_cat_rolls"] = advclass_cat_rolls.Copy()
+	if(length(mind_traits))
+		data["mind_traits"] = mind_traits.Copy()
+	if(length(traits))
+		data["traits"] = traits.Copy()
+	if(length(languages))
+		data["languages"] = languages.Copy()
+	if(length(jobstats))
+		data["jobstats"] = jobstats.Copy()
+	if(length(spells))
+		data["spells"] = spells.Copy()
+	if(length(allowed_ages))
+		data["allowed_ages"] = allowed_ages.Copy()
+	if(length(allowed_patrons))
+		data["allowed_patrons"] = allowed_patrons.Copy()
+
+
+	if(outfit)
+		var/outfit_key = outfit
+		var/list/outfit_data
+
+		// If this is a custom outfit, include its full JSON
+		if(istext(outfit_key) && (outfit_key in GLOB.custom_outfits))
+			var/datum/outfit/O = GLOB.custom_outfits[outfit_key]
+			if(O)
+				outfit_data = O.get_json_data()
+
+		data["outfit"] = list(
+			"id" = outfit_key,
+			"custom_outfit_data" = outfit_data
+		)
+
+
+
+	return data
+
+/datum/job/proc/load_from_json(list/data, mob/admin)
+	if(!islist(data))
+		return
+
+	title = data["title"]
+	f_title = data["f_title"]
+	enabled = data["enabled"]
+	spawn_positions = data["spawn_positions"]
+	cmode_music = data["cmode_music"]
+	outfit = data["outfit"]
+	antag_role = text2path(data["antag_role"])
+	faction = data["faction"]
+	total_positions = data["total_positions"]
+	tutorial = data["tutorial"]
+	selection_color = data["selection_color"]
+	minimal_player_age = data["minimal_player_age"]
+	exp_requirements = data["exp_requirements"]
+	exp_type = data["exp_type"]
+	paycheck = data["paycheck"]
+	paycheck_department = data["paycheck_department"]
+	display_order = data["display_order"]
+	job_flags = data["job_flags"]
+	allowed_sexes = data["allowed_sexes"]
+	allowed_races = data["allowed_races"]
+	min_pq = data["min_pq"]
+	give_bank_account = data["give_bank_account"]
+	can_random = data["can_random"]
+	always_show_on_latechoices = data["always_show_on_latechoices"]
+	same_job_respawn_delay = data["same_job_respawn_delay"]
+	job_reopens_slots_on_death = data["job_reopens_slots_on_death"]
+	is_foreigner = data["is_foreigner"]
+	is_recognized = data["is_recognized"]
+	shows_in_list = data["shows_in_list"]
+	can_have_apprentices = data["can_have_apprentices"]
+	max_apprentices = data["max_apprentices"]
+	apprentice_name = data["apprentice_name"]
+	magic_user = data["magic_user"]
+	noble_income = data["noble_income"]
+	job_bitflag = data["job_bitflag"]
+	id = data["id"]
+
+
+	if(data["skills"])
+		skills = list()
+		for(var/skill_path_text in data["skills"])
+			var/skill_path = text2path(skill_path_text)
+			if(skill_path)
+				var/level = data["skills"][skill_path_text]
+				skills[skill_path] = level
+	if(data["allowed_ages"])
+		var/list/tmp = data["allowed_ages"]
+		allowed_ages = tmp.Copy()
+	if(data["allowed_patrons"])
+		allowed_patrons = list()
+		for(var/allowed_patrons_text in data["allowed_patrons"])
+			var/allowed_patrons_path = text2path(allowed_patrons_text)
+			if(allowed_patrons_path) // valid path
+				allowed_patrons += allowed_patrons_path
+	if(data["trainable_skills"])
+		var/list/tmp = data["trainable_skills"]
+		trainable_skills = tmp.Copy()
+	if(data["advclass_cat_rolls"])
+		var/list/tmp = data["advclass_cat_rolls"]
+		advclass_cat_rolls = tmp.Copy()
+	if(data["mind_traits"])
+		var/list/tmp = data["mind_traits"]
+		mind_traits = tmp.Copy()
+	if(data["traits"])
+		var/list/tmp = data["traits"]
+		traits = tmp.Copy()
+	if(data["languages"])
+		var/list/tmp = data["languages"]
+		languages = tmp.Copy()
+	if(data["jobstats"])
+		var/list/tmp = data["jobstats"]
+		jobstats = tmp.Copy()
+	if(data["spells"])
+		var/list/tmp = data["spells"]
+		spells = tmp.Copy()
+
+
+	if(data["outfit"])
+		var/list/outfit_entry = data["outfit"]
+		if(islist(outfit_entry))
+			var/outfit_id = outfit_entry["id"]
+			var/custom_outfit_data = outfit_entry["custom_outfit_data"]
+
+			if(custom_outfit_data)
+				var/datum/outfit/O = new
+				O.load_from(custom_outfit_data)
+				if(O.id in GLOB.custom_outfits)
+					outfit = O.id
+					return
+				GLOB.custom_outfits[O.id] = O
+				outfit = O.id
+				message_admins("[key_name(usr)]from the job [title] it was loaded a custom outfit: [O.name]")
+				to_chat(admin, span_notice("Successfully loaded outfit [O.name]."))
+			else
+				outfit = outfit_id
+		else
+			outfit = outfit_entry
+
+
+	return TRUE
