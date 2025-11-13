@@ -179,7 +179,7 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 			mob.ambush()
 
 /datum/ai_behavior/find_potential_targets/ambush/hermitcrab
-	vision_range = 0
+	vision_range = 1
 
 /datum/ai_behavior/find_potential_targets/ambush/mimic
 	vision_range = 1

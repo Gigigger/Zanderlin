@@ -1,3 +1,7 @@
+/datum/ai_planning_subtree/sneak
+	var/light_threshold = SHADOW_SPECIES_LIGHT_THRESHOLD
+	var/datum/ai_behavior/basic_sneak/sneak_behavior = /datum/ai_behavior/basic_sneak
+
 /datum/ai_planning_subtree/sneak/SelectBehaviors(datum/ai_controller/controller, delta_time)
 	if(controller.blackboard[BB_SNEAKING] || (world.time < controller.blackboard[BB_SNEAK_COOLDOWN]))
 		return
@@ -5,8 +9,8 @@
 	var/mob/living/simple_animal/basic_mob = controller.pawn
 	var/turf/current_turf = get_turf(basic_mob)
 	var/light_amount = current_turf.get_lumcount()
-	if(light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD)
-		controller.queue_behavior(/datum/ai_behavior/basic_sneak)
+	if(light_amount < light_threshold)
+		controller.queue_behavior(sneak_behavior)
 
 /datum/ai_behavior/basic_sneak
 	action_cooldown = 3 SECONDS  // How often to check for sneak opportunities
@@ -82,3 +86,8 @@
 	controller.set_blackboard_key(sneaking_key, FALSE)
 	basic_mob.alpha = initial(basic_mob.alpha)
 	controller.set_blackboard_key(sneak_cooldown_key, world.time + sneak_cooldown_time)
+
+/datum/ai_behavior/basic_sneak/hermitcrab
+	light_threshold = 1
+	sneak_cooldown_time = 15 SECONDS
+	sneak_alpha = 60

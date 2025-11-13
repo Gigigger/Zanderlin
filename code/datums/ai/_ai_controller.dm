@@ -181,10 +181,7 @@ have ways of interacting with a specific atom and control it. They posses a blac
 	if(nextmove && living_pawn.next_move > world.time)
 		return FALSE
 
-	if(living_pawn.body_position == LYING_DOWN)
-		living_pawn.aimheight_change(rand(1,9))
-	else
-		living_pawn.aimheight_change(rand(10,19))
+	living_pawn.select_zone(zone_simpmob_target(living_pawn))
 
 	if(isnull(combat_mode))
 		SEND_SIGNAL(living_pawn, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, final_target)

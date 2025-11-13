@@ -28,6 +28,7 @@
 	attack_sound = 'sound/combat/wooshes/punch/punchwoosh (2).ogg'
 	melee_damage_lower = 12
 	melee_damage_upper = 14
+	accurate = TRUE
 	dextrous = TRUE
 	held_items = list(null, null)
 	can_be_held = TRUE
@@ -90,6 +91,7 @@
 	update_appearance(UPDATE_OVERLAYS)
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_CHUNKYFINGERS, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_TINY, TRAIT_GENERIC)
 	transform = transform.Scale(0.75, 0.75)
 	update_transform()
 	RegisterSignal(src, COMSIG_LIVING_MOB_HOLDER_DEPOSIT, PROC_REF(mob_holder_deposit))
@@ -108,9 +110,10 @@
 	m_holder.sellprice = 15
 	m_holder.embedding = list(
 		"embed_chance" = 100,
-		"embedded_pain_chance" = 30,
+		"embedded_pain_chance" = 50,
+		"embedded_impact_pain_multiplier" = 0,
 		"embedded_pain_multiplier" = 6, //ouch!
-		"embedded_unsafe_removal_time" = 3 SECONDS,
+		"embedded_unsafe_removal_time" = 1 SECONDS,
 		"embedded_unsafe_removal_pain_multiplier" = 12, // iron grip
 		"embedded_fall_chance" = 0,
 		"embedded_bloodloss"= 0,
@@ -126,20 +129,6 @@
 		return
 	if(istype(ai_controller))
 		ai_controller.set_ai_status(ai_controller.get_expected_ai_status())
-
-/*
-/mob/living/simple_animal/hostile/retaliate/hermitcrab/hide()
-	if(!hiding)
-		hiding = TRUE
-		density = FALSE
-		//icon_state = ""
-
-/mob/living/simple_animal/hostile/retaliate/hermitcrab/ambush()
-	if(hiding)
-		hiding = FALSE
-		density = TRUE
-		//icon_state = icon_living
-*/
 
 /mob/living/simple_animal/hostile/retaliate/hermitcrab/death(gibbed)
 	..()
@@ -157,17 +146,22 @@
 
 /mob/living/simple_animal/hostile/retaliate/hermitcrab/AttackingTarget(mob/living/passed_target)
 	. = ..()
-	if(.)
+	if(!(. && iscarbon(target)))
+		return
 	// note you can't latch if you're being held.
-		if(iscarbon(target) && isturf(loc) && !get_active_held_item())
-			var/mob/living/carbon/C = target
-			var/obj/item/bodypart/BP = C.get_bodypart(zone_selected)
-			var/obj/item/clothing/head/mob_holder/m_holder = new(get_turf(src), src)
-			if(BP && !BP.is_object_embedded(m_holder) && BP.add_embedded_object(m_holder, TRUE))
-				visible_message(span_danger("[src] latches onto [C]'s [zone_selected]!"))
-			else
-				// waste of processing power to make this for nothing, but this should only happen to things with godmode or pierce immunity
-				qdel(m_holder)
+	if(isturf(loc) && !get_active_held_item())
+		var/mob/living/carbon/C = target
+		var/obj/item/bodypart/BP = C.get_bodypart(zone_selected)
+		var/obj/item/clothing/head/mob_holder/m_holder = new(get_turf(src), src)
+		if(BP && !BP.is_object_embedded(m_holder) && BP.add_embedded_object(m_holder))
+			// ai effectively has a 90% chance to do this while a player has 10%. AI can't choose where to aim. A player can.
+			if(zone_selected == BODY_ZONE_PRECISE_GROIN && (ckey ^ prob(90)))
+				if(BP.try_crit(BCLASS_TWIST, 99999, src, zone_selected, crit_message = TRUE))
+					to_chat(C, span_userdanger("WHYYY!"))
+					C.Knockdown(5 SECONDS)
+		else
+			// waste of processing power to make this for nothing, but this should only happen to things with godmode or pierce immunity
+			qdel(m_holder)
 	return .
 
 /mob/living/simple_animal/hostile/retaliate/hermitcrab/simple_limb_hit(zone)

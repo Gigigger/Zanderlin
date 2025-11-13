@@ -62,6 +62,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	///LETTING SIMPLE ANIMALS ATTACK? WHAT COULD GO WRONG. Defaults to zero so Ian can still be cuddly.
 	var/melee_damage_lower = 0
 	var/melee_damage_upper = 0
+	///Does the simple mob always hit the body zone they're aiming for in melee?
+	var/accurate = FALSE
 	///how much damage this simple animal does to objects, if any.
 	var/obj_damage = 0
 	///How much armour they ignore, as a flat reduction from the targets armour value.
