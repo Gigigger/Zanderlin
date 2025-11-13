@@ -80,6 +80,7 @@
 	AddComponent(/datum/component/obeys_commands, pet_commands) // here due to signal overridings from pet commands
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
+	ADD_TRAIT(src, TRAIT_GOOD_SWIM, TRAIT_GENERIC)
 
 	var/datum/action/cooldown/mob_cooldown/trogfish_burst/burst = new()
 	burst.Grant(src)

@@ -559,6 +559,7 @@
 		for(var/hand in living.hud_used?.hand_slots)
 			var/atom/movable/screen/inventory/hand/H = living.hud_used.hand_slots[hand]
 			H?.update_appearance(UPDATE_OVERLAYS)
+	return TRUE
 
 /mob/living/proc/is_limb_covered(obj/item/bodypart/limb)
 	if(!limb)

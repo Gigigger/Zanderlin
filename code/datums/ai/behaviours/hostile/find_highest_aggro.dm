@@ -125,8 +125,6 @@
 
 /datum/ai_behavior/find_aggro_targets/proc/failed_to_find_anyone(datum/ai_controller/controller, target_key, targeting_strategy_key, hiding_location_key)
 	var/aggro_range = controller.blackboard[BB_AGGRO_RANGE] || 9
-	// takes the larger between our range() input and our implicit hearers() input (world.view)
-	aggro_range = max(aggro_range, ROUND_UP(max(getviewsize(world.view)) / 2))
 	// Set up proximity field to await someone interesting to come along
 	var/datum/proximity_monitor/advanced/ai_aggro_tracking/detection_field = new(
 		controller.pawn,

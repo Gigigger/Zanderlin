@@ -41,6 +41,7 @@
 	sellprice = L.sellprice
 	name = L.name
 	desc = L.desc
+	SEND_SIGNAL(held_mob, COMSIG_LIVING_MOB_HOLDER_DEPOSIT, src)
 	return TRUE
 
 /obj/item/clothing/head/mob_holder/attackby(obj/item/I, mob/living/user, params)
@@ -63,6 +64,7 @@
 	held_mob?.reset_perspective()
 	held_mob?.setDir(SOUTH)
 	held_mob?.visible_message("<span class='warning'>[held_mob] uncurls!</span>")
+	SEND_SIGNAL(held_mob, COMSIG_LIVING_MOB_HOLDER_RELEASE, src)
 	held_mob = null
 	if((del_on_release || !held_mob) && !destroying)
 		qdel(src)

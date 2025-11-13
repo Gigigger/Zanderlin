@@ -3086,7 +3086,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 8
 	},
-/turf/open/transparent/openspace,
+/turf/open/floor/grass/yel,
 /area/rogue/outdoors)
 "Ky" = (
 /obj/structure/stairs/d{
@@ -3244,10 +3244,6 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors)
-"Oi" = (
-/mob/living/simple_animal/hostile/retaliate/trogfish,
-/turf/open/floor/cobblerock,
-/area/rogue/under/town/basement)
 "Ow" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -3677,6 +3673,10 @@
 /obj/structure/hotspring/border/twelve,
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors)
+"XM" = (
+/mob/living/simple_animal/hostile/retaliate/hermitcrab,
+/turf/open/floor/cobblerock,
+/area/rogue/under/town/basement)
 "XT" = (
 /obj/structure/bridge_stakes{
 	dir = 4
@@ -5757,7 +5757,7 @@ oj
 oj
 oj
 oj
-oj
+XM
 oj
 oj
 oj
@@ -6015,7 +6015,7 @@ oj
 oj
 oj
 oj
-Oi
+oj
 oj
 oj
 oj

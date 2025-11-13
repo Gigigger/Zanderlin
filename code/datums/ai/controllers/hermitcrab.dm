@@ -13,7 +13,9 @@
 		/datum/ai_planning_subtree/flee_target,
 
 		/datum/ai_planning_subtree/simple_find_target/hermitcrab,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/sneak,
+		/datum/ai_planning_subtree/no_target_hide,
 	)
 
 	idle_behavior = /datum/idle_behavior/idle_hide

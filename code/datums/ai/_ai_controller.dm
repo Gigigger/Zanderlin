@@ -312,10 +312,13 @@ have ways of interacting with a specific atom and control it. They posses a blac
 
 /**
  * Gets the AI status we expect the AI controller to be on at this current moment.
- * Returns AI_STATUS_OFF if it's inhabited by a Client and shouldn't be, if it's dead and cannot act while dead, or is on a z level without clients.
+ * Returns AI_STATUS_OFF if the game is over, it's inhabited by a Client and shouldn't be, if it's dead and cannot act while dead, or is on a z level without clients.
  * Returns AI_STATUS_ON otherwise.
  */
 /datum/ai_controller/proc/get_expected_ai_status()
+
+	if(SSticker.current_state == GAME_STATE_FINISHED)
+		return AI_STATUS_OFF
 
 	if (!ismob(pawn))
 		return AI_STATUS_ON

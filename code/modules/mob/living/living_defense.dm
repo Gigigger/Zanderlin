@@ -234,7 +234,7 @@
 		if(user.l_grab)
 			user.l_grab.grab_state = GRAB_AGGRESSIVE
 			user.l_grab.update_grab_intents()
-	if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+	if(HAS_TRAIT(user, TRAIT_NOHANDGRABS))
 		var/list/ct = user.contents
 		for(var/i = length(ct), i > 0, i--)
 			if(istype(ct[i], /obj/item/grabbing))
@@ -252,7 +252,7 @@
 			stop_pulling()
 		user.set_pull_offsets(src, user.grab_state)
 	log_combat(user, src, "grabbed", addition="aggressive grab[add_log]")
-	return 1
+	return TRUE
 
 /turf/proc/grabbedintents(mob/living/user)
 	//RTD up and down

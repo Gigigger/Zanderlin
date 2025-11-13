@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/nautilus
 	icon = 'icons/roguetown/mob/monster/nautilus.dmi'
 	name = "nautilus"
-	desc = ""
+	desc = "A massive mollusk with razor sharp tentacles."
 	icon_state = "nautilus"
 	icon_living = "nautilus"
 	icon_dead = "nautilus_dead"
@@ -39,7 +39,7 @@
 					/obj/item/organ,
 					/obj/item/bodypart)
 
-	base_intents = list(/datum/intent/simple/nautilus_lash)
+	base_intents = list(/datum/intent/simple/nautilus_lash, /datum/intent/simple/headbutt)
 	attack_sound = list('sound/combat/wooshes/whip_crack1.ogg','sound/combat/wooshes/whip_crack2.ogg','sound/combat/wooshes/whip_crack3.ogg')
 	melee_damage_lower = 20
 	melee_damage_upper = 30
@@ -64,6 +64,7 @@
 	stat_attack = UNCONSCIOUS
 	remains_type = /obj/effect/decal/remains/nautilus
 	body_eater = TRUE
+	limb_destroyer = TRUE
 
 	ai_controller = /datum/ai_controller/nautilus
 	dendor_taming_chance = DENDOR_TAME_PROB_NONE
@@ -80,6 +81,7 @@
 	ADD_TRAIT(src, TRAIT_NOHANDGRABS, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STRONG_GRABBER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOTIGHTGRABMESSAGE, TRAIT_GENERIC)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/taunted(mob/user)
 	emote("aggro")
@@ -112,43 +114,40 @@
 
 	var/grappledAlready = FALSE
 	for(var/obj/item/grabbing/G in get_contents())
-		if(!iscarbon(G.grabbed))
-			continue
 		if(target == G.grabbed)
 			grappledAlready = TRUE
 
-		if(prob(70))
-			continue
 		var/mob/living/carbon/C = G.grabbed
+		if(!istype(C) || prob(50)) //50% chance we won't make shit worse
+			continue
+		if(G.grab_state < GRAB_AGGRESSIVE)
+			C.grippedby(src)
+			continue //anything past this point in the loop we're only gonna do if we have a good grip
 		if(C.body_position == STANDING_UP)
 			C.Knockdown(20)
-			visible_message(span_userdanger("[src] tackles [C] to the ground!"))
+			visible_message(span_danger("[src] tackles [C] to the ground!"), \
+				span_userdanger("[src] tackles me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
 		else
 			var/choke = /datum/intent/grab/choke
 			var/twist = /datum/intent/grab/twist
 			var/smash = /datum/intent/grab/smash
 
-			G.update_grab_intents()
 			var/list/grabIntents = G.possible_item_intents
 			grabIntents &= list(choke, twist, smash)
 			if(!length(grabIntents))
 				continue
 			if(grabIntents.Find(choke) && get_location_accessible(C, BODY_ZONE_PRECISE_NECK))
-				var/choke_damage = STASTR * 0.5 // less than the average choke
-				choke_damage *= 1.2
-				if(C.pulling == src && C.grab_state >= GRAB_AGGRESSIVE)
-					choke_damage *= 0.95
+				var/choke_damage = STASTR
 				C.adjustOxyLoss(choke_damage)
 				C.visible_message(span_danger("[src] [pick("chokes", "strangles")] [C][G.chokehold ? " with a chokehold" : ""]!"), \
 						span_userdanger("[src] [pick("chokes", "strangles")] me[G.chokehold ? " with a chokehold" : ""]!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
-			else if (pick(grabIntents) == twist)
-				G.twistlimb(src)
 			else
-				G.smashlimb(C, src, C.loc)
+				pick(grabIntents) == twist ? G.twistlimb(src) : G.smashlimb((get_turf(C) || C), src)
 
-	if(!grappledAlready && prob(30) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
-		visible_message(span_boldwarning("[src] wraps their tentacles around [L]!"))
-		L.Immobilize(10)
+	if(!grappledAlready && prob(40) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
+		visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
+			span_userdanger("[src] wraps their tentacles around me!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
+	return .
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/simple_limb_hit(zone)
 	if(!zone)
@@ -198,7 +197,7 @@
 	blade_class = BCLASS_LASHING
 	hitsound = "smallslash"
 	chargetime = 0
-	penfactor = 8
+	penfactor = 10
 	canparry = FALSE
 	item_damage_type = "slash"
 

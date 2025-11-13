@@ -90,6 +90,7 @@
 	AddComponent(/datum/component/ai_aggro_system)
 	AddElement(/datum/element/ai_flee_while_injured, 0.75, retreat_health)
 
+	ADD_TRAIT(src, TRAIT_GOOD_SWIM, TRAIT_GENERIC)
 	if(is_pack_alpha)
 		ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
 	else
