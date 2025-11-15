@@ -25,7 +25,7 @@
 "ad" = (
 /obj/effect/waterfall,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ae" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/reagent_containers/glass/bucket/pot{
@@ -242,7 +242,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "aK" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "vanderlin-forest_bog-forest2";
@@ -626,7 +626,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "bO" = (
 /obj/structure/chair/wood/alt/chair_noble/purple{
 	dir = 4
@@ -648,7 +648,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "bQ" = (
 /obj/structure/flora/pillar,
 /obj/structure/fluff/walldeco/church/line{
@@ -670,7 +670,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "bT" = (
 /obj/structure/fluff/walldeco/wallshield,
 /obj/structure/fluff/walldeco/bath/wallrope,
@@ -792,7 +792,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "cj" = (
 /obj/structure/carpet/blue,
 /turf/open/floor/abyss_tile/three{
@@ -823,7 +823,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "cm" = (
 /obj/structure/fluff/railing/stonehedge{
 	color = "#7D9BAE"
@@ -940,7 +940,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "cE" = (
 /obj/structure/flora/grass/herb/atropa,
 /turf/open/floor/grass,
@@ -1834,7 +1834,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "fi" = (
 /obj/machinery/light/fueled/firebowl/stumpb,
 /turf/open/floor/abyss_tile{
@@ -1858,7 +1858,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "fl" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie,
 /obj/structure/fluff/walldeco/bath/wallpipes/innie{
@@ -2036,7 +2036,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "fL" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -2156,7 +2156,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gc" = (
 /obj/machinery/light/fueled/wallfire/candle/blue,
 /turf/open/floor/abyss_tile/three{
@@ -2267,7 +2267,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gr" = (
 /obj/structure/chair/bench/couch/right/alt{
 	dir = 4
@@ -2292,7 +2292,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gu" = (
 /obj/structure/stairs/abyss{
 	color = "#7D9BAE"
@@ -2350,7 +2350,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gC" = (
 /obj/structure/fluff/walldeco/painting/castle{
 	pixel_x = 0;
@@ -2394,7 +2394,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gG" = (
 /turf/closed/mineral/bedrock/cold,
 /area/rogue/under/cavewet)
@@ -2486,7 +2486,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "gT" = (
 /obj/structure/meathook,
 /obj/effect/decal/cleanable/blood/gibs/up,
@@ -2590,11 +2590,6 @@
 	color = "#7D9BAE"
 	},
 /area/rogue/under/cavewet)
-"hg" = (
-/turf/open/floor/abyss_tile{
-	color = "#314C5D"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "hh" = (
 /obj/structure/flora/ocean_plants,
 /obj/effect/spawner/map_spawner/loot/potion_vitals,
@@ -2654,7 +2649,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "hp" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -2959,7 +2954,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ie" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3044,7 +3039,7 @@
 "ip" = (
 /obj/structure/fluff/psycross/psycrucifix/silver,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "iq" = (
 /mob/living/simple_animal/hostile/deepone{
 	faction = list("Hostile");
@@ -3060,7 +3055,7 @@
 "is" = (
 /obj/structure/flora/ocean_plants,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "it" = (
 /obj/structure/table/wood/crafted,
 /obj/item/reagent_containers/glass/cup/skull{
@@ -3108,7 +3103,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "iy" = (
 /obj/structure/stairs/stone/church{
 	dir = 1;
@@ -3117,7 +3112,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "iz" = (
 /obj/structure/carpet/blue,
 /obj/structure/fluff/walldeco/church/line,
@@ -3271,7 +3266,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "iV" = (
 /obj/structure/flora/pillar,
 /obj/structure/fluff/walldeco/church/line,
@@ -3589,7 +3584,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "jN" = (
 /obj/structure/fluff/railing/stonehedge{
 	color = "#7D9BAE";
@@ -4007,7 +4002,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "kX" = (
 /obj/structure/flora/pillar,
 /turf/open/floor/abyss_tile/three{
@@ -4045,7 +4040,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "lb" = (
 /obj/effect/decal/shadow_floor{
 	dir = 10
@@ -4066,7 +4061,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "le" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -4075,7 +4070,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "lf" = (
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
@@ -4157,7 +4152,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "lp" = (
 /obj/structure/table/wood/bar,
 /obj/item/reagent_containers/glass/cup/wooden,
@@ -4343,11 +4338,6 @@
 	color = "#547285"
 	},
 /area/rogue/under/cavewet)
-"lP" = (
-/turf/open/floor/abyss_tile/two{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "lQ" = (
 /obj/machinery/light/fueled/campfire/densefire,
 /turf/open/floor/abyss_tile/two{
@@ -4863,7 +4853,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "nh" = (
 /obj/machinery/light/fueled/wallfire/candle/blue{
 	pixel_y = -32
@@ -5045,7 +5035,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "nD" = (
 /mob/living/simple_animal/hostile/deepone{
 	faction = list("Hostile");
@@ -5140,7 +5130,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "nQ" = (
 /obj/structure/fluff/railing/stonehedge{
 	color = "#7D9BAE";
@@ -5299,7 +5289,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "on" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -5307,7 +5297,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "oo" = (
 /turf/closed/mineral/bedrock,
 /area/rogue)
@@ -5467,7 +5457,7 @@
 	name = "abyssal wall";
 	desc = "A Hard to destroy wall stands before you with the godly might of Abyssor coursing through it."
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "oO" = (
 /obj/structure/handcart,
 /turf/open/floor/ruinedwood/turned/darker,
@@ -5642,7 +5632,7 @@
 /area/rogue/under/cavewet)
 "pp" = (
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "pq" = (
 /obj/structure/fermentation_keg/whitewine{
 	pixel_x = -6;
@@ -5724,7 +5714,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "pB" = (
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
@@ -5784,7 +5774,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "pP" = (
 /obj/structure/flora/rock/water,
 /turf/open/water/ocean,
@@ -5852,7 +5842,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "pX" = (
 /obj/effect/decal/remains/bogbug,
 /turf/open/floor/abyss_tile/three{
@@ -5901,7 +5891,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "qd" = (
 /obj/structure/fluff/steamvent,
 /obj/structure/trap/spike{
@@ -5961,7 +5951,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "qj" = (
 /mob/living/simple_animal/hostile/deepone/arm{
 	faction = list("Hostile");
@@ -6219,7 +6209,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "qQ" = (
 /mob/living/simple_animal/hostile/retaliate/headless{
 	faction = list("Hostile")
@@ -6516,7 +6506,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "rO" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/concrete,
@@ -6575,7 +6565,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "sa" = (
 /obj/effect/decal/carpet{
 	pixel_x = 15;
@@ -6655,7 +6645,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "sm" = (
 /obj/structure/flora/starfish,
 /turf/open/water/ocean,
@@ -6864,12 +6854,6 @@
 	dir = 8
 	},
 /area/rogue/under/cavewet)
-"sR" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile{
-	color = "#7D9BAE"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "sS" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -6878,7 +6862,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "sT" = (
 /obj/structure/table/stone_small{
 	color = "#7D9BAE"
@@ -6949,7 +6933,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "te" = (
 /obj/structure/flora/pillar,
 /obj/structure/fluff/walldeco/church/line{
@@ -7076,7 +7060,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "tw" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
@@ -7184,7 +7168,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "tM" = (
 /obj/structure/fluff/testportal{
 	aportalloc = "Tower"
@@ -7301,7 +7285,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ue" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -7523,7 +7507,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "uL" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -7610,7 +7594,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "uY" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -7618,7 +7602,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "uZ" = (
 /obj/structure/closet/crate/drawer{
 	color = "#7D9BAE"
@@ -7643,12 +7627,6 @@
 	color = "#29404E"
 	},
 /area/rogue/under/cavewet)
-"vd" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile/three{
-	color = "#29404E"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "ve" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -7750,7 +7728,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "vu" = (
 /obj/structure/fluff/nest,
 /obj/item/gem/coral,
@@ -7822,12 +7800,6 @@
 /mob/living/simple_animal/hostile/retaliate/blood/weird,
 /turf/open/floor/tile/diamond/purple,
 /area/rogue/indoors/town/clocktower)
-"vG" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile{
-	color = "#314C5D"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "vH" = (
 /obj/item/rope,
 /turf/open/floor/ruinedwood/turned,
@@ -7872,7 +7844,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "vP" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
 /turf/open/floor/dirt,
@@ -7915,7 +7887,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "vW" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -7930,7 +7902,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "vZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -7995,7 +7967,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "wk" = (
 /obj/structure/flora/tree/evil,
 /turf/open/floor/dirt,
@@ -8098,7 +8070,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "wx" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -8107,7 +8079,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "wy" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -8287,11 +8259,6 @@
 /obj/structure/fluff/walldeco/vinez/red,
 /turf/closed/wall/mineral/craftstone,
 /area/rogue/outdoors/bog)
-"wU" = (
-/turf/open/floor/abyss_tile{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "wW" = (
 /turf/closed/wall/mineral/craftstone,
 /area/rogue/indoors/shelter/bog)
@@ -8359,7 +8326,7 @@
 /area/rogue/outdoors/bog)
 "xh" = (
 /turf/closed/wall/window/stained,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "xj" = (
 /obj/item/reagent_containers/food/snacks/fish/swordfish,
 /turf/open/floor/abyss_tile{
@@ -8547,7 +8514,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "xK" = (
 /obj/structure/fluff/walldeco/vinez/red,
 /turf/closed/wall/mineral/craftstone,
@@ -8798,7 +8765,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "yt" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/dirt/road,
@@ -8833,7 +8800,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "yz" = (
 /obj/structure/fluff/nest,
 /obj/item/reagent_containers/food/snacks/cooked/egg{
@@ -9011,7 +8978,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "yW" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -9399,7 +9366,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Af" = (
 /obj/structure/stairs/stone/church{
 	color = "#7D9BAE"
@@ -9407,7 +9374,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ag" = (
 /obj/structure/table/stone_small{
 	color = "#7D9BAE"
@@ -9704,7 +9671,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "AW" = (
 /obj/effect/decal/shadow_floor{
 	dir = 10
@@ -10020,11 +9987,6 @@
 /obj/item/gem/jade,
 /turf/open/floor/wood,
 /area/rogue/indoors/ship)
-"BI" = (
-/turf/open/floor/abyss_tile/three{
-	color = "#7D9BAE"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "BJ" = (
 /obj/structure/chair/stool/bar,
 /mob/living/carbon/human/species/orc/tribal,
@@ -10040,7 +10002,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "BL" = (
 /turf/closed/wall/mineral/abyssal{
 	color = "#406379";
@@ -10349,7 +10311,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "CC" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -10430,12 +10392,6 @@
 	color = "#547285"
 	},
 /area/rogue/under/cavewet)
-"CP" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "CQ" = (
 /obj/structure/flora/ocean_plants{
 	color = "#880808"
@@ -10562,21 +10518,10 @@
 	color = "#7D9BAE"
 	},
 /area/rogue/under/cavewet)
-"Dc" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile/three{
-	color = "#7D9BAE"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Dd" = (
 /obj/structure/fluff/walldeco/vinez/red,
 /turf/closed/wall/mineral/wooddark/vertical,
 /area/rogue/indoors/shelter/bog)
-"De" = (
-/turf/open/floor/abyss_tile/three{
-	color = "#29404E"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Df" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/fluff/nest,
@@ -10834,7 +10779,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "DO" = (
 /turf/closed/wall/mineral/abyssal{
 	color = "#406379";
@@ -11060,7 +11005,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ew" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
@@ -11162,7 +11107,7 @@
 	color = "#406379";
 	desc = "A Hard to destroy wall stands before you with the godly might of Abyssor coursing through it."
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "EM" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/reagent_containers/food/snacks/fish/carp,
@@ -11387,7 +11332,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Fx" = (
 /obj/structure/gate/bars/preopen{
 	color = "#314C5D"
@@ -11613,7 +11558,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Gb" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -12029,10 +11974,10 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Hd" = (
 /turf/closed/mineral/bedrock/cold,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "He" = (
 /obj/effect/decal/shadow_floor,
 /obj/effect/decal/shadow_floor,
@@ -12349,7 +12294,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "HT" = (
 /mob/living/simple_animal/hostile/retaliate/shark,
 /turf/open/floor/abyss_tile/two{
@@ -12486,7 +12431,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ir" = (
 /turf/open/water/river/blood,
 /area/rogue/under/cavewet)
@@ -12555,13 +12500,6 @@
 /obj/structure/closet/crate/crafted_closet/inn/south,
 /turf/open/floor/ruinedwood/turned,
 /area/rogue/indoors/shelter/bog)
-"IF" = (
-/turf/closed/wall/mineral/underbrick{
-	color = "#4B758F";
-	name = "abyssal wall";
-	desc = "A Hard to destroy wall stands before you with the godly might of Abyssor coursing through it."
-	},
-/area/rogue/under/tomb/indoors/magic)
 "IH" = (
 /obj/item/gem/coral,
 /turf/open/floor/abyss_sand/path,
@@ -12882,7 +12820,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Jx" = (
 /turf/open/water/cleanshallow,
 /area/rogue/under/cavewet)
@@ -12960,7 +12898,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "JI" = (
 /obj/structure/flora/ocean_plants,
 /obj/item/clothing/face/coralmask,
@@ -13005,7 +12943,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "JP" = (
 /obj/structure/bars,
 /turf/open/water/river{
@@ -13071,7 +13009,7 @@
 /obj/structure/flora/ocean_plants,
 /obj/effect/waterfall,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "JZ" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/kitchen/rollingpin,
@@ -13139,7 +13077,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Kg" = (
 /obj/structure/trap/shock{
 	invisibility = 1
@@ -13412,7 +13350,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "KO" = (
 /obj/structure/bed/hay,
 /obj/machinery/light/fueled/wallfire/candle/weak,
@@ -13555,7 +13493,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Lh" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/decal/cleanable/dirt,
@@ -13909,7 +13847,7 @@
 /obj/structure/flora/ocean_plants,
 /obj/structure/flora/ocean_plants,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ml" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -13954,7 +13892,7 @@
 "Mt" = (
 /obj/structure/flora/pillar,
 /turf/open/water/ocean,
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Mu" = (
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/abyss_tile{
@@ -14036,7 +13974,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "MI" = (
 /obj/structure/flora/tree/evil,
 /turf/open/floor/grass,
@@ -14219,7 +14157,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Nc" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -14317,12 +14255,6 @@
 	color = "#547285"
 	},
 /area/rogue/indoors/town/magician)
-"Nr" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile/three{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Ns" = (
 /obj/structure/flora/grass/water,
 /mob/living/simple_animal/hostile/retaliate/shark,
@@ -14458,7 +14390,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "NL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
@@ -14621,7 +14553,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Oh" = (
 /obj/item/natural/wood/plank,
 /turf/open/water/ocean,
@@ -14802,7 +14734,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "OJ" = (
 /turf/open/floor/abyss_sand/path,
 /area/rogue/outdoors/bog)
@@ -14818,7 +14750,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "OM" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -14832,7 +14764,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ON" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -14873,7 +14805,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "OT" = (
 /obj/structure/door/abyss{
 	color = "#406379"
@@ -14939,7 +14871,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Pc" = (
 /obj/structure/flora/tree,
 /obj/structure/flora/grass/water/reeds,
@@ -14988,7 +14920,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Pg" = (
 /mob/living/simple_animal/hostile/retaliate/mimic{
 	faction = list("mimic","Undead")
@@ -15032,7 +14964,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Pm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/mineral/bedrock/cold,
@@ -15044,7 +14976,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Po" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/effect/decal/remains/human,
@@ -15254,7 +15186,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "PQ" = (
 /obj/structure/closet/crate/chest/crafted,
 /obj/item/weapon/sword/long/greatsword/gutsclaymore,
@@ -15306,7 +15238,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "PW" = (
 /obj/structure/table/wood/fancy/cyan,
 /obj/structure/carpet/blue,
@@ -15413,7 +15345,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Qk" = (
 /obj/structure/chair/bench/couch/middle/alt{
 	dir = 4
@@ -15436,7 +15368,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Qn" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/clothing/wrists/gem/amberbracelet,
@@ -15448,12 +15380,6 @@
 "Qo" = (
 /turf/open/water/bath,
 /area/rogue/indoors/town/clocktower)
-"Qp" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile/two{
-	color = "#29404E"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Qq" = (
 /obj/structure/window/openclose/reinforced{
 	dir = 8
@@ -15483,11 +15409,6 @@
 	},
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog)
-"Qu" = (
-/turf/open/floor/abyss_tile/three{
-	color = "#314C5D"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Qv" = (
 /turf/closed/wall/mineral/decowood,
 /area/rogue/outdoors/bog)
@@ -15559,7 +15480,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "QK" = (
 /obj/structure/rack/underworld{
 	color = "#7D9BAE"
@@ -15804,7 +15725,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ru" = (
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
@@ -15982,7 +15903,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "RQ" = (
 /obj/structure/flora/pillar,
 /obj/machinery/light/fueled/wallfire/candle/blue{
@@ -16282,7 +16203,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "SC" = (
 /obj/structure/fluff/nest,
 /obj/item/reagent_containers/food/snacks/cooked/egg{
@@ -16343,7 +16264,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "SH" = (
 /obj/structure/rack/underworld{
 	color = "#7D9BAE"
@@ -16389,7 +16310,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "SP" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie{
 	dir = 6
@@ -16558,7 +16479,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Tl" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -16730,7 +16651,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "TF" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -16748,12 +16669,6 @@
 /obj/structure/flora/grass/water,
 /turf/open/water/swamp,
 /area/rogue/outdoors/bog)
-"TI" = (
-/obj/machinery/light/fueled/firebowl/firebowlb,
-/turf/open/floor/abyss_tile/three{
-	color = "#7D9BAE"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "TJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -16800,12 +16715,6 @@
 	},
 /turf/open/water/ocean,
 /area/rogue/under/cavewet)
-"TQ" = (
-/turf/closed/wall/mineral/abyssal{
-	color = "#406379";
-	desc = "A Hard to destroy wall stands before you with the godly might of Abyssor coursing through it."
-	},
-/area/rogue/under/tomb/indoors/magic)
 "TR" = (
 /obj/structure/flora/pillar,
 /obj/structure/fluff/walldeco/church/line,
@@ -17009,7 +16918,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Uu" = (
 /turf/closed/wall/mineral/underbrick{
 	color = "#4B758F";
@@ -17260,7 +17169,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Vn" = (
 /obj/structure/fluff/railing/stonehedge{
 	color = "#7D9BAE";
@@ -17307,7 +17216,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Vu" = (
 /turf/open/floor/ruinedwood/darker,
 /area/rogue/outdoors/bog)
@@ -17474,11 +17383,6 @@
 	},
 /turf/open/water/bath,
 /area/rogue/indoors/town/clocktower)
-"VV" = (
-/turf/open/floor/abyss_tile/three{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "VW" = (
 /obj/structure/flora/newtree/scorched,
 /turf/open/floor/grass,
@@ -17565,7 +17469,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Wj" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -17635,7 +17539,7 @@
 /turf/open/floor/abyss_tile/three{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Ww" = (
 /turf/open/floor/blocks,
 /area/rogue/indoors/town/clocktower)
@@ -17735,12 +17639,6 @@
 /obj/structure/chair/bench/couch/right/alt,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/town/clocktower)
-"WN" = (
-/obj/structure/flora/pillar,
-/turf/open/floor/abyss_tile/three{
-	color = "#314C5D"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "WO" = (
 /obj/structure/boiler,
 /turf/open/floor/concrete,
@@ -17993,7 +17891,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#314C5D"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "Xx" = (
 /obj/structure/fermentation_keg/redwine,
 /turf/open/floor/ruinedwood/alt,
@@ -18028,7 +17926,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#29404E"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "XC" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie{
 	dir = 9
@@ -18119,7 +18017,7 @@
 /turf/open/floor/abyss_tile/two{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "XO" = (
 /obj/structure/fluff/railing/stonehedge{
 	color = "#7D9BAE";
@@ -18441,15 +18339,6 @@
 	},
 /turf/open/transparent/glass,
 /area/rogue/indoors/town/clocktower)
-"YL" = (
-/obj/structure/stairs/stone/church{
-	dir = 8;
-	color = "#7D9BAE"
-	},
-/turf/open/floor/abyss_tile{
-	color = "#547285"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "YM" = (
 /obj/structure/fermentation_keg{
 	pixel_x = 5;
@@ -18650,11 +18539,6 @@
 	},
 /turf/open/floor/concrete,
 /area/rogue/indoors/town/clocktower)
-"Zo" = (
-/turf/open/floor/abyss_tile{
-	color = "#7D9BAE"
-	},
-/area/rogue/under/tomb/indoors/magic)
 "Zp" = (
 /obj/structure/inert_bonepile,
 /turf/open/floor/abyss_tile{
@@ -18732,7 +18616,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#547285"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ZC" = (
 /obj/structure/door/iron/bars,
 /obj/effect/mapping_helpers/access/locker,
@@ -18781,7 +18665,7 @@
 /turf/open/floor/abyss_tile{
 	color = "#7D9BAE"
 	},
-/area/rogue/under/tomb/indoors/magic)
+/area/rogue/indoors/town/magician)
 "ZH" = (
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean,
@@ -44711,11 +44595,11 @@ ZJ
 OK
 hk
 ZJ
-TQ
-IF
-TQ
-IF
-TQ
+BL
+vz
+BL
+vz
+BL
 ZJ
 hk
 ZJ
@@ -44912,13 +44796,13 @@ hk
 ZJ
 ZJ
 OK
-TQ
-TQ
+BL
+BL
 jM
 uY
 yV
-TQ
-TQ
+BL
+BL
 OK
 ZJ
 OK
@@ -45114,13 +44998,13 @@ OK
 ZJ
 ZJ
 hk
-IF
+vz
 NK
-BI
+HI
 KN
-Qu
+sL
 aJ
-IF
+vz
 hk
 ZJ
 Zz
@@ -45316,13 +45200,13 @@ ZJ
 Zz
 hk
 OK
-TQ
+BL
 tL
-Nr
-lP
-Nr
+XJ
+cb
+XJ
 pO
-TQ
+BL
 ZJ
 OK
 hk
@@ -45517,7 +45401,7 @@ hk
 OK
 hk
 hk
-IF
+vz
 oN
 BK
 AV
@@ -45525,7 +45409,7 @@ TE
 XN
 wx
 oN
-IF
+vz
 ZJ
 ZJ
 OK
@@ -45718,17 +45602,17 @@ gg
 OK
 hk
 ZJ
-TQ
-IF
-TQ
-TQ
+BL
+vz
+BL
+BL
 gt
 Tk
 qh
-TQ
-TQ
-IF
-TQ
+BL
+BL
+vz
+BL
 hk
 ZJ
 OK
@@ -45917,23 +45801,23 @@ hk
 ve
 gi
 ZT
-IF
-TQ
-IF
-IF
-IF
-IF
-sR
-BI
+vz
+BL
+vz
+vz
+vz
+vz
+eV
+HI
 uX
-De
-sR
-IF
-IF
-IF
-IF
-TQ
-IF
+RU
+eV
+vz
+vz
+vz
+vz
+BL
+vz
 JC
 mw
 WV
@@ -46119,23 +46003,23 @@ hk
 gg
 sP
 gg
-TQ
-TQ
-IF
-TQ
-IF
-TQ
+BL
+BL
+vz
+BL
+vz
+BL
 ci
 ix
 pp
 on
 Fw
-TQ
-IF
-TQ
-IF
-TQ
-TQ
+BL
+vz
+BL
+vz
+BL
+BL
 gg
 Jx
 gg
@@ -46321,23 +46205,23 @@ OK
 ve
 sP
 ZT
-IF
+vz
 vY
 Fw
 tv
-vG
-IF
-WN
+Vo
+vz
+Ng
 MH
 pp
 on
 Ev
-IF
-vd
+vz
+Vy
 gb
 SB
 Ev
-IF
+vz
 JC
 Jx
 WV
@@ -46524,20 +46408,20 @@ gg
 sP
 gg
 EL
-Zo
-lP
-BI
-De
+Gz
+cb
+HI
+RU
 ng
-Qu
-wU
+sL
+QD
 Iq
 ys
-Qu
+sL
 Wv
-lP
-VV
-Zo
+cb
+Cg
+Gz
 ys
 EL
 gg
@@ -46726,21 +46610,21 @@ JC
 gi
 KK
 Wv
-Zo
-BI
-BI
+Gz
+HI
+HI
 Vt
-IF
-TQ
+vz
+BL
 oN
-TQ
+BL
 oN
-TQ
-IF
+BL
+vz
 PP
-Zo
-BI
-hg
+Gz
+HI
+bg
 Jw
 An
 mw
@@ -46928,21 +46812,21 @@ gg
 bh
 gg
 EL
-vd
-VV
-VV
-BI
-De
-Nr
-TQ
-TQ
-TQ
-sR
-BI
-De
-Zo
-BI
-Dc
+Vy
+Cg
+Cg
+HI
+RU
+XJ
+BL
+BL
+BL
+eV
+HI
+RU
+Gz
+HI
+hE
 EL
 gg
 aQ
@@ -47129,23 +47013,23 @@ ht
 gg
 sP
 gg
-IF
+vz
 PV
-De
-Zo
+RU
+Gz
 JO
-BI
-VV
+HI
+Cg
 cD
-IF
+vz
 cD
-VV
-Zo
-VV
+Cg
+Gz
+Cg
 kW
-De
+RU
 JH
-IF
+vz
 gg
 Jx
 gg
@@ -47331,23 +47215,23 @@ ht
 gg
 gg
 gg
-TQ
-vd
-lP
-Zo
-VV
+BL
+Vy
+cb
+Gz
+Cg
 lo
-Dc
-TQ
-TQ
-TQ
-Nr
-De
-VV
-De
-BI
-Qp
-TQ
+hE
+BL
+BL
+BL
+XJ
+RU
+Cg
+RU
+HI
+hU
+BL
 gg
 gg
 gg
@@ -47533,23 +47417,23 @@ gG
 gG
 gG
 gG
-IF
-IF
+vz
+vz
 SG
-IF
+vz
 SG
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
+vz
+BL
+vz
+BL
+vz
+BL
+vz
 SG
-IF
+vz
 nP
-IF
-IF
+vz
+vz
 gG
 gG
 gG
@@ -47735,23 +47619,23 @@ gG
 gG
 gG
 gG
-IF
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
-TQ
-IF
-IF
+vz
+vz
+BL
+vz
+BL
+vz
+BL
+vz
+BL
+vz
+BL
+vz
+BL
+vz
+BL
+vz
+vz
 gG
 gG
 gG
@@ -85112,11 +84996,11 @@ yE
 yE
 yE
 yE
-TQ
+BL
 xh
 xh
 xh
-TQ
+BL
 yE
 yE
 yE
@@ -85313,13 +85197,13 @@ yE
 yE
 yE
 yE
-TQ
-TQ
+BL
+BL
 bP
 ho
 ud
-TQ
-TQ
+BL
+BL
 yE
 yE
 yE
@@ -85517,9 +85401,9 @@ yE
 yE
 xh
 cl
-wU
+QD
 rN
-wU
+QD
 OM
 xh
 yE
@@ -85719,9 +85603,9 @@ yE
 yE
 xh
 Rt
-Qu
+sL
 qc
-Qu
+sL
 pO
 xh
 yE
@@ -85918,15 +85802,15 @@ yE
 yE
 yE
 yE
-TQ
-IF
+BL
+vz
 vt
 gF
 Pn
 gS
 vO
-IF
-TQ
+vz
+BL
 yE
 yE
 yE
@@ -86119,17 +86003,17 @@ IW
 yE
 yE
 yE
-TQ
-TQ
+BL
+BL
 EL
-YL
+Sq
 OL
 uK
-YL
+Sq
 OL
 EL
-TQ
-TQ
+BL
+BL
 yE
 yE
 yE
@@ -86318,23 +86202,23 @@ yE
 vw
 dc
 Fd
-TQ
-TQ
-IF
-IF
-TQ
+BL
+BL
+vz
+vz
+BL
 OG
-BI
-BI
-BI
-Qu
-VV
+HI
+HI
+HI
+sL
+Cg
 fK
-TQ
-IF
-IF
-TQ
-TQ
+BL
+vz
+vz
+BL
+BL
 vw
 UY
 IW
@@ -86520,23 +86404,23 @@ yE
 Zt
 ST
 Ot
-TQ
-TQ
-TQ
+BL
+BL
+BL
 EL
 pp
 wj
-wU
+QD
 Ae
-VV
+Cg
 Ae
-Zo
+Gz
 ZG
 pp
 EL
-TQ
-TQ
-TQ
+BL
+BL
+BL
 ZT
 lf
 IW
@@ -86722,23 +86606,23 @@ yE
 Zt
 kX
 aC
-IF
-TQ
-TQ
+vz
+BL
+BL
 ad
 Mk
 gq
-wU
-BI
-BI
-Qu
-BI
+QD
+HI
+HI
+sL
+HI
 Ut
 is
 ad
-TQ
-TQ
-IF
+BL
+BL
+vz
 Cs
 rh
 JC
@@ -86924,23 +86808,23 @@ gg
 Zt
 lf
 Ot
-IF
-IF
+vz
+vz
 oN
 is
 is
 wj
-VV
+Cg
 CB
-BI
+HI
 rZ
-BI
+HI
 Lg
 pp
 is
 oN
-TQ
-IF
+BL
+vz
 vw
 Ih
 Ot
@@ -87126,23 +87010,23 @@ ht
 Gm
 UY
 Ot
-TQ
-TQ
-TQ
+BL
+BL
+BL
 is
 pp
 Pl
-BI
-VV
-VV
-Qu
-Qu
+HI
+Cg
+Cg
+sL
+sL
 fK
 pp
 is
-TQ
-TQ
-TQ
+BL
+BL
+BL
 Zt
 kX
 IW
@@ -87328,23 +87212,23 @@ al
 vw
 Nu
 di
-TQ
-TQ
-TQ
+BL
+BL
+BL
 is
 is
 XB
-VV
+Cg
 fk
-BI
+HI
 Ae
-BI
+HI
 Nb
 pp
 is
-TQ
-TQ
-TQ
+BL
+BL
+BL
 vw
 Nu
 IW
@@ -87530,23 +87414,23 @@ ht
 yX
 np
 IW
-IF
-IF
+vz
+vz
 oN
 pp
 pp
 pA
-BI
-lP
-wU
-Zo
-wU
+HI
+cb
+QD
+Gz
+QD
 fK
 is
 is
 oN
-TQ
-IF
+BL
+vz
 Zt
 UY
 di
@@ -87732,23 +87616,23 @@ gg
 Zt
 lf
 JC
-IF
-TQ
-TQ
+vz
+BL
+BL
 JY
 pp
 wj
-Qu
-BI
+sL
+HI
 KN
-Qu
-Qu
+sL
+sL
 Nb
 is
 ad
-TQ
-TQ
-IF
+BL
+BL
+vz
 ZT
 bL
 Ot
@@ -87934,23 +87818,23 @@ gG
 gG
 gG
 gG
-TQ
-TQ
-TQ
+BL
+BL
+BL
 EL
 is
 OG
-TI
-Nr
+nw
+XJ
 EL
-Nr
+XJ
 Pf
 fK
 pp
 EL
-TQ
-TQ
-TQ
+BL
+BL
+BL
 gG
 gG
 gG
@@ -88136,23 +88020,23 @@ gG
 gG
 gG
 gG
-TQ
-TQ
-IF
-IF
-TQ
-IF
+BL
+BL
+vz
+vz
+BL
+vz
 EL
-IF
-IF
-IF
+vz
+vz
+vz
 EL
-IF
-TQ
-IF
-IF
-TQ
-TQ
+vz
+BL
+vz
+vz
+BL
+BL
 gG
 gG
 gG
@@ -125509,10 +125393,10 @@ Bl
 Bl
 gG
 gG
-TQ
-IF
-TQ
-TQ
+BL
+vz
+BL
+BL
 gG
 gG
 gG
@@ -125711,10 +125595,10 @@ Bl
 Bl
 gG
 gG
-TQ
+BL
 PV
-vG
-TQ
+Vo
+BL
 gG
 gG
 gG
@@ -125912,12 +125796,12 @@ Bl
 Bl
 gG
 gG
-TQ
+BL
 EL
-BI
-hg
-IF
-TQ
+HI
+bg
+vz
+BL
 gG
 gG
 gG
@@ -126114,13 +125998,13 @@ Bl
 gG
 gG
 gG
-IF
+vz
 Vm
 Qj
 vV
 sk
-TQ
-TQ
+BL
+BL
 gG
 gG
 gG
@@ -126316,14 +126200,14 @@ Bl
 gG
 gG
 gG
-TQ
-CP
+BL
+wt
 ix
 pp
 pp
 HS
-IF
-TQ
+vz
+BL
 gG
 gG
 gG
@@ -126518,15 +126402,15 @@ gG
 gG
 gG
 gG
-TQ
-IF
-TQ
+BL
+vz
+BL
 Xw
 pp
 pp
 pA
-TQ
-TQ
+BL
+BL
 gG
 gG
 gG
@@ -126722,14 +126606,14 @@ gG
 gG
 gG
 gG
-TQ
-IF
+BL
+vz
 pp
 pp
 td
 iU
 oN
-TQ
+BL
 gG
 gG
 gG
@@ -126925,14 +126809,14 @@ gG
 gG
 gG
 gG
-IF
+vz
 EL
 bS
 pO
 pp
 Mt
-TQ
-TQ
+BL
+BL
 gG
 gG
 gG
@@ -127123,25 +127007,25 @@ gG
 gG
 gG
 gG
-TQ
-TQ
-IF
+BL
+BL
+vz
 EL
-IF
+vz
 pW
-Qu
-wU
+sL
+QD
 le
 pp
 pp
-IF
+vz
 EL
-IF
-TQ
-IF
+vz
+BL
+vz
 EL
-IF
-TQ
+vz
+BL
 Hd
 gG
 gG
@@ -127324,27 +127208,27 @@ gG
 gG
 gG
 gG
-TQ
+BL
 oN
 Kf
-CP
+wt
 ys
-CP
-Qu
-BI
-wU
-wU
+wt
+sL
+HI
+QD
+QD
 sS
 pp
 Mt
 la
-Dc
+hE
 QJ
-Dc
-wU
-vG
-TQ
-TQ
+hE
+QD
+Vo
+BL
+BL
 gG
 gG
 gg
@@ -127526,27 +127410,27 @@ gG
 gG
 gG
 gG
-TQ
+BL
 yy
 om
 ZB
-BI
+HI
 vV
 ys
 Pb
-wU
-BI
+QD
+HI
 XN
 wv
 Hc
-wU
-wU
+QD
+QD
 gB
-lP
-wU
-wU
+cb
+QD
+QD
 Wi
-IF
+vz
 gG
 gG
 ht
@@ -127728,27 +127612,27 @@ gG
 gG
 gG
 gG
-TQ
+BL
 RP
 iy
-lP
+cb
 OS
 pp
 Og
-wU
-lP
+QD
+cb
 nC
 pp
 Ga
-hg
-BI
-wU
+bg
+HI
+QD
 gB
-BI
-wU
-wU
-hg
-IF
+HI
+QD
+QD
+bg
+vz
 gG
 gG
 gg
@@ -127930,7 +127814,7 @@ gG
 gG
 gG
 gG
-TQ
+BL
 oN
 bN
 SO
@@ -127943,14 +127827,14 @@ OS
 pp
 pp
 xJ
-BI
-CP
+HI
+wt
 Af
-CP
+wt
 id
-Dc
-TQ
-TQ
+hE
+BL
+BL
 gG
 gG
 ht
@@ -128133,25 +128017,25 @@ gG
 gG
 gG
 gG
-TQ
-TQ
-IF
+BL
+BL
+vz
 EL
-IF
+vz
 ip
 DN
 pp
 pp
 pp
 Qm
-IF
+vz
 EL
-IF
-TQ
-IF
+vz
+BL
+vz
 EL
-IF
-TQ
+vz
+BL
 Hd
 gG
 gG
@@ -128339,14 +128223,14 @@ gG
 gG
 gG
 gG
-IF
+vz
 EL
-Dc
+hE
 le
 pp
 bP
-TQ
-TQ
+BL
+BL
 gG
 gG
 gG
@@ -128540,14 +128424,14 @@ gG
 gG
 gG
 gG
-TQ
-IF
+BL
+vz
 iU
-wU
+QD
 ZB
 wv
 oN
-TQ
+BL
 gG
 gG
 gG
@@ -128740,15 +128624,15 @@ RZ
 RZ
 RZ
 Bl
-TQ
-IF
-TQ
+BL
+vz
+BL
 Mt
 pp
 Ga
-Dc
-TQ
-TQ
+hE
+BL
+BL
 Bl
 Bl
 gG
@@ -128942,14 +128826,14 @@ RZ
 RZ
 RZ
 gG
-TQ
-CP
+BL
+wt
 ld
 pp
 pp
 pp
-IF
-TQ
+vz
+BL
 Bl
 Bl
 Bl
@@ -129144,13 +129028,13 @@ RZ
 RZ
 RZ
 gG
-IF
+vz
 PV
-wU
+QD
 sS
 Mt
-TQ
-TQ
+BL
+BL
 Bl
 Bl
 Bl
@@ -129346,12 +129230,12 @@ RZ
 RZ
 WX
 gG
-TQ
+BL
 EL
 qP
-wU
-IF
-TQ
+QD
+vz
+BL
 Bl
 Bl
 Bl
@@ -129549,10 +129433,10 @@ WX
 gG
 gG
 gG
-TQ
+BL
 PV
-vG
-TQ
+Vo
+BL
 Bl
 Bl
 Bl
@@ -129751,10 +129635,10 @@ WX
 gG
 gG
 gG
-TQ
-TQ
-TQ
-TQ
+BL
+BL
+BL
+BL
 Bl
 Bl
 RZ

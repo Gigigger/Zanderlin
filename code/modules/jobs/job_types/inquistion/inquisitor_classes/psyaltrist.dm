@@ -23,7 +23,12 @@
 		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE
 	)
 
-	traits = list(TRAIT_DODGEEXPERT, TRAIT_EMPATH)
+	traits = list(	TRAIT_DODGEEXPERT,
+		TRAIT_EMPATH,
+		TRAIT_INQUISITION,
+		TRAIT_SILVER_BLESSED,
+		TRAIT_PSYDONIAN_GRIT,
+		TRAIT_PSYDONITE,)
 
 	spells = list(/datum/action/cooldown/spell/vicious_mockery)
 
