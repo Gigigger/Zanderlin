@@ -1,4 +1,4 @@
-GLOBAL_VAR_INIT(adventurer_hugbox_duration, 5 SECONDS)
+GLOBAL_VAR_INIT(adventurer_hugbox_duration, 30 SECONDS)
 GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 
 /datum/job/adventurer

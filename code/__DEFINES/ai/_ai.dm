@@ -123,7 +123,6 @@
 #define SPT_PROB(prob_per_second_percent, seconds_per_tick) (prob(100*SPT_PROB_RATE((prob_per_second_percent)/100, (seconds_per_tick))))
 // )
 
-
 ///our fishing target
 #define BB_FISHING_TARGET "BB_fishing_target"
 
