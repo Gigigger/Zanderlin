@@ -26,8 +26,8 @@
 		else
 			break
 
-	//water turf eats reagents
-	if(istype(epicenter, /turf/open/water))
+	//turfs eats reagents. This should probably be expanded to a better check in the future
+	if(istype(epicenter, /turf/open/water) || istype(epicenter, /turf/open/lava) || istype(epicenter, /turf/open/dungeon_trap))
 		for(var/datum/reagents/R in reactants)
 			R.clear_reagents()
 		return
