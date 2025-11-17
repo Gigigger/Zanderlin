@@ -1380,10 +1380,6 @@
 "jN" = (
 /turf/closed/wall/mineral/stone,
 /area/rogue/indoors/town/manor)
-"jS" = (
-/mob/living/carbon/human/species/human/northern/bum,
-/turf/open/floor/cobblerock,
-/area/rogue/under/town/basement)
 "jV" = (
 /obj/structure/rotation_piece,
 /obj/machinery/light/fueled/torchholder/hotspring/standing{
@@ -2159,10 +2155,6 @@
 /obj/structure/carpet,
 /turf/open/floor/tile/checkeralt,
 /area/rogue/indoors/town/manor)
-"uH" = (
-/mob/living/simple_animal/hostile/retaliate/hermitcrab,
-/turf/open/floor/dirt/road,
-/area/rogue/under/town/basement)
 "uL" = (
 /obj/structure/hotspring/border/two,
 /turf/open/floor/cobblerock,
@@ -3681,10 +3673,6 @@
 /obj/structure/hotspring/border/twelve,
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors)
-"XM" = (
-/mob/living/simple_animal/hostile/retaliate/hermitcrab,
-/turf/open/floor/cobblerock,
-/area/rogue/under/town/basement)
 "XT" = (
 /obj/structure/bridge_stakes{
 	dir = 4
@@ -4994,7 +4982,7 @@ oj
 oj
 oj
 oj
-uH
+lI
 lI
 oj
 oj
@@ -5765,7 +5753,7 @@ oj
 oj
 oj
 oj
-XM
+oj
 oj
 oj
 oj
@@ -6533,10 +6521,10 @@ as
 as
 Ls
 YE
-jS
 oj
 oj
-uH
+oj
+lI
 lI
 lI
 oj

@@ -11,7 +11,7 @@
 	speak_emote = list("gurgles", "bubbles")
 	emote_see = list("writhes its tentacles")
 	emote_hear = list("gurgles wetly", "makes bubbling sounds")
-	move_to_delay = 3
+	move_to_delay = 5
 	vision_range = 5
 	see_in_dark = 5
 	aggro_vision_range = 5
@@ -43,6 +43,7 @@
 	attack_sound = list('sound/combat/wooshes/whip_crack1.ogg','sound/combat/wooshes/whip_crack2.ogg','sound/combat/wooshes/whip_crack3.ogg')
 	melee_damage_lower = 20
 	melee_damage_upper = 30
+	melee_attack_cooldown = 2.4 SECONDS
 
 	base_constitution = 14
 	base_strength = 12
@@ -65,6 +66,7 @@
 	remains_type = /obj/effect/decal/remains/nautilus
 	body_eater = TRUE
 	limb_destroyer = TRUE
+	slowed_by_drag = FALSE
 
 	ai_controller = /datum/ai_controller/nautilus
 	dendor_taming_chance = DENDOR_TAME_PROB_NONE
@@ -75,13 +77,14 @@
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Initialize()
 	. = ..()
-	//AddComponent(/datum/component/ai_aggro_system)
-
 	update_appearance(UPDATE_OVERLAYS)
 	ADD_TRAIT(src, TRAIT_NOHANDGRABS, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STRONG_GRABBER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOTIGHTGRABMESSAGE, TRAIT_GENERIC)
+	//ai's not gonna use this so it does need controller keys
+	var/datum/action/cooldown/mob_cooldown/nautilus_hide/hide = new()
+	hide.Grant(src)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/taunted(mob/user)
 	emote("aggro")
@@ -89,17 +92,22 @@
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/hide()
 	if(!hiding)
-		sleep(1 SECONDS)
 		icon_state = "nautilus_hide"
+		update_appearance(UPDATE_ICON)
 		force_threshold = 80
 		hiding = TRUE
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/ambush()
 	if(hiding)
 		icon_state = "nautilus"
-		sleep(1 SECONDS)
+		update_appearance(UPDATE_ICON)
 		force_threshold = 15
 		hiding = FALSE
+
+/mob/living/simple_animal/hostile/retaliate/nautilus/Move()
+	. = ..()
+	if(.)
+		ambush()
 
 //this is an impermanent solution with an indefinite fix date
 /mob/living/simple_animal/hostile/retaliate/nautilus/apply_damage(damage, damagetype, def_zone, blocked, forced)
@@ -113,7 +121,7 @@
 	var/mob/living/L = target
 
 	var/grappledAlready = FALSE
-	for(var/obj/item/grabbing/G in get_contents())
+	for(var/obj/item/grabbing/G in src.contents)
 		if(target == G.grabbed)
 			grappledAlready = TRUE
 
@@ -125,7 +133,7 @@
 			continue //anything past this point in the loop we're only gonna do if we have a good grip
 		if(C.body_position == STANDING_UP)
 			C.Knockdown(20)
-			visible_message(span_danger("[src] tackles [C] to the ground!"), \
+			C.visible_message(span_danger("[src] tackles [C] to the ground!"), \
 				span_userdanger("[src] tackles me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
 		else
 			var/choke = /datum/intent/grab/choke
@@ -144,10 +152,11 @@
 			else
 				pick(grabIntents) == twist ? G.twistlimb(src) : G.smashlimb((get_turf(C) || C), src)
 
+	if(target == src)
+		return
 	if(!grappledAlready && prob(40) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
-		visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
+		L.visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
 			span_userdanger("[src] wraps their tentacles around me!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
-	return .
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/simple_limb_hit(zone)
 	if(!zone)
@@ -205,3 +214,30 @@
 /obj/effect/decal/remains/nautilus
 	icon_state = "nautilus_dead"
 	icon = 'icons/roguetown/mob/monster/nautilus.dmi'
+
+// not used by ai because they naturally hide
+/datum/action/cooldown/mob_cooldown/nautilus_hide
+	name = "Hide"
+	button_icon_state = "conjure_armor"
+	desc = "Retreat into your shell, making you exceedingly difficult to hurt."
+	cooldown_time = 10 SECONDS
+
+/datum/action/cooldown/mob_cooldown/nautilus_hide/Activate(atom/target)
+	var/mob/living/simple_animal/hostile/retaliate/nautilus/nauti = owner
+	if(!istype(nauti))
+		to_chat(owner, span_warning("...you don't have a shell. How do you even have this??"))
+		return FALSE
+
+	if(nauti.hiding)
+		nauti.visible_message(span_boldwarning("[nauti] bursts from within their shell!"))
+		nauti.ambush()
+		REMOVE_TRAIT(nauti, TRAIT_IMMOBILIZED, "[type]")
+	else
+		for(var/obj/item/grabbing/G in nauti.contents)
+			qdel(G)
+		nauti.visible_message(span_boldwarning("[nauti] starts to retreat into their shell!"))
+		if(do_after(nauti, 3 SECONDS))
+			ADD_TRAIT(nauti, TRAIT_IMMOBILIZED, "[type]")
+			nauti.hide()
+	StartCooldown()
+	return TRUE

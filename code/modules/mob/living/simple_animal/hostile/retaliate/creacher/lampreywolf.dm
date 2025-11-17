@@ -45,7 +45,7 @@
 	// pack tactics, steal blood and get out of there
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-	melee_attack_cooldown = 1.7 SECONDS
+	melee_attack_cooldown = 2 SECONDS
 	var/blood_steal = 30 // how much blood are we stealing per bite
 	retreat_health = 0.3
 
