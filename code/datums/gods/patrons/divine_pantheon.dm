@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/can_pray(mob/living/carbon/human/follower)
 	//you can pray anywhere inside a church
-	if(istype(get_area(follower), /area/rogue/indoors/town/church))
+	if(istype(get_area(follower), /area/indoors/town/church))
 		return TRUE
 
 	for(var/obj/structure/fluff/psycross/cross in view(4, get_turf(follower)))

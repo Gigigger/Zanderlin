@@ -26,6 +26,10 @@
 
 	languages = list(/datum/language/oldpsydonic)
 
+	spells = list(
+		/datum/action/cooldown/spell/undirected/call_bird/inquisitor
+	)
+
 /datum/outfit/inquisitor
 	abstract_type = /datum/outfit/inquisitor
 	name = "Inquisitor"

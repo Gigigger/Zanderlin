@@ -878,7 +878,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			update_appearance()
 		playsound(loc, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		var/list/turfs = list()
-		var/area/A = GLOB.areas_by_type[/area/rogue/indoors/inq/import]
+		var/area/A = GLOB.areas_by_type[/area/indoors/inq/import]
 		for(var/turf/T in A)
 			turfs += T
 		var/turf/T = pick(turfs)

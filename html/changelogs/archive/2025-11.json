@@ -524,5 +524,31 @@
                 "balance": "rebalanced a few things."
             }
         ]
+    },
+    "2025-11-17": {
+        "YellowHarlequin": [
+            {
+                "image": "Added 4 new accessories and 1 new beard for Rakshari"
+            },
+            {
+                "code_imp": "Rakshari can only wear Rakshari-specific accessories now"
+            },
+            {
+                "code_imp": "Children can no longer use customizer accessories, they didn't fit right in most cases anyway."
+            },
+            {
+                "code_imp": "Removed color customization from accessories, it wasn't functional anyways."
+            }
+        ],
+        "Wrench-1": [
+            {
+                "rscadd": "Give the Herr Prafekt their Inquisition summon bird back"
+            }
+        ],
+        "PineappleMan929": [
+            {
+                "spellcheck": "fixed ported azure peak language"
+            }
+        ]
     }
 }

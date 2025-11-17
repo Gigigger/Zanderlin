@@ -326,13 +326,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	return ..()
 
 /**
- * Update the icon of the area (overridden to always be null for space
- */
-/area/space/update_icon_state()
-	icon_state = null
-	return ..()
-
-/**
  * Call back when an atom enters an area
  *
  * Sends signals COMSIG_AREA_ENTERED and COMSIG_ENTER_AREA (to the atom)

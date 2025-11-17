@@ -2,14 +2,14 @@
 "ad" = (
 /obj/effect/landmark/latejoin,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ag" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /obj/structure/fermentation_keg,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ah" = (
 /obj/structure/fluff/railing/border{
 	layer = 2.65
@@ -22,7 +22,7 @@
 	layer = 2.6
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "at" = (
 /obj/structure/door{
 	lockid = "roomiii";
@@ -30,14 +30,14 @@
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "au" = (
 /obj/effect/landmark/tram/queued_path{
 	next_path_id = "cargo_pre_enter";
 	platform_code = "point_1"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "aC" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -47,11 +47,11 @@
 /turf/open/floor/rooftop/green{
 	dir = 8
 	},
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "aD" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "aF" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -62,7 +62,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "aJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -73,7 +73,7 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "aL" = (
 /obj/structure/door{
 	lockid = "roomii";
@@ -81,13 +81,13 @@
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "aM" = (
 /obj/machinery/light/fueled/wallfire/candle/blue{
 	pixel_y = -32
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "aN" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/wicker,
@@ -100,7 +100,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "aT" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -110,7 +110,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bg" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -125,44 +125,44 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "bj" = (
 /obj/item/ore/coal,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bk" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bn" = (
 /obj/structure/industrial_lift/tram{
 	icon_state = "roofg";
 	dir = 4
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "br" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "bs" = (
 /obj/structure/door/iron/bars,
 /obj/effect/mapping_helpers/access/keyset/manor/vault,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/metal/barograte,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "by" = (
 /obj/effect/landmark/tram/queued_path/cargo_map_enter{
 	next_path_id = "point_1"
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "bz" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/reagent_containers/powder/spice,
@@ -179,21 +179,21 @@
 /obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
 /obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
 /turf/open/floor/tile/checker,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bB" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fermentation_keg/hagwoodbitter,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bI" = (
 /obj/effect/landmark/start/cook,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bK" = (
 /turf/closed/wall/mineral/wooddark/window,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bO" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/old_crate,
@@ -202,17 +202,17 @@
 	pixel_y = -32
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bR" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bT" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "bV" = (
 /obj/structure/rack,
 /obj/item/weapon/shield/tower/metal,
@@ -221,7 +221,7 @@
 /obj/item/weapon/mace/spiked,
 /obj/item/weapon/shield/tower/buckleriron,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bX" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/natural/cloth,
@@ -245,15 +245,15 @@
 	pixel_x = 9
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "bZ" = (
 /obj/structure/fake_machine/atm,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cd" = (
 /obj/structure/carpet/green,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "ce" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/ingot/iron,
@@ -263,13 +263,13 @@
 /obj/item/ingot/steel,
 /obj/item/ingot/copper,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ci" = (
 /obj/structure/fluff/walldeco/bsmith{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "co" = (
 /obj/structure/industrial_lift/tram{
 	icon_state = "corner";
@@ -278,30 +278,30 @@
 	opacity = 1
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "cp" = (
 /obj/structure/fluff/statue/pillar{
 	density = 1
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cs" = (
 /obj/structure/industrial_lift/tram{
 	fake = 1
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "ct" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/structure/roguetent,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cx" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/fabric,
 /obj/structure/rack/shelf/notdense,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cC" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -312,7 +312,7 @@
 	},
 /obj/item/needle,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cF" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -323,7 +323,7 @@
 	icon_state = "border"
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "cI" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -339,20 +339,20 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cN" = (
 /obj/effect/landmark/start/templar{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "cR" = (
 /obj/structure/stairs/fancy/c{
 	dir = 1;
 	icon_state = "fancy_stairs_c"
 	},
 /turf/open/floor/carpet/lord/center,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "cS" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -360,11 +360,11 @@
 /obj/structure/fluff/railing/border,
 /obj/item/tent_kit,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cW" = (
 /obj/item/coin/silver/pile,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "cY" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -375,11 +375,11 @@
 	icon_state = "border"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "cZ" = (
 /obj/structure/dock_bell,
 /turf/open/floor/ruinedwood/chevron,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "db" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -390,7 +390,7 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "dc" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -402,7 +402,7 @@
 	pixel_y = -16
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dd" = (
 /obj/structure/bed/hay,
 /obj/item/bedsheet/cloth,
@@ -410,7 +410,7 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "de" = (
 /obj/structure/toilet,
 /obj/structure/rack/shelf{
@@ -421,17 +421,17 @@
 	pixel_y = 18
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "df" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/effect/landmark/start/prince,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "dh" = (
 /turf/open/floor/churchrough,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "dp" = (
 /obj/structure/table/wood,
 /obj/structure/bars{
@@ -439,22 +439,22 @@
 	layer = 2.81
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dq" = (
 /obj/structure/fluff/clock{
 	pixel_y = 0;
 	pixel_x = 32
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dr" = (
 /obj/structure/ladder,
 /turf/open/floor/woodturned,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "du" = (
 /obj/effect/landmark/start/templar,
 /turf/open/floor/churchrough,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "dy" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
@@ -476,7 +476,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "dA" = (
 /obj/structure/door{
 	lockid = "roomv";
@@ -484,7 +484,7 @@
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dB" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -494,7 +494,7 @@
 	},
 /obj/item/fuse/parchment,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "dE" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -504,7 +504,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "dF" = (
 /obj/structure/fake_machine/mail{
 	mailtag = "Priest";
@@ -512,18 +512,18 @@
 	pixel_x = 32
 	},
 /turf/open/floor/churchrough,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "dI" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
 	icon_state = "border"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dL" = (
 /obj/structure/door/fancy,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "dN" = (
 /obj/structure/table/wood{
 	dir = 4;
@@ -532,7 +532,7 @@
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "dS" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -541,28 +541,28 @@
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/ingot/copper,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "dX" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "dY" = (
 /obj/effect/mapping_helpers/access/locker,
 /obj/structure/door,
 /obj/effect/mapping_helpers/access/keyset/town/tailor,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "dZ" = (
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ec" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "ee" = (
 /obj/structure/bed/shit,
 /obj/item/bedsheet/cloth,
@@ -570,16 +570,16 @@
 	dir = 4
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "eh" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ei" = (
 /obj/item/bin/water/gross,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "ej" = (
 /obj/structure/table/wood{
 	dir = 8;
@@ -587,13 +587,13 @@
 	},
 /obj/item/weapon/sword/sabre/cutlass,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "eo" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "eq" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -605,13 +605,13 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "er" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "eu" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -622,13 +622,13 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "eC" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "eG" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -636,12 +636,12 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "eQ" = (
 /obj/machinery/light/fueled/torchholder/c,
 /obj/effect/landmark/start/mercenary,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "eR" = (
 /obj/structure/bed/inn,
 /obj/structure/roguetent{
@@ -652,7 +652,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fd" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -663,24 +663,24 @@
 	icon_state = "border"
 	},
 /turf/open/floor/churchmarble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "fg" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /obj/item/storage/backpack/satchel/surgbag,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fi" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "fm" = (
 /obj/structure/fluff/railing/wood,
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fo" = (
 /obj/structure/table/wood{
 	dir = 4;
@@ -696,7 +696,7 @@
 	pixel_y = -9
 	},
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fr" = (
 /obj/structure/stairs{
 	dir = 8
@@ -706,11 +706,11 @@
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "fv" = (
 /obj/structure/table/optable,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fE" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_x = -32;
@@ -718,7 +718,7 @@
 	},
 /obj/structure/bed/shit,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fF" = (
 /obj/structure/door/red{
 	name = "Dungeoneer's Room"
@@ -726,7 +726,7 @@
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/manor/dungeon,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fN" = (
 /obj/effect/landmark/start/orthodoxist,
 /obj/structure/bed/inn,
@@ -735,7 +735,7 @@
 	pixel_y = 29
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "fP" = (
 /obj/structure/door/violet{
 	name = "Mage's Quarters"
@@ -743,10 +743,10 @@
 /obj/effect/mapping_helpers/access/keyset/town/tower,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "fQ" = (
 /turf/closed/wall/mineral/wooddark/horizontal,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "fR" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -761,22 +761,22 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fS" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/head/helmet/leather/tricorn,
 /obj/item/weapon/sword/sabre/cutlass,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "fU" = (
 /obj/structure/carpet/blue,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "fW" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /obj/structure/carpet/red,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "fZ" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -784,7 +784,7 @@
 /obj/structure/fluff/railing/wood,
 /obj/structure/fluff/nest,
 /turf/open/floor/hay,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "gb" = (
 /obj/structure/plank{
 	icon_state = "plank"
@@ -796,14 +796,14 @@
 	dir = 10
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "gf" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "gn" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -812,7 +812,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "go" = (
 /obj/structure/bed/shit,
 /obj/item/bedsheet/cloth,
@@ -820,62 +820,62 @@
 	dir = 8
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "gq" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "gu" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/gem/amethyst,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "gv" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "gx" = (
 /turf/open/floor/carpet/lord/center,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "gE" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "gI" = (
 /obj/structure/fluff/wallclock/l,
 /turf/open/water/bath,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "gK" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "gO" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_x = 32;
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "gP" = (
 /obj/structure/fake_machine/mail,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "gT" = (
 /obj/effect/landmark/start/cook{
 	dir = 8
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "hf" = (
 /obj/item/coin/copper/pile,
 /obj/structure/carpet/green,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "hi" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -887,7 +887,7 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "hm" = (
 /obj/structure/industrial_lift/tram,
 /obj/structure/fluff/railing/border{
@@ -895,17 +895,17 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "hs" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "hv" = (
 /obj/item/reagent_containers/food/snacks/crow{
 	dir = 1;
 	icon_state = "crow"
 	},
 /turf/open/floor/ruinedwood/platform,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "hy" = (
 /obj/structure/door{
 	lockid = "roomi";
@@ -913,7 +913,7 @@
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "hA" = (
 /obj/effect/mapping_helpers/access/locker,
 /obj/structure/door/violet{
@@ -921,16 +921,16 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/town/tower,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "hB" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/closet/crate/chest,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "hE" = (
 /obj/structure/fluff/wallclock,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "hI" = (
 /obj/machinery/light/fueled/wallfire{
 	pixel_y = 32;
@@ -940,7 +940,7 @@
 	layer = 3.8
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "hJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -959,12 +959,12 @@
 	dir = 10
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "hT" = (
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "hW" = (
 /obj/structure/closet/crate/chest/neu_iron,
 /obj/item/reagent_containers/glass/bottle/healthpot,
@@ -975,7 +975,7 @@
 /obj/item/reagent_containers/glass/bottle/healthpot,
 /obj/item/clothing/neck/chaincoif,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "if" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest,
@@ -988,30 +988,30 @@
 /obj/item/reagent_containers/food/snacks/produce/vegetable/potato,
 /obj/item/reagent_containers/food/snacks/produce/vegetable/potato,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ig" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ih" = (
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "longtable"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "iw" = (
 /obj/effect/landmark/start/hunter{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ix" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "iA" = (
 /obj/structure/door{
 	name = "clinic bunks"
@@ -1019,17 +1019,17 @@
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/town/clinic,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "iE" = (
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "iJ" = (
 /obj/structure/closet/crate/chest,
 /obj/item/clothing/armor/chainmail,
 /obj/item/clothing/armor/leather/jacket/sea,
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "iM" = (
 /obj/structure/bed/inn/double,
 /obj/effect/landmark/start/hand{
@@ -1037,7 +1037,7 @@
 	},
 /obj/item/bedsheet/fabric_double,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "iS" = (
 /obj/item/bin/water/gross,
 /obj/effect/decal/cobbleedge{
@@ -1049,7 +1049,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "iU" = (
 /obj/machinery/light/fueled/torchholder/l{
 	pixel_x = -15
@@ -1057,13 +1057,13 @@
 /obj/structure/bed/shit,
 /obj/effect/landmark/start/vagrant,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jd" = (
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_y = -32
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jg" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -1075,7 +1075,7 @@
 	},
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "jm" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -1085,7 +1085,7 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "jq" = (
 /obj/structure/door/viewport{
 	name = "Priest's Quarters"
@@ -1093,46 +1093,46 @@
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "jy" = (
 /obj/effect/landmark/start/villager{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jz" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = -32
 	},
 /turf/open/floor/carpet/lord/left,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "jA" = (
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jB" = (
 /obj/structure/mirror/fancy{
 	pixel_y = -32
 	},
 /obj/item/coin/gold/pile,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "jF" = (
 /obj/structure/ladder,
 /turf/open/floor/woodturned,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "jJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "jL" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "jQ" = (
 /obj/structure/rack/shelf/big{
 	icon_state = "shelf_biggest";
@@ -1146,7 +1146,7 @@
 	pixel_y = 20
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jT" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -1158,10 +1158,10 @@
 /obj/machinery/light/fueled/torchholder/l,
 /obj/item/reagent_containers/food/snacks/bread,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "jU" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "jY" = (
 /obj/structure/table/wood{
 	dir = 4;
@@ -1179,12 +1179,12 @@
 /obj/item/needle,
 /obj/item/needle,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "kh" = (
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "kl" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/flashlight/flare/torch/metal,
@@ -1196,12 +1196,12 @@
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "kn" = (
 /obj/structure/door/fancy,
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ko" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -1215,7 +1215,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "kp" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -1226,24 +1226,24 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ks" = (
 /obj/structure/stockpile_storage/food,
 /obj/structure/stockpile_storage,
 /obj/structure/stockpile_storage/metal,
 /obj/structure/carpet/green,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "ky" = (
 /obj/structure/bed/shit,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "kB" = (
 /obj/structure/door/fancy,
 /obj/effect/mapping_helpers/access/keyset/garrison/captain,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "kC" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
@@ -1254,33 +1254,33 @@
 /obj/item/needle,
 /obj/item/needle,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "kF" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "kI" = (
 /obj/structure/grindwheel,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "kL" = (
 /obj/effect/landmark/terrain_generation_marker,
 /turf/closed/sea_fog,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "kS" = (
 /obj/structure/pillory/double,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "kT" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "kU" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -1292,19 +1292,19 @@
 	color = "#ff9a55"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "kV" = (
 /obj/item/storage/backpack/satchel/surgbag,
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/storage/backpack/satchel/surgbag,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "kX" = (
 /obj/structure/fluff/railing/border{
 	layer = 2.65
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "kY" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -1314,7 +1314,7 @@
 	dir = 4
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "le" = (
 /obj/structure/industrial_lift/tram{
 	icon_state = "corner";
@@ -1323,45 +1323,45 @@
 	opacity = 1
 	},
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "li" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /obj/structure/carpet/cyan,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "lj" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "lk" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lq" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lr" = (
 /obj/structure/chair/bench/couch/right,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "ls" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lx" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -1371,12 +1371,12 @@
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ly" = (
 /obj/structure/bed/hay,
 /obj/item/bedsheet/cloth,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "lA" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -1385,7 +1385,7 @@
 /obj/item/reagent_containers/food/snacks/meat/salami,
 /obj/item/weapon/knife/villager,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lE" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -1395,26 +1395,26 @@
 	},
 /obj/structure/fluff/wallclock/r,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "lH" = (
 /obj/effect/landmark/start/nightmaiden{
 	dir = 4
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lK" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /obj/item/weapon/axe/iron,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lN" = (
 /obj/structure/chair/stool,
 /obj/structure/fluff/walldeco/wantedposter/l,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lV" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/clothing/pants/tights/colored/random,
@@ -1440,33 +1440,33 @@
 /obj/item/soap,
 /obj/item/soap,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lW" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
 /obj/item/candle/yellow/lit,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lY" = (
 /obj/structure/window/openclose{
 	dir = 8
 	},
 /obj/structure/bars,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "lZ" = (
 /obj/structure/fluff/walldeco/painting{
 	pixel_x = -31
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "md" = (
 /obj/structure/rack,
 /obj/item/clothing/armor/plate/iron,
 /obj/item/clothing/gloves/chain/iron,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "me" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/structure/industrial_lift/tram{
@@ -1474,7 +1474,7 @@
 	dir = 4
 	},
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "mq" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -1489,10 +1489,10 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ms" = (
 /turf/closed/sea_fog,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "mv" = (
 /obj/structure/rack/shelf/notdense,
 /obj/item/candle/yellow{
@@ -1504,7 +1504,7 @@
 	pixel_y = 40
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "mz" = (
 /obj/machinery/light/fueled/firebowl/standing,
 /obj/effect/decal/cobbleedge{
@@ -1512,7 +1512,7 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "mG" = (
 /obj/structure/toilet,
 /obj/effect/decal/cobbleedge{
@@ -1528,39 +1528,39 @@
 	},
 /obj/effect/landmark/start/veteran,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "mI" = (
 /turf/open/water/cleanshallow,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "mJ" = (
 /obj/structure/chair/bench/coucha/r,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "mM" = (
 /obj/effect/landmark/start/mercenary,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "mQ" = (
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "mR" = (
 /obj/machinery/light/fueled/firebowl/standing,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "mV" = (
 /obj/structure/chair/wood{
 	dir = 1;
 	icon_state = "chair2"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "mW" = (
 /obj/structure/carpet/green,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ne" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nf" = (
 /obj/structure/closet/crate/chest/neu_iron,
 /obj/item/key/church,
@@ -1568,7 +1568,7 @@
 /obj/item/reagent_containers/glass/cup/silver,
 /obj/item/needle/thorn,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "nl" = (
 /obj/structure/rack/shelf/big{
 	icon_state = "shelf_biggest";
@@ -1601,14 +1601,14 @@
 /obj/item/kitchen/spoon,
 /obj/item/kitchen/spoon,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nm" = (
 /obj/structure/chair/wood{
 	dir = 8;
 	icon_state = "chair2"
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "no" = (
 /obj/structure/industrial_lift/tram{
 	icon_state = "plank2"
@@ -1618,7 +1618,7 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "nt" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -1632,13 +1632,13 @@
 	icon_state = "chair2"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nu" = (
 /obj/machinery/light/fueled/torchholder/r{
 	pixel_x = 16
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nx" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8
@@ -1649,26 +1649,26 @@
 /obj/effect/mapping_helpers/access/keyset/manor/steward,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nz" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "nF" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "nG" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "nL" = (
 /obj/structure/stairs/fancy/r{
 	dir = 1;
 	icon_state = "fancy_stairs_r"
 	},
 /turf/open/floor/carpet/lord/right,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "nQ" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -1678,13 +1678,13 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "nR" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = 32
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "nS" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/wool,
@@ -1693,20 +1693,20 @@
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oa" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8;
 	icon_state = "borderfall"
 	},
 /turf/open/water/cleanshallow,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "oh" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "om" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -1718,25 +1718,25 @@
 	},
 /obj/effect/landmark/start/adventurerlate,
 /turf/open/floor/twig,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "oo" = (
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oq" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ow" = (
 /obj/structure/bed/shit{
 	name = "squire bed"
 	},
 /obj/effect/landmark/start/squire,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ox" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/gem/yellow,
@@ -1744,7 +1744,7 @@
 /obj/item/coin/copper/pile,
 /obj/structure/carpet/green,
 /turf/open/floor/tile/checker,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oA" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -1755,7 +1755,7 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "oB" = (
 /obj/structure/rack,
 /obj/item/weapon/sword/sabre/cutlass,
@@ -1769,14 +1769,14 @@
 	pixel_y = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oF" = (
 /obj/machinery/light/fueled/torchholder/l{
 	pixel_x = -15
 	},
 /obj/structure/rack/shelf/big,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oH" = (
 /obj/structure/mirror,
 /obj/effect/landmark/start/nightmaiden,
@@ -1785,13 +1785,13 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oI" = (
 /obj/machinery/light/fueled/torchholder{
 	pixel_y = 26
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oO" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -1799,18 +1799,18 @@
 	},
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oT" = (
 /obj/structure/carpet/red,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oW" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/millstone{
 	pixel_y = 12
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "oZ" = (
 /obj/item/candle/yellow/lit{
 	pixel_x = 8;
@@ -1822,23 +1822,23 @@
 	},
 /obj/structure/rack/shelf/notdense,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "pa" = (
 /obj/structure/table/wood{
 	layer = 2.8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "pn" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "pp" = (
 /obj/structure/carpet/cyan,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "pt" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/candle/yellow,
@@ -1848,7 +1848,7 @@
 /obj/item/candle/yellow,
 /obj/item/candle/yellow,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "pz" = (
 /obj/item/reagent_containers/glass/mortar{
 	pixel_x = 32
@@ -1867,19 +1867,19 @@
 	pixel_x = 32
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "pG" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
 /obj/item/rope,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "pM" = (
 /turf/closed/wall/mineral/wooddark/end{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "pQ" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/natural/cloth,
@@ -1888,11 +1888,11 @@
 /obj/item/natural/cloth,
 /obj/item/natural/cloth,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "pT" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/lord/right,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "pU" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/clothing/shirt/dress/silkdress/colored/random,
@@ -1904,27 +1904,27 @@
 /obj/item/storage/backpack/satchel,
 /obj/item/storage/backpack/satchel,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "pW" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "pY" = (
 /obj/structure/chair/wood/alt/chair_noble{
 	dir = 8;
 	icon_state = "chair1"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "qa" = (
 /obj/effect/landmark/start/woodsman{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "qm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -1933,14 +1933,14 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "qv" = (
 /obj/structure/window/openclose{
 	dir = 4;
 	icon_state = "woodwindowdir"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "qC" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -1949,27 +1949,27 @@
 	dir = 5
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "qD" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "qE" = (
 /obj/effect/landmark/start/farmer{
 	dir = 1
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "qL" = (
 /obj/structure/carpet/purple,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "qM" = (
 /obj/structure/chair/wood/alt/fancy{
 	dir = 8
 	},
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "qP" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/natural/bundle/fibers/full,
@@ -1977,17 +1977,17 @@
 /obj/item/natural/bundle/fibers/full,
 /obj/item/natural/bundle/fibers/full,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "qS" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "qZ" = (
 /obj/effect/landmark/start/farmer,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "rC" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -1996,7 +1996,7 @@
 	dir = 9
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "rF" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -2010,12 +2010,12 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "rG" = (
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "rJ" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -2025,33 +2025,33 @@
 	},
 /obj/item/fuse/parchment,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "rM" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /obj/item/candle/skull/lit,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "rO" = (
 /obj/structure/window/openclose{
 	dir = 4;
 	icon_state = "woodwindowdir"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "rR" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "rV" = (
 /obj/effect/landmark/start/shophand{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "sc" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -2061,18 +2061,18 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "se" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "sk" = (
 /obj/structure/bars/grille,
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "sm" = (
 /obj/machinery/light/fueled/lanternpost{
 	dir = 1;
@@ -2080,29 +2080,29 @@
 	pixel_y = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "sq" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "sw" = (
 /turf/closed/wall/mineral/wooddark/window,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "sA" = (
 /obj/structure/rack/shelf/big,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "sL" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
 	icon_state = "border"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "sT" = (
 /obj/structure/fluff/wallclock/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "sU" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -2111,7 +2111,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "sW" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -2119,7 +2119,7 @@
 	},
 /obj/structure/fermentation_keg,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "sZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -2129,7 +2129,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "tb" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/fabric,
@@ -2138,14 +2138,14 @@
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "th" = (
 /obj/structure/fluff/railing/border{
 	dir = 6;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "tq" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -2153,28 +2153,28 @@
 	},
 /obj/structure/fermentation_keg/random/beer,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "tt" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/gem,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "tB" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
 /obj/item/clothing/armor/leather/jacket/sea,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "tD" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "tE" = (
 /obj/structure/toilet,
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "tK" = (
 /obj/structure/table/wood{
 	dir = 2;
@@ -2185,29 +2185,29 @@
 	pixel_x = 15
 	},
 /turf/open/floor/churchrough,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "tM" = (
 /obj/machinery/light/fueled/hearth,
 /obj/item/cooking/pan,
 /turf/open/floor/blocks,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "tS" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/ingot/blacksteel,
 /obj/item/ingot/blacksteel,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "tT" = (
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "tY" = (
 /obj/effect/landmark/start/jester{
 	dir = 4
 	},
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ud" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -2216,14 +2216,14 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uh" = (
 /obj/machinery/light/fueled/forge,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ui" = (
 /turf/open/floor/churchmarble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uk" = (
 /obj/item/book/arcyne,
 /obj/item/book/beardling,
@@ -2232,11 +2232,11 @@
 /obj/item/book/fishing,
 /obj/structure/roguetent,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ul" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "um" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/fabric,
@@ -2246,7 +2246,7 @@
 /obj/structure/rack/shelf/notdense,
 /obj/structure/carpet/cyan,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "uo" = (
 /obj/structure/table/wood{
 	dir = 2;
@@ -2258,11 +2258,11 @@
 	},
 /obj/item/clothing/head/helmet/leather/tricorn,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "up" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/blocks/newstone/alt,
-/area/rogue/indoors/town/warehouse)
+/area/indoors/town/warehouse)
 "uu" = (
 /obj/structure/rack,
 /obj/item/clothing/armor/gambeson,
@@ -2270,27 +2270,27 @@
 /obj/item/clothing/armor/gambeson,
 /obj/item/clothing/armor/gambeson,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uv" = (
 /obj/structure/table/wood/fine,
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "uw" = (
 /obj/effect/mapping_helpers/access/locker,
 /obj/structure/door/stone,
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uB" = (
 /obj/structure/carpet/blue,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uD" = (
 /obj/structure/bed/shit,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uF" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -2298,21 +2298,21 @@
 	},
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "uG" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uK" = (
 /turf/open/floor/tile/masonic/spiral,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "uM" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/needle,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uN" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -2321,7 +2321,7 @@
 	dir = 6
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uU" = (
 /obj/structure/throne{
 	pixel_x = -32
@@ -2331,17 +2331,17 @@
 	pixel_y = 32
 	},
 /turf/open/floor/carpet/lord/center,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "uV" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = -32
 	},
 /turf/open/floor/carpet/lord/right,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "uX" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "uY" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -2354,21 +2354,21 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "uZ" = (
 /obj/effect/landmark/start/monk,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "vc" = (
 /obj/effect/landmark/tram/queued_path/cargo_exit{
 	next_path_id = "cargo_map_exit"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "ve" = (
 /obj/effect/landmark/start/mercenarylate,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "vf" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -2388,18 +2388,18 @@
 /obj/structure/rack/shelf/notdense,
 /obj/effect/landmark/start/clinicapprentice,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vn" = (
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "vo" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/neu,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vs" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -2416,24 +2416,24 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "vt" = (
 /obj/structure/roguetent,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vv" = (
 /obj/structure/door/stone{
 	lockid = "church";
 	name = "Church"
 	},
 /turf/open/floor/churchmarble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "vx" = (
 /obj/structure/fluff/walldeco/painting/queen{
 	pixel_x = 32
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vB" = (
 /obj/structure/fluff/walldeco/painting/seraphina{
 	pixel_y = 32
@@ -2445,7 +2445,7 @@
 	},
 /obj/item/coin/gold/pile,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "vC" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -2455,19 +2455,19 @@
 	pixel_x = -7
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vE" = (
 /obj/effect/landmark/start/villager,
 /obj/structure/rack/shelf/big,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vH" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "vI" = (
 /obj/structure/chair/wood/alt/fancy,
 /obj/structure/fake_machine/mail{
@@ -2478,7 +2478,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "vQ" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -2488,7 +2488,7 @@
 	},
 /obj/item/fuse/parchment,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vU" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -2501,37 +2501,37 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "vY" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /obj/item/weapon/axe/iron,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wb" = (
 /turf/closed/wall/mineral/craftstone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "we" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "wh" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "wq" = (
 /obj/structure/closet/crate/drawer{
 	pixel_y = 12;
 	density = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "wv" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/old_crate,
@@ -2540,11 +2540,11 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wx" = (
 /obj/structure/roguetent,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wz" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -2552,20 +2552,20 @@
 /obj/structure/fake_machine/steward,
 /obj/item/key/steward,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wA" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/clothing/armor/leather/jacket/sea,
 /obj/item/weapon/mace/woodclub/train_sword,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "wD" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wE" = (
 /obj/structure/table/wood/plain{
 	layer = 2
@@ -2574,7 +2574,7 @@
 	dir = 2
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wF" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/cloth,
@@ -2584,7 +2584,7 @@
 	},
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wH" = (
 /obj/structure/rack,
 /obj/item/weapon/axe/battle,
@@ -2593,7 +2593,7 @@
 /obj/item/clothing/head/helmet/leather/tricorn,
 /obj/item/clothing/head/helmet/leather/tricorn,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "wI" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -2601,14 +2601,14 @@
 /obj/structure/fluff/railing/wood,
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "wU" = (
 /obj/effect/landmark/start/orthodoxist,
 /obj/structure/bed/inn,
 /obj/item/bedsheet/wool,
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "wZ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
@@ -2619,21 +2619,21 @@
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "xd" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "xi" = (
 /obj/structure/bed/hay,
 /obj/structure/roguetent{
 	layer = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xm" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -2646,11 +2646,11 @@
 	layer = 2.6
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "xn" = (
 /obj/machinery/artificer_table,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "xu" = (
 /obj/item/candle/yellow,
 /obj/item/candle/yellow,
@@ -2659,11 +2659,11 @@
 /obj/item/candle/yellow,
 /obj/structure/carpet/green,
 /turf/open/floor/tile/checker,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xv" = (
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xw" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -2675,10 +2675,10 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xy" = (
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xA" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -2686,59 +2686,59 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "xM" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xR" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
 /obj/effect/landmark/start/nightman,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xT" = (
 /obj/structure/fluff/railing/border,
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "xV" = (
 /obj/structure/chair/wood/alt/chair_noble{
 	dir = 8;
 	icon_state = "chair1"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "yd" = (
 /obj/structure/fluff/wallclock/r,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "yh" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "yi" = (
 /obj/structure/closet/crate/chest/old_crate,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "yj" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "yl" = (
 /obj/structure/bars,
 /obj/structure/window/openclose{
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ym" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -2748,14 +2748,14 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "yt" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "yA" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -2764,78 +2764,78 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "yB" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "yF" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "manor"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "yI" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "yK" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "yX" = (
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "zc" = (
 /turf/open/floor/carpet/lord/left,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "zf" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "zg" = (
 /obj/structure/door/iron/bars,
 /obj/effect/mapping_helpers/access/keyset/manor/dungeon,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "zh" = (
 /obj/structure/chair/stool,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "zz" = (
 /obj/structure/closet/crate/chest,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "zF" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "zH" = (
 /obj/effect/landmark/start/mercenary{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "zO" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "zQ" = (
 /obj/structure/carpet/red,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "zR" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8;
@@ -2845,19 +2845,19 @@
 	pixel_y = 29
 	},
 /turf/open/water/cleanshallow,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "zT" = (
 /obj/structure/chair/wood/alt/fancy{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "zW" = (
 /obj/structure/bed/shit,
 /obj/item/bedsheet/cloth,
 /obj/effect/landmark/start/churchling,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "zY" = (
 /obj/structure/rack/shelf/notdense,
 /obj/item/weapon/polearm/spear{
@@ -2882,40 +2882,40 @@
 	pixel_y = 32
 	},
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ac" = (
 /obj/effect/landmark/start/innkeep,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ad" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ae" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Af" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/gem/blue,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "Ah" = (
 /obj/effect/landmark/start/tailor{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Aj" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ak" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/wicker,
@@ -2924,11 +2924,11 @@
 /obj/item/grown/log/tree/stick,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Al" = (
 /obj/structure/closet/crate/chest/neu,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ap" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -2943,7 +2943,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Av" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/coffin,
@@ -2953,10 +2953,10 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "AB" = (
 /turf/closed/basic,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "AE" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -2967,11 +2967,11 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "AT" = (
 /obj/structure/bed/hay,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "AU" = (
 /obj/structure/fluff/statue/small{
 	pixel_y = 11;
@@ -2981,7 +2981,7 @@
 	icon_state = "plank2"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "AZ" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/instrument/flute,
@@ -2993,7 +2993,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Bc" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3003,7 +3003,7 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Bi" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -3013,7 +3013,7 @@
 	icon_state = "tablewood3"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Bk" = (
 /obj/structure/door/viewport{
 	dir = 4;
@@ -3022,36 +3022,36 @@
 /obj/effect/mapping_helpers/access/keyset/manor/vault,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Bn" = (
 /obj/structure/window/openclose,
 /obj/structure/bars,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "By" = (
 /obj/structure/door/iron/bars,
 /obj/effect/mapping_helpers/access/keyset/manor/dungeon,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/metal/barograte,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "BA" = (
 /turf/open/water/bath,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "BG" = (
 /obj/structure/bed/inn/double,
 /obj/effect/landmark/start/steward,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "BH" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
 /obj/effect/landmark/start/prince,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "BN" = (
 /obj/structure/bars,
 /turf/open/floor/metal/barograte,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "BR" = (
 /obj/structure/fluff/railing/border{
 	dir = 9;
@@ -3060,14 +3060,14 @@
 	},
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "BV" = (
 /obj/structure/winch{
 	name = "anchor"
 	},
 /obj/structure/stone_tile/slab,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "BX" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/armor/leather,
@@ -3078,15 +3078,15 @@
 /obj/item/clothing/armor/leather,
 /obj/item/clothing/armor/leather,
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Cg" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ch" = (
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Cj" = (
 /obj/structure/door{
 	name = "Barracks"
@@ -3094,28 +3094,28 @@
 /obj/effect/mapping_helpers/access/keyset/garrison/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ck" = (
 /obj/structure/door/viewport,
 /obj/effect/mapping_helpers/access/keyset/garrison/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Cl" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Cn" = (
 /turf/open/floor/carpet/lord/right,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Co" = (
 /obj/structure/toilet,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "Cv" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -3123,11 +3123,11 @@
 	},
 /obj/item/tent_kit,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Cw" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "CA" = (
 /obj/item/natural/worms/leech{
 	pixel_x = -7;
@@ -3149,7 +3149,7 @@
 	pixel_x = 10
 	},
 /turf/open/water/swamp,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CE" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -3160,7 +3160,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CG" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/neu_fancy,
@@ -3169,7 +3169,7 @@
 /obj/item/book/tales1,
 /obj/item/book/robber,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CI" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/cloth,
@@ -3178,17 +3178,17 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CJ" = (
 /obj/structure/chair/wood,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CK" = (
 /obj/effect/landmark/start/villager{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "CS" = (
 /obj/structure/mannequin/male{
 	dir = 8;
@@ -3197,11 +3197,11 @@
 	density = 0
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "CY" = (
 /obj/effect/landmark/start/clinicapprentice,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Da" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -3211,7 +3211,7 @@
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Dg" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -3221,7 +3221,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Dn" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/clothing/head/wizhat,
@@ -3236,34 +3236,34 @@
 /obj/item/clothing/cloak/cape/puritan,
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Dt" = (
 /obj/effect/landmark/tram/queued_path/cargo_pre_enter{
 	next_path_id = "cargo_stop"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Du" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Dv" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Dw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DA" = (
 /obj/structure/fake_machine/vendor/inn,
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DG" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/ore/coal,
@@ -3271,21 +3271,21 @@
 /obj/item/ore/coal,
 /obj/item/ore/coal,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DO" = (
 /turf/closed/wall/mineral/wooddark/slitted,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DP" = (
 /turf/closed/wall/mineral/decostone,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "DQ" = (
 /obj/effect/landmark/ship_marker,
 /turf/closed/sea_fog,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "DS" = (
 /obj/item/bin/water,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DU" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -3297,7 +3297,7 @@
 	pixel_y = 12
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "DV" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /obj/item/paper/scroll,
@@ -3306,13 +3306,13 @@
 /obj/item/book/law,
 /obj/item/book/law,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "DY" = (
 /obj/structure/closet/crate/drawer/random,
 /obj/item/scrying,
 /obj/structure/carpet/cyan,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Ea" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/pelt,
@@ -3322,16 +3322,16 @@
 	},
 /obj/structure/rack/shelf/notdense,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ed" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "Ee" = (
 /obj/machinery/light/fueled/wallfire/candle/blue,
 /obj/structure/fluff/psycross/copper,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Em" = (
 /obj/machinery/light/fueled/oven/east,
 /obj/structure/rack/shelf,
@@ -3354,7 +3354,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Eo" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -3366,7 +3366,7 @@
 	},
 /obj/effect/landmark/start/adventurerlate,
 /turf/open/floor/hay,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Eq" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -3376,7 +3376,7 @@
 	pixel_y = 29
 	},
 /turf/open/water/cleanshallow,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Ew" = (
 /obj/structure/fluff/walldeco/bigpainting/lake{
 	pixel_x = 0
@@ -3385,39 +3385,39 @@
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "EE" = (
 /obj/machinery/light/fueled/torchholder/r,
 /obj/structure/roguetent,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "EG" = (
 /obj/machinery/light/fueled/wallfire{
 	pixel_y = -32
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "EJ" = (
 /obj/structure/chair/stool,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "EM" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "EN" = (
 /obj/structure/closet/crate/chest,
 /obj/item/clothing/armor/chainmail,
 /obj/item/clothing/armor/leather/jacket/sea,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ET" = (
 /obj/structure/table/wood/crafted,
 /obj/item/storage/crucible/random,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "EX" = (
 /obj/structure/fluff/railing/border{
 	dir = 9;
@@ -3425,13 +3425,13 @@
 	layer = 2.7
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Fa" = (
 /obj/effect/landmark/start/servant,
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Fe" = (
 /obj/structure/fluff/railing/border{
 	layer = 2.65
@@ -3448,11 +3448,11 @@
 	layer = 2.6
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Fq" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Fs" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3461,7 +3461,7 @@
 /obj/item/natural/bundle/fibers/full,
 /obj/item/natural/bundle/fibers/full,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Fu" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -3473,12 +3473,12 @@
 /obj/item/book/noc,
 /obj/item/book/tales1,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Fx" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /obj/structure/stairs/stone/church,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Fz" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -3489,26 +3489,26 @@
 	icon_state = "cobbleedge-e"
 	},
 /turf/open/floor/ruinedwood/platform,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "FD" = (
 /obj/structure/door/fancy{
 	lockid = "royal";
 	name = "Captain's Chamber"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "FF" = (
 /obj/machinery/light/fueled/hearth,
 /obj/item/reagent_containers/glass/bucket/pot/copper,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "FK" = (
 /obj/structure/window/openclose{
 	dir = 1;
 	icon_state = "woodwindowdir"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "FN" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -3522,7 +3522,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "FO" = (
 /obj/structure/door/weak/bolt{
 	dir = 1
@@ -3531,7 +3531,7 @@
 	pixel_x = 5
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "FP" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -3552,21 +3552,21 @@
 	pixel_x = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "FX" = (
 /obj/structure/table/wood{
 	dir = 6;
 	icon_state = "largetable"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "FZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 5;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ge" = (
 /obj/item/natural/cloth{
 	pixel_x = 3;
@@ -3582,7 +3582,7 @@
 	},
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Gf" = (
 /obj/structure/table/wood{
 	layer = 2.8
@@ -3591,7 +3591,7 @@
 /obj/item/key/lord,
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Gh" = (
 /obj/structure/bed/hay,
 /obj/structure/rack/shelf/notdense{
@@ -3601,20 +3601,20 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Gm" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Gq" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Gt" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/reagent_containers/glass/cup/wooden,
@@ -3622,11 +3622,11 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Gx" = (
 /obj/structure/fermentation_keg/beer,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "GA" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3636,45 +3636,45 @@
 	},
 /obj/item/clothing/head/strawhat,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "GC" = (
 /obj/structure/chair/bench/church{
 	dir = 4
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "GF" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "GG" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/pelt,
 /obj/effect/landmark/start/guardsman,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "GH" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "GI" = (
 /obj/effect/landmark/start/priest,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "GK" = (
 /obj/structure/bed/shit,
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "GQ" = (
 /obj/effect/landmark/tram/queued_path{
 	next_path_id = "cargo_map_enter";
 	platform_code = "cargo_return_2"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "GR" = (
 /obj/structure/rack,
 /obj/item/weapon/sword/scimitar/messer,
@@ -3686,52 +3686,52 @@
 /obj/item/clothing/pants/chainlegs/iron,
 /obj/item/clothing/pants/chainlegs/iron,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "GS" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/scomstone,
 /obj/item/weapon/whip/antique,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "GU" = (
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "GY" = (
 /obj/structure/window/openclose{
 	dir = 8;
 	icon_state = "woodwindowdir"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Hi" = (
 /obj/structure/door/iron/bars,
 /obj/effect/mapping_helpers/access/keyset/garrison/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Hs" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Hu" = (
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Hx" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "HD" = (
 /obj/effect/landmark/start/artificer{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "HH" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/paper/scroll,
@@ -3743,7 +3743,7 @@
 /obj/item/book/law,
 /obj/item/weapon/sword/sabre,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "HO" = (
 /obj/structure/bed/hay,
 /obj/item/bedsheet/cloth,
@@ -3754,7 +3754,7 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "HQ" = (
 /obj/structure/table/wood/crafted,
 /obj/item/storage/crucible/random{
@@ -3762,13 +3762,13 @@
 	pixel_x = 5
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "HS" = (
 /obj/structure/plank{
 	icon_state = "plank"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ia" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -3778,13 +3778,13 @@
 /obj/item/reagent_containers/food/snacks/hardtack,
 /obj/item/reagent_containers/food/snacks/hardtack,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Il" = (
 /obj/structure/door/violet,
 /obj/effect/mapping_helpers/access/keyset/town/tower,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "In" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/reagent_containers/glass/cup/wooden,
@@ -3797,17 +3797,17 @@
 /obj/item/storage/messkit,
 /obj/item/storage/messkit,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "It" = (
 /turf/closed/wall/mineral/wooddark/end,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Ix" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /obj/structure/bed/shit,
 /obj/item/bedsheet/cloth,
 /obj/structure/carpet/red,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "IA" = (
 /obj/structure/industrial_lift/tram,
 /obj/structure/stairs{
@@ -3818,10 +3818,10 @@
 	icon_state = "border"
 	},
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "II" = (
 /turf/closed/wall/mineral/wooddark/vertical,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "IJ" = (
 /obj/machinery/anvil/crafted,
 /obj/item/weapon/hammer,
@@ -3831,7 +3831,7 @@
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "IM" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -3841,12 +3841,12 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "IT" = (
 /obj/item/ore/coal,
 /obj/effect/landmark/start/mercenary,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "IV" = (
 /obj/structure/door/viewport{
 	dir = 1;
@@ -3855,7 +3855,7 @@
 /obj/effect/mapping_helpers/access/keyset/manor/steward,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/chevron,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "IY" = (
 /obj/machinery/light/fueled/lanternpost{
 	pixel_x = 16;
@@ -3863,23 +3863,23 @@
 	pixel_y = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Je" = (
 /obj/structure/bed/shit,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ji" = (
 /obj/structure/fermentation_keg,
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Jt" = (
 /obj/structure/fluff/railing/border,
 /obj/item/rope,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Jv" = (
 /obj/structure/closet/crate/crafted_closet/lord,
 /obj/item/storage/messkit,
@@ -3888,14 +3888,14 @@
 /obj/item/clothing/cloak/half/colored/red,
 /obj/item/clothing/armor/leather/jacket/silk_coat,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Jx" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "JE" = (
 /obj/structure/table/wood{
 	dir = 8;
@@ -3911,21 +3911,21 @@
 	pixel_y = 10
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "JF" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "JI" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-w"
 	},
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "JJ" = (
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "JP" = (
 /obj/item/reagent_containers/glass/cup/silver{
 	pixel_x = -5;
@@ -3937,13 +3937,13 @@
 	},
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "JR" = (
 /obj/effect/landmark/start/beastmonger{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "JU" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -3961,7 +3961,7 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "JW" = (
 /obj/structure/fireaxecabinet/south,
 /obj/structure/chair/bench/coucha,
@@ -3970,19 +3970,19 @@
 	},
 /obj/effect/landmark/start/lord,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "JZ" = (
 /obj/structure/door/fancy,
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Kc" = (
 /obj/effect/landmark/tram/queued_path/cargo_map_exit{
 	next_path_id = "cargo_return_1"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Kd" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/cobbleedge{
@@ -3990,33 +3990,33 @@
 	},
 /obj/structure/chair/stool,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ki" = (
 /obj/item/weapon/shield/wood{
 	pixel_y = -32
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Kk" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Km" = (
 /obj/structure/window,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Kp" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ks" = (
 /obj/structure/bars,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "Ku" = (
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Kv" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -4037,11 +4037,11 @@
 	dir = 2
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Kw" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KC" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -4057,18 +4057,18 @@
 	color = "#ff9a55"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "KF" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/ingot/iron,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "KH" = (
 /obj/structure/door/weak/bolt{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KL" = (
 /obj/structure/fluff/railing/border,
 /obj/machinery/light/fueled/wallfire/candle{
@@ -4078,21 +4078,21 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KM" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8;
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KO" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "KQ" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -4102,29 +4102,29 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KR" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KS" = (
 /obj/structure/chair/stool,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KX" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /obj/structure/fluff/walldeco/wantedposter,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KY" = (
 /turf/closed/wall/mineral/wooddark/end{
 	dir = 8
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "KZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -4133,13 +4133,13 @@
 /obj/structure/fluff/railing/border,
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "La" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Lf" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -4148,17 +4148,17 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Lg" = (
 /turf/open/floor/tile/checker,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Li" = (
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Lp" = (
 /obj/structure/fermentation_keg,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ls" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -4166,11 +4166,11 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "LB" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "LD" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -4182,44 +4182,44 @@
 	pixel_y = -16
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "LE" = (
 /obj/structure/stairs/fancy/l{
 	dir = 1;
 	icon_state = "fancy_stairs_l"
 	},
 /turf/open/floor/carpet/lord/left,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "LJ" = (
 /turf/closed/wall/mineral/wooddark/end{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "LU" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
 	dir = 4
 	},
 /turf/open/water/cleanshallow,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "LV" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "LX" = (
 /obj/structure/fake_machine/mail,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ma" = (
 /obj/structure/bars,
 /obj/structure/window/openclose{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Me" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/table/wood{
@@ -4227,39 +4227,39 @@
 	},
 /obj/item/rope,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Mh" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Mj" = (
 /turf/closed/wall/mineral/wooddark/end{
 	dir = 1
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Mp" = (
 /obj/structure/door/window,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Mq" = (
 /obj/structure/mirror{
 	pixel_y = -32
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Mr" = (
 /obj/effect/landmark/start/veteran,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ME" = (
 /obj/item/statue/gold{
 	pixel_y = 12
 	},
 /obj/structure/table/wood/fine,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "MF" = (
 /obj/structure/bed/inn,
 /obj/effect/decal/cobbleedge{
@@ -4271,14 +4271,14 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ML" = (
 /obj/structure/door/stone{
 	lockid = "church"
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "MQ" = (
 /obj/structure/door/viewport{
 	dir = 8
@@ -4286,28 +4286,28 @@
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/town/apothecary,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "MU" = (
 /obj/machinery/light/fueled/torchholder/r,
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Na" = (
 /obj/structure/window,
 /obj/structure/roguetent,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Nb" = (
 /obj/effect/landmark/start/servant,
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Nc" = (
 /obj/effect/landmark/start/orphanlate,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Nk" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -4316,23 +4316,23 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Nt" = (
 /turf/closed/wall/mineral/wooddark/end,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Nx" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ny" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "NB" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -4345,7 +4345,7 @@
 /obj/item/reagent_containers/food/snacks/meat/poultry/cutlet,
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "NE" = (
 /obj/structure/closet/crate/drawer/random,
 /obj/item/storage/belt/pouch/coins/mid,
@@ -4354,11 +4354,11 @@
 /obj/item/scomstone,
 /obj/structure/fluff/wallclock/r,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "NM" = (
 /obj/structure/toilet,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "NO" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/wicker,
@@ -4366,7 +4366,7 @@
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "NV" = (
 /obj/structure/door/viewport{
 	dir = 1;
@@ -4374,10 +4374,10 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/town/apothecary,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "NX" = (
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "Ob" = (
 /obj/structure/chair/wood/alt/fancy,
 /obj/structure/fluff/walldeco/customflag{
@@ -4385,7 +4385,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Od" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -4395,7 +4395,7 @@
 /obj/item/natural/bundle/fibers/full,
 /obj/item/natural/bundle/fibers/full,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Oh" = (
 /obj/item/candle/yellow/lit{
 	pixel_x = -7;
@@ -4407,16 +4407,16 @@
 	},
 /obj/structure/rack/shelf/notdense,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ol" = (
 /obj/structure/fluff/walldeco/psybanner,
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Om" = (
 /obj/structure/chair/stool,
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Op" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -4426,52 +4426,52 @@
 	dir = 1
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Os" = (
 /obj/machinery/light/fueled/torchholder/l{
 	pixel_x = -15
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ot" = (
 /obj/structure/closet/crate/chest,
 /obj/item/rope/chain,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/book/law,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ou" = (
 /obj/effect/landmark/start/wapprentice,
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Ov" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ow" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Oy" = (
 /obj/structure/trophy/deer,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OA" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/glass/cup/golden,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "OF" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/weapon/sword/long/exe/cloth,
 /obj/structure/fluff/wallclock/l,
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OL" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -4486,12 +4486,12 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OP" = (
 /obj/structure/bed/shit,
 /obj/structure/carpet/red,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OQ" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -4509,7 +4509,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OS" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/candle/yellow,
@@ -4524,13 +4524,13 @@
 /obj/item/candle/yellow,
 /obj/item/candle/yellow,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OW" = (
 /obj/structure/industrial_lift/tram{
 	fake = 1
 	},
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "OY" = (
 /obj/structure/door{
 	lockid = "roomiv";
@@ -4538,11 +4538,11 @@
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "OZ" = (
 /obj/structure/carpet/green,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "Pb" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -4559,12 +4559,12 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Pg" = (
 /obj/effect/mapping_helpers/access/locker,
 /obj/structure/door/fancy,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Pl" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -4572,7 +4572,7 @@
 	},
 /obj/item/candle/yellow,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ps" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -4580,17 +4580,17 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Pt" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
 	icon_state = "border"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Pv" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "PJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -4600,11 +4600,11 @@
 	dir = 9
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "PL" = (
 /obj/structure/chair/stool,
 /turf/open/floor/churchmarble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "PN" = (
 /obj/structure/stairs{
 	dir = 4
@@ -4614,17 +4614,17 @@
 	pixel_y = 14
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "PQ" = (
 /obj/machinery/anvil/crafted,
 /obj/item/weapon/hammer,
 /obj/item/weapon/tongs,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Qa" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Qb" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -4634,7 +4634,7 @@
 	},
 /obj/item/fuse/parchment,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Qf" = (
 /obj/structure/rack/shelf/notdense{
 	pixel_y = 23
@@ -4644,30 +4644,30 @@
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Qg" = (
 /obj/machinery/light/fueled/hearth,
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Qi" = (
 /obj/item/reagent_containers/food/snacks/crow{
 	dir = 1;
 	icon_state = "crow"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Qx" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/fabric,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "QB" = (
 /obj/structure/roguetent,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "QF" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -4682,7 +4682,7 @@
 	pixel_y = -16
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "QK" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/cloth,
@@ -4691,12 +4691,12 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "QN" = (
 /obj/structure/bed/hay,
 /obj/effect/landmark/start/templar,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "QP" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -4704,20 +4704,20 @@
 	},
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "QR" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "QS" = (
 /obj/structure/door/window,
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "QU" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -4725,54 +4725,54 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "QZ" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/hardtack,
 /obj/item/reagent_containers/food/snacks/hardtack,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Rd" = (
 /obj/structure/bed/shit{
 	name = "makeshift bed"
 	},
 /obj/effect/landmark/start/squire,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Re" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/shipbrig)
+/area/ship/shipbrig)
 "Ri" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Rk" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Rn" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Rq" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ru" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/lord/left,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Rw" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Rz" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -4785,11 +4785,11 @@
 /obj/structure/fluff/nest,
 /obj/effect/landmark/start/adventurerlate,
 /turf/open/floor/hay,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "RF" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "RH" = (
 /obj/structure/fluff/railing/border{
 	dir = 9;
@@ -4803,16 +4803,16 @@
 	color = "#ff9a55"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "RJ" = (
 /obj/structure/meathook,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "RL" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /obj/structure/industrial_lift/tram,
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "RO" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -4828,7 +4828,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "RR" = (
 /obj/structure/closet/crate/drawer/inn,
 /obj/item/clothing/cloak/raincloak/colored/mortus,
@@ -4839,11 +4839,11 @@
 	pixel_y = 25
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "RX" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "RY" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /obj/effect/decal/cobbleedge{
@@ -4851,14 +4851,14 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "RZ" = (
 /obj/machinery/light/fueled/torchholder/r{
 	pixel_x = 16
 	},
 /obj/structure/rack/shelf/big,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sc" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/cobbleedge{
@@ -4867,13 +4867,13 @@
 /obj/structure/closet/crate/coffin,
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Se" = (
 /obj/structure/window/openclose{
 	dir = 1
 	},
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sg" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -4881,21 +4881,21 @@
 	},
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sj" = (
 /obj/structure/fluff/statue/pillar,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sk" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sq" = (
 /obj/structure/door/swing,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Sr" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/cloak/stole/red,
@@ -4903,12 +4903,12 @@
 /obj/item/weapon/polearm/woodstaff/aries,
 /obj/item/scomstone,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "Ss" = (
 /turf/open/floor/rooftop/green{
 	dir = 8
 	},
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Su" = (
 /obj/structure/rack,
 /obj/item/natural/cloth,
@@ -4920,7 +4920,7 @@
 /obj/item/needle/thorn,
 /obj/item/needle/thorn,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "Sy" = (
 /obj/structure/table/wood{
 	layer = 2.8
@@ -4935,16 +4935,16 @@
 	pixel_x = -9
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "SB" = (
 /obj/machinery/light/fueled/smelter/great,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "SC" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/flashlight/flare/torch/lantern,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "SI" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/shirt/dress/silkdress/colored/princess,
@@ -4952,23 +4952,23 @@
 /obj/item/clothing/shirt/undershirt/puritan,
 /obj/item/clothing/shirt/tunic,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "SO" = (
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "SP" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "SR" = (
 /obj/structure/industrial_lift/tram{
 	icon_state = "roofg";
 	dir = 4
 	},
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "ST" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -4976,18 +4976,18 @@
 	},
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "SX" = (
 /turf/open/floor/ruinedwood/chevron,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Tb" = (
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/town/church)
+/area/indoors/town/church)
 "Te" = (
 /obj/structure/chair/stool,
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Tg" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -4996,7 +4996,7 @@
 /obj/structure/fluff/railing/wood,
 /obj/item/ingot/iron,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ti" = (
 /obj/structure/rack/shelf/notdense,
 /obj/item/candle/yellow/lit{
@@ -5008,10 +5008,10 @@
 	pixel_y = 40
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ts" = (
 /turf/open/floor/churchmarble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Tv" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -5019,14 +5019,14 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Tw" = (
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Tx" = (
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "TE" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -5036,18 +5036,18 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "TF" = (
 /obj/effect/landmark/tram/queued_path{
 	next_path_id = "cargo_return_2";
 	platform_code = "cargo_return_1"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "TG" = (
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "TK" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -5055,14 +5055,14 @@
 /obj/structure/fluff/railing/border,
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "TN" = (
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "TO" = (
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "TP" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -5072,16 +5072,16 @@
 	pixel_x = -25
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "TW" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "TY" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Uf" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -5089,7 +5089,7 @@
 	},
 /obj/item/reagent_containers/glass/bottle/beer/hagwoodbitter,
 /turf/open/floor/churchrough,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Uq" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -5097,11 +5097,11 @@
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ur" = (
 /obj/effect/landmark/start/villager,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Us" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -5110,14 +5110,14 @@
 /obj/structure/fluff/nest,
 /obj/structure/ladder,
 /turf/open/floor/hay,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Ut" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/ingot/silver,
 /obj/item/ingot/silver,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/tile/checker,
-/area/rogue/indoors/town/vault)
+/area/indoors/town/vault)
 "Uu" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -5137,14 +5137,14 @@
 /obj/item/reagent_containers/powder/blastpowder,
 /obj/item/reagent_containers/powder/blastpowder,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Uv" = (
 /obj/structure/fluff/walldeco/bigpainting,
 /obj/structure/chair/bench/couch/left,
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "UD" = (
 /obj/structure/bed/inn,
 /obj/item/bedsheet/fabric,
@@ -5153,7 +5153,7 @@
 	},
 /obj/effect/landmark/start/dungeoneer,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "UF" = (
 /obj/structure/chair/wood/alt/chair_noble{
 	dir = 8;
@@ -5162,39 +5162,39 @@
 /obj/structure/fluff/wallclock,
 /obj/structure/carpet/blue,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "UI" = (
 /obj/structure/roguetent{
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "UM" = (
 /obj/structure/fluff/statue/astrata/bling,
 /turf/open/floor/ruinedwood/platform,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "US" = (
 /obj/effect/landmark/start/mercenary{
 	dir = 1
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "UT" = (
 /obj/structure/window/openclose{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "UU" = (
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "UV" = (
 /obj/structure/rack/shelf/notdense,
 /obj/structure/industrial_lift/tram,
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "UX" = (
 /obj/structure/rack/shelf/big{
 	icon_state = "shelf_biggest";
@@ -5224,11 +5224,11 @@
 	pixel_y = 12
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "UY" = (
 /obj/structure/industrial_lift/tram,
 /turf/open/water/ocean/deep,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "UZ" = (
 /obj/item/rope,
 /obj/structure/fluff/railing/border{
@@ -5240,29 +5240,29 @@
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Vb" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Vd" = (
 /obj/structure/mirror{
 	pixel_x = -28;
 	pixel_y = 0
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Vg" = (
 /obj/structure/table/wood{
 	dir = 4;
 	icon_state = "largetable"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Vi" = (
 /obj/structure/carpet/blue,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "Vj" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -5273,14 +5273,14 @@
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Vl" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Vn" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -5290,11 +5290,11 @@
 	},
 /obj/item/fuse/parchment,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Vp" = (
 /obj/effect/landmark/tram/queued_path/cargo_stop,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Vs" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -5308,29 +5308,29 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Vy" = (
 /obj/effect/landmark/start/churchling{
 	dir = 8
 	},
 /turf/open/floor/cobble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "VA" = (
 /obj/structure/chair/wood/alt/chair_noble{
 	dir = 4;
 	icon_state = "chair1"
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VD" = (
 /obj/structure/door/window,
 /obj/effect/mapping_helpers/access/keyset/town/inn,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VG" = (
 /turf/open/floor/carpet/lord/center,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VH" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -5345,12 +5345,12 @@
 	pixel_y = -16
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "VI" = (
 /turf/closed/wall/mineral/tent{
 	dir = 4
 	},
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "VK" = (
 /obj/structure/closet/crate/chest,
 /obj/item/reagent_containers/food/snacks/produce/vegetable/potato,
@@ -5359,7 +5359,7 @@
 /obj/item/reagent_containers/food/snacks/meat/steak,
 /obj/item/reagent_containers/food/snacks/produce/vegetable/cabbage,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VL" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -5379,7 +5379,7 @@
 	layer = 2.7
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "VO" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/pants/trou/leather,
@@ -5389,25 +5389,25 @@
 /obj/item/clothing/pants/trou/leather,
 /obj/item/clothing/pants/trou/leather,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VQ" = (
 /obj/structure/bookcase/random_recipes,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "VS" = (
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "VU" = (
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Wi" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
 	icon_state = "border"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Wl" = (
 /obj/structure/stairs{
 	dir = 8
@@ -5417,38 +5417,38 @@
 	pixel_y = 14
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Wr" = (
 /obj/machinery/light/fueled/lanternpost/fixed{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ws" = (
 /obj/machinery/light/fueled/torchholder{
 	pixel_y = 26
 	},
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Wv" = (
 /obj/effect/landmark/start/feldsher,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Wx" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
 /obj/effect/landmark/start/cook,
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "WB" = (
 /obj/structure/chair/wood,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "WG" = (
 /obj/structure/ship_wheel,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "WO" = (
 /obj/structure/stairs{
 	dir = 4
@@ -5458,7 +5458,7 @@
 	icon_state = "border"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "WT" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/candle/yellow,
@@ -5466,31 +5466,31 @@
 /obj/item/candle/yellow,
 /obj/item/candle/yellow,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "WV" = (
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "longtable"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "WX" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "WZ" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Xa" = (
 /obj/effect/landmark/start/innkeep_son{
 	dir = 4
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Xb" = (
 /obj/item/candle/yellow/lit{
 	pixel_x = 8;
@@ -5502,7 +5502,7 @@
 	pixel_y = 40
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Xd" = (
 /obj/structure/fluff/railing/border,
 /obj/machinery/tanningrack,
@@ -5510,21 +5510,21 @@
 	pixel_y = -32
 	},
 /turf/open/floor/hay,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Xj" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet/lord/right{
 	dir = 1
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Xo" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Xu" = (
 /obj/structure/door/window{
 	name = "Treatment Center"
@@ -5532,14 +5532,14 @@
 /obj/effect/mapping_helpers/access/keyset/town/clinic,
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "XA" = (
 /obj/structure/fluff/railing/border,
 /obj/item/tent_kit,
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "XB" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -5548,16 +5548,16 @@
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/clothing/armor/leather/jacket/sea,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "XI" = (
 /turf/closed/wall/mineral/decowood/vert,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "XL" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "XR" = (
 /obj/structure/bed/shit,
 /obj/structure/rack/shelf/notdense,
@@ -5580,7 +5580,7 @@
 	pixel_y = 35
 	},
 /turf/open/floor/twig,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "XY" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -5588,7 +5588,7 @@
 /obj/structure/fluff/railing/border,
 /obj/effect/landmark/observer_start,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Ya" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -5596,25 +5596,25 @@
 /obj/structure/fluff/railing/wood,
 /obj/structure/fermentation_keg,
 /turf/open/floor/twig,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Yh" = (
 /obj/item/clothing/armor/chainmail,
 /obj/structure/closet/crate/chest,
 /obj/item/clothing/armor/leather/jacket/sea,
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Yl" = (
 /obj/structure/door/stone{
 	lockid = "church"
 	},
 /turf/open/floor/churchmarble,
-/area/rogue/indoors/town/church/chapel)
+/area/indoors/town/church/chapel)
 "Yn" = (
 /obj/structure/bars,
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "Yw" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall"
@@ -5622,7 +5622,7 @@
 /turf/open/floor/rooftop/green{
 	dir = 4
 	},
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Yx" = (
 /obj/structure/bed/inn,
 /obj/effect/landmark/start/dungeoneer{
@@ -5630,7 +5630,7 @@
 	},
 /obj/item/bedsheet/fabric,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Yy" = (
 /obj/structure/bed/inn/double,
 /obj/item/bedsheet/fabric_double,
@@ -5638,34 +5638,34 @@
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "YH" = (
 /turf/closed/wall/mineral/wooddark/vertical,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "YI" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "YS" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/storage/backpack/satchel,
 /obj/item/clothing/armor/brigandine,
 /obj/structure/carpet/green,
 /turf/open/floor/wood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "YV" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/carpet/lord/left{
 	dir = 1
 	},
-/area/rogue/ship/nobledeck)
+/area/ship/nobledeck)
 "YW" = (
 /obj/structure/fake_machine/stockpile,
 /turf/open/floor/ruinedwood,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "YY" = (
 /obj/item/key/manor,
 /obj/item/key/walls,
@@ -5687,7 +5687,7 @@
 /obj/effect/mapping_helpers/access/keyset/manor/steward,
 /obj/structure/closet/crate/chest,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "YZ" = (
 /obj/effect/landmark/start/puritan{
 	dir = 8
@@ -5697,7 +5697,7 @@
 /obj/item/bedsheet/fabric,
 /obj/item/book/bibble,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/indoors/inq/import)
+/area/indoors/inq/import)
 "Za" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -5705,10 +5705,10 @@
 	},
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Ze" = (
 /turf/closed/wall/mineral/wooddark,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Zg" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -5720,19 +5720,19 @@
 	},
 /obj/item/reagent_containers/food/snacks/meat/salami,
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Zh" = (
 /obj/structure/door/window,
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Zk" = (
 /obj/structure/fermentation_keg,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Zl" = (
 /obj/machinery/loom,
 /turf/open/floor/hay,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Zr" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/ammo_casing/caseless/cball,
@@ -5747,18 +5747,18 @@
 /obj/item/reagent_containers/powder/blastpowder,
 /obj/item/reagent_containers/powder/blastpowder,
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "Zu" = (
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "longtable_mid"
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "Zy" = (
 /obj/machinery/light/fueled/oven/east,
 /turf/open/floor/cobble,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ZB" = (
 /obj/structure/fake_machine/drugmachine{
 	pixel_x = 32;
@@ -5768,39 +5768,39 @@
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ZD" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
 /obj/structure/industrial_lift/tram,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/beach)
+/area/outdoors/beach)
 "ZE" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ZM" = (
 /obj/machinery/light/fueled/torchholder{
 	dir = 1
 	},
 /turf/open/floor/herringbone,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ZO" = (
 /obj/effect/landmark/start/farmer{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ZP" = (
 /obj/item/weapon/mace/woodclub/train_sword,
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ZQ" = (
 /obj/structure/bed/inn,
 /obj/effect/decal/cobbleedge{
@@ -5813,10 +5813,10 @@
 	layer = 8
 	},
 /turf/open/floor/ruinedwood/two,
-/area/rogue/ship/middeck)
+/area/ship/middeck)
 "ZU" = (
 /turf/open/transparent/openspace,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 "ZV" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -5825,7 +5825,7 @@
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiral,
-/area/rogue/ship/topdeck)
+/area/ship/topdeck)
 
 (1,1,1) = {"
 ms

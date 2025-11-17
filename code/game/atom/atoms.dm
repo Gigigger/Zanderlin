@@ -328,29 +328,6 @@
 		return TRUE
 	return !density
 
-/**
- * Is this atom currently located on centcom
- *
- * Specifically, is it on the z level and within the centcom areas
- *
- * You can also be in a shuttleshuttle during endgame transit
- *
- * Used in gamemode to identify mobs who have escaped and for some other areas of the code
- * who don't want atoms where they shouldn't be
- */
-/atom/proc/onCentCom()
-	var/turf/T = get_turf(src)
-	if(!T)
-		return FALSE
-
-	if(!is_centcom_level(T.z))//if not, don't bother
-		return FALSE
-
-	//Check for centcom itself
-	if(istype(T.loc, /area/centcom))
-		return TRUE
-
-
 /atom/proc/make_shiny(_shine = SHINE_REFLECTIVE)
 	if(total_reflection_mask)
 		if(shine != _shine)
