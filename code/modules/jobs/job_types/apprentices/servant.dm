@@ -167,6 +167,7 @@
 	cmode_music = 'sound/music/cmode/adventurer/CombatIntense.ogg'
 	outfit = /datum/outfit/gaffer_assistant
 	give_bank_account = TRUE
+	exp_types_granted = list(EXP_TYPE_MERCENARY)
 
 /datum/outfit/gaffer_assistant/pre_equip(mob/living/carbon/human/H)
 	..()

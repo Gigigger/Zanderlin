@@ -11,8 +11,6 @@
 	faction = FACTION_TOWN
 	total_positions = 1
 	spawn_positions = 1
-	//Should...probably actually be a veteran of at least a few weeks before trying to teach others
-	min_pq = 10
 
 	spells = list(/datum/action/cooldown/spell/undirected/list_target/convert_role/militia)
 	allowed_sexes = list(MALE, FEMALE) //same as town guard
@@ -24,6 +22,13 @@
 	give_bank_account = 35
 	can_have_apprentices = FALSE
 	job_bitflag = BITFLAG_GARRISON
+	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
+	exp_types_granted  = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
+	exp_requirements = list(
+		EXP_TYPE_ADVENTURER = 300,
+		EXP_TYPE_COMBAT = 1500
+	)
+
 
 /datum/job/veteran/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
@@ -40,6 +45,7 @@
 
 /datum/job/advclass/veteran
 	inherit_parent_title = TRUE
+	exp_types_granted  = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
 
 /datum/job/advclass/veteran/battlemaster
 	title = "Veteran Battlemaster"

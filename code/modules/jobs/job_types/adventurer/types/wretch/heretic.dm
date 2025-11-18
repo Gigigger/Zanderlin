@@ -6,6 +6,8 @@
 	allowed_patrons = ALL_ICONOCLAST_PATRONS
 	outfit = /datum/outfit/wretch/heretic
 	total_positions = 2
+	exp_type = list(EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
+	exp_types_granted  = list(EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
 
 /datum/outfit/wretch/heretic/pre_equip(mob/living/carbon/human/H)
 	..()

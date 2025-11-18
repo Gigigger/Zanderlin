@@ -11,7 +11,6 @@
 	faction = FACTION_TOWN
 	total_positions = 1
 	spawn_positions = 1
-	min_pq = 2
 	bypass_lastclass = TRUE
 
 	trainable_skills = list(/datum/skill/misc/medicine)
@@ -55,6 +54,15 @@
 	)
 
 	job_bitflag = BITFLAG_CONSTRUCTOR
+
+	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_MEDICAL)
+	exp_types_granted = list(EXP_TYPE_MEDICAL)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 600,
+		EXP_TYPE_MEDICAL = 300
+
+	)
+
 
 /datum/job/feldsher/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

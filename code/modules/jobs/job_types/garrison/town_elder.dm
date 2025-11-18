@@ -11,7 +11,6 @@
 	faction = FACTION_TOWN
 	total_positions = 1
 	spawn_positions = 1
-	min_pq = 10 // Requires knowledge and good rp for the classes.
 	bypass_lastclass = TRUE
 	spells = list(/datum/action/cooldown/spell/undirected/list_target/convert_role/militia)
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
@@ -21,6 +20,13 @@
 	advclass_cat_rolls = list(CTAG_TOWN_ELDER = 20)
 	give_bank_account = 50
 	can_have_apprentices = FALSE
+
+	exp_type = list(EXP_TYPE_BARD, EXP_TYPE_LIVING)
+	exp_types_granted  = list(EXP_TYPE_LEADERSHIP, EXP_TYPE_BARD)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 1200,
+		EXP_TYPE_BARD = 300
+	)
 
 
 /mob/living/carbon/human/proc/townannouncement()
@@ -69,6 +75,9 @@
 		spawn_instrument = /obj/item/instrument/lute
 	H.equip_to_slot_or_del(new spawn_instrument(H),ITEM_SLOT_BACK_R, TRUE)
 
+/datum/job/advclass/town_elder
+	exp_types_granted  = list(EXP_TYPE_LEADERSHIP, EXP_TYPE_BARD)
+
 /datum/job/advclass/town_elder/mayor
 	title = "Mayor"
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED // Due to the inherent nobility coming from being a mayor, non-humen species are barred.
@@ -78,8 +87,6 @@
 	category_tags = list(CTAG_TOWN_ELDER)
 
 // Mayor start with slight changes, they were turned noble and got more money, also highly skilled in merchant skills.
-
-
 
 /datum/outfit/town_elder/mayor/pre_equip(mob/living/carbon/human/H)
 

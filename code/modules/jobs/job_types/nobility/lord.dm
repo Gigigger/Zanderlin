@@ -15,7 +15,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	faction = FACTION_TOWN
 	total_positions = 0
 	spawn_positions = 1
-	min_pq = 25
 
 	spells = list(
 		/datum/action/cooldown/spell/undirected/list_target/grant_title,
@@ -32,6 +31,15 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	can_have_apprentices = FALSE
 
 	job_bitflag = BITFLAG_ROYALTY
+
+	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING, EXP_TYPE_LEADERSHIP)
+	exp_types_granted  = list(EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 1200,
+		EXP_TYPE_NOBLE = 900,
+		EXP_TYPE_LEADERSHIP = 300
+	)
+
 
 /datum/job/lord/get_informed_title(mob/mob, change_title = FALSE, new_title)
 	if(change_title)

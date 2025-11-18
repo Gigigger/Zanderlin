@@ -7,7 +7,6 @@
 	total_positions = 1
 	roll_chance = 15
 	category_tags = list(CTAG_ADVENTURER)
-	min_pq = 2
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 	is_recognized = TRUE
 

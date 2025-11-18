@@ -9,7 +9,6 @@
 	faction = FACTION_TOWN
 	total_positions = 2
 	spawn_positions = 2
-	min_pq = 1
 
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 
@@ -26,6 +25,8 @@
 	)
 
 	job_bitflag = BITFLAG_ROYALTY
+
+	exp_types_granted  = list(EXP_TYPE_NOBLE)
 
 /datum/outfit/noble/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -9,7 +9,6 @@
 	faction = FACTION_TOWN
 	total_positions = 2
 	spawn_positions = 2
-	min_pq = 8
 	bypass_lastclass = TRUE
 
 // Medicators and Tritons are hallowed in the eyes of the Ten, no matter how much Astrata dislikes it, Harpies do not get to be templars because they literally cannot wear plate armour nor lift their weapons.
@@ -23,6 +22,14 @@
 
 	allowed_patrons = ALL_TEMPLAR_PATRONS
 	job_bitflag = BITFLAG_CHURCH
+
+	exp_type = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT)
+	exp_types_granted  = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
+	exp_requirements = list(
+		EXP_TYPE_CHURCH = 900,
+		EXP_TYPE_COMBAT = 900
+	)
+
 
 /datum/outfit/templar
 	name = "Templar"

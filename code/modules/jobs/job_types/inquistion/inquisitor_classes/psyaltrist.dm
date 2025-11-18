@@ -1,4 +1,4 @@
-/datum/job/advclass/psyaltrist
+/datum/job/advclass/sacrestant/psyaltrist
 	title = "Psyaltrist"
 	tutorial = "Every inquisitor has their second. You aim to keep spirits and faith high, while handling the needs of the inquisitor. Not a glamorous role, but a vital one. “Maybe his lordship would prefer the lute, today, over the viola?”"
 	category_tags = list(CTAG_INQUISITION)
@@ -33,7 +33,7 @@
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
 
-/datum/job/advclass/psyaltrist/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/sacrestant/psyaltrist/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	GLOB.inquisition.add_member_to_school(spawned, "Order of the Venatari", 0, "Psyaltrist")
 

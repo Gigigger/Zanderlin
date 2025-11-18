@@ -550,5 +550,30 @@
                 "spellcheck": "fixed ported azure peak language"
             }
         ]
+    },
+    "2025-11-18": {
+        "wgtjunior743": [
+            {
+                "code_imp": "Remove the mind from species hostiles npc and make them receive the skills directly"
+            }
+        ],
+        "Draggeru": [
+            {
+                "map": "Fixes some small issues with Vanderlin"
+            },
+            {
+                "map": "Touches up the noble estates"
+            }
+        ],
+        "CheffieGithub": [
+            {
+                "bugfix": "Fix surgery tool craft not working correctly on the anvil"
+            }
+        ],
+        "ladesplat": [
+            {
+                "map": "added MinorLordKeep.dmm"
+            }
+        ]
     }
 }

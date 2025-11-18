@@ -9,6 +9,9 @@
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 	total_positions = 4	// to be lowered to 2? once testing is done
 
+	exp_types_granted  = list(EXP_TYPE_CLERIC)
+
+
 /datum/outfit/adventurer/briar/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)

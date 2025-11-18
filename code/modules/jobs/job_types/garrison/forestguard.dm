@@ -14,7 +14,6 @@
 	faction = FACTION_TOWN
 	total_positions = 4
 	spawn_positions = 4
-	min_pq = 5
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 
@@ -29,6 +28,12 @@
 	advclass_cat_rolls = list(CTAG_FORGARRISON = 20)
 
 	job_bitflag = BITFLAG_GARRISON
+
+	exp_type = list(EXP_TYPE_GARRISON)
+	exp_types_granted  = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
+	exp_requirements = list(
+		EXP_TYPE_GARRISON = 600
+	)
 
 /datum/outfit/forestguard/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -46,6 +51,10 @@
 
 /datum/job/forestguard/after_spawn(mob/living/carbon/spawned, client/player_client)
 	..()
+
+
+/datum/job/advclass/forestguard
+	exp_types_granted  = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
 
 // Ravager, whips, flails, axes and swords and shields.
 /datum/job/advclass/forestguard/infantry

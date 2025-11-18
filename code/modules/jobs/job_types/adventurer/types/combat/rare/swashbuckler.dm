@@ -14,7 +14,6 @@
 	)
 	outfit = /datum/outfit/adventurer/swashbuckler
 	total_positions = 1
-	min_pq = 0
 	roll_chance = 30
 	category_tags = list(CTAG_ADVENTURER)
 

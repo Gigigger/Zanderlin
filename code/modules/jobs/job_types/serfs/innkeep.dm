@@ -19,6 +19,11 @@
 	cmode_music = 'sound/music/cmode/towner/CombatInn.ogg'
 
 	job_bitflag = BITFLAG_CONSTRUCTOR
+	exp_type = list(EXP_TYPE_LIVING)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 300
+	)
+
 
 /datum/outfit/innkeep/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -11,6 +11,9 @@
 	total_positions = 4
 	allowed_patrons = ALL_CLERIC_PATRONS
 
+	exp_types_granted  = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
+
+
 /datum/outfit/adventurer/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.virginity = TRUE

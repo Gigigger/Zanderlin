@@ -1,4 +1,4 @@
-/datum/job/advclass/confessor
+/datum/job/advclass/sacrestant/confessor
 	title = "Confessor"
 	tutorial = "Psydonite hunters, unmatched in the fields of subterfuge and investigation. There is no suspect too powerful to investigate, no room too guarded to infiltrate, and no weakness too hidden to exploit. The Ordo Venetari trained you, and this, your final hunt as a student, will prove the wisdom of their teachings."
 	allowed_sexes = list(MALE, FEMALE)
@@ -34,7 +34,7 @@
 		TRAIT_PSYDONIAN_GRIT,
 		TRAIT_PSYDONITE,
 	)
-/datum/job/advclass/confessor/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/sacrestant/confessor/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	GLOB.inquisition.add_member_to_school(spawned, "Order of the Venatari", 0, "Confessor")
 

@@ -21,6 +21,8 @@
 	allowed_patrons = ALL_TEMPLE_PATRONS
 	job_bitflag = BITFLAG_CHURCH
 
+	exp_types_granted  = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC)
+
 /datum/outfit/monk
 	name = "Acolyte"
 

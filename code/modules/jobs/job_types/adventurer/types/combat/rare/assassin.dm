@@ -7,7 +7,6 @@
 	category_tags = list(CTAG_PILGRIM)
 	total_positions = 2
 	inherit_parent_title = TRUE //this prevents advjob from being set back to "Assassin" in equipme
-	min_pq = 6
 
 /datum/outfit/adventurer/assassin/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -20,14 +20,18 @@
 	display_order = JDO_PURITAN
 	advclass_cat_rolls = list(CTAG_PURITAN = 20)
 	give_bank_account = 30
-	min_pq = 10
 	bypass_lastclass = TRUE
 	antag_role = /datum/antagonist/purishep
 
 	languages = list(/datum/language/oldpsydonic)
-
 	spells = list(
 		/datum/action/cooldown/spell/undirected/call_bird/inquisitor
+	)
+
+	exp_type = list(EXP_TYPE_INQUISITION)
+	exp_types_granted  = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)
+	exp_requirements = list(
+		EXP_TYPE_INQUISITION = 900
 	)
 
 /datum/outfit/inquisitor
@@ -398,3 +402,6 @@
 	to_chat(src, span_good("I resist the torture!"))
 	say(pick(innocent_lines), spans = list("torture"), forced = TRUE)
 	return
+
+/datum/job/advclass/puritan
+	exp_types_granted  = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)

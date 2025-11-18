@@ -1,4 +1,4 @@
-/datum/job/advclass/disciple
+/datum/job/advclass/sacrestant/disciple
 	title = "Disciple"
 	tutorial = "Some train their steel, others train their wits. You have honed your body itself into a weapon, anointing it with faithful markings to fortify your soul. You serve and train under the Ordo Benetarus, and one day you will be among Psydon’s most dauntless warriors."
 	allowed_sexes = list(MALE, FEMALE)
@@ -33,7 +33,7 @@
 
 	languages = list(/datum/language/oldpsydonic)
 
-/datum/job/advclass/disciple/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/sacrestant/disciple/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	GLOB.inquisition.add_member_to_school(spawned, "Benetarus", 0, "Disciple")
 

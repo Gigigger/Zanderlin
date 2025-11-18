@@ -12,7 +12,6 @@
 	faction = FACTION_TOWN
 	total_positions = 1
 	spawn_positions = 1
-	min_pq = 2
 	bypass_lastclass = TRUE
 
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
@@ -21,6 +20,12 @@
 	outfit = /datum/outfit/butler
 	give_bank_account = 30 // Along with the pouch, enough to purchase some ingredients from the farm and give hard working servants a silver here and there. Still need the assistance of the crown's coffers to do anything significant
 	cmode_music = 'sound/music/cmode/towner/CombatInn.ogg'
+	exp_type = list(EXP_TYPE_LIVING)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 600
+	)
+
+
 
 /datum/job/butler/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

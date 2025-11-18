@@ -519,7 +519,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	popup.open(FALSE)
 	onclose(user, "capturekeypress", src)
 
-/datum/preferences/proc/SetChoices(mob/user, limit = 15, list/splitJobs = list("Captain", "Priest", "Merchant", "Butler", "Village Elder"), widthPerColumn = 295, height = 620) //295 620
+/datum/preferences/proc/SetChoices(mob/user, limit = 15, list/splitJobs = list("Captain", "Priest", "Merchant", "Butler", "Village Elder"), widthPerColumn = 400, height = 620) //400 620
 	if(!SSjob)
 		return
 
@@ -586,10 +586,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			if(is_role_banned(user.ckey, job.title))
 				HTML += "[used_name]</td> <td><a href='?_src_=prefs;bancheck=[rank]'> BANNED</a></td></tr>"
 				continue
-			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
-			if(required_playtime_remaining)
-				HTML += "[used_name]</td> <td><font color=red> \[ [get_exp_format(required_playtime_remaining)] as [job.get_exp_req_type()] \] </font></td></tr>"
-				continue
 			if(!job.player_old_enough(user.client))
 				var/available_in_days = job.available_in_days(user.client)
 				HTML += "[used_name]</td> <td><font color=red> \[IN [(available_in_days)] DAYS\]</font></td></tr>"
@@ -598,28 +594,12 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 				if(job.whitelist_req && (!user.client.whitelisted()))
 					HTML += "<font color=#6183a5>[used_name]</font></td> <td> </td></tr>"
 					continue
-
-			if(get_playerquality(user.ckey) < job.min_pq)
-				HTML += "<font color=#a36c63>[used_name] (Min PQ: [job.min_pq])</font></td> <td> </td></tr>"
+			var/lock_html = get_job_lock_html(job, user, used_name)
+			if(lock_html)
+				HTML += lock_html
 				continue
-			if(length(job.allowed_ages) && !(user.client.prefs.age in job.allowed_ages))
-				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
-				continue
-			if((length(job.allowed_races) && !(user.client.prefs.pref_species.id in job.allowed_races)) || \
-				(length(job.blacklisted_species) && (user.client.prefs.pref_species.id in job.blacklisted_species)))
-				if(!(user.client.has_triumph_buy(TRIUMPH_BUY_RACE_ALL)))
-					HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
-					continue
-			if(length(job.allowed_patrons) && !(user.client.prefs.selected_patron.type in job.allowed_patrons))
-				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
-				continue
-			if(length(job.allowed_sexes) && !(user.client.prefs.gender in job.allowed_sexes))
-				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
-				continue
-
 			HTML += {"
 				<style>
-
 					.tutorialhover {
 						position: relative;
 						display: inline-block;
@@ -2013,3 +1993,70 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 		to_chat(user, span_notice("[loadout.name]"))
 		if(loadout.description)
 			to_chat(user, "[loadout.description]")
+
+/datum/preferences/proc/get_job_lock_html(datum/job/job, mob/user, used_name)
+	if((length(job.allowed_races) && !(user.client.prefs.pref_species.id in job.allowed_races)) || \
+		(length(job.blacklisted_species) && (user.client.prefs.pref_species.id in job.blacklisted_species)))
+		if(!user.client.has_triumph_buy(TRIUMPH_BUY_RACE_ALL))
+			var/races_text = jointext(job.allowed_races, ", ")
+			return make_lock_row(
+				used_name,
+				"\[SPECIES LOCK\]",
+				"<b>Species Needed:</b><br>[races_text]"
+			)
+	if(length(job.allowed_ages) && !(user.client.prefs.age in job.allowed_ages))
+		var/ages_text = jointext(job.allowed_ages, ", ")
+		return make_lock_row(
+			used_name,
+			"\[AGE LOCK\]",
+			"<b>Ages Needed:</b><br>[ages_text]"
+		)
+	if(length(job.allowed_sexes) && !(user.client.prefs.gender in job.allowed_sexes))
+		var/sexes_text = jointext(job.allowed_sexes, ", ")
+		return make_lock_row(
+			used_name,
+			"\[SEX LOCK\]",
+			"<b>Sexes Needed:</b><br>[sexes_text]"
+		)
+	if(length(job.allowed_patrons) && !(user.client.prefs.selected_patron.type in job.allowed_patrons))
+		var/list/patron_list = list()
+		for(var/mult_patron in job.allowed_patrons)
+			var/datum/patron/P = new mult_patron
+			patron_list += (P.display_name ? P.display_name : P.name)
+			qdel(P)
+		var/patron_text = jointext(patron_list, ", ")
+
+		return make_lock_row(
+			used_name,
+			"\[PATRON LOCK\]",
+			"<b>Patron Needed:</b><br>[patron_text]"
+		)
+	if(job.required_playtime_remaining(user.client))
+		var/list/lines = list()
+		for(var/t in job.exp_requirements)
+			var/needed = job.exp_requirements[t]
+			var/have = user.client.calc_exp_type(t)
+			lines += "[t]: [get_exp_format(have)] / [get_exp_format(needed)]"
+		var/text = jointext(lines, "<br>")
+
+		return make_lock_row(
+			used_name,
+			"\[TIME LOCK\]",
+			"<b>Requirements:</b><br>[text]"
+		)
+	// No lock
+	return FALSE
+
+/datum/preferences/proc/make_lock_row(used_name, lock_text, body_text)
+	return {"
+		[used_name]
+	</td>
+	<td>
+		<div class='tutorialhover'>
+			<font color=#a36c63>[lock_text]</font>
+			<span class='tutorial'>[body_text]</span>
+		</div>
+	</td>
+	</tr>
+	"}
+
