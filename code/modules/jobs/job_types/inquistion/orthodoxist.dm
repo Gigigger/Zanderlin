@@ -6,7 +6,7 @@
 	spawn_positions = 2
 	allowed_races = RACES_PLAYER_GRENZ
 	bypass_lastclass = TRUE
-	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
+	cmode_music = 'sound/music/cmode/church/CombatInquisitor2.ogg'
 	allowed_patrons = list(
 		/datum/patron/psydon
 	)

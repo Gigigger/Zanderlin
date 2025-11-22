@@ -378,6 +378,13 @@
 		/obj/item/natural/bundle/fibers/full,
 	)
 
+/obj/item/storage/backpack/satchel/musketeer
+	populate_contents = list(
+		/obj/item/weapon/knife/dagger/bayonet,
+		/obj/item/storage/belt/pouch/coins/poor,
+		/obj/item/reagent_containers/glass/bottle/aflask
+	)
+
 /obj/item/storage/belt/leather/knifebelt
 	name = "tossblade belt"
 	desc = "A many-slotted belt meant for tossblades. Little room left over."

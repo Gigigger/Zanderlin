@@ -13,7 +13,7 @@
 	min_pq = -20
 	bypass_lastclass = TRUE
 
-	allowed_ages = list(AGE_CHILD, AGE_ADULT, AGE_IMMORTAL)
+	allowed_ages = list(AGE_CHILD, AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	allowed_races = RACES_PLAYER_ALL
 
 	outfit = /datum/outfit/servant

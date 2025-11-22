@@ -11,7 +11,7 @@
 		/datum/attunement/death = 0.2,
 	)
 
-	invocation = "Be torn apart!"
+	invocation = "Death grip you!"
 	invocation_type = INVOCATION_SHOUT
 	spell_flags = SPELL_RITUOS
 	charge_time = 2 SECONDS

@@ -292,8 +292,6 @@
 				if(/datum/faith/psydon)
 					if(ispath(victim_patron.type, /datum/patron/divine) && victim_patron.type != /datum/patron/divine/necra)
 						interrogator.add_stress(/datum/stress_event/torture_small_penalty)
-					else if(victim_patron.type == /datum/patron/psydon/progressive)
-						interrogator.add_stress(/datum/stress_event/torture_small_penalty)
 					else if(victim_patron.type == /datum/patron/godless/naivety)
 						interrogator.add_stress(/datum/stress_event/torture_small_penalty)
 					else if(victim_patron.type == /datum/patron/psydon)

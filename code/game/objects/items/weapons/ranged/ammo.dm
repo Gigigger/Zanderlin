@@ -514,6 +514,14 @@
 	reduce_crit_chance = 5 //Reduces crit chance
 	dismemberment = 0 //Can't dismember
 
+/obj/projectile/bullet/reusable/bullet/on_hit(atom/target)
+	var/atom/throw_target = get_edge_target_turf(firer, get_dir(firer, target))
+	if(ismob(target))
+		var/mob/living/carbon/target_mob = target
+		target_mob.safe_throw_at(throw_target, 1, 4)
+		target_mob.Knockdown(SHOVE_KNOCKDOWN_SOLID)
+	..()
+
 /obj/projectile/bullet/fragment
 	name = "smaller lead ball"
 	desc = "Haha. You're not able to see this!"

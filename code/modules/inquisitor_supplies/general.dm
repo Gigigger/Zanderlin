@@ -256,6 +256,22 @@
 	new /obj/item/storage/belt/pouch/bullets(src)
 	new /obj/item/reagent_containers/glass/bottle/aflask(src)
 
+/*
+//Added this and then realized it wasn't actually in the bounty and I'm just stupid. It's staying here incase somebody wants it.
+
+/datum/inqports/equipment/musket
+	name = "1 Musket with bayonet, 4 lead bullets and powder flask"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/musket
+	marquescost = 30 //needs balancing
+	maximum = 1
+
+/obj/structure/closet/crate/chest/inqcrate/equipment/musket/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/pistol/musket(src)
+	new /obj/item/weapon/knife/dagger/bayonet(src)
+	new /obj/item/storage/belt/pouch/bullets(src)
+	new /obj/item/reagent_containers/glass/bottle/aflask(src)
+*/
+
 /datum/inqports/equipment/lantern
 	name = "3 Iron Lamptern"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/lantern

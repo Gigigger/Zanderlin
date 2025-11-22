@@ -249,13 +249,6 @@ While it's not required reading, leadership roles may find this information usef
 		<br><br>
 	</details>
 
-	<details>
-		<summary><strong> Progressive Psydonism </strong></summary>
-		<br>
-		A schism within the orthodox church of Psydon, this progressive faction believes that worship is possible through The Ten. Rather than striving to cut down The Ten, progressive Psydonites instead look for signs of His will expressed through the pieces left behind.
-		<br><br>
-	</details>
-
 	<hr>
 	<strong><span style="font-size:115%"> THE DIVINE PANTHEON </span></strong>
 	<br>
