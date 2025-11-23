@@ -8970,7 +8970,7 @@
 "klJ" = (
 /obj/structure/fluff/customsign{
 	name = "Sunken Man";
-	desc = "do they... do they name these inns underwater after land folk?"
+	desc = "Do they... do they name these inns underwater after land folk?"
 	},
 /turf/open/floor/abyss_tile/three{
 	color = "#547285"
@@ -10791,7 +10791,7 @@
 /obj/item/flashlight/flare/torch/lantern/psycenser,
 /obj/item/clothing/wrists/bracers/psythorns,
 /obj/item/weapon/shield/tower/metal/psy,
-/obj/item/weapon/sword/long/greatsword/broadsword/psy/relic,
+/obj/item/weapon/sword/long/broadsword/psy/relic,
 /obj/item/carvedgem/turq,
 /obj/item/carvedgem/turq/fancyvase,
 /obj/item/carvedgem/coral/cameo,
@@ -12573,7 +12573,7 @@
 /area/outdoors/bog)
 "plJ" = (
 /obj/structure/mirror/fancy{
-	desc = "There is an idea of a Patrick Bateman; some kind of abstraction. But there is no real me: only an entity, something illusory. And though I can hide my cold gaze, and you can shake my hand and feel flesh gripping yours and maybe you can even sense our lifestyles are probably comparable... I simply am not there"
+	desc = "There is an idea of a Patrick Bateman; some kind of abstraction. But there is no real me: only an entity, something illusory. And though I can hide my cold gaze, and you can shake my hand and feel flesh gripping yours and maybe you can even sense our lifestyles are probably comparable... I simply am not there."
 	},
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/lipstick/black,

@@ -49,8 +49,7 @@
 /area)
 "w" = (
 /obj/structure/dungeon_exit{
-	dungeon_id = "center";
-	entry_requirements = list("Time" = "day")
+	dungeon_id = "center"
 	},
 /turf/open/floor/ruinedwood/spiral,
 /area)

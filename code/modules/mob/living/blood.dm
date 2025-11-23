@@ -268,7 +268,7 @@
 		return GLOB.blood_types[dna.species.exotic_bloodtype]
 	return GLOB.blood_types[dna.human_blood_type]
 
-// This is has more potential uses, and is probably faster than the old proc.
+// This has more potential uses, and is probably faster than the old proc.
 /proc/get_safe_blood(bloodtype)
 	. = list()
 	if(!bloodtype)

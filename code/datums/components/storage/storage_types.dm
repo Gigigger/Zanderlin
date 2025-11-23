@@ -17,7 +17,7 @@
 
 /datum/component/storage/concrete/scabbard/kazengun/New(list/raw_args)
 	. = ..()
-	set_holdable(list(/obj/item/weapon/sword/sabre/mulyeog))
+	set_holdable(list(/obj/item/weapon/sword/katana))
 
 /datum/component/storage/concrete/boots
 	max_items = 1

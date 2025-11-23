@@ -317,7 +317,7 @@
 
 	for(var/atom/movable/hearing_movable as anything in listening)
 		if(!hearing_movable)
-			stack_trace("somehow theres a null returned from get_hearers_in_view() in send_speech!")
+			stack_trace("somehow there's a null returned from get_hearers_in_view() in send_speech!")
 			continue
 
 		var/ignore_z = FALSE

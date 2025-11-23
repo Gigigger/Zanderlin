@@ -117,6 +117,7 @@
 		if(/datum/patron/inhumen/graggar) //They get cooler outfits cause of non-unique weapon
 			head = /obj/item/clothing/head/helmet/graggar
 			armor = /obj/item/clothing/armor/plate/full/graggar
+			neck = /obj/item/clothing/neck/gorget
 			gloves = /obj/item/clothing/gloves/plate/graggar
 			pants = /obj/item/clothing/pants/platelegs/graggar
 			shoes = /obj/item/clothing/shoes/boots/armor/graggar
@@ -126,6 +127,7 @@
 		if(/datum/patron/inhumen/graggar_zizo)
 			head = /obj/item/clothing/head/helmet/graggar
 			armor = /obj/item/clothing/armor/plate/full/graggar
+			neck = /obj/item/clothing/neck/gorget
 			gloves = /obj/item/clothing/gloves/plate/graggar
 			pants = /obj/item/clothing/pants/platelegs/graggar
 			shoes = /obj/item/clothing/shoes/boots/armor/graggar
@@ -135,6 +137,7 @@
 		if(/datum/patron/inhumen/zizo)
 			head = /obj/item/clothing/head/helmet/visored/zizo
 			armor = /obj/item/clothing/armor/plate/full/zizo
+			neck = /obj/item/clothing/neck/gorget
 			gloves = /obj/item/clothing/gloves/plate/zizo
 			pants = /obj/item/clothing/pants/platelegs/zizo
 			shoes = /obj/item/clothing/shoes/boots/armor/zizo
@@ -145,6 +148,7 @@
 		if(/datum/patron/inhumen/matthios)
 			head = /obj/item/clothing/head/helmet/heavy/matthios
 			armor = /obj/item/clothing/armor/plate/full/matthios
+			neck = /obj/item/clothing/neck/gorget
 			gloves = /obj/item/clothing/gloves/plate/matthios
 			pants = /obj/item/clothing/pants/platelegs/matthios
 			shoes = /obj/item/clothing/shoes/boots/armor/matthios
@@ -153,6 +157,7 @@
 		if(/datum/patron/inhumen/baotha) //give them custom armor i beg
 			head = /obj/item/clothing/head/helmet/heavy/baotha
 			mask = /obj/item/clothing/face/spectacles/sglasses
+			neck = /obj/item/clothing/neck/gorget
 			armor = /obj/item/clothing/armor/plate
 			gloves = /obj/item/clothing/gloves/plate
 			pants = /obj/item/clothing/pants/platelegs

@@ -911,7 +911,7 @@
 	pixel_x = 60;
 	pixel_y = -10;
 	name = "Stableboy's Scribbles";
-	desc = "parchment with scribblings of barely legible letters, it says something about buried treasure in a bush nearby."
+	desc = "A parchment with scribblings of barely legible letters, it says something about buried treasure in a bush nearby."
 	},
 /turf/open/floor/wood/nosmooth/saiga,
 /area/under/tomb/indoors)

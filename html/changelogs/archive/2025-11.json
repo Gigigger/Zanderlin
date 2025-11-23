@@ -677,5 +677,42 @@
                 "balance": "humens can't intrinsically read anymore."
             }
         ]
+    },
+    "2025-11-23": {
+        "wgtjunior743": [
+            {
+                "bugfix": "Preferences shows properly the roles that halfling can or cannot play."
+            }
+        ],
+        "snowyseshi": [
+            {
+                "bugfix": "fixed inquisitors recieving church key"
+            },
+            {
+                "rscadd": "Added new Prafekt class"
+            },
+            {
+                "rscadd": "Changed creed's parent and removed some of its intents"
+            },
+            {
+                "balance": "Inquisition enchant doesn't give defense anymore"
+            },
+            {
+                "balance": "reduced katar force and pen a bit"
+            },
+            {
+                "map": "change path of a mapped in weapon in the bog"
+            }
+        ],
+        "SmokingCrackForChrist": [
+            {
+                "balance": "Gives the Inhumen Iconoclast gorgets."
+            }
+        ],
+        "tired-wired": [
+            {
+                "rscadd": "Adds Extremist Psydonism."
+            }
+        ]
     }
 }

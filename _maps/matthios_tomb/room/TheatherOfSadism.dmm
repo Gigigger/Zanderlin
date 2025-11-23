@@ -688,7 +688,7 @@
 "Pt" = (
 /obj/structure/handcart{
 	dir = 4;
-	desc = "A wooden cart that will help you carry many things. You cant help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
+	desc = "A wooden cart that will help you carry many things. You can't help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
 	},
 /obj/item/organ/lungs,
 /obj/item/organ/eyes,
@@ -697,7 +697,7 @@
 "PA" = (
 /obj/structure/handcart{
 	dir = 4;
-	desc = "A wooden cart that will help you carry many things. You cant help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
+	desc = "A wooden cart that will help you carry many things. You can't help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
 	},
 /obj/item/organ/brain,
 /turf/open/floor/blocks/stonered/tiny,
@@ -895,7 +895,7 @@
 "Xm" = (
 /obj/structure/handcart{
 	dir = 4;
-	desc = "A wooden cart that will help you carry many things. You cant help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
+	desc = "A wooden cart that will help you carry many things. You can't help but notice dried blood, pieces of viscera scattered across the wheel and inside..."
 	},
 /obj/machinery/light/fueled/oven/south,
 /turf/open/floor/tile/checker,

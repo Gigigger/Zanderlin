@@ -536,7 +536,7 @@
 		if(!R.reagents.has_reagent(/datum/reagent/water, 10))
 			to_chat(user, span_notice("Needs more water to work it."))
 			return TRUE
-		to_chat(user, span_notice("Adding water, now its time to knead it..."))
+		to_chat(user, span_notice("Adding water, now it's time to knead it..."))
 		playsound(get_turf(user), 'sound/foley/splishy.ogg', 100, TRUE, -1)
 		if(do_after(user, 1.5 SECONDS, src))
 			name = "wet flour"
@@ -564,7 +564,7 @@
 // -------------- SALT -----------------
 /obj/item/reagent_containers/powder/salt
 	name = "salt"
-	desc = "A survialist's best friend, great for preserving meat."
+	desc = "A survivalist's best friend, great for preserving meat."
 	gender = PLURAL
 	icon_state = "salt"
 	list_reagents = list(/datum/reagent/flour = 1)

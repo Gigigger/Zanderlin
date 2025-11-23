@@ -34,7 +34,7 @@
 
 /obj/item/clothing/cloak/apron/cook
 	name = "cook apron"
-	desc = "An apron covering the frontal part of the body. Apart of protection from spills, won't prevent you from getting cut in half."
+	desc = "An apron covering the frontal part of the body. Apart from protection from spills, won't prevent you from getting cut in half."
 	color = null
 	icon_state = "aproncook"
 	item_state = "aproncook"

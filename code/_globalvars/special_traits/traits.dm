@@ -467,7 +467,7 @@
 	name = "War Veteran"
 	greet_text = span_boldwarning("I have fought in the goblin wars.. albeit at a cost.")
 	weight = 25
-	req_text = "Be middle aged or old"
+	req_text = "Be middle-aged or old"
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 
 /datum/special_trait/war_veteran/on_apply(mob/living/carbon/human/character, silent)
@@ -671,7 +671,7 @@
 
 /datum/special_trait/my_precious
 	name = "My Precious"
-	greet_text = span_notice("The ring, it's so shiny.. so valuable, I can feel it's power. It's all mine!")
+	greet_text = span_notice("The ring, it's so shiny.. so valuable, I can feel its power. It's all mine!")
 	req_text = "Be a beggar"
 	allowed_jobs = list(/datum/job/vagrant)
 	weight = 50
@@ -723,7 +723,7 @@
 
 /datum/special_trait/skeleton
 	name = "Skeleton"
-	greet_text = span_boldwarning("I was- am afflicted with a curse by a lich that left me without my flesh but i still retained controls..(This is not a antagonist role, expect to be attacked unless wearing something to cover your head.)")
+	greet_text = span_boldwarning("I was... am... afflicted with a curse by a lich that left me without my flesh, but I still retained control of myself... (This is not an antagonist role, expect to be attacked unless wearing something to cover your head.)")
 	allowed_jobs = list(/datum/job/pilgrim)
 	req_text = "Be a Pilgrim."
 	weight = 20
@@ -743,7 +743,7 @@
 
 /datum/special_trait/overcompensating
 	name = "Overcompensating"
-	greet_text = span_boldwarning("I have an enormous sword on my back, I had it crafted specially for me, it left me peniless, but now nobody will mention my small pintle!.")
+	greet_text = span_boldwarning("I have an enormous sword on my back, I had it crafted specially for me, it left me without even a zenny, but now nobody will mention my small pintle!.")
 	allowed_jobs = list(/datum/job/vagrant)
 	req_text = "Be a Beggar"
 	weight = 10
@@ -909,7 +909,7 @@
 
 /datum/special_trait/glutton
 	name = "The Glutton"
-	greet_text = span_notice("Baotha has cursed my entire bloodline, demanding that we indulge in luxuries and dine in decadance.")
+	greet_text = span_notice("Baotha has cursed my entire bloodline, demanding that we indulge in luxuries and dine in decadence.")
 	weight = 20
 	req_text = "Monarch"
 	allowed_jobs = list(/datum/job/lord)

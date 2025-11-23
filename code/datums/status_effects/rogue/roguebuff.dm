@@ -379,7 +379,7 @@
 		var/mob/living/carbon/human/C = owner
 		C.emote("pain", forced = TRUE)
 		playsound(get_turf(C), 'sound/gore/flesh_eat_03.ogg', 100, TRUE)
-		to_chat(C, span_warning("Dendors transformation fades, flesh shrinking back. My body aches..."))
+		to_chat(C, span_warning("Dendor's transformation fades, flesh shrinking back. My body aches..."))
 		C.adjustBruteLoss(10)
 		C.apply_status_effect(/datum/status_effect/debuff/barbfalter)
 		C.resize = (1/1.2)
@@ -882,7 +882,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/nocblessed
 	name = "Blessed by Noc"
-	desc = "I have been blessed by Noc since i was born, with his help i can see and think better than anyone."
+	desc = "I have been blessed by Noc since I was born, with his help I can see and think better than anyone."
 	icon_state = "intelligence"
 
 

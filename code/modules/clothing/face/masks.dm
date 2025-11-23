@@ -47,7 +47,7 @@
 /obj/item/clothing/face/facemask/goldnosechain
 	name = "gold nosechain"
 	icon_state = "nosechain_g"
-	desc = "A fashionable nose chain with two rings, It's design originated from the Savannah Elf tribes."
+	desc = "A fashionable nose chain with two rings. Its design originated from the Savannah Elf tribes."
 	max_integrity = 100
 	blocksound = FALSE
 	armor = FALSE
@@ -64,7 +64,7 @@
 /obj/item/clothing/face/facemask/silvernosechain
 	name = "silver nosechain"
 	icon_state = "nosechain_s"
-	desc = "A fashionable nose chain with two rings, It's design originated from the Savannah Elf tribes."
+	desc = "A fashionable nose chain with two rings. Its design originated from the Savannah Elf tribes."
 	max_integrity = 100
 	blocksound = FALSE
 	armor = FALSE
@@ -334,7 +334,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/adept.dmi'
 	icon_state = "silvermask"
 	armor = list("blunt" = 100, "slash" = 100, "stab" = 100,  "piercing" = 85, "fire" = 0, "acid" = 0)
-	desc = "A custom made silver penance mask, created especially for the Adepts of the Inquisitorial Lodge."
+	desc = "A custom-made silver penance mask, created especially for the Adepts of the Inquisitorial Lodge."
 	max_integrity = 300
 	smeltresult = /obj/item/ingot/silver
 	melting_material = /datum/material/silver
@@ -458,7 +458,7 @@
 //................ Druids Mask ............... //
 /obj/item/clothing/face/druid
 	name = "druids mask"
-	desc = "Roots from a old oak-tree, shaped according to the wishes of Tree-father."
+	desc = "Roots from an old oak-tree, shaped according to the wishes of Tree-father."
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 	icon_state = "dendormask"

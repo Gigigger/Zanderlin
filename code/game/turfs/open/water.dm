@@ -14,7 +14,7 @@
 /turf/open/water
 	gender = PLURAL
 	name = "water"
-	desc = "It's.. well, water."
+	desc = "It's... well, water."
 	icon = 'icons/turf/newwater.dmi'
 	icon_state = "together"
 	baseturfs = /turf/open/water
@@ -698,7 +698,7 @@
 
 /turf/open/water/river
 	name = "water"
-	desc = "Crystal clear water! Flowing swiflty along the river."
+	desc = "Crystal clear water! Flowing swiftly along the river."
 	icon_state = MAP_SWITCH("rocky", "rivermove-dir")
 	water_level = 3
 	slowdown = 20

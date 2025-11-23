@@ -30,7 +30,7 @@
 
 /obj/item/clothing/pants/trou/leather/splint
 	name = "splint plate trousers"
-	desc = "Affordable armored pants for regular soldiers, they seem simple and their craftmanship is solid, makes sure all stays in place with a plated codpiece."
+	desc = "Affordable armored pants for regular soldiers, they seem simple and their craftsmanship is solid, makes sure all stays in place with a plated codpiece."
 	icon_state = "splintlegs"
 	armor = ARMOR_MAILLE_IRON
 	max_integrity = INTEGRITY_STANDARD
@@ -74,7 +74,7 @@
 
 /obj/item/clothing/pants/trou/leather/masterwork
 	name = "masterwork leather chausses"
-	desc = "These chausses are a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
+	desc = "These chausses are a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_POOR + 100
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP)
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
@@ -108,7 +108,7 @@
 
 /obj/item/clothing/pants/trou/artipants
 	name = "artificer trousers"
-	desc = "Thick leather trousers to protect from sparks or stray gear projectiles. Judging by the wear, its had plenty of use."
+	desc = "Thick leather trousers to protect from sparks or stray gear projectiles. Judging by the wear, it's had plenty of use."
 	icon_state = "artipants"
 	item_state = "artipants"
 

@@ -3,36 +3,48 @@
 	if(!user)
 		return
 	var/obj/item/held_item = user.get_active_held_item()
-	if(held_item && (user.zone_selected == BODY_ZONE_PRECISE_MOUTH))
-		if(held_item.get_sharpness() && held_item.wlength == WLENGTH_SHORT)
-			var/datum/bodypart_feature/hair/facial = get_bodypart_feature_of_slot(BODYPART_FEATURE_FACIAL_HAIR)
-			if(has_stubble)
-				playsound(src, 'sound/foley/shaving.ogg', 100, TRUE, -1)
+	if(user.cmode)
+		if(held_item && (user.zone_selected == BODY_ZONE_PRECISE_NECK))
+			if(held_item.get_sharpness() && held_item.wlength == WLENGTH_SHORT)
+				playsound(src, 'sound/surgery/scalpel1.ogg', 100, TRUE, -1)
 				if(user == src)
-					user.visible_message("<span class='danger'>[user] starts to shave [user.p_their()] stubble with [held_item].</span>")
+					user.visible_message("<span class='danger'>[user] starts to slit [user.p_their()] throat with [held_item].</span>")
 				else
-					user.visible_message("<span class='danger'>[user] starts to shave [src]'s stubble with [held_item].</span>")
+					user.visible_message("<span class='danger'>[user] starts to slit [src]'s throat with [held_item].</span>")
 				if(do_after(user, 5 SECONDS, src))
-					has_stubble = FALSE
-					update_body()
-				else
-					held_item.melee_attack_chain(user, src, params)
-			else if(facial?.accessory_type != /datum/sprite_accessory/hair/facial/none)
-				playsound(src, 'sound/foley/shaving.ogg', 100, TRUE, -1)
-				if(user == src)
-					user.visible_message("<span class='danger'>[user] starts to shave [user.p_their()] facehairs with [held_item].</span>")
-				else
-					user.visible_message("<span class='danger'>[user] starts to shave [src]'s facehairs with [held_item].</span>")
-				if(do_after(user, 5 SECONDS, src))
-					set_facial_hair_style(/datum/sprite_accessory/hair/facial/none)
-					update_body()
-					record_round_statistic(STATS_BEARDS_SHAVED)
-					if(dna?.species)
-						if(dna.species.id == SPEC_ID_DWARF)
-							var/mob/living/carbon/V = src
-							V.add_stress(/datum/stress_event/dwarfshaved)
-				else
-					held_item.melee_attack_chain(user, src, params)
+					var/obj/item/bodypart/part = src.get_bodypart(BODY_ZONE_PRECISE_NECK)
+					part.add_wound(/datum/wound/artery/neck)
+	else
+		if(held_item && (user.zone_selected == BODY_ZONE_PRECISE_MOUTH))
+			if(held_item.get_sharpness() && held_item.wlength == WLENGTH_SHORT)
+				var/datum/bodypart_feature/hair/facial = get_bodypart_feature_of_slot(BODYPART_FEATURE_FACIAL_HAIR)
+				if(has_stubble)
+					playsound(src, 'sound/foley/shaving.ogg', 100, TRUE, -1)
+					if(user == src)
+						user.visible_message("<span class='danger'>[user] starts to shave [user.p_their()] stubble with [held_item].</span>")
+					else
+						user.visible_message("<span class='danger'>[user] starts to shave [src]'s stubble with [held_item].</span>")
+					if(do_after(user, 5 SECONDS, src))
+						has_stubble = FALSE
+						update_body()
+					else
+						held_item.melee_attack_chain(user, src, params)
+				else if(facial?.accessory_type != /datum/sprite_accessory/hair/facial/none)
+					playsound(src, 'sound/foley/shaving.ogg', 100, TRUE, -1)
+					if(user == src)
+						user.visible_message("<span class='danger'>[user] starts to shave [user.p_their()] facehairs with [held_item].</span>")
+					else
+						user.visible_message("<span class='danger'>[user] starts to shave [src]'s facehairs with [held_item].</span>")
+					if(do_after(user, 5 SECONDS, src))
+						set_facial_hair_style(/datum/sprite_accessory/hair/facial/none)
+						update_body()
+						record_round_statistic(STATS_BEARDS_SHAVED)
+						if(dna?.species)
+							if(dna.species.id == SPEC_ID_DWARF)
+								var/mob/living/carbon/V = src
+								V.add_stress(/datum/stress_event/dwarfshaved)
+					else
+						held_item.melee_attack_chain(user, src, params)
 
 /mob/living/carbon/human/Initialize()
 	// verbs += /mob/living/proc/mob_sleep

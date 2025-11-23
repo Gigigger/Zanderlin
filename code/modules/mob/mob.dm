@@ -368,7 +368,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		return
 
 	if(ismovableatom(new_perspective))
-		//Set the the thing unless it's us
+		//Set the thing unless it's us
 		if(new_perspective != src)
 			client.perspective = EYE_PERSPECTIVE
 			client.eye = new_perspective

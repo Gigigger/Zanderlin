@@ -107,7 +107,7 @@
 // -------------- CHOCOLATE -----------------
 /obj/item/reagent_containers/food/snacks/chocolate
 	name = "chocolate bar"
-	desc = "Unbelievably fancy chocolate, imported all the way from distant Grenzlehoft"
+	desc = "Unbelievably fancy chocolate, imported all the way from distant Grenzelhoft"
 	icon_state = "chocolate"
 	bitesize = 4
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)

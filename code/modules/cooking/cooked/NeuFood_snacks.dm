@@ -59,7 +59,7 @@
 	if(modified)
 		return TRUE
 	if(bitecount >0)
-		to_chat(user, span_warning("Leftovers aren´t suitable for this."))
+		to_chat(user, span_warning("Leftovers aren't suitable for this."))
 		return TRUE
 	var/obj/item/reagent_containers/peppermill/mill = I
 	if(istype(mill) && (!modified))
@@ -195,7 +195,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/royal_truffle
 	name = "royal truffles"
-	desc = "The height of decadence, a precious truffle pig, turned into a amusing meal, served on a bed of its beloved golden truffles."
+	desc = "The height of decadence, a precious truffle pig, turned into an amusing meal, served on a bed of its beloved golden truffles."
 	icon_state = "royaltruffles"
 	base_icon_state = "royaltruffles"
 	list_reagents = list(/datum/reagent/consumable/nutriment = COOKED_MEAT_NUTRITION+COOKED_MEAT_NUTRITION+2)
@@ -229,7 +229,7 @@
 /*	.............   Frything   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/strange
 	name = "fried strange meat"
-	desc = "Whatever it was, its roasted."
+	desc = "Whatever it was, it's roasted."
 	icon_state = "fried_strange"
 	base_icon_state = "fried_strange"
 	list_reagents = list(/datum/reagent/consumable/nutriment = RAWMEAT_NUTRITION) // raw meat nutrition but without getting sick
@@ -243,7 +243,7 @@
 /*	.............   Sausage & Wiener   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/sausage
 	name = "sausage"
-	desc = "Delicious flesh stuffed in a intestine casing."
+	desc = "Delicious flesh stuffed in an intestine casing."
 	icon_state = "wiener"
 	base_icon_state = "wiener"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SAUSAGE_NUTRITION)
@@ -309,7 +309,7 @@
 /*	.............   Sausages on sticks   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/sausage_sticked
 	name = "sausage onna stick"
-	desc = "A sausage skewered for convenience and cleanliness, classic Grenzlehoftian street food."
+	desc = "A sausage skewered for convenience and cleanliness, classic Grenzelhoftian street food."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SAUSAGE_NUTRITION+1)
 	icon_state = "sausageonastick"
 	tastes = list("savory sausage" = 2)
@@ -331,7 +331,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/griddledog
 	name = "griddledog"
-	desc = "A classic piece of Grenzlehoftian street food, the fried butterdough is a Vanderlinian adulteration."
+	desc = "A classic piece of Grenzelhoftian street food, the fried butterdough is a Vanderlinian adulteration."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SAUSAGE_NUTRITION+BUTTERDOUGHSLICE_NUTRITION+2)
 	icon_state = "griddledog"
 	tastes = list("savory sausage" = 2, "crispy butterdough" = 1)
@@ -425,7 +425,7 @@
 	if(modified)
 		return TRUE
 	if(bitecount >0)
-		to_chat(user, span_warning("Leftovers aren´t suitable for this."))
+		to_chat(user, span_warning("Leftovers aren't suitable for this."))
 		return TRUE
 	else if(istype(mill))
 		if(!mill.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))

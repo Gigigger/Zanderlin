@@ -10,7 +10,7 @@
 	You have the scars and the arcyne prowess to prove it, after all.\
 	\n\n\ \
 	Yet after all this, you still think to yourself, that this work is beneath you, as your sense of pride protests every morning. \
-	But it all goes away whenever a zenarii filled pouch is thrown your way, for a while atleast."
+	But it all goes away whenever a zenarii filled pouch is thrown your way, for a while at least."
 	//not RACES_PLAYER_NONDISCRIMINATED becauses they are a FOREIGN noble
 	allowed_races = RACES_PLAYER_FOREIGNNOBLE
 	outfit = /datum/outfit/mercenary/sellmage

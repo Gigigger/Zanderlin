@@ -241,7 +241,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 /datum/ritual/transmutation/allseeingeye/invoke(mob/living/user, turf/center)
 	. = ..()
 	new /obj/item/scrying/eye(center)
-	to_chat(user, span_notice("The All-seeying Eye. To see beyond sight."))
+	to_chat(user, span_notice("The All-seeing Eye. To see beyond sight."))
 
 /datum/ritual/transmutation/criminalstool
 	name = "Criminal's Tool"

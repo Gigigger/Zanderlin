@@ -776,7 +776,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
  ** skill - associated skill
  ** amt - amount of experience to give
  ** silent - is the player notified of their skill change?
- ** check_apprentice - do apprentices recieve skill experience too?
+ ** check_apprentice - do apprentices receive skill experience too?
 */
 /datum/mind/proc/add_sleep_experience(skill, amt, silent = FALSE, check_apprentice = TRUE)
 	amt *= GLOB.sleep_experience_modifier

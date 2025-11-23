@@ -683,7 +683,7 @@
 	icon_state = "clinic_feld"
 
 /area/indoors/town/thieves_guild
-	first_time_text = "Thieves Guild"
+	first_time_text = "Thieves' Guild"
 	icon_state = "thieves_guild"
 
 /area/indoors/town/merc_guild

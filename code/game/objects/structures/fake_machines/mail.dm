@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	. += span_info("Load a coin inside, then right click to send a letter.")
 	. += span_info("Left click with a paper to send a prewritten letter for free.")
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		. += span_info("<br>The MARQUETTE can be accessed via a secret compartment fitted within the HERMES. Load a Marque to access it.")
+		. += span_info("<br>The Oratorium's reliquary can be accessed via a secret compartment fitted within the HERMES. Load a Marque to access it.")
 
 		. += span_info("You can send arrival slips, accusation slips, fully loaded INDEXERs or confessions here.")
 		. += span_info("Properly sign them. Include an INDEXER where needed. Stamp them for two additional Marques.")
@@ -345,7 +345,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		else if(is_selfreport)
 			to_chat(user, span_notice("Why was that confession signed by an inquisition member? What?"))
 			if(is_indexed)
-				visible_message(span_warning("[user] recieves something."))
+				visible_message(span_warning("[user] receives something."))
 				var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer/
 				user.put_in_hands(replacement)
 		return
@@ -398,7 +398,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			qdel(indexer)
 			visible_message(span_warning("[user] sends something."))
 			playsound(loc, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-			visible_message(span_warning("[user] recieves something."))
+			visible_message(span_warning("[user] receives something."))
 			to_chat(user, span_notice("We've already collected a sample of their accursed blood."))
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer/
 			user.put_in_hands(replacement)
@@ -429,7 +429,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			qdel(indexer)
 			visible_message(span_warning("[user] sends something."))
 			playsound(loc, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-			visible_message(span_warning("[user] recieves something."))
+			visible_message(span_warning("[user] receives something."))
 
 			if(is_selfreport)
 				to_chat(user, span_notice("Why did that INDEXER contain Inquisitional blood? What am I doing?"))
@@ -539,7 +539,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			to_chat(user, span_notice("They've confessed."))
 		else if(is_selfreport)
 			to_chat(user, span_notice("Why are we accusing our own? What have we come to?"))
-			visible_message(span_warning("[user] recieves something."))
+			visible_message(span_warning("[user] receives something."))
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer/
 			user.put_in_hands(replacement)
 		else
@@ -796,12 +796,12 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 /obj/structure/fake_machine/mail/proc/display_marquette(mob/user)
 	var/contents
-	contents = "<center>✤ ── L'INQUISITION MARQUETTE D'ORATORIUM ── ✤<BR>"
-	contents += "POUR L'ÉRADICATION DE L'HÉRÉSIE, TANT QUE PSYDON ENDURE.<BR>"
+	contents = "<center>✤ ── THE ORATORIUM'S RELIQUARY ── ✤<BR>"
+	contents += "ERADICATE HERESY, SO THAT PSYDONIA MAY ENDURE <BR>"
 	if(HAS_TRAIT(user, TRAIT_PURITAN))
-		contents += "✤ ── <a href='?src=[REF(src)];locktoggle=1]'> PURITAN'S LOCK: [inqonly ? "OUI":"NON"]</a> ── ✤<BR>"
+		contents += "✤ ── <a href='?src=[REF(src)];locktoggle=1]'> PURITAN'S LOCK: [inqonly ? "YES":"NO"]</a> ── ✤<BR>"
 	else
-		contents += "✤ ── PURITAN'S LOCK: [inqonly ? "OUI":"NON"] ── ✤<BR>"
+		contents += "✤ ── PURITAN'S LOCK: [inqonly ? "YES":"NO"] ── ✤<BR>"
 	contents += "ᛉ <a href='?src=[REF(src)];eject=1'>MARQUES LOADED: [inqcoins]</a>ᛉ<BR>"
 
 	if(cat_current == "1")

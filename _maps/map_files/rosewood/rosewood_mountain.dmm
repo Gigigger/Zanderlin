@@ -92,7 +92,7 @@
 /obj/structure/closet/crate/drawer,
 /obj/item/recipe_book/arcyne,
 /obj/item/paper/scroll{
-	desc = "A aged scroll detailing a ritual's materials for a summoning of a great power.";
+	desc = "An aged scroll detailing a ritual's materials for a summoning of a great power.";
 	name = "Ancient Scroll"
 	},
 /turf/open/floor/carpet/purple,
@@ -973,7 +973,7 @@
 "hr" = (
 /obj/structure/noticeboard{
 	name = "Bloodied Notice Board";
-	desc = "West holds a few untapped ruines, East is dangerous and untouched for the most part. Hold on mining east till further reinforcements arrive."
+	desc = "West holds a few untapped ruins, East is dangerous and untouched for the most part. Hold on mining east till further reinforcements arrive."
 	},
 /turf/closed/wall/mineral/craftstone,
 /area/indoors/mountains/anvil/surface/building)
@@ -2527,7 +2527,7 @@
 /area/under/mountains/anvil/lower)
 "uu" = (
 /mob/living/simple_animal/hostile/retaliate/elemental/collossus{
-	name = "Guardian Collossus"
+	name = "Guardian Colossus"
 	},
 /turf/open/floor/carpet/royalblack,
 /area/under/mountains/anvil/dungeon/lower)
@@ -3411,7 +3411,7 @@
 "BL" = (
 /obj/structure/fluff/statue/small{
 	name = "Strange Petrified Elf";
-	desc = "This living statue looks etheral in beauty, in its hands it holds a sword..."
+	desc = "This living statue looks ethereal in beauty, in its hands it holds a sword..."
 	},
 /obj/item/weapon/sword/long/greatsword/elfgsword{
 	name = "Tsere Slayer";
@@ -4037,7 +4037,7 @@
 "He" = (
 /obj/structure/table/stone_small,
 /obj/item/book{
-	desc = "A book that is covered in crystalized mana, unable to be read due to the letters of the ancient text fusing the papers shut.";
+	desc = "A book that is covered in crystallized mana, unable to be read due to the letters of the ancient text fusing the papers shut.";
 	name = "Ancient Book"
 	},
 /turf/open/floor/herringbone,
@@ -5206,7 +5206,7 @@
 /area/under/mountains/anvil/dungeon/lower)
 "PP" = (
 /mob/living/simple_animal/hostile/retaliate/elemental/collossus{
-	name = "Guardian Collossus"
+	name = "Guardian Colossus"
 	},
 /turf/open/floor/carpet/purple,
 /area/under/mountains/anvil/dungeon)
@@ -5382,7 +5382,7 @@
 /area/under/mountains/anvil/dungeon/lower)
 "QV" = (
 /mob/living/simple_animal/hostile/retaliate/elemental/collossus{
-	name = "Guardian Collossus"
+	name = "Guardian Colossus"
 	},
 /turf/open/floor/cobblerock,
 /area/under/mountains/anvil/upper)

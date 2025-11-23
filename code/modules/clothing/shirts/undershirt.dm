@@ -68,7 +68,7 @@
 
 /obj/item/clothing/shirt/undershirt/fancy
 	name = "fancy tunic"
-	desc = "A button-down shirt woven from fine sliks with a decorated front and cuffs."
+	desc = "A button-down shirt woven from fine silks with a decorated front and cuffs."
 	icon_state = "fancyshirt"
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'

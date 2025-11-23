@@ -602,7 +602,7 @@
 /obj/structure/table/church{
 	dir = 1
 	},
-/obj/item/weapon/sword/sabre/mulyeog/rumacaptain{
+/obj/item/weapon/sword/katana/mulyeog/rumacaptain{
 	name = "Astrata's Will";
 	desc = "A gold-stained sword with cloud patterns, it seems to be a highly sacred relic."
 	},

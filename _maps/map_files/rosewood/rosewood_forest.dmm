@@ -361,7 +361,7 @@
 "gE" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi';
 	pixel_x = -39;
@@ -1764,7 +1764,7 @@
 "OH" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi';
 	pixel_x = -39;
@@ -2033,7 +2033,7 @@
 	},
 /obj/item/natural/worms{
 	name = "A Fishy Worm";
-	desc = "Something about this worm seems... fishy? perhaps its not what it seems."
+	desc = "Something about this worm seems... fishy? Perhaps it's not what it seems."
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/woods)

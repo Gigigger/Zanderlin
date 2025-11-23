@@ -506,7 +506,7 @@
 //vampire
 /obj/structure/fluff/wallclock/vampire
 	name = "ancient clock"
-	desc = "This appears to be a clock, but a pair of red lights blink in a recess where the face ought be."
+	desc = "This appears to be a clock, but a pair of red lights blink in a recess where the face ought to be."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "wallclockvampire"
 	density = FALSE
@@ -1120,7 +1120,7 @@
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
 	name = "growing shrine to Dendor"
-	desc = "The life force of a Gote has consecrated this holy place. \n First present a poppy flower, swampweed leaf, and silk grub to craft a green sacrifice. \n Then offer a euphoriba flower, swampweed leaf, and two thorns to craft a viridian sacrifice."
+	desc = "The life force of a Gote has consecrated this holy place. \n First present a poppy flower, swampweed leaf, and silk grub to craft a green sacrifice. \n Then offer a euphorbia flower, swampweed leaf, and two thorns to craft a viridian sacrifice."
 	icon_state = "shrine_dendor_gote"
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_troll

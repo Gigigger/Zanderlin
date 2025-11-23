@@ -6801,7 +6801,7 @@
 "IV" = (
 /obj/structure/flora/sakura{
 	name = "wishing tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi'
 	},

@@ -34,7 +34,7 @@
 
 /obj/item/clothing/armor/leather/masterwork
 	name = "masterwork leather armor"
-	desc = "This leather armor is a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
+	desc = "This leather armor is a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_STANDARD + 100
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
@@ -221,7 +221,7 @@
 /obj/item/clothing/armor/leather/jacket/hand
 	name = "noble coat"
 	icon_state = "handcoat"
-	desc = "A quality silken coat, discretely lined with thin metal platr on the inside to protect its affluent wearer."
+	desc = "A quality silken coat, discretely lined with a thin metal plate on the inside to protect its affluent wearer."
 	sellprice = VALUE_LEATHER_ARMOR_LORD
 
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS

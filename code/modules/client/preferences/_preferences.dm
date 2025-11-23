@@ -1995,10 +1995,15 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			to_chat(user, "[loadout.description]")
 
 /datum/preferences/proc/get_job_lock_html(datum/job/job, mob/user, used_name)
-	if((length(job.allowed_races) && !(user.client.prefs.pref_species.id in job.allowed_races)) || \
-		(length(job.blacklisted_species) && (user.client.prefs.pref_species.id in job.blacklisted_species)))
+	var/player_species = user.client.prefs.pref_species.id
+	var/fails_allowed = length(job.allowed_races) && !(player_species in job.allowed_races)
+	var/fails_blacklist = length(job.blacklisted_species) && (player_species in job.blacklisted_species)
+	if(fails_allowed || fails_blacklist)
 		if(!user.client.has_triumph_buy(TRIUMPH_BUY_RACE_ALL))
-			var/races_text = jointext(job.allowed_races, ", ")
+			var/list/allowed_races = job.allowed_races.Copy()
+			for(var/blacklist in job.blacklisted_species)
+				allowed_races -= blacklist
+			var/races_text = jointext(allowed_races, ", ")
 			return make_lock_row(
 				used_name,
 				"\[SPECIES LOCK\]",

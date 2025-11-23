@@ -2,16 +2,16 @@
 	name = "Psydon"
 	display_name = "Orthodox Psydonite"
 	domain = "God of Humenity, Dreams and Creation"
-	desc = "Deceased, slain by Necra in His final moments. She ripped His body apart to create The Ten... we must put Him back together again. Psydon lives. He will return."
+	desc = "Deceased, slain by Necra in His final moments. She ripped His body apart to create The Ten... we must put Him back together again. Psydon lives on, He will return."
 	flaws = "Grudge-Holding, Judgemental, Self-Sacrificing"
-	worshippers = "Grenzelhofters, Inquisitors, Heroes"
+	worshippers = "Grenzelhoftians, Inquisitors, Heroes"
 	sins = "Apostasy, Demon Worship, Betraying thy Father"
 	boons = "None. His power is divided."
 	associated_faith = /datum/faith/psydon
 	confess_lines = list(
-		"THERE IS ONLY ONE GOD!",
+		"THERE IS ONLY ONE TRUE GOD!",
 		"THE SUCCESSORS HALT HIS RETURN!",
-		"PSYDON LIVES!",
+		"PSYDON WILL RETURN!",
 	)
 	profane_words = list()
 
@@ -24,3 +24,17 @@
 
 	to_chat(follower, span_danger("I can not talk to Him... I need His cross!"))
 	return FALSE
+
+/datum/patron/psydon/extremist
+	display_name = "Extremist Psydonite"
+	desc = "The Ten are conmen, false prophets, and heathens. The acts of the Tennite church are all tricks to beguile the mind and dissuade you from following the true path of Psydon. My actions prove my faith and His strength. Psydon lives, and you cannot convince me otherwise."
+	flaws = "Stubborn, Fanatical, Spiteful"
+	worshippers = "Fanatics, Misinformed Fools"
+	sins = "Blasphemy, False Prophets, Trickery"
+	confess_lines = list(
+		"THERE IS ONLY ONE GOD!",
+		"YOUR FALSE TEN ARE LIES!",
+		"PSYDON LIVES!",
+	)
+
+

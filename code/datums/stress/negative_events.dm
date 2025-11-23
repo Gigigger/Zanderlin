@@ -207,7 +207,7 @@
 /datum/stress_event/delf
 	timer = 30 SECONDS
 	stress_change = 1
-	desc = "<span class='red'>A loathesome dark elf.</span>"
+	desc = "<span class='red'>A loathsome dark elf.</span>"
 
 /datum/stress_event/tieb
 	timer = 30 SECONDS
@@ -237,7 +237,7 @@
 /datum/stress_event/paratalk
 	timer = 2 MINUTES
 	stress_change = 2
-	desc = "<span class='red'>They are plotting against me in evil tongues..</span>"
+	desc = "<span class='red'>They are plotting against me in evil tongues...</span>"
 
 /datum/stress_event/paraforeigner
 	timer = 2 MINUTES
@@ -657,10 +657,10 @@
 	timer = 1000 MINUTES
 
 /datum/stress_event/consumed_tainted_lux
-	desc = span_warning("Why did i drink that?")
+	desc = span_warning("Why did I drink that?")
 	stress_change = 15
 	timer = 10 MINUTES
-  
+
 /datum/stress_event/dead_bird
 	timer = 5 MINUTES
 	stress_change = 3

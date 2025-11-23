@@ -146,7 +146,7 @@
 
 /obj/item/clothing/shoes/otavan
 	name = "grenzelhoftian leather boots"
-	desc = "Boots of outstanding craft, your fragile feet has never felt so protected and comfortable before."
+	desc = "Boots of outstanding craft, your fragile feet have never felt so protected and comfortable before."
 	body_parts_covered = FEET
 	icon_state = "fencerboots"
 	item_state = "fencerboots"

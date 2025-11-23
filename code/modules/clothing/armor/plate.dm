@@ -102,7 +102,7 @@
 
 /obj/item/clothing/armor/plate/decorated
 	name = "decorated halfplate"
-	desc = "A halfplate decorated with an gold ornament on the chestplate. A status symbol that doesnt lose out on practicality. "
+	desc = "A halfplate decorated with a gold ornament on the chestplate. A status symbol that doesn't lose out on practicality. "
 	icon_state = "halfplate_decorated"
 	icon = 'icons/roguetown/clothing/special/decorated_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_armor.dmi'
@@ -111,7 +111,7 @@
 
 /obj/item/clothing/armor/plate/decorated/corset
 	name = "decorated halfplate with corset"
-	desc = "A halfplate decorated with an gold ornament on the chestplate and a fine silk corset. More for decoration then actual use."
+	desc = "A halfplate decorated with a gold ornament on the chestplate and a fine silk corset. More for decoration then actual use."
 	icon_state = "halfplate_decorated_corset"
 
 //................ Zizo Armor ...............//

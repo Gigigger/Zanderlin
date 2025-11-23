@@ -1260,7 +1260,7 @@
 "bdx" = (
 /obj/item/paper{
 	name = "Paper with Bloody Scribbles";
-	desc = "The paper details a scribbling of an confession. Who ever used this basement before must have left it here."
+	desc = "The paper details a scribbled confession. Whoever used this basement before must have left it here."
 	},
 /turf/open/floor/blocks,
 /area/under/cave)
@@ -1755,7 +1755,7 @@
 "bAu" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi'
 	},
@@ -6452,7 +6452,7 @@
 "gnn" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi'
 	},
@@ -24368,7 +24368,7 @@
 "wLg" = (
 /obj/item/reagent_containers/food/snacks/smallrat{
 	name = "Big Cheddar";
-	desc = "biggest and most adorable rat in town"
+	desc = "The biggest and most adorable rat in town."
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,

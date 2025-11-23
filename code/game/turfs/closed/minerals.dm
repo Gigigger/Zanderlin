@@ -493,7 +493,7 @@
 
 /turf/closed/mineral/bedrock
 	name = "rock"
-	desc = "Seems barren, and nigh indestructable."
+	desc = "Seems barren, and nigh-indestructible."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "bedrock")
 	max_integrity = 10000000

@@ -7315,7 +7315,7 @@
 	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
 	pixel_x = 34;
 	pixel_y = 111;
-	desc = "Zizo's eye hoveres above the hand of zizo, the glowing red orb seem's to always stare into your soul no matter how much you move around.";
+	desc = "Zizo's eye hovers above the hand of Zizo. The glowing red orb seems to always stare into your soul no matter how much you move around.";
 	name = "Zizo's Eye"
 	},
 /turf/open/floor/church/purple,

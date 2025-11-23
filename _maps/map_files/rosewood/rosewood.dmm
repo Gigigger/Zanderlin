@@ -20798,7 +20798,7 @@
 "kQT" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi'
 	},
@@ -31002,7 +31002,7 @@
 "qba" = (
 /obj/structure/flora/sakura{
 	name = "manabloom tree";
-	desc = "This totally isnt pink...";
+	desc = "This totally isn't pink...";
 	icon_state = "manabloomtree";
 	icon = 'icons/obj/structures/manabloomtree.dmi'
 	},
@@ -35409,7 +35409,7 @@
 	},
 /obj/structure/fluff/statue/small{
 	name = "Elf Statue";
-	desc = "A statue covered in leeches, it seems like who ever made this statue and perhaps this room REALLY liked leeches, the statue practically looks like a leech abomination with how many stick to it's stoney skin."
+	desc = "A statue covered in leeches, it seems like whoever made this statue and perhaps this room REALLY liked leeches, the statue practically looks like a leech abomination with how many stick to its stone skin."
 	},
 /turf/open/water/sewer,
 /area/under/town/sewer)
@@ -35606,10 +35606,7 @@
 /obj/item/neuFarm/seed/sugarcane,
 /obj/item/neuFarm/seed/raspberry,
 /obj/item/neuFarm/seed/raspberry,
-/obj/item/neuFarm/seed/raspberry{
-	desc = "we got lazy";
-	name = "seeds?"
-	},
+/obj/item/neuFarm/seed/raspberry,
 /turf/open/floor/cobblerock,
 /area/indoors/soilsons)
 "svC" = (

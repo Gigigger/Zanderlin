@@ -239,12 +239,12 @@
 
 /datum/migrant_role/footman_guard
 	name = "Guardsmen of Rockhill"
-	greet_text = "Your Serjeant has been ordered by the mayor of rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
+	greet_text = "Your Serjeant has been ordered by the mayor of Rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
 	migrant_job = /datum/job/migrant/footman_bannerman/rockhill
 
 /datum/job/migrant/footman_bannerman/rockhill
 	title = "Guardsmen of Rockhill"
-	tutorial = "Your Serjeant has been ordered by the mayor of rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
+	tutorial = "Your Serjeant has been ordered by the mayor of Rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
 	is_foreigner = TRUE
 
 /datum/migrant_wave/rockhill_wave

@@ -48,9 +48,9 @@
 
 /datum/job/hand/proc/know_agents(mob/living/carbon/human/H)
 	if(!GLOB.roundstart_court_agents.len)
-		to_chat(H, span_notice("You begun the week with no agents."))
+		to_chat(H, span_notice("You began the week with no agents."))
 	else
-		to_chat(H, span_notice("We begun the week with these agents:"))
+		to_chat(H, span_notice("We began the week with these agents:"))
 		for(var/name in GLOB.roundstart_court_agents)
 			to_chat(H, span_notice(name))
 		H.mind.cached_frumentarii |= GLOB.roundstart_court_agents

@@ -61,7 +61,7 @@
 	name = MATTHIOS
 	domain = "God of Thievery, Ill-Gotten Gains, and Highwaymen"
 	desc = "Legendary humen bandit whose name was attributed to countless great thefts. It is because of his legacy that nobles clutch their coin purses to their chests in town."
-	flaws = "Pride, Greed, Orneryness"
+	flaws = "Pride, Greed, Orneriness"
 	worshippers = "Outlaws, Noble-Haters, Downtrodden Peasantry"
 	sins = "Clumsiness, Stupidity, Humility"
 	boons = "You can see the most expensive item someone is carrying."
