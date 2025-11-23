@@ -15,3 +15,16 @@
 
 /datum/ai_planning_subtree/eat_dead_body/then_hide
 	behavior = /datum/ai_behavior/eat_dead_body/then_hide
+
+/datum/ai_planning_subtree/eat_dead_body/drink_blood
+	behavior = /datum/ai_behavior/interact_with_target/drink_blood
+
+/datum/ai_planning_subtree/eat_dead_body/drink_blood/SelectBehaviors(datum/ai_controller/controller, delta_time)
+	var/atom/target = controller.blackboard[BB_BASIC_MOB_FOOD_TARGET]
+	if(QDELETED(target))
+		return
+	if(isliving(target))
+		var/mob/living/L = target
+		if(L.blood_volume > 0)
+			return ..()
+	return FALSE

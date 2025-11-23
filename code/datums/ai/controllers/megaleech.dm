@@ -16,6 +16,8 @@
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/saiga,
 		/datum/ai_planning_subtree/find_nearest_thing_which_attacked_me_to_flee,
 		/datum/ai_planning_subtree/flee_target/saiga,
+		/datum/ai_planning_subtree/find_dead_bodies,
+		/datum/ai_planning_subtree/eat_dead_body/drink_blood,
 	)
 
 /datum/ai_controller/megaleech/TryPossessPawn(atom/new_pawn)
@@ -30,4 +32,3 @@
 	movement_delay = 0.3 SECONDS
 	set_blackboard_key(BB_BASIC_MOB_FLEEING, FALSE)
 	idle_behavior = null
-

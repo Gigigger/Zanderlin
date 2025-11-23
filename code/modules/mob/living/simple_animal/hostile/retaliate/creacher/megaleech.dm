@@ -60,12 +60,14 @@
 	ai_controller = /datum/ai_controller/megaleech
 
 	var/static/list/pet_commands = list(
+		/datum/pet_command/fish,
 		/datum/pet_command/idle,
 		/datum/pet_command/free,
 		/datum/pet_command/good_boy,
 		/datum/pet_command/follow,
 		/datum/pet_command/attack,
-		/datum/pet_command/fetch,
+		/datum/pet_command/attack/leech_blood,
+		/datum/pet_command/attack/give_blood,
 		/datum/pet_command/play_dead,
 		/datum/pet_command/protect_owner,
 		/datum/pet_command/aggressive,
@@ -82,7 +84,6 @@
 		hunger.hunger_drain = 1
 	AddElement(/datum/element/ai_retaliate)
 
-	ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, ROUNDSTART_TRAIT)
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, ROUNDSTART_TRAIT)
 
 /mob/living/simple_animal/hostile/retaliate/megaleech/Destroy()
@@ -181,13 +182,14 @@
 	name = "feed"
 	desc = "RMB - Feed a target blood from yourself. Or, take a target's blood if you're in combat mode"
 	icon_state = "special"
-	// per bump of the do_after
+	/// how much blood we steal/give per do_after
 	var/feed_amount = 10
-	var/busy = FALSE
 
 /datum/rmb_intent/megaleech_feed/special_attack(mob/living/user, atom/target)
-	if(!isliving(target) || !isanimal(user) || busy)
+	if(!isliving(target) || !isanimal(user) || user.doing())
 		return
+	if(user == target)
+		return //freak.
 	var/mob/living/simple_animal/A = user
 	var/mob/living/L = target
 	var/giving = !user.cmode
@@ -214,26 +216,22 @@
 			to_chat(user, span_warning("They need no blood."))
 			return
 		user.visible_message(span_green("[user] starts feeding blood to [L]."), span_danger("I start feeding blood to [L]."), null, COMBAT_MESSAGE_RANGE)
-	busy = TRUE
-	while(do_after(A, 1 SECONDS, extra_checks=CALLBACK(src, PROC_REF(can_feed), A, L, giving), display_over_user = TRUE))
+	while(do_after(A, 1 SECONDS, extra_checks=CALLBACK(src, PROC_REF(can_feed), A, L, giving), display_over_user = TRUE, interaction_key = DOAFTER_SOURCE_LEECH_BLOOD))
 		var/hunger = SEND_SIGNAL(user, COMSIG_MOB_RETURN_HUNGER) * A.food_max / 100
-		var/blood_given = 0
+		var/blood = 0
 		if(giving)
-			blood_given = min(BLOOD_VOLUME_NORMAL - L.blood_volume, feed_amount, hunger)
+			blood = min(BLOOD_VOLUME_NORMAL - L.blood_volume, feed_amount, hunger)
 		else
-			blood_given = -min(A.food_max - hunger, feed_amount * 0.6, L.blood_volume) // we feed slower than we attack
-		L.blood_volume += blood_given
-		SEND_SIGNAL(user, COMSIG_MOB_ADJUST_HUNGER, -blood_given)
+			blood = -min(A.food_max - hunger, feed_amount, L.blood_volume)
+		L.blood_volume += blood
+		SEND_SIGNAL(user, COMSIG_MOB_ADJUST_HUNGER, -blood)
 		playsound(A, 'sound/misc/drink_blood.ogg', 50, FALSE, -4)
-	L.handle_blood() // call this early and someone bleeding will immediately die from so many updates
-	busy = FALSE
+
 
 /datum/rmb_intent/megaleech_feed/proc/can_feed(mob/living/user, mob/living/target, giving)
-	if(HAS_TRAIT(target, TRAIT_BLOODLOSS_IMMUNE)) // if, for some god damn reason you were
-		return FALSE
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
-		if(C.dna?.species && (NOBLOOD in C.dna.species.species_traits))
+		if(C.dna?.species && (NOBLOOD in C.dna.species.species_traits)) // if for some god damn reason you weren't earlier but are now... maybe you're a skeleton?
 			return FALSE
 	var/hunger = SEND_SIGNAL(user, COMSIG_MOB_RETURN_HUNGER)
 	if(hunger == null)

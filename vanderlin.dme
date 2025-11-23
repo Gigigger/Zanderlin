@@ -987,6 +987,7 @@
 #include "code\datums\components\pet_commands\agrio_commands.dm"
 #include "code\datums\components\pet_commands\basics.dm"
 #include "code\datums\components\pet_commands\fetch.dm"
+#include "code\datums\components\pet_commands\leech.dm"
 #include "code\datums\components\pet_commands\obeys_commands.dm"
 #include "code\datums\components\pet_commands\gnome\_base_commands.dm"
 #include "code\datums\components\pet_commands\gnome\alchemy.dm"

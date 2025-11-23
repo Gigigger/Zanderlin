@@ -9,7 +9,7 @@
 	var/blood_threshold = controller.blackboard[target_blood_threshold_key]
 
 	// we found a normal success, they have enough blood to want do it, and they actually have blood
-	if(. && living_mob?.blood_volume > blood_threshold && !HAS_TRAIT(living_mob, TRAIT_BLOODLOSS_IMMUNE))
+	if(. && living_mob?.blood_volume > blood_threshold)
 		if(iscarbon(living_mob))
 			var/mob/living/carbon/C = living_mob
 			//and it's not like a skeleton or some shit
