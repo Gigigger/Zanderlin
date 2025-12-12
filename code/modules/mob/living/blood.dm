@@ -164,7 +164,7 @@
 	return bleed_rate
 
 /// How much slower we'll be bleeding for every CON point. 0.1 = 10% slower.
-#define CONSTITUTION_BLEEDRATE_MOD 0.05
+#define CONSTITUTION_BLEEDRATE_MOD 0.03
 
 /// Makes a blood drop, leaking amt units of blood from the mob
 /mob/living/proc/bleed(amt)
@@ -181,11 +181,6 @@
 		con_modifier = our_con - 10
 
 	amt -= amt * con_modifier * CONSTITUTION_BLEEDRATE_MOD
-
-	if(HAS_TRAIT(src, TRAIT_CRITICAL_RESISTANCE))
-		amt /= 2
-	if(HAS_TRAIT(src, TRAIT_CRITICAL_WEAKNESS))
-		amt *= 2
 
 	blood_volume = max(blood_volume - amt, 0)
 

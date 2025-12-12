@@ -21,6 +21,9 @@
 	//Players will be allowed to spawn in as jobs that are set to "Station"
 	var/faction = FACTION_NONE
 
+	///Whether this job can be chosen if the player is already an antagonist
+	var/antags_can_pick = TRUE
+
 	/// How many players can be this job
 	var/total_positions = 0
 
@@ -135,8 +138,6 @@
 
 	var/list/peopleiknow = list()
 	var/list/peopleknowme = list()
-
-	var/min_pq = -999
 
 	var/give_bank_account = FALSE
 
@@ -612,7 +613,6 @@
 	data["job_flags"] = job_flags
 	data["allowed_sexes"] = allowed_sexes
 	data["allowed_races"] = allowed_races
-	data["min_pq"] = min_pq
 	data["give_bank_account"] = give_bank_account
 	data["can_random"] = can_random
 	data["always_show_on_latechoices"] = always_show_on_latechoices
@@ -698,7 +698,6 @@
 	job_flags = data["job_flags"]
 	allowed_sexes = data["allowed_sexes"]
 	allowed_races = data["allowed_races"]
-	min_pq = data["min_pq"]
 	give_bank_account = data["give_bank_account"]
 	can_random = data["can_random"]
 	always_show_on_latechoices = data["always_show_on_latechoices"]
