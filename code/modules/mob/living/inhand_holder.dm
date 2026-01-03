@@ -42,7 +42,15 @@
 	name = L.name
 	desc = L.desc
 	SEND_SIGNAL(held_mob, COMSIG_MOB_HOLDER_DEPOSIT, src)
+	if(length(L.stored_enchantments))
+		for(var/datum/enchantment/enchant as anything in L.stored_enchantments)
+			enchant(enchant)
 	return TRUE
+
+/obj/item/clothing/head/mob_holder/enchant(datum/enchantment/path)
+	if(..())
+		LAZYADD(held_mob.stored_enchantments, path)
+
 
 /obj/item/clothing/head/mob_holder/attackby(obj/item/I, mob/living/user, params)
 	I.attack(held_mob, user, user.zone_selected)
