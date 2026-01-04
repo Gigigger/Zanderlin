@@ -3709,7 +3709,6 @@
 /area/outdoors)
 "VE" = (
 /obj/effect/landmark/start/adventurer,
-/obj/effect/landmark/start/adventurerlate,
 /turf/open/floor/churchrough,
 /area/under/town/basement)
 "VG" = (

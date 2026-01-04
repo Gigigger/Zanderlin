@@ -1746,9 +1746,8 @@
 				I = M.get_inactive_held_item()
 
 		if(user.mind)
-			skill_diff += (user.get_skill_level(/datum/skill/combat/swords))	//You check your sword skill
-		if(M.mind)
-			skill_diff -= (M.mind ? M.get_skill_level(/datum/skill/combat/wrestling) : 0) + M.get_wrestling_bonuses() //They check their wrestling skill to stop the weapon from being pulled.
+			skill_diff += user.get_skill_level(/datum/skill/combat/swords)	//You check your sword skill
+		skill_diff -= M.get_wrestling_skill() //They check their wrestling skill to stop the weapon from being pulled.
 		user.adjust_stamina(-rand(3,8))
 		var/probby = clamp((((3 + (((user.STASTR - M.STASTR)/4) + skill_diff)) * 10)), 5, 95)
 		if(I)

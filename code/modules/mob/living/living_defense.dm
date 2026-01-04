@@ -180,8 +180,8 @@
 	var/skill_diff = 0
 	var/combat_modifier = 1
 
-	skill_diff -= (mind ? get_skill_level(/datum/skill/combat/wrestling) : 0) + get_wrestling_bonuses() //my wrestling
-	skill_diff += (user.mind ? user.get_skill_level(/datum/skill/combat/wrestling) : 0) + user.get_wrestling_bonuses() //their wrestling
+	skill_diff += user.get_wrestling_skill() //their wrestling
+	skill_diff -= get_wrestling_skill() //my wrestling
 
 	if(user == src)
 		instant = TRUE

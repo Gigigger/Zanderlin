@@ -116,18 +116,26 @@
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/AttackingTarget(mob/living/passed_target)
 	. = ..()
+	if(target == src)
+		return
 	if(!(. && isliving(target)))
 		return
 	var/mob/living/L = target
 
-	var/grappledAlready = FALSE
-	for(var/obj/item/grabbing/G in src.contents)
-		if(target == G.grabbed)
-			grappledAlready = TRUE
-
-		var/mob/living/carbon/C = G.grabbed
-		if(!istype(C) || prob(50)) //50% chance we won't make shit worse
+	if(!pulling && prob(40) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
+		L.visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
+			span_userdanger("[src] wraps their tentacles around me!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
+		return
+	var/list/grabs = list()
+	for(var/obj/item/grabbing/G in contents)
+		for(var/obj/item/grabbing/PG in grabs)
+			if(G.grabbed == PG.grabbed)
+				qdel(G) // somehow we have two grabs on someone, dont know how this will happen though
+				continue
+		grabs += G
+		if(!iscarbon(target) || prob(50)) //50% chance we won't make shit worse
 			continue
+		var/mob/living/carbon/C = G.grabbed
 		if(G.grab_state < GRAB_AGGRESSIVE)
 			C.grippedby(src)
 			continue //anything past this point in the loop we're only gonna do if we have a good grip
@@ -135,28 +143,21 @@
 			C.Knockdown(20)
 			C.visible_message(span_danger("[src] tackles [C] to the ground!"), \
 				span_userdanger("[src] tackles me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
+			continue
+		var/choke = /datum/intent/grab/choke
+		var/twist = /datum/intent/grab/twist
+		var/smash = /datum/intent/grab/smash
+
+		var/list/grabIntents = G.possible_item_intents & list(choke, twist, smash)
+		if(!length(grabIntents))
+			continue
+		if(grabIntents.Find(choke) && get_location_accessible(C, BODY_ZONE_PRECISE_NECK))
+			var/choke_damage = STASTR
+			C.adjustOxyLoss(choke_damage)
+			C.visible_message(span_danger("[src] [pick("chokes", "strangles")] [C][G.chokehold ? " with a chokehold" : ""]!"), \
+					span_userdanger("[src] [pick("chokes", "strangles")] me[G.chokehold ? " with a chokehold" : ""]!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
 		else
-			var/choke = /datum/intent/grab/choke
-			var/twist = /datum/intent/grab/twist
-			var/smash = /datum/intent/grab/smash
-
-			var/list/grabIntents = G.possible_item_intents
-			grabIntents &= list(choke, twist, smash)
-			if(!length(grabIntents))
-				continue
-			if(grabIntents.Find(choke) && get_location_accessible(C, BODY_ZONE_PRECISE_NECK))
-				var/choke_damage = STASTR
-				C.adjustOxyLoss(choke_damage)
-				C.visible_message(span_danger("[src] [pick("chokes", "strangles")] [C][G.chokehold ? " with a chokehold" : ""]!"), \
-						span_userdanger("[src] [pick("chokes", "strangles")] me[G.chokehold ? " with a chokehold" : ""]!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
-			else
-				pick(grabIntents) == twist ? G.twistlimb(src) : G.smashlimb((get_turf(C) || C), src)
-
-	if(target == src)
-		return
-	if(!grappledAlready && prob(40) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
-		L.visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
-			span_userdanger("[src] wraps their tentacles around me!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
+			pick(grabIntents) == twist ? G.twistlimb(src) : G.smashlimb((get_turf(C) || C), src)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/simple_limb_hit(zone)
 	if(!zone)
@@ -195,8 +196,8 @@
 		else
 			return "shell"
 
-/mob/living/simple_animal/hostile/retaliate/nautilus/get_wrestling_bonuses()
-	return wrestling_bonus
+/mob/living/simple_animal/hostile/retaliate/nautilus/get_wrestling_skill()
+	return ..() + wrestling_bonus
 
 /datum/intent/simple/nautilus_lash
 	name = "tendril lash"

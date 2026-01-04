@@ -624,7 +624,7 @@
 					gcord.wipeslate(src)
 
 			if(grab_state >= GRAB_AGGRESSIVE)
-				TIMER_COOLDOWN_START(pulling, "broke_free", max(0, 2 SECONDS - (0.2 SECONDS * get_skill_level(/datum/skill/combat/wrestling)))) // BUFF: Reduced cooldown
+				TIMER_COOLDOWN_START(pulling, "broke_free", max(0, 2 SECONDS - (0.2 SECONDS * get_wrestling_skill()))) // BUFF: Reduced cooldown
 
 		if(forced) //if false, called by the grab item itself, no reason to drop it again
 			if(istype(get_active_held_item(), /obj/item/grabbing))
@@ -1251,11 +1251,8 @@
 	if(!mutual_grab)
 		return FALSE
 
-	var/my_wrestling = (mind ? get_skill_level(/datum/skill/combat/wrestling) : 0) + get_wrestling_bonuses()
-	var/their_wrestling = (pulledby.mind ? pulledby.get_skill_level(/datum/skill/combat/wrestling) : 0) + pulledby.get_wrestling_bonuses()
-
 	var/break_chance = 15 // Base chance
-	break_chance += (my_wrestling - their_wrestling)
+	break_chance += (get_wrestling_skill() - pulledby.get_wrestling_skill())
 	break_chance += (STASTR - pulledby.STASTR) * 0.4
 
 	// Both parties get a chance to break free
@@ -1294,8 +1291,7 @@
 		return FALSE
 
 	var/counter_chance = 15 // Base chance
-	var/my_wrestling = (mind ? get_skill_level(/datum/skill/combat/wrestling) : 0) + get_wrestling_bonuses()
-	counter_chance += my_wrestling * 8
+	counter_chance += pulledby.get_wrestling_skill() * 8
 
 	// Stat differences
 	counter_chance += (STASTR - attacker.STASTR) * 2
@@ -1454,8 +1450,8 @@
 	// Modifier of pulledby against the resisting src
 	var/positioning_modifier = L.get_positioning_modifier(src)
 
-	var/my_wrestling = (mind ? get_skill_level(/datum/skill/combat/wrestling) : 0) + get_wrestling_bonuses()
-	var/their_wrestling = (L.mind ? L.get_skill_level(/datum/skill/combat/wrestling) : 0) + L.get_wrestling_bonuses()
+	var/my_wrestling = get_wrestling_skill()
+	var/their_wrestling = L.get_wrestling_skill()
 	var/wrestling_diff = my_wrestling - their_wrestling
 
 	if(has_status_effect(/datum/status_effect/buff/oiled))
@@ -1598,10 +1594,9 @@
 							return TRUE
 	return ..()
 
-
-/// Provides a bonus to wrestling checks made. Used for simple mobs to give them pseudo wrestle skills.
-/mob/living/proc/get_wrestling_bonuses()
-	return 0
+/// Used for inheritance to apply wrestling bonuses. Only really done because NPC mobs don't have a mind
+/mob/living/proc/get_wrestling_skill()
+	return mind ? get_skill_level(/datum/skill/combat/wrestling) : 0
 
 /mob/living/proc/resist_buckle()
 	buckled.user_unbuckle_mob(src,src)

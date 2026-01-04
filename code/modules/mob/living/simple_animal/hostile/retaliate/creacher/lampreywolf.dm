@@ -27,8 +27,8 @@
 						/obj/item/alch/bone = 2)
 	head_butcher = /obj/item/natural/head/volf
 
-	health = LAMPREYVOLF_HEALTH
-	maxHealth = LAMPREYVOLF_HEALTH
+	health = 110
+	maxHealth = 110
 	gender = MALE
 	var/is_pack_alpha = FALSE
 	animal_species = /mob/living/simple_animal/hostile/retaliate/lampreywolf/alpha
@@ -103,7 +103,6 @@
 	if(is_pack_alpha)
 		ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, ROUNDSTART_TRAIT)
 	else
-		ADD_TRAIT(src, TRAIT_CRITICAL_WEAKNESS, ROUNDSTART_TRAIT)
 		if(prob(50))
 			gender = FEMALE
 			icon_living = "lampreyvolf2"
@@ -238,8 +237,8 @@
 
 	defprob = 50
 
-	health = ALPHA_LAMPREYVOLF_HEALTH
-	maxHealth = ALPHA_LAMPREYVOLF_HEALTH
+	health = 125
+	maxHealth = 125
 	food_max = BLOOD_VOLUME_BAD
 
 	base_constitution = 10
