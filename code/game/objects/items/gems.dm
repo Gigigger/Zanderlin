@@ -223,7 +223,7 @@
 	desc = "An iridescent pearl as blue as the sea it came from. An important symbol in Triton marriage rituals as trial of strength."
 	icon = 'icons/roguetown/items/pearl.dmi'
 	icon_state = "pearl_blue"
-	sellprice = 60
+	sellprice = 120
 	dropshrink = 0.4
 	attuned = /datum/attunement/blood
 
