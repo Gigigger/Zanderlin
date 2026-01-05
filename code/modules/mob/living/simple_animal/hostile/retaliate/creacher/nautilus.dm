@@ -153,6 +153,17 @@
 		else
 			pick(grabIntents) == twist ? G.twistlimb(src) : G.smashlimb((get_turf(C) || C), src)
 
+/mob/living/simple_animal/hostile/retaliate/nautilus/get_sound(input)
+	switch(input)
+		if("aggro")
+			return pick('sound/vo/mobs/nautilus/aggro1.ogg','sound/vo/mobs/nautilus/aggro1.ogg')
+		if("death")
+			return pick('sound/vo/mobs/nautilus/death.ogg')
+		if("idle")
+			return pick('sound/vo/mobs/nautilus/idle1.ogg','sound/vo/mobs/nautilus/idle2.ogg')
+		if("cidle")
+			return pick('sound/vo/mobs/troll/cidle1.ogg','sound/vo/mobs/nautilus/idle2.ogg')
+
 /mob/living/simple_animal/hostile/retaliate/nautilus/simple_limb_hit(zone)
 	if(!zone)
 		return ""

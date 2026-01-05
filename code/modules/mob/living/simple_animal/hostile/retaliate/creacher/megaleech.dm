@@ -124,6 +124,13 @@
 	if(can_buckle)
 		AddComponent(/datum/component/riding/megaleech)
 
+/mob/living/simple_animal/hostile/retaliate/megaleech/get_sound(input)
+	switch(input)
+		if("idle")
+			return pick('sound/vo/mobs/megaleech/bigsuck1.ogg','sound/vo/mobs/megaleech/bigsuck2.ogg', 'sound/vo/mobs/megaleech/bigsuck3.ogg')
+		if("cidle")
+			return pick('sound/vo/mobs/megaleech/bigsuck1.ogg','sound/vo/mobs/megaleech/bigsuck2.ogg', 'sound/vo/mobs/megaleech/bigsuck3.ogg')
+
 /mob/living/simple_animal/hostile/retaliate/megaleech/simple_limb_hit(zone)
 	if(!zone)
 		return ""
