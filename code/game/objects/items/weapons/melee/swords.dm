@@ -1747,7 +1747,7 @@
 
 		if(user.mind)
 			skill_diff += user.get_skill_level(/datum/skill/combat/swords)	//You check your sword skill
-		skill_diff -= M.get_wrestling_skill() //They check their wrestling skill to stop the weapon from being pulled.
+		skill_diff -= M.skills ? M.get_skill_level(/datum/skill/combat/wrestling) : 0 //They check their wrestling skill to stop the weapon from being pulled.
 		user.adjust_stamina(-rand(3,8))
 		var/probby = clamp((((3 + (((user.STASTR - M.STASTR)/4) + skill_diff)) * 10)), 5, 95)
 		if(I)

@@ -624,7 +624,8 @@
 					gcord.wipeslate(src)
 
 			if(grab_state >= GRAB_AGGRESSIVE)
-				TIMER_COOLDOWN_START(pulling, "broke_free", max(0, 2 SECONDS - (0.2 SECONDS * get_wrestling_skill()))) // BUFF: Reduced cooldown
+				var/wrestling_skill = skills ? get_skill_level(/datum/skill/combat/wrestling) : 0
+				TIMER_COOLDOWN_START(pulling, "broke_free", max(0, 2 SECONDS - (0.2 SECONDS * wrestling_skill))) // BUFF: Reduced cooldown
 
 		if(forced) //if false, called by the grab item itself, no reason to drop it again
 			if(istype(get_active_held_item(), /obj/item/grabbing))
@@ -1252,7 +1253,7 @@
 		return FALSE
 
 	var/break_chance = 15 // Base chance
-	break_chance += (get_wrestling_skill() - pulledby.get_wrestling_skill())
+	break_chance += (skills ? get_skill_level(/datum/skill/combat/wrestling) : 0) - (pulledby.skills ? pulledby.get_skill_level(/datum/skill/combat/wrestling) : 0)
 	break_chance += (STASTR - pulledby.STASTR) * 0.4
 
 	// Both parties get a chance to break free
@@ -1291,7 +1292,7 @@
 		return FALSE
 
 	var/counter_chance = 15 // Base chance
-	counter_chance += pulledby.get_wrestling_skill() * 8
+	counter_chance += (pulledby.skills ? pulledby.get_skill_level(/datum/skill/combat/wrestling) : 0) * 8
 
 	// Stat differences
 	counter_chance += (STASTR - attacker.STASTR) * 2
@@ -1450,8 +1451,8 @@
 	// Modifier of pulledby against the resisting src
 	var/positioning_modifier = L.get_positioning_modifier(src)
 
-	var/my_wrestling = get_wrestling_skill()
-	var/their_wrestling = L.get_wrestling_skill()
+	var/my_wrestling = skills ? get_skill_level(/datum/skill/combat/wrestling) : 0
+	var/their_wrestling = L.skills ? L.get_skill_level(/datum/skill/combat/wrestling) : 0
 	var/wrestling_diff = my_wrestling - their_wrestling
 
 	if(has_status_effect(/datum/status_effect/buff/oiled))
@@ -1593,10 +1594,6 @@
 							client?.move_delay = world.time + 20
 							return TRUE
 	return ..()
-
-/// Used for inheritance to apply wrestling bonuses. Only really done because NPC mobs don't have a mind
-/mob/living/proc/get_wrestling_skill()
-	return mind ? get_skill_level(/datum/skill/combat/wrestling) : 0
 
 /mob/living/proc/resist_buckle()
 	buckled.user_unbuckle_mob(src,src)

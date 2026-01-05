@@ -25,7 +25,7 @@
 	aggro_vision_range = 12
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 
-	faction = list("kraken")
+	faction = list(FACTION_SEA)
 	aggressive = TRUE
 	stat_attack = UNCONSCIOUS
 	deaggroprob = 0
@@ -224,7 +224,7 @@
 	melee_damage_upper = 30
 	base_intents = list(/datum/intent/simple/claw)
 
-	faction = list("kraken")
+	faction = list(FACTION_SEA)
 	stat_attack = UNCONSCIOUS
 
 	vision_range = 8

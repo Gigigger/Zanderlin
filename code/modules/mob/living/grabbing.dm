@@ -235,7 +235,8 @@
 	var/skill_diff = 0
 	var/combat_modifier = positioning_mod // Start with positioning
 
-	skill_diff += user.get_wrestling_skill() - M.get_wrestling_skill()
+	skill_diff += user.skills ? user.get_skill_level(/datum/skill/combat/wrestling) : 0
+	skill_diff -= M.skills ? M.get_skill_level(/datum/skill/combat/wrestling) : 0
 
 	if(M.surrendering)
 		combat_modifier *= 2

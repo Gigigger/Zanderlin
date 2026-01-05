@@ -71,8 +71,6 @@
 	ai_controller = /datum/ai_controller/nautilus
 	dendor_taming_chance = DENDOR_TAME_PROB_NONE
 
-	var/wrestling_bonus = SKILL_LEVEL_EXPERT
-
 	var/hiding = FALSE
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Initialize()
@@ -85,6 +83,7 @@
 	//ai's not gonna use this so it doesnt need controller keys
 	var/datum/action/cooldown/mob_cooldown/nautilus_hide/hide = new()
 	hide.Grant(src)
+	clamped_adjust_skillrank(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, SKILL_LEVEL_JOURNEYMAN, TRUE)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/taunted(mob/user)
 	emote("aggro")
@@ -108,11 +107,6 @@
 	. = ..()
 	if(.)
 		ambush()
-
-//this is an impermanent solution with an indefinite fix date
-/mob/living/simple_animal/hostile/retaliate/nautilus/apply_damage(damage, damagetype, def_zone, blocked, forced)
-	if(damage > force_threshold)
-		return ..()
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/AttackingTarget(mob/living/passed_target)
 	. = ..()
@@ -195,9 +189,6 @@
 			return "tentacles"
 		else
 			return "shell"
-
-/mob/living/simple_animal/hostile/retaliate/nautilus/get_wrestling_skill()
-	return ..() + wrestling_bonus
 
 /datum/intent/simple/nautilus_lash
 	name = "tendril lash"
