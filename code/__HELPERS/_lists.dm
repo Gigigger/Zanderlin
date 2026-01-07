@@ -179,7 +179,7 @@ if (length(L) < I) { \
 
 //Returns a list in plain english as a string
 /proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
-	var/total = length(input)
+	var/total = length_char(input)
 	switch(total)
 		if (0)
 			return "[nothing_text]"

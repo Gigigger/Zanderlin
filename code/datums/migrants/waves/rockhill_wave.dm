@@ -130,7 +130,7 @@
 		var/obj/item/clothing/S = spawned.cloak
 		var/index = findtext(spawned.real_name, " ")
 		if(index)
-			index = copytext(spawned.real_name, 1,index)
+			index = copytext_char_char(spawned.real_name, 1,index)
 		if(!index)
 			index = spawned.real_name
 		S.name = "knight tabard ([index])"

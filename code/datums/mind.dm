@@ -325,7 +325,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 /datum/mind/proc/store_memory(new_text)
 	var/newlength = length(memory) + length(new_text)
 	if (newlength > MAX_MESSAGE_LEN * 100)
-		memory = copytext(memory, -newlength-MAX_MESSAGE_LEN * 100)
+		memory = copytext_char_char(memory, -newlength-MAX_MESSAGE_LEN * 100)
 	memory += "[new_text]<BR>"
 
 /// wipes the memory of a mind
@@ -534,7 +534,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 		antag_datum_ref.admin_remove(usr)
 
 	else if (href_list["memory_edit"])
-		var/new_memo = copytext(sanitize(input("Write new memory", "Memory", memory) as null|message),1,MAX_MESSAGE_LEN)
+		var/new_memo = copytext_char_char(sanitize(input("Write new memory", "Memory", memory) as null|message),1,MAX_MESSAGE_LEN)
 		if (isnull(new_memo))
 			return
 		memory = new_memo

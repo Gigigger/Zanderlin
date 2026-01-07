@@ -27,7 +27,7 @@
 		title = html_encode(title)
 	if(encode_text)
 		text = html_encode(text)
-		if(!length(text))
+		if(!length_char(text))
 			return
 
 	var/announcement = "<br><div class='alert_holder'>"

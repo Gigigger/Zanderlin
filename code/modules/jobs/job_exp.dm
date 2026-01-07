@@ -163,10 +163,10 @@ GLOBAL_PROTECT(exp_to_update)
 		var/mins = text2num(exp_read.item[2])
 
 		var/str_key = "[raw_key]"
-		if(copytext(str_key, 1, 2) == "'")
-			str_key = copytext(str_key, 2)
-		if(copytext(str_key, length(str_key)) == "'")
-			str_key = copytext(str_key, 1, length(str_key))
+		if(copytext_char_char(str_key, 1, 2) == "'")
+			str_key = copytext_char_char(str_key, 2)
+		if(copytext_char_char(str_key, length(str_key)) == "'")
+			str_key = copytext_char_char(str_key, 1, length(str_key))
 
 		play_records[str_key] = mins
 

@@ -1245,44 +1245,44 @@
 	if(!groom_name_index)
 		surname = " " + groom.dna.species.random_surname()
 	else
-		var/last_word = copytext(groom.real_name, groom_name_index + 1)
+		var/last_word = copytext_char_char(groom.real_name, groom_name_index + 1)
 		var/second_last_index = findlasttext(groom.real_name, " ", 1, groom_name_index - 1)
 
 		var/is_title = FALSE
 		if(second_last_index)
-			var/second_last_word = copytext(groom.real_name, second_last_index + 1, groom_name_index)
+			var/second_last_word = copytext_char_char(groom.real_name, second_last_index + 1, groom_name_index)
 			if((lowertext(second_last_word) == "the" || lowertext(second_last_word) == "of") && last_word)
 				is_title = TRUE
 
 		if(is_title)
 			var/surname_index = findlasttext(groom.real_name, " ", 1, second_last_index - 1)
 			if(!surname_index)
-				surname = " " + copytext(groom.real_name, 1, second_last_index)
+				surname = " " + copytext_char_char(groom.real_name, 1, second_last_index)
 				groom.change_name("")
 			else
-				surname = copytext(groom.real_name, surname_index, second_last_index)
-				groom.change_name(copytext(groom.real_name, 1, surname_index))
+				surname = copytext_char_char(groom.real_name, surname_index, second_last_index)
+				groom.change_name(copytext_char_char(groom.real_name, 1, surname_index))
 		else if(findtext(groom.real_name, " the ") || findtext(groom.real_name, " of "))
 			surname = " " + groom.dna.species.random_surname()
 		else
-			surname = copytext(groom.real_name, groom_name_index)
-			groom.change_name(copytext(groom.real_name, 1, groom_name_index))
+			surname = copytext_char_char(groom.real_name, groom_name_index)
+			groom.change_name(copytext_char_char(groom.real_name, 1, groom_name_index))
 
 	var/bride_name_index = findlasttext(bride.real_name, " ")
 	var/bride_first_name = bride.real_name
 
 	if(bride_name_index)
-		var/last_word_bride = copytext(bride.real_name, bride_name_index + 1)
+		var/last_word_bride = copytext_char_char(bride.real_name, bride_name_index + 1)
 		var/second_last_index_bride = findlasttext(bride.real_name, " ", 1, bride_name_index - 1)
 
 		var/is_title_bride = FALSE
 		if(second_last_index_bride)
-			var/second_last_word_bride = copytext(bride.real_name, second_last_index_bride + 1, bride_name_index)
+			var/second_last_word_bride = copytext_char_char(bride.real_name, second_last_index_bride + 1, bride_name_index)
 			if((lowertext(second_last_word_bride) == "the" || lowertext(second_last_word_bride) == "of") && last_word_bride)
 				is_title_bride = TRUE
 
 		if(!is_title_bride && !findtext(bride.real_name, " the ") && !findtext(bride.real_name, " of "))
-			bride.change_name(copytext(bride.real_name, 1, bride_name_index))
+			bride.change_name(copytext_char_char(bride.real_name, 1, bride_name_index))
 
 		bride_first_name = bride.real_name
 

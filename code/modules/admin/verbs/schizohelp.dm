@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 /mob/proc/schizohelp(msg as text, ask_again = FALSE, client/voice_again, datum/schizohelp/schizo_again)
 	if(!msg)
 		return
-	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext_char_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	if(!msg)
 		return
 

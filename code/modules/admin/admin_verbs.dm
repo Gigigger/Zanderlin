@@ -563,7 +563,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 			if(!new_key)
 				return
 			if(length(new_key) >= 26)
-				new_key = copytext(new_key, 1, 26)
+				new_key = copytext_char_char(new_key, 1, 26)
 			holder.fakekey = new_key
 			createStealthKey()
 			if(isobserver(mob))

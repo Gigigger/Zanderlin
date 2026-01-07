@@ -53,12 +53,12 @@ proc
 	// Suffix checking //
 	/////////////////////
 	dd_hassuffix(text, suffix)
-		var/start = length(text) - length(suffix)
+		var/start = length_char(text) - length(suffix)
 		if (start)
 			return findtext(text, suffix, start)
 
 	dd_hasSuffix(text, suffix)
-		var/start = length(text) - length(suffix)
+		var/start = length_char(text) - length(suffix)
 		if (start)
 			return findtextEx(text, suffix, start)
 
@@ -74,8 +74,8 @@ proc
 		var/buggyText
 		while (1)															// Loop forever.
 			findPosition = findtext(text, separator, searchPosition, 0)
-			buggyText = copytext(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
-			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext().
+			buggyText = copytext_char_char(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
+			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext_char_char().
 
 			searchPosition = findPosition + separatorlength					// Skip over separator.
 			if (findPosition == 0)											// Didn't find anything at end of string so stop here.
@@ -94,8 +94,8 @@ proc
 		var/buggyText
 		while (1)															// Loop forever.
 			findPosition = findtextEx(text, separator, searchPosition, 0)
-			buggyText = copytext(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
-			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext().
+			buggyText = copytext_char_char(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
+			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext_char_char().
 
 			searchPosition = findPosition + separatorlength					// Skip over separator.
 			if (findPosition == 0)											// Didn't find anything at end of string so stop here.
@@ -124,7 +124,7 @@ proc
 		if (size == length)
 			return new_message
 		if (size > length)
-			return copytext(new_message, 1, length + 1)
+			return copytext_char_char(new_message, 1, length + 1)
 
 		// Need to pad text to center it.
 		var/delta = length - size
@@ -150,4 +150,4 @@ proc
 		if (size <= length)
 			return message
 		else
-			return copytext(message, 1, length + 1)
+			return copytext_char_char(message, 1, length + 1)

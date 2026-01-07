@@ -5,7 +5,7 @@
 
 
 /datum/proc/plural_s(pluralize)
-	switch(copytext_char(pluralize, -2))
+	switch(copytext_char_char_char(pluralize, -2))
 		if ("ss")
 			. = "es"
 		if ("sh")
@@ -13,7 +13,7 @@
 		if ("ch")
 			. = "es"
 		else
-			switch(copytext_char(pluralize, -1))
+			switch(copytext_char_char_char(pluralize, -1))
 				if("s", "x", "z")
 					. = "es"
 				else

@@ -142,7 +142,7 @@
 		// Insert the prefix before "bottle of"
 		var/bottle_pos = findtext(bottle.name, " bottle of ")
 		if(bottle_pos)
-			bottle.name = copytext(bottle.name, 1, bottle_pos) + " [name_prefix] bottle of " + copytext(bottle.name, bottle_pos + 11)
+			bottle.name = copytext_char_char(bottle.name, 1, bottle_pos) + " [name_prefix] bottle of " + copytext_char_char(bottle.name, bottle_pos + 11)
 		else
 			bottle.name = "[name_prefix] [bottle.name]"
 

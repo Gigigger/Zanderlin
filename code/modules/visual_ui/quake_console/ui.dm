@@ -180,7 +180,7 @@
 	var/current_arg = ""
 	var/in_quotes = FALSE
 
-	for(var/i = 1, i <= length(text), i++)
+	for(var/i = 1, i <= length_char(text), i++)
 		var/char = text[i]
 
 		// Handle quote character
@@ -195,7 +195,7 @@
 				current_arg = ""
 			continue
 
-		if(char == "\\" && i < length(text) && text[i+1] == "\"")
+		if(char == "\\" && i < length_char(text) && text[i+1] == "\"")
 			current_arg += "\""
 			i++
 			continue

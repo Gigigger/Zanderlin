@@ -28,7 +28,7 @@
 	if(!ckey)
 		return FALSE
 
-	var/ckey_prefix = copytext(ckey, 1, 2)
+	var/ckey_prefix = copytext_char_char(ckey, 1, 2)
 	base_path = "data/player_saves/[ckey_prefix]/[ckey]/persistent_data"
 
 	return TRUE
