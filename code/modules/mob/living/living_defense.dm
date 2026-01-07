@@ -300,7 +300,7 @@
 
 	M.do_attack_animation(src, visual_effect_icon = M.a_intent.animname)
 	if(M.attack_sound)
-		playsound(get_turf(M), pick(M.attack_sound), 100, FALSE)
+		playsound(M, pick(M.attack_sound), 100, FALSE)
 
 	var/cached_intent = M.used_intent
 
@@ -407,7 +407,7 @@
 		"<span class='danger'>I feel a powerful shock coursing through my body!</span>", \
 		"<span class='hear'>I hear a heavy electrical crack.</span>" \
 	)
-	playsound(get_turf(src), pick('sound/misc/elec (1).ogg', 'sound/misc/elec (2).ogg', 'sound/misc/elec (3).ogg'), 100, FALSE)
+	playsound(src, pick('sound/misc/elec (1).ogg', 'sound/misc/elec (2).ogg', 'sound/misc/elec (3).ogg'), 100, FALSE)
 	return shock_damage
 
 //called when the mob receives a bright flash
