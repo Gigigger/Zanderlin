@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	///our selected accent
 	var/selected_accent = ACCENT_DEFAULT
 	/// If our owner is patreon or twitch sub
-	var/donator = FALSE
+	var/donator = TRUE
 	/// If our owner is from a race that has more than one accent
 	var/change_accent = FALSE
 
