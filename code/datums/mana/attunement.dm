@@ -61,9 +61,9 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 		total_weight += weight
 
 		// Extract RGB components (assuming hex format #RRGGBB)
-		var/red = hex2num(copytext_char_char(color, 2, 4))
-		var/green = hex2num(copytext_char_char(color, 4, 6))
-		var/blue = hex2num(copytext_char_char(color, 6, 8))
+		var/red = hex2num(copytext_char(color, 2, 4))
+		var/green = hex2num(copytext_char(color, 4, 6))
+		var/blue = hex2num(copytext_char(color, 6, 8))
 
 		red_sum += red * weight
 		green_sum += green * weight

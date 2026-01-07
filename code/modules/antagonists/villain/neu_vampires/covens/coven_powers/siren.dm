@@ -28,7 +28,7 @@
 		return
 
 	//prevent forceful emoting and whatnot
-	new_say = trim(copytext_char_char_char(sanitize(new_say), 1, MAX_MESSAGE_LEN))
+	new_say = trim(copytext_char(sanitize(new_say), 1, MAX_MESSAGE_LEN))
 	if (findtext(new_say, "*"))
 		to_chat(owner, span_danger("You can't force others to perform emotes!"))
 		return
@@ -88,7 +88,7 @@
 		return
 
 	//sanitisation!
-	input_message = trim(copytext_char_char_char(sanitize(input_message), 1, MAX_MESSAGE_LEN))
+	input_message = trim(copytext_char(sanitize(input_message), 1, MAX_MESSAGE_LEN))
 	if(CHAT_FILTER_CHECK(input_message))
 		to_chat(owner, span_warning("That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[input_message]\"</span>"))
 		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))

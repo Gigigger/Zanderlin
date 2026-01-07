@@ -46,13 +46,13 @@
 /datum/tgs_api/v3210/proc/trim_left(text)
 	for (var/i = 1 to length_char(text))
 		if (text2ascii(text, i) > 32)
-			return copytext_char_char(text, i)
+			return copytext_char(text, i)
 	return ""
 
 /datum/tgs_api/v3210/proc/trim_right(text)
 	for (var/i = length_char(text), i > 0, i--)
 		if (text2ascii(text, i) > 32)
-			return copytext_char_char(text, 1, i + 1)
+			return copytext_char(text, 1, i + 1)
 	return ""
 
 /datum/tgs_api/v3210/OnWorldNew(minimum_required_security_level)

@@ -747,7 +747,7 @@
 		if(findtext(person?.real_name, " of ") || findtext(person?.real_name, " the "))
 			surname2use = person?.dna?.species?.random_surname()
 		else
-			surname2use = copytext_char_char(person?.real_name, index)
+			surname2use = copytext_char(person?.real_name, index)
 	return surname2use
 
 /datum/heritage/proc/ApplyUI(mob/living/carbon/human/iconer, toggle_true = FALSE)

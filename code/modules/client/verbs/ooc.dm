@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(QDELETED(src))
 		return
 
-	msg = copytext_char_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	var/raw_msg = msg
 
 	if(!msg)
@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(QDELETED(src))
 		return
 
-	msg = copytext_char_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	var/raw_msg = msg
 
 	if(!msg)
@@ -288,12 +288,12 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	var/parsed = ""
 	var/pos = 1
 	var/search = findtext(jd, "country", pos)
-	parsed += copytext_char_char(jd, pos, search)
+	parsed += copytext_char(jd, pos, search)
 	if(search)
 		pos = search
 		search = findtext(jd, ",", pos+1)
 		if(search)
-			return lowertext(copytext_char_char(jd, pos+9, search))
+			return lowertext(copytext_char(jd, pos+9, search))
 
 /client/verb/fix_chat()
 	set name = "Fix Chat"
@@ -396,9 +396,9 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 		// pronouns can end in "self" or "selfs" so allow those
 		// if has "self" or "selfs" at the end, remove it
 		if (endswith(pronoun, "selfs"))
-			pronoun = copytext_char_char(pronoun, 1, length(pronoun) - 5)
+			pronoun = copytext_char(pronoun, 1, length(pronoun) - 5)
 		else if (endswith(pronoun, "self"))
-			pronoun = copytext_char_char(pronoun, 1, length(pronoun) - 4)
+			pronoun = copytext_char(pronoun, 1, length(pronoun) - 4)
 		pronoun = trim(pronoun)
 
 		if (!(pronoun in GLOB.oocpronouns_valid))

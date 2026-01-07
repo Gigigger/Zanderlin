@@ -338,13 +338,13 @@
 	return A.loc
 
 /proc/GetRedPart(const/hexa)
-	return hex2num(copytext_char_char(hexa, 2, 4))
+	return hex2num(copytext_char(hexa, 2, 4))
 
 /proc/GetGreenPart(const/hexa)
-	return hex2num(copytext_char_char(hexa, 4, 6))
+	return hex2num(copytext_char(hexa, 4, 6))
 
 /proc/GetBluePart(const/hexa)
-	return hex2num(copytext_char_char(hexa, 6, 8))
+	return hex2num(copytext_char(hexa, 6, 8))
 
 
 // Find a obstruction free turf that's within the range of the center. Can also condition on if it is of a certain area type.

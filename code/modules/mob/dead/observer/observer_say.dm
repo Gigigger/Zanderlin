@@ -1,6 +1,6 @@
 /mob/dead/observer/check_emote(message, forced)
 	if(message == "*spin" || message == "*flip")
-		emote(copytext_char_char(message, length(message[1]) + 1), intentional = !forced)
+		emote(copytext_char(message, length(message[1]) + 1), intentional = !forced)
 		return TRUE
 
 //Modified version of get_message_mods, removes the trimming, the only thing we care about here is admin channels
@@ -12,14 +12,14 @@
 	return message
 
 /mob/dead/observer/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
-	message = trim(copytext_char_char(sanitize(message), 1, MAX_MESSAGE_LEN))
+	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
 	if(!message)
 		return
 
 	var/list/message_mods = list()
 	message = get_message_mods(message, message_mods)
 	if(client && (message_mods[RADIO_EXTENSION] == MODE_ADMIN || message_mods[RADIO_EXTENSION] == MODE_DEADMIN))
-		message = trim_left(copytext_char_char_char(message, length(message_mods[RADIO_KEY]) + 2))
+		message = trim_left(copytext_char(message, length(message_mods[RADIO_KEY]) + 2))
 		if(message_mods[RADIO_EXTENSION] == MODE_ADMIN)
 			client.cmd_admin_say(message)
 		else if(message_mods[RADIO_EXTENSION] == MODE_DEADMIN)
@@ -54,7 +54,7 @@
 		if (!(ignore_spam || forced) && src.client.handle_spam_prevention(message,MUTE_IC))
 			return
 
-	message = capitalize(trim(copytext_char_char(sanitize(message), 1, MAX_MESSAGE_LEN)))
+	message = capitalize(trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN)))
 	var/rendered = "<span class='say'><span class='name'>[name]</span> <span class='message'>[say_quote(message)]</span></span>"
 
 	visible_message(message = rendered, self_message = FALSE, blind_message = rendered, vision_distance = 0)

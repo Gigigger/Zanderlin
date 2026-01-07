@@ -11,7 +11,7 @@
 /datum/mapGenerator/New()
 	..()
 	if(buildmode_name == "Undocumented")
-		buildmode_name = copytext_char_char("[type]", 20)	// / d a t u m / m a p g e n e r a t o r / = 20 characters.
+		buildmode_name = copytext_char("[type]", 20)	// / d a t u m / m a p g e n e r a t o r / = 20 characters.
 
 #ifndef TESTING
 	initialiseModules()

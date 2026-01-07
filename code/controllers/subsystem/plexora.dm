@@ -678,7 +678,7 @@ SUBSYSTEM_DEF(plexora)
 	var/adminname = stealth ? "Administrator" : plx_tagged
 	var/stealthkey = GetTgsStealthKey()
 
-	message = sanitize(copytext_char_char_char(message, 1, MAX_MESSAGE_LEN))
+	message = sanitize(copytext_char(message, 1, MAX_MESSAGE_LEN))
 	message = emoji_parse(message)
 
 	if (!message)
@@ -726,7 +726,7 @@ SUBSYSTEM_DEF(plexora)
 	var/sender = input["sender"]
 	var/msg = input["message"]
 
-	msg = emoji_parse(copytext_char_char_char(sanitize(msg), 1, MAX_MESSAGE_LEN))
+	msg = emoji_parse(copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN))
 	if(!msg)
 		return
 

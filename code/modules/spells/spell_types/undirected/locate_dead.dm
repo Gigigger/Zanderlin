@@ -38,7 +38,7 @@
 		else
 			corpse_name = "Forgotten remains of "
 
-		corpse_name += " [copytext_char_char(C.name, 1, 2)]..."
+		corpse_name += " [copytext_char(C.name, 1, 2)]..."
 		corpses[corpse_name] = C
 
 	if(!length(corpses))

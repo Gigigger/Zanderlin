@@ -157,7 +157,7 @@
 		var/insertpos = rand(1, message_list.len - 1)
 		var/inserttext = message_list[insertpos]
 
-		if(!(copytext_char_char(inserttext, length(inserttext) - 2) == "..."))
+		if(!(copytext_char(inserttext, length(inserttext) - 2) == "..."))
 			message_list[insertpos] = inserttext + "..."
 
 		if(prob(20) && message_list.len > 3)

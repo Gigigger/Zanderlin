@@ -99,7 +99,7 @@
 		return
 
 	var/filename = "[infile]"
-	var/file_ext = lowertext(copytext_char_char(filename, -4))
+	var/file_ext = lowertext(copytext_char(filename, -4))
 	var/file_size = length(infile)
 
 	if(file_ext != ".ogg")

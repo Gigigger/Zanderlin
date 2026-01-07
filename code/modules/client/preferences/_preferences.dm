@@ -1981,7 +1981,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	// Extract domain from the URL
 	var/start_index = length("https://") + 1
 	var/end_index = findtext(value, "/", start_index)
-	var/domain = (end_index ? copytext_char_char(value, start_index, end_index) : copytext_char_char(value, start_index))
+	var/domain = (end_index ? copytext_char(value, start_index, end_index) : copytext_char(value, start_index))
 
 	// Check if domain is in the allowed list
 	if(!(domain in allowed_hosts))

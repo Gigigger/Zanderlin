@@ -47,7 +47,7 @@
 	for(var/char in repl_chars)
 		var/index = findtext(text, char)
 		while(index)
-			text = copytext_char_char(text, 1, index) + repl_chars[char] + copytext_char_char(text, index + length(char))
+			text = copytext_char(text, 1, index) + repl_chars[char] + copytext_char(text, index + length(char))
 			index = findtext(text, char, index + length(char))
 	return text
 

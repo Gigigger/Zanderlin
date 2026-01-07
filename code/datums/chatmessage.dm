@@ -142,7 +142,7 @@
 	// Clip message
 	var/maxlen = owned_by.prefs.max_chat_length
 	if (length_char(text) > maxlen)
-		text = copytext_char_char_char(text, 1, maxlen + 1) + "..." // BYOND index moment
+		text = copytext_char(text, 1, maxlen + 1) + "..." // BYOND index moment
 
 	// Calculate target color if not already present
 	if(ishuman(target))
@@ -258,28 +258,28 @@
 
 	while(current_pos <= text_length)
 		// Check if we're at the start of an HTML entity
-		if(copytext_char_char(text, current_pos, current_pos + 1) == "&")
+		if(copytext_char(text, current_pos, current_pos + 1) == "&")
 			var/entity_end = findtext(text, ";", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
-				var/entity = copytext_char_char(text, current_pos, entity_end + 1)
+				var/entity = copytext_char(text, current_pos, entity_end + 1)
 				result += entity
 				current_pos = entity_end + 1
 				continue
-		else if(copytext_char_char(text, current_pos, current_pos + 1) == "<")
+		else if(copytext_char(text, current_pos, current_pos + 1) == "<")
 			var/entity_end = findtext(text, ">", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
-				var/entity = copytext_char_char(text, current_pos, entity_end + 1)
+				var/entity = copytext_char(text, current_pos, entity_end + 1)
 				result += entity
 				current_pos = entity_end + 1
 				continue
-		else if(copytext_char_char(text, current_pos, current_pos + 1) == "�") // Should handle UTF-8 multi-byte characters
+		else if(copytext_char(text, current_pos, current_pos + 1) == "�") // Should handle UTF-8 multi-byte characters
 			var/offset = 1
 			var/failed = FALSE
 			var/entity
 			while(current_pos + offset <= text_length)
-				var/test_char = copytext_char_char(text, current_pos, current_pos + offset + 1)
+				var/test_char = copytext_char(text, current_pos, current_pos + offset + 1)
 				if(!findtext(test_char, "�")) // Valid character found
 					entity = test_char
 					break
@@ -293,7 +293,7 @@
 				continue
 
 		// Not an entity, add single character
-		result += copytext_char_char(text, current_pos, current_pos + 1)
+		result += copytext_char(text, current_pos, current_pos + 1)
 		current_pos++
 
 	return result
