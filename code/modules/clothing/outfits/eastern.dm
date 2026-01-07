@@ -213,6 +213,7 @@
 	icon_state = "pearlcross"
 	desc = "An amulet made of white pearls, usually worn by fishers or sailors."
 	sellprice = 80
+	dropshrink = 0.7
 
 /obj/item/clothing/neck/psycross/bpearl
 	name = "cerulean pearl amulet"

@@ -223,8 +223,8 @@
 	desc = "An iridescent pearl as blue as the sea it came from. An important symbol in Triton marriage rituals as trial of strength."
 	icon = 'icons/roguetown/items/pearl.dmi'
 	icon_state = "pearl_blue"
-	sellprice = 120
-	dropshrink = 0.4
+	sellprice = 60
+	dropshrink = 0.6
 	attuned = /datum/attunement/blood
 
 /obj/item/gem/pearl
@@ -232,7 +232,7 @@
 	desc = "A shimmering pearl plucked from a mollusk. A plentiful gem said to bring good fortune to sailors."
 	icon = 'icons/roguetown/items/pearl.dmi'
 	icon_state = "pearl"
-	dropshrink = 0.4
+	dropshrink = 0.6
 	sellprice = 20
 
 /obj/item/gem/onyxa
