@@ -80,7 +80,7 @@
 		animate(src, alpha = 255)
 	var/list/lines_to_skip = list()
 	var/static/html_locate_regex = regex("<.*>")
-	var/tag_position = findtext(text_to_play, html_locate_regex)
+	var/tag_position = findtext_char(text_to_play, html_locate_regex)
 	var/reading_tag = TRUE
 	while(tag_position)
 		if(reading_tag)
@@ -91,7 +91,7 @@
 				lines_to_skip += tag_position
 			tag_position++
 		else
-			tag_position = findtext(text_to_play, html_locate_regex, tag_position)
+			tag_position = findtext_char(text_to_play, html_locate_regex, tag_position)
 			reading_tag = TRUE
 	for(var/letter = 2 to length(text_to_play) + letters_per_update step letters_per_update)
 		if(letter in lines_to_skip)

@@ -456,7 +456,7 @@
 			A.associate(C)
 	else
 		D.disassociate()
-		if(!findtext(D.rank.name, "([admin_ckey])")) //not a modified subrank, need to duplicate the admin_rank datum to prevent modifying others too
+		if(!findtext_char(D.rank.name, "([admin_ckey])")) //not a modified subrank, need to duplicate the admin_rank datum to prevent modifying others too
 			D.rank = new("[D.rank.name]([admin_ckey])", new_flags, new_exclude_flags, new_can_edit_flags) //duplicate our previous admin_rank but with a new name
 			//we don't add this clone to the admin_ranks list, as it is unique to that ckey
 		else

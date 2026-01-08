@@ -8,11 +8,11 @@
 	var/search = 0
 	var/emoji = ""
 	while(1)
-		search = findtext(text, ":", pos)
+		search = findtext_char(text, ":", pos)
 		parsed += copytext_char(text, pos, search)
 		if(search)
 			pos = search
-			search = findtext(text, ":", pos+1)
+			search = findtext_char(text, ":", pos+1)
 			if(search)
 				emoji = lowertext(copytext_char(text, pos+1, search))
 //				var/datum/asset/spritesheet_batched/sheet = get_asset_datum(/datum/asset/spritesheet_batched/goonchat)
@@ -40,10 +40,10 @@
 	var/pos = 1
 	var/search = 0
 	while(1)
-		search = findtext(text, ":", pos)
+		search = findtext_char(text, ":", pos)
 		if(search)
 			pos = search
-			search = findtext(text, ":", pos+1)
+			search = findtext_char(text, ":", pos+1)
 			if(search)
 				var/word = lowertext(copytext_char(text, pos+1, search))
 				if(word in emojis)

@@ -189,7 +189,7 @@
 
 	src.bounds = parsed_bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
 
-	if(findtext(tfile, matches_tgm))
+	if(findtext_char(tfile, matches_tgm))
 		map_format = MAP_TGM
 	else
 		map_format = MAP_DMM // Fallback
@@ -836,10 +836,10 @@ GLOBAL_LIST_EMPTY(map_model_default)
 			var/variables_start = 0
 			var/member_string = model_path.group[1]
 			model_index = model_path.next
-			//findtext is a bit expensive, lets only do this if the last char of our string is a } (IE: we know we have vars)
+			//findtext_char is a bit expensive, lets only do this if the last char of our string is a } (IE: we know we have vars)
 			//this saves about 25 miliseconds on my machine. Not a major optimization
 			if(member_string[length(member_string)] == "}")
-				variables_start = findtext(member_string, "{")
+				variables_start = findtext_char(member_string, "{")
 
 			var/path_text = trimtext(copytext_char(member_string, 1, variables_start))
 			var/atom_def = text2path(path_text) //path definition, e.g /obj/foo/bar
@@ -984,13 +984,13 @@ GLOBAL_LIST_EMPTY(map_model_default)
 //returns 0 if reached the last delimiter
 /datum/parsed_map/proc/find_next_delimiter_position(text as text,initial_position as num, delimiter=",",opening_escape="\"",closing_escape="\"")
 	var/position = initial_position
-	var/next_delimiter = findtext(text,delimiter,position,0)
-	var/next_opening = findtext(text,opening_escape,position,0)
+	var/next_delimiter = findtext_char(text,delimiter,position,0)
+	var/next_opening = findtext_char(text,opening_escape,position,0)
 
 	while((next_opening != 0) && (next_opening < next_delimiter))
-		position = findtext(text,closing_escape,next_opening + 1,0)+1
-		next_delimiter = findtext(text,delimiter,position,0)
-		next_opening = findtext(text,opening_escape,position,0)
+		position = findtext_char(text,closing_escape,next_opening + 1,0)+1
+		next_delimiter = findtext_char(text,delimiter,position,0)
+		next_opening = findtext_char(text,opening_escape,position,0)
 
 	return next_delimiter
 
@@ -1008,7 +1008,7 @@ GLOBAL_LIST_EMPTY(map_model_default)
 		position = find_next_delimiter_position(text,old_position,delimiter)
 
 		// check if this is a simple variable (as in list(var1, var2)) or an associative one (as in list(var1="foo",var2=7))
-		var/equal_position = findtext(text,"=",old_position, position)
+		var/equal_position = findtext_char(text,"=",old_position, position)
 		var/trim_left = trimtext(copytext_char(text,old_position,(equal_position ? equal_position : position)))
 		var/left_constant = parse_constant(trim_left)
 		if(position)

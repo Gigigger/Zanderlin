@@ -48,7 +48,7 @@
 
 /datum/outfit/gatemaster/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
-	if(H.wear_armor && !findtext(H.wear_armor.name, "([H.real_name])"))
+	if(H.wear_armor && !findtext_char(H.wear_armor.name, "([H.real_name])"))
 		H.wear_armor.name = "[H.wear_armor.name] ([H.real_name])"
 
 /datum/job/advclass/gatemaster

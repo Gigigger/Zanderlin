@@ -100,11 +100,11 @@
 	// Get a local copy of the template for modification
 	var/local_template = issue_template
 
-	local_template = replacetext(local_template, "## Map:\n", "## Map:\n[SSmapping.config.map_name]")
+	local_template = replacetext_char(local_template, "## Map:\n", "## Map:\n[SSmapping.config.map_name]")
 
 	// Insert round
 	if(GLOB.round_id)
-		local_template = replacetext(local_template, "## Round ID:\n", "## Round ID:\n[GLOB.round_id]")
+		local_template = replacetext_char(local_template, "## Round ID:\n", "## Round ID:\n[GLOB.round_id]")
 
 	// Insert testmerges
 	if(length(GLOB.revdata.testmerge))
@@ -112,7 +112,7 @@
 		for(var/datum/tgs_revision_information/test_merge/tm as anything in GLOB.revdata.testmerge)
 			all_tms += "- \[[tm.title]\]([githuburl]/pull/[tm.number])"
 		var/all_tms_joined = all_tms.Join("\n") // for some reason this can't go in the []
-		local_template = replacetext(local_template, "## Testmerges:\n", "## Testmerges:\n[all_tms_joined]")
+		local_template = replacetext_char(local_template, "## Testmerges:\n", "## Testmerges:\n[all_tms_joined]")
 
 	var/issue_title = browser_input_text(src, "Please give the issue a title", "Issue Title")
 	if(!issue_title)
@@ -121,13 +121,13 @@
 	if(!user_description)
 		return
 
-	local_template = replacetext(local_template, "## Reproduction:\n", "## Reproduction:\n[user_description]")
+	local_template = replacetext_char(local_template, "## Reproduction:\n", "## Reproduction:\n[user_description]")
 
 	var/list/client_info = list()
 	client_info += "BYOND: [byond_version].[byond_build]"
 	client_info += "Ckey: [ckey]"
 
-	local_template = replacetext(local_template, "## Client Information:\n", "## Client Information:\n[client_info.Join("\n")]")
+	local_template = replacetext_char(local_template, "## Client Information:\n", "## Client Information:\n[client_info.Join("\n")]")
 
 	var/list/body_structure = list(
 		"title" = issue_title,

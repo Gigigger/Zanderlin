@@ -114,19 +114,19 @@ GLOBAL_LIST_EMPTY(thieves_guild_doors)
 
 	if(is_type_in_list(H.mind?.assigned_role, vip)) //are they a VIP?
 		var/list/mods = list(WHISPER_MODE = MODE_WHISPER)
-		if(findtext(message2recognize, "help"))
+		if(findtext_char(message2recognize, "help"))
 			send_speech(span_purple("'say phrase'... 'set phrase'..."), speaking_distance, src, message_language = lang, message_mods = mods)
 			return TRUE
-		if(findtext(message2recognize, "say phrase"))
+		if(findtext_char(message2recognize, "say phrase"))
 			send_speech(span_purple("[open_phrase]..."), speaking_distance, src, message_language = lang, message_mods = mods)
 			return TRUE
-		if(findtext(message2recognize, "set phrase"))
+		if(findtext_char(message2recognize, "set phrase"))
 			var/new_pass = stripped_input(H, "What should the new close phrase be?")
 			open_phrase = new_pass
 			send_speech(span_purple("It is done, [flavor_name()]..."), speaking_distance, src, message_language = lang, message_mods = mods)
 			return TRUE
 
-	if(findtext(message2recognize, open_phrase))
+	if(findtext_char(message2recognize, open_phrase))
 		if(!door_opened)
 			force_open()
 		else
@@ -318,7 +318,7 @@ GLOBAL_LIST_EMPTY(thieves_guild_doors)
 	var/mob/living/carbon/human/H = speaker
 
 	var/message2recognize = SANITIZE_HEAR_MESSAGE(raw_message)
-	if(is_type_in_list(H.mind?.assigned_role, vip) && findtext(message2recognize, "set phrase"))
+	if(is_type_in_list(H.mind?.assigned_role, vip) && findtext_char(message2recognize, "set phrase"))
 		for(var/obj/structure/door/secret/D in GLOB.keep_doors)
 			D.set_phrase(open_phrase)
 	return TRUE
@@ -367,7 +367,7 @@ GLOBAL_LIST_EMPTY(thieves_guild_doors)
 	var/mob/living/carbon/human/H = speaker
 
 	var/message2recognize = SANITIZE_HEAR_MESSAGE(raw_message)
-	if((is_type_in_list(H.mind?.assigned_role, vip)) && findtext(message2recognize, "set phrase"))
+	if((is_type_in_list(H.mind?.assigned_role, vip)) && findtext_char(message2recognize, "set phrase"))
 		for(var/obj/structure/door/secret/D in GLOB.keep_doors)
 			D.set_phrase(open_phrase)
 	return TRUE

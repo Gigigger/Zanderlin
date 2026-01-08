@@ -124,7 +124,7 @@
 		if(lockthis)
 			L = copytext_char(L, 2)
 
-		var/pos = findtext(L, " ")
+		var/pos = findtext_char(L, " ")
 		var/entry = null
 		var/value = null
 
@@ -270,7 +270,7 @@ Example config:
 		else if(t[1] == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/command = null
 		var/data = null
 

@@ -187,9 +187,9 @@
 							return
 
 						to_chat(user, span_notice("You tell the bird to go to [spell.destinations[dest]]"))
-						var/strip_info = STRIP_HTML_FULL(replacetext(P.info, "<br>", "\n"), MAX_MESSAGE_LEN)
+						var/strip_info = STRIP_HTML_FULL(replacetext_char(P.info, "<br>", "\n"), MAX_MESSAGE_LEN)
 						log_game("LETTER SENT: from [key_name(user)] to [spell.destinations[dest]]:\n[strip_info]", LOG_GAME)
-						strip_info = replacetext(strip_info, "\n", "<br>")
+						strip_info = replacetext_char(strip_info, "\n", "<br>")
 						message_admins("[noble_info] [ADMIN_BIRD_LETTER(user)] [ADMIN_FLW(user)] writes to [spell.destinations[dest]]: <br>[strip_info]")
 						fly_away()
 						qdel(P)

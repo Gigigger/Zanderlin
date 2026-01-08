@@ -47,7 +47,7 @@
 
 /datum/outfit/guardsman/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
-	if(H.cloak && !findtext(H.cloak.name, "([H.real_name])"))
+	if(H.cloak && !findtext_char(H.cloak.name, "([H.real_name])"))
 		H.cloak.name = "[H.cloak.name] ([H.real_name])"
 
 /datum/job/advclass/garrison

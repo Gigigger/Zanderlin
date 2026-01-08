@@ -72,7 +72,7 @@ GLOBAL_LIST_EMPTY(menulist)
 	if (copytext_char(verbpath.name,1,2) == "@")
 		winset(C, null, list2params(list("command" = copytext_char(verbpath.name,2))))
 	else
-		winset(C, null, list2params(list("command" = replacetext(verbpath.name, " ", "-"))))
+		winset(C, null, list2params(list("command" = replacetext_char(verbpath.name, " ", "-"))))
 
 /datum/verbs/menu/Icon/Size
 	checkbox = CHECKBOX_GROUP

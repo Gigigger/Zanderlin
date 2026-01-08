@@ -161,7 +161,7 @@
 
 	// Get rid of any URL schemes that might cause BYOND to automatically wrap something in an anchor tag
 	var/static/regex/url_scheme = new(@"[A-Za-z][A-Za-z0-9+-\.]*:\/\/", "g")
-	text = replacetext(text, url_scheme, "")
+	text = replacetext_char(text, url_scheme, "")
 
 	// Reject whitespace
 	var/static/regex/whitespace = new(@"^\s*$")
@@ -259,7 +259,7 @@
 	while(current_pos <= text_length)
 		// Check if we're at the start of an HTML entity
 		if(copytext_char(text, current_pos, current_pos + 1) == "&")
-			var/entity_end = findtext(text, ";", current_pos)
+			var/entity_end = findtext_char(text, ";", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
 				var/entity = copytext_char(text, current_pos, entity_end + 1)
@@ -267,7 +267,7 @@
 				current_pos = entity_end + 1
 				continue
 		else if(copytext_char(text, current_pos, current_pos + 1) == "<")
-			var/entity_end = findtext(text, ">", current_pos)
+			var/entity_end = findtext_char(text, ">", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
 				var/entity = copytext_char(text, current_pos, entity_end + 1)
@@ -280,7 +280,7 @@
 			var/entity
 			while(current_pos + offset <= text_length)
 				var/test_char = copytext_char(text, current_pos, current_pos + offset + 1)
-				if(!findtext(test_char, "�")) // Valid character found
+				if(!findtext_char(test_char, "�")) // Valid character found
 					entity = test_char
 					break
 				offset++

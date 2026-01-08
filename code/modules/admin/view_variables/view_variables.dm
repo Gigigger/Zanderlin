@@ -32,7 +32,7 @@
 			no_icon = TRUE
 
 	title = "[D] ([REF(D)]) = [type]"
-	var/formatted_type = replacetext("[type]", "/", "<wbr>/")
+	var/formatted_type = replacetext_char("[type]", "/", "<wbr>/")
 
 	var/sprite_text
 	if(sprite)

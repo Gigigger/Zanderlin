@@ -384,7 +384,7 @@
 
 	var/message = speech_args[SPEECH_MESSAGE]
 
-	if(findtext(message, majesty_user.name) && (findtext(message, "fuck") || findtext(message, "shit") || findtext(message, "damn") || findtext(message, "kill") || findtext(message, "attack")))
+	if(findtext_char(message, majesty_user.name) && (findtext_char(message, "fuck") || findtext_char(message, "shit") || findtext_char(message, "damn") || findtext_char(message, "kill") || findtext_char(message, "attack")))
 		if(prob(70))
 			to_chat(source, "<span class='warning'>The words die in your throat. You cannot speak ill of [majesty_user]!</span>")
 			return

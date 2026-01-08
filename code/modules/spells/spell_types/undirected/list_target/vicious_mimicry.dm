@@ -40,7 +40,7 @@
 	var/mob/living/L = owner
 	var/static/list/bannedwords = list("zizo", "graggar", "matthios", "baotha", "inhumen", "heresy")
 	for(var/T in bannedwords)  //astrata smites naughty xylixans
-		if(findtext(message, T))
+		if(findtext_char(message, T))
 			L.add_stress(/datum/stress_event/psycurselight)
 			L.adjust_divine_fire_stacks(6)
 			L.IgniteMob()

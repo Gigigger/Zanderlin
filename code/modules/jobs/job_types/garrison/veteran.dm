@@ -37,7 +37,7 @@
 	. = ..()
 	if(istype(spawned.cloak, /obj/item/clothing/cloak/half/vet))
 		var/obj/item/clothing/S = spawned.cloak
-		var/index = findtext(spawned.real_name, " ")
+		var/index = findtext_char(spawned.real_name, " ")
 		if(index)
 			index = copytext_char(spawned.real_name, 1, index)
 		if(!index)

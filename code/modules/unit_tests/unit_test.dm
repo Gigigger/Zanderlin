@@ -113,8 +113,8 @@ GLOBAL_LIST_EMPTY(required_map_items)
 	var/map_name = SSmapping.config?.map_name
 
 	// Need to escape the text to properly support newlines.
-	var/annotation_text = replacetext(text, "%", "%25")
-	annotation_text = replacetext(annotation_text, "\n", "%0A")
+	var/annotation_text = replacetext_char(text, "%", "%25")
+	annotation_text = replacetext_char(annotation_text, "\n", "%0A")
 
 	log_world("::[priority] file=[file],line=[line],title=[map_name]: [type]::[annotation_text]")
 

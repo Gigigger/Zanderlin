@@ -220,7 +220,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in arg_list)
-		if(findtext(arg, "="))
+		if(findtext_char(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)
@@ -294,7 +294,7 @@
 			return null
 
 	// Check if it's a list (comma-separated)
-	if(findtext(arg, ","))
+	if(findtext_char(arg, ","))
 		var/list/result = list()
 		for(var/item in splittext(arg, ","))
 			result += convert_arg_type(trim(item), sender, marked)
@@ -422,7 +422,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in pre_parsed_args)
-		if(findtext(arg, "="))
+		if(findtext_char(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)
@@ -475,7 +475,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in pre_parsed_args)
-		if(findtext(arg, "="))
+		if(findtext_char(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)

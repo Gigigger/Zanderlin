@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/rt/wisdoms.txt"))
 	if(!contained)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	var/obj/item/reagent_containers/glass/bottle/btle = new
-	btle.icon_state = replacetext("[icon_state]","_message","")
+	btle.icon_state = replacetext_char("[icon_state]","_message","")
 	btle.closed = FALSE
 	user.dropItemToGround(src, silent=TRUE)
 	user.put_in_active_hand(btle)

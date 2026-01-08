@@ -823,7 +823,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 			STOP_PROCESSING(SSobj, src)
 			stop_flopping()
 			if(!silent)
-				var/message = span_warning(replacetext(death_text, "%SRC", "[src]"))
+				var/message = span_warning(replacetext_char(death_text, "%SRC", "[src]"))
 				visible_message(message)
 	update_appearance()
 	update_fish_force()

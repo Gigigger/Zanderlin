@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(prayers)
 
 	if(length(profane_words))
 		for(var/profanity in profane_words)
-			if(findtext(prayer, profanity))
+			if(findtext_char(prayer, profanity))
 				punish_prayer(follower)
 				return FALSE
 
@@ -88,7 +88,7 @@ GLOBAL_LIST_EMPTY(prayers)
 	record_featured_stat(FEATURED_STATS_DEVOUT, follower)
 	record_round_statistic(STATS_PRAYERS_MADE)
 
-	if(findtext(prayer, name))
+	if(findtext_char(prayer, name))
 		reward_prayer(follower)
 
 /// The follower has somehow offended the patron and is now being punished.

@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(potentialRandomZlevels, generateMapList(filename = "[global.con
 		else if (copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/name = null
 
 		if (pos)

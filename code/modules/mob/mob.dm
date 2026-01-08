@@ -1318,13 +1318,13 @@ GLOBAL_VAR_INIT(mobids, 1)
 	SEND_SIGNAL(src, COMSIG_MOB_STATCHANGE, new_stat, .)
 
 /mob/say_mod(input, list/message_mods = list())
-	var/customsayverb = findtext(input, "*")
+	var/customsayverb = findtext_char(input, "*")
 	if(customsayverb)
 		return lowertext(copytext_char(input, 1, customsayverb))
 	. = ..()
 
 /atom/movable/proc/attach_spans(input, list/spans)
-	var/customsayverb = findtext(input, "*")
+	var/customsayverb = findtext_char(input, "*")
 	if(customsayverb)
 		input = capitalize(copytext_char(input, customsayverb+1))
 	return "[message_spans_start(spans)][input]</span>"

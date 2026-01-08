@@ -420,7 +420,7 @@
 
 	. = list()
 
-	var/var_found = findtext(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
+	var/var_found = findtext_char(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
 	if(var_found)
 		//Find var names
 
@@ -429,13 +429,13 @@
 		// jointext() --> "A dog said hi name]!"
 		// splittext() --> list("A","dog","said","hi","name]!")
 
-		t_string = replacetext(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
+		t_string = replacetext_char(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
 		var/list/list_value = splittext(t_string,"\[")
 		var/intermediate_stage = jointext(list_value, null)
 
 		list_value = splittext(intermediate_stage," ")
 		for(var/value in list_value)
-			if(findtext(value,"]"))
+			if(findtext_char(value,"]"))
 				value = splittext(value,"]") //"name]!" --> list("name","!")
 				for(var/A in value)
 					if(var_source.vars.Find(A))
@@ -505,7 +505,7 @@
 		if(/turf)
 			return "turf"
 		else //regex everything else (works for /proc too)
-			return lowertext(replacetext("[the_type]", "[type2parent(the_type)]/", ""))
+			return lowertext(replacetext_char("[the_type]", "[type2parent(the_type)]/", ""))
 
 /// Return html to load a url.
 /// for use inside of browse() calls to html assets that might be loaded on a cdn.

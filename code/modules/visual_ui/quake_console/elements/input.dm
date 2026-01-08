@@ -166,7 +166,7 @@
 	if(parts_count == 1 && !ends_with_space)
 		var/current_word = input_parts[1]
 		for(var/command in base_commands)
-			if(findtext(command, current_word, 1, length(current_word) + 1) == 1)
+			if(findtext_char(command, current_word, 1, length(current_word) + 1) == 1)
 				matches += command
 	else if((parts_count == 1 && ends_with_space) || (parts_count == 2 && !ends_with_space))
 		var/base_command = input_parts[1]
@@ -176,7 +176,7 @@
 
 		var/list/possible_args = get_secondary_args(base_command)
 		for(var/arg in possible_args)
-			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1)
+			if(findtext_char(arg, current_word, 1, length(current_word) + 1) == 1)
 				matches += arg
 	else if((parts_count == 2 && ends_with_space) || (parts_count == 3 && !ends_with_space))
 		var/base_command = input_parts[1]
@@ -187,7 +187,7 @@
 
 		var/list/possible_args = get_tertiary_args(base_command, secondary_arg)
 		for(var/arg in possible_args)
-			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1)
+			if(findtext_char(arg, current_word, 1, length(current_word) + 1) == 1)
 				matches += arg
 	else if(parts_count > 3)
 		var/base_command = input_parts[1]
@@ -196,7 +196,7 @@
 
 		var/list/possible_args = get_tertiary_args(base_command, secondary_arg)
 		for(var/arg in possible_args)
-			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1)
+			if(findtext_char(arg, current_word, 1, length(current_word) + 1) == 1)
 				matches += arg
 
 	if(!length(matches))
@@ -225,7 +225,7 @@
 /obj/abstract/visual_ui_element/console_input/proc/apply_completion_with_quotes(list/input_parts, completion, ends_with_space)
 	var/new_text = ""
 	// Check if we need to quote the completion (if it contains spaces)
-	var/needs_quotes = findtext(completion, " ") > 0
+	var/needs_quotes = findtext_char(completion, " ") > 0
 
 	if(length(input_parts) == 1 && !ends_with_space)
 		// Completing the command
@@ -312,7 +312,7 @@
 		// Predict base command
 		var/current_word = input_parts[1]
 		for(var/command in base_commands)
-			if(findtext(command, current_word, 1, length(current_word) + 1) == 1 && command != current_word)
+			if(findtext_char(command, current_word, 1, length(current_word) + 1) == 1 && command != current_word)
 				prediction_text = copytext_char(command, length(current_word) + 1)
 				showing_prediction = TRUE
 				break
@@ -322,7 +322,7 @@
 
 		var/list/possible_args = get_secondary_args(base_command)
 		for(var/arg in possible_args)
-			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
+			if(findtext_char(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
 				prediction_text = copytext_char(arg, length(current_word) + 1)
 				showing_prediction = TRUE
 				break
@@ -333,7 +333,7 @@
 
 		var/list/possible_args = get_tertiary_args(base_command, secondary_arg)
 		for(var/arg in possible_args)
-			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
+			if(findtext_char(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
 				prediction_text = copytext_char(arg, length(current_word) + 1)
 				showing_prediction = TRUE
 				break

@@ -1074,7 +1074,7 @@ GLOBAL_LIST_INIT(freon_color_matrix, list("#2E5E69", "#60A2A8", "#A1AFB1", rgb(0
 //Assumes already frozed
 /obj/proc/make_unfrozen()
 	if(obj_flags & FROZEN)
-		name = replacetext(name, "frozen ", "")
+		name = replacetext_char(name, "frozen ", "")
 		remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, GLOB.freon_color_matrix)
 		alpha += 25
 		obj_flags &= ~FROZEN
@@ -1109,7 +1109,7 @@ GLOBAL_LIST_INIT(freon_color_matrix, list("#2E5E69", "#60A2A8", "#A1AFB1", rgb(0
 	WRITE_FILE(dummySave["dummy"], icon)
 	var/iconData = dummySave.ExportText("dummy")
 	var/list/partial = splittext(iconData, "{")
-	. = replacetext(copytext_char(partial[2], 3, -5), "\n", "") //if cleanup fails we want to still return the correct base64
+	. = replacetext_char(copytext_char(partial[2], 3, -5), "\n", "") //if cleanup fails we want to still return the correct base64
 	dummySave.Unlock()
 	dummySave = null
 	fdel("tmp/dummySave.sav") //if you get the idea to try and make this more optimized, make sure to still call unlock on the savefile after every write to unlock it.

@@ -199,7 +199,7 @@
 	if(!LAZYACCESS(hiddenprints, suspect.key))
 		LAZYSET(hiddenprints, suspect.key, "First: \[[current_time]\] \"[suspect.real_name]\"[has_gloves]. Ckey: [suspect.ckey]")
 	else
-		var/last_stamp_pos = findtext(LAZYACCESS(hiddenprints, suspect.key), "\nLast: ")
+		var/last_stamp_pos = findtext_char(LAZYACCESS(hiddenprints, suspect.key), "\nLast: ")
 		if(last_stamp_pos)
 			LAZYSET(hiddenprints, suspect.key, copytext_char(hiddenprints[suspect.key], 1, last_stamp_pos))
 		hiddenprints[suspect.key] += "\nLast: \[[current_time]\] \"[suspect.real_name]\"[has_gloves]. Ckey: [suspect.ckey]" //made sure to be existing by if(!LAZYACCESS);else

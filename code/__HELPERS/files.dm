@@ -63,7 +63,7 @@
 		var/list/new_filenames = flist(current_dir)
 		for(var/new_filename in new_filenames)
 			// if filename ends in / it is a directory, append to currdir
-			if(findtext(new_filename, "/", -1))
+			if(findtext_char(new_filename, "/", -1))
 				jobs += "[current_dir][new_filename]"
 				continue
 			// filename extension filtering
@@ -80,7 +80,7 @@
 	return filenames
 
 /proc/pathflatten(path)
-	return replacetext(path, "/", "_")
+	return replacetext_char(path, "/", "_")
 
 /// Returns the md5 of a file at a given path.
 /proc/md5filepath(path)

@@ -112,5 +112,5 @@
 
 /datum/outfit/lieutenant/post_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
-	if(equipped_human.cloak && !findtext(equipped_human.cloak.name,"([equipped_human.real_name])"))
+	if(equipped_human.cloak && !findtext_char(equipped_human.cloak.name,"([equipped_human.real_name])"))
 		equipped_human.cloak.name = "[equipped_human.cloak.name]"+" "+"([equipped_human.real_name])"

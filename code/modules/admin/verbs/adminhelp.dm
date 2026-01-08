@@ -749,8 +749,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 
 /proc/send2irc(msg,msg2)
-	msg = replacetext(replacetext(msg, "\proper", ""), "\improper", "")
-	msg2 = replacetext(replacetext(msg2, "\proper", ""), "\improper", "")
+	msg = replacetext_char(replacetext_char(msg, "\proper", ""), "\improper", "")
+	msg2 = replacetext_char(replacetext_char(msg2, "\proper", ""), "\improper", "")
 	world.TgsTargetedChatBroadcast("[msg] | [msg2]", TRUE)
 
 /proc/send2otherserver(source,msg,type = "Ahelp")
