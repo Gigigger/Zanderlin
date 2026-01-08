@@ -297,7 +297,7 @@
 			INVOKE_ASYNC(src, PROC_REF(rig_coin), user)
 		return
 
-	user.put_in_active_hand(new type(user.loc, 1))
+	user.put_in_active_hand(new base_type(user.loc, 1))
 	set_quantity(quantity - 1)
 
 /obj/item/coin/attack_self(mob/living/user, params)
