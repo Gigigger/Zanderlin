@@ -45,8 +45,8 @@
 		TRAIT_SEEPRICES,
 	)
 
-	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(EXP_TYPE_LIVING = 600)
+	//exp_type = list(EXP_TYPE_LIVING)
+	//exp_requirements = list(EXP_TYPE_LIVING = 600)
 
 
 /datum/job/armorsmith/after_spawn(mob/living/carbon/human/spawned, client/player_client)
@@ -133,8 +133,8 @@
 		TRAIT_SEEPRICES,
 	)
 
-	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(EXP_TYPE_LIVING = 600)
+	//exp_type = list(EXP_TYPE_LIVING)
+	//exp_requirements = list(EXP_TYPE_LIVING = 600)
 
 
 /datum/job/weaponsmith/after_spawn(mob/living/carbon/human/spawned, client/player_client)

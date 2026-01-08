@@ -22,12 +22,12 @@
 
 	job_bitflag = BITFLAG_ROYALTY
 
-	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_NOBLE)
+	//exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_NOBLE)
 	exp_types_granted = list(EXP_TYPE_NOBLE)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600,
-		EXP_TYPE_NOBLE = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 600,
+	//	EXP_TYPE_NOBLE = 300
+	//)
 
 	traits = list(
 		TRAIT_KNOWKEEPPLANS,

@@ -22,12 +22,12 @@
 	cmode_music = 'sound/music/cmode/nobility/CombatKnight.ogg'
 	job_bitflag = BITFLAG_GARRISON
 
-	exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
+	//exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_GARRISON = 900,
-		EXP_TYPE_COMBAT = 1200
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_GARRISON = 900,
+	//	EXP_TYPE_COMBAT = 1200
+	//)
 
 	jobstats = list(
 		STATKEY_STR = 3,

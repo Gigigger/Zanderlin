@@ -56,13 +56,13 @@
 
 	allowed_patrons = list(/datum/patron/divine/noc, /datum/patron/inhumen/zizo) //intentional. This means it's a gamble between Noc or Zizo if neither is your patron. Don't change this.
 
-	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_LIVING, EXP_TYPE_MAGICK)
+	//exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_LIVING, EXP_TYPE_MAGICK)
 	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_MAGICK, EXP_TYPE_ADVENTURER)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_MAGICK = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 1200,
+	//	EXP_TYPE_ADVENTURER = 300,
+	//	EXP_TYPE_MAGICK = 300
+	//)
 
 	jobstats = list(
 		STATKEY_STR = -2,

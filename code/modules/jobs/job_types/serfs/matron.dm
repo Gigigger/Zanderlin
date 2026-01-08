@@ -26,13 +26,13 @@
 		/datum/action/cooldown/spell/undirected/seek_orphan,
 	)
 
-	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_THIEF)
+	//exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_THIEF)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_THIEF)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_THIEF = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 1200,
+	//	EXP_TYPE_ADVENTURER = 300,
+	//	EXP_TYPE_THIEF = 300
+	//)
 
 	skills = list(
 		/datum/skill/misc/sewing = 3,

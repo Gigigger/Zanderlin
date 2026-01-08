@@ -49,10 +49,10 @@
 
 	job_bitflag = BITFLAG_CONSTRUCTOR
 
-	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600
-	)
+	//exp_type = list(EXP_TYPE_LIVING)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 600
+	//)
 
 
 /datum/job/apothecary/after_spawn(mob/living/carbon/human/spawned, client/player_client)

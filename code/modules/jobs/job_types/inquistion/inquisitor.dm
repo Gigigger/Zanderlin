@@ -29,11 +29,11 @@
 		/datum/action/cooldown/spell/undirected/call_bird/inquisitor
 	)
 
-	exp_type = list(EXP_TYPE_INQUISITION)
+	//exp_type = list(EXP_TYPE_INQUISITION)
 	exp_types_granted = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)
-	exp_requirements = list(
-		EXP_TYPE_INQUISITION = 900
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_INQUISITION = 900
+	//)
 
 /datum/outfit/inquisitor
 	abstract_type = /datum/outfit/inquisitor

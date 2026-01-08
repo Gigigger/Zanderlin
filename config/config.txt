@@ -16,13 +16,13 @@ $include plexora.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-SERVERNAME Vanderlin
+SERVERNAME [RU] Zanderlin: Age of Blight (hosted by https://discord.gg/wYKX4Vwm)
 
 ## Server subtitle: This appears right after the server name in the BYOND hub.
-SERVERSUBTITLE Dark Medieval Fantasy Roleplay
+SERVERSUBTITLE Dark Medieval Fantasy Roleplay based on Vanderlin code
 
 ## Hosted By: Shows below
-HOSTEDBY Vanderlin
+HOSTEDBY Vanaim
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
