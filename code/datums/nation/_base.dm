@@ -7,12 +7,24 @@
 	///this is the cost in mammons of how much it costs to buy into the nation
 	var/national_currency_cost = 1
 
+	///how many agreements we've finished and can recycle into new agreements
+	var/finished_agreements = 0
+
 	///this is a list of all of our nodes starts as paths on init it will bloom into basically singletons
 	var/list/nodes = list()
 	///this is a list of all the completed paths we have done for trades
 	var/list/completed_trades
 	///this is a lazyman accessor for what we can currently work on trade wise
 	var/list/lazyman
+	///this is the reward cache from doing other things with the nation
+	var/list/cached_rewards = list()
+
+	///list of all possible trade requests we can have
+	var/list/possible_trade_requests = list()
+	///list of the chosen agreements
+	var/list/active_agreements
+	///everypony viewing the nation
+	var/list/ui_users = list()
 
 /datum/nation/New()
 	. = ..()
@@ -23,6 +35,8 @@
 	nodes = actual_nodes
 
 	populate_lazyman()
+	setup_possible_cache()
+	setup_agreements(rand(400, length(possible_trade_requests) * 0.25))
 
 /datum/nation/Destroy(force, ...)
 	. = ..()
@@ -34,6 +48,10 @@
 		if(!can_work_on(node))
 			continue
 		LAZYADD(lazyman, node)
+
+/datum/nation/proc/setup_possible_cache()
+	for(var/datum/trade_agreement/agreement_path as anything in possible_trade_requests)
+		possible_trade_requests[agreement_path] = initial(agreement_path.weight)
 
 /datum/nation/proc/complete_trade(datum/trade/node)
 	LAZYADD(completed_trades, node.type)
@@ -47,8 +65,28 @@
 	return TRUE
 
 /datum/nation/proc/handle_import_shipment(list/items)
+	for(var/datum/trade_agreement/agreement in active_agreements)
+		if(!agreement.active)
+			continue
+		items = agreement.process_shipment(items)
+		if(agreement.amount_requested <= 0)
+			qdel(agreement)
+
 	for(var/datum/trade/node in lazyman)
 		var/valid_items = node.return_valid_count(items)
 		if(!valid_items)
 			continue
 		node.progress_trade(valid_items)
+
+/datum/nation/proc/setup_agreements(amount)
+	for(var/i = 1 to amount)
+		var/picked_path = pickweight(possible_trade_requests)
+		var/datum/trade_agreement/new_agreement = new picked_path(src)
+		possible_trade_requests[picked_path] = max(new_agreement.minimum_weight, possible_trade_requests[picked_path] - 10)
+		LAZYADD(active_agreements, new_agreement)
+
+/datum/nation/proc/activate_agreement(datum/trade_agreement/agreement)
+	if(agreement.active)
+		return FALSE
+	agreement.activate_agreement()
+	return TRUE

@@ -2,6 +2,8 @@
 	var/name = "???"
 	var/desc = "???"
 
+	var/trade_icon = 'icons/effects/effects.dmi'
+	var/trade_icon_state = "explosion"
 	var/datum/nation/papa
 
 	///these are the trades we need to do prior to this one before we can work on this
