@@ -39,8 +39,11 @@
 	else
 		. += "It is empty."
 
-/obj/item/perfume/afterattack(atom/target, mob/user)
+/obj/item/perfume/afterattack(atom/target, mob/user, proximity_flag)
 	. = ..()
+	if(!proximity_flag)
+		return
+
 	if(.)
 		return
 	if(!ismovable(target))
