@@ -467,21 +467,34 @@
 
 			if(dx === 0 && dy === 0) return '';
 
-			const length = Math.sqrt(dx * dx + dy * dy);
-			let angle = 0;
-
-			if(dx !== 0) {
-				angle = Math.atan(dy / dx) * (180 / Math.PI);
-				if(dx < 0) angle += 180;
-			} else {
-				angle = dy > 0 ? 90 : -90;
-			}
-
-			const startX = fromPos.x + 30;
-			const startY = fromPos.y + 30;
 			const lockClass = isLocked ? 'locked' : '';
 
-			return `<div class='connection-line ${lockClass}' style='left: ${startX}px; top: ${startY}px; width: ${length}px; height: 2px; transform: rotate(${angle}deg);'></div>`;
+			// Starting point (center of parent node)
+			const startX = fromPos.x + 30;
+			const startY = fromPos.y + 30;
+
+			// Ending point (center of child node)
+			const endX = toPos.x + 30;
+			const endY = toPos.y + 30;
+
+			// Calculate midpoint for the bend
+			const midY = startY + (endY - startY) / 2;
+
+			let html = '';
+
+			// Vertical line from parent node down to midpoint
+			const verticalHeight = Math.abs(midY - startY);
+			html += `<div class='connection-line ${lockClass}' style='left: ${startX}px; top: ${Math.min(startY, midY)}px; width: 2px; height: ${verticalHeight}px;'></div>`;
+
+			// Horizontal line at midpoint connecting the two vertical lines
+			const horizontalWidth = Math.abs(endX - startX);
+			html += `<div class='connection-line ${lockClass}' style='left: ${Math.min(startX, endX)}px; top: ${midY}px; width: ${horizontalWidth}px; height: 2px;'></div>`;
+
+			// Vertical line from midpoint up to child node
+			const verticalHeight2 = Math.abs(endY - midY);
+			html += `<div class='connection-line ${lockClass}' style='left: ${endX}px; top: ${Math.min(midY, endY)}px; width: 2px; height: ${verticalHeight2}px;'></div>`;
+
+			return html;
 		}
 
 		function generateNodeTooltip(node) {

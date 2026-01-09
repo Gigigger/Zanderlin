@@ -36,7 +36,7 @@
 
 	populate_lazyman()
 	setup_possible_cache()
-	setup_agreements(rand(400, length(possible_trade_requests) * 0.25))
+	setup_agreements(rand(3, length(possible_trade_requests) * 0.25))
 
 /datum/nation/Destroy(force, ...)
 	. = ..()
