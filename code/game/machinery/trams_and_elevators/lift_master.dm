@@ -906,6 +906,7 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 			original_contents += resolved_contents
 		var/list/sold_items = list()
 		var/list/sold_count = list()
+		SSmerchant.handle_lift_contents(platform, platform.lift_load, destination) //this potentially nukes some items so its done here
 		for(var/atom/movable/listed_atom in platform.lift_load)
 			if(listed_atom in original_contents)
 				continue

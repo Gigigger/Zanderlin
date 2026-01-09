@@ -63,13 +63,14 @@
 		fail_time = world.time + time
 
 ///we do a full process here since we don't get paid for agreement items
-/datum/trade_agreement/proc/process_shipment(list/items)
+/datum/trade_agreement/proc/process_shipment(list/items, obj/structure/industrial_lift/tram/platform)
 	for(var/atom/item in items)
 		if(!(is_type_in_list(item, required_items)))
 			continue
 		amount_requested--
 		items -= item
 		qdel(item)
+		platform.lift_load -= item
 		if(amount_requested <= 0)
 			handle_rewards()
 			break
