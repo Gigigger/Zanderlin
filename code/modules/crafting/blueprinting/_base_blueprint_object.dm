@@ -170,6 +170,7 @@
 
 /obj/structure/blueprint/proc/try_construct(mob/user, obj/item/weapon/hammer/hammer)
 	if(!recipe)
+		qdel(src)
 		return FALSE
 
 	if(!recipe.check_craft_requirements(user, get_turf(src), src))
