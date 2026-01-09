@@ -417,48 +417,170 @@
 
 		function calculateNodePositions(nodes) {
 			const positions = {};
-			const depthGroups = {};
+			const nodeMap = new Map();
+
+			nodes.forEach(node => nodeMap.set(node.id, node));
+
+			// Build layer assignments
+			const layers = \[\];
+			const layerMap = new Map();
+
+			function getLayer(nodeId, visited = new Set()) {
+				if (layerMap.has(nodeId)) return layerMap.get(nodeId);
+				if (visited.has(nodeId)) return 0;
+
+				const node = nodeMap.get(nodeId);
+				if (!node || !node.prerequisites || node.prerequisites.length === 0) {
+					layerMap.set(nodeId, 0);
+					return 0;
+				}
+
+				visited.add(nodeId);
+				let maxLayer = -1;
+
+				node.prerequisites.forEach(prereq => {
+					const parent = nodes.find(n => n.name === prereq.name);
+					if (parent) {
+						maxLayer = Math.max(maxLayer, getLayer(parent.id, visited));
+					}
+				});
+
+				visited.delete(nodeId);
+				const layer = maxLayer + 1;
+				layerMap.set(nodeId, layer);
+				return layer;
+			}
 
 			nodes.forEach(node => {
-				const depth = calculateDepth(node, nodes);
-				if(!depthGroups\[depth\]) depthGroups\[depth\] = \[\];
-				depthGroups\[depth\].push(node);
+				const layer = getLayer(node.id);
+				if (!layers\[layer\]) layers\[layer\] = \[\];
+				layers\[layer\].push(node);
 			});
 
-			const horizontalSpacing = 120;
-			const verticalSpacing = 150;
-			const startX = 2000;
-			const startY = 2000;
+			const horizontalSpacing = 200;
+			const verticalSpacing = 200;
+			const startY = 1800;
 
-			Object.keys(depthGroups).forEach(depth => {
-				const nodesAtDepth = depthGroups\[depth\];
-				const count = nodesAtDepth.length;
-				const totalWidth = (count - 1) * horizontalSpacing;
-				const offsetX = startX - (totalWidth / 2);
+			// Position root layer centered
+			const rootLayer = layers\[0\];
+			const rootCount = rootLayer.length;
+			const rootWidth = (rootCount - 1) * horizontalSpacing;
+			const rootStartX = 2000 - (rootWidth / 2);
 
-				nodesAtDepth.forEach((node, i) => {
-					positions\[node.id\] = {
-						x: offsetX + i * horizontalSpacing,
-						y: startY + parseInt(depth) * verticalSpacing
-					};
+			rootLayer.forEach((node, i) => {
+				positions\[node.id\] = {
+					x: rootStartX + i * horizontalSpacing,
+					y: startY
+				};
+			});
+
+			// For each subsequent layer, position nodes based on parent relationships
+			for (let layerIdx = 1; layerIdx < layers.length; layerIdx++) {
+				const layer = layers\[layerIdx\];
+				const positioned = new Set();
+
+				// Group nodes by their parent sets to identify branches
+				const branches = new Map();
+
+				layer.forEach(node => {
+					const parentIds = \[\];
+					if (node.prerequisites) {
+						node.prerequisites.forEach(prereq => {
+							const parent = nodes.find(n => n.name === prereq.name);
+							if (parent) parentIds.push(parent.id);
+						});
+					}
+					parentIds.sort();
+					const branchKey = parentIds.join(',');
+
+					if (!branches.has(branchKey)) {
+						branches.set(branchKey, \[\]);
+					}
+					branches.get(branchKey).push(node);
 				});
-			});
+
+				// Sort branches by leftmost parent
+				const branchArray = Array.from(branches.entries()).map((\[key, nodes\]) => {
+					const parentIds = key.split(',').filter(id => id);
+					let minX = Infinity;
+					parentIds.forEach(pid => {
+						if (positions\[pid\]) {
+							minX = Math.min(minX, positions\[pid\].x);
+						}
+					});
+					return { key, nodes, minX, parentIds };
+				});
+
+				branchArray.sort((a, b) => a.minX - b.minX);
+
+				// Position each branch
+				let currentX = 1500; // Start from left
+
+				branchArray.forEach(branch => {
+					const branchNodes = branch.nodes;
+
+					// Calculate ideal X position (average of parents)
+					let targetX = 0;
+					let parentCount = 0;
+					branch.parentIds.forEach(pid => {
+						if (positions\[pid\]) {
+							targetX += positions\[pid\].x;
+							parentCount++;
+						}
+					});
+
+					if (parentCount > 0) {
+						targetX = targetX / parentCount;
+					} else {
+						targetX = currentX;
+					}
+
+					// Make sure we don't overlap with previous branch
+					targetX = Math.max(targetX, currentX);
+
+					// Position nodes in this branch
+					if (branchNodes.length === 1) {
+						positions\[branchNodes\[0\].id\] = {
+							x: targetX,
+							y: startY + layerIdx * verticalSpacing
+						};
+						currentX = targetX + horizontalSpacing;
+					} else {
+						// Multiple nodes in branch - spread them out
+						const branchWidth = (branchNodes.length - 1) * horizontalSpacing;
+						const branchStartX = targetX - (branchWidth / 2);
+
+						branchNodes.forEach((node, i) => {
+							positions\[node.id\] = {
+								x: branchStartX + i * horizontalSpacing,
+								y: startY + layerIdx * verticalSpacing
+							};
+						});
+
+						currentX = branchStartX + branchWidth + horizontalSpacing;
+					}
+				});
+			}
 
 			return positions;
 		}
 
-		function calculateDepth(node, allNodes, depth = 0) {
-			if(!node.prerequisites || node.prerequisites.length === 0) return depth;
+		function calculateDepth(node, allNodes, visited = new Set()) {
+			if (visited.has(node.id)) return 0;
+			visited.add(node.id);
 
-			let maxDepth = depth;
+			if (!node.prerequisites || node.prerequisites.length === 0) return 0;
+
+			let maxDepth = 0;
 			node.prerequisites.forEach(prereq => {
 				const parent = allNodes.find(n => n.name === prereq.name);
-				if(parent) {
-					const parentDepth = calculateDepth(parent, allNodes, depth + 1);
+				if (parent) {
+					const parentDepth = calculateDepth(parent, allNodes, visited);
 					maxDepth = Math.max(maxDepth, parentDepth);
 				}
 			});
-			return maxDepth;
+
+			return maxDepth + 1;
 		}
 
 		function drawConnectionLine(fromPos, toPos, isLocked) {
