@@ -109,8 +109,6 @@
 	var/fluid_type = fish.required_fluid_type
 	if(fluid_type == FISH_FLUID_FRESHWATER || fluid_type == FISH_FLUID_ANADROMOUS || fluid_type == FISH_FLUID_ANY_WATER)
 		return TRUE
-	if((/datum/fish_trait/amphibious in fish.fish_traits) && fluid_type == FISH_FLUID_AIR)
-		return TRUE
 	return FALSE
 
 /obj/item/fishing/lure/artificial_fly
@@ -216,8 +214,6 @@
 		return FALSE
 	var/init_fluid_type = fish.required_fluid_type
 	if(init_fluid_type == FISH_FLUID_FRESHWATER || init_fluid_type == FISH_FLUID_ANADROMOUS || init_fluid_type == FISH_FLUID_ANY_WATER)
-		return TRUE
-	if((/datum/fish_trait/amphibious in fish.fish_traits) && init_fluid_type == FISH_FLUID_AIR) //fluid type is changed to freshwater on init
 		return TRUE
 	return FALSE
 
