@@ -17,16 +17,20 @@
 	var/tmp/list/viewing_images = list() // Track images by client
 	var/blueprint_dir = SOUTH // Direction this blueprint will be built in
 
-	var/image/cached_image
+	var/tmp/image/cached_image
 	var/stored_pixel_y = 0
 	var/stored_pixel_x = 0
 
-	var/time_when_placed
+	var/tmp/time_when_placed
 
 /obj/structure/blueprint/Initialize(mapload)
 	. = ..()
 	GLOB.active_blueprints += src
 	SSblueprints.add_new_blueprint(src)
+
+/obj/structure/blueprint/after_load()
+	. = ..()
+	setup_blueprint()
 
 /obj/structure/blueprint/Destroy()
 	GLOB.active_blueprints -= src
