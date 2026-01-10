@@ -512,8 +512,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 
 	if(holder)
 		show_popup_menus = TRUE
-
-	set_right_click_menu_mode(TRUE)
+		set_right_click_menu_mode(TRUE)
 
 	var/reconnecting = FALSE
 	if(GLOB.player_details[ckey])
