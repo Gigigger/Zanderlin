@@ -30,7 +30,7 @@
 
 /obj/structure/blueprint/after_load()
 	. = ..()
-	setup_blueprint()
+	addtimer(CALLBACK(src, PROC_REF(setup_blueprint), 1 SECONDS))
 
 /obj/structure/blueprint/Destroy()
 	GLOB.active_blueprints -= src
