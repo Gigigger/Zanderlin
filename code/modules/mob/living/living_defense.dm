@@ -313,7 +313,7 @@
 		playsound(src, M.a_intent.hitsound, 100, FALSE)
 
 	log_combat(M, src, "attacked")
-	SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_ANIMAL, user)
+	SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_ANIMAL, M)
 	return TRUE
 
 
