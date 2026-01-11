@@ -1,3 +1,28 @@
+/datum/fish_source/water
+	catalog_description = "Calm Waters"
+	fish_table = list(
+		FISHING_DUD = 2,
+		/obj/item/reagent_containers/food/snacks/fish/carp = 6,
+		/obj/item/reagent_containers/food/snacks/fish/eel = 2,
+		/obj/item/reagent_containers/food/snacks/fish/angler = 1,
+		/obj/item/reagent_containers/food/snacks/fish/clownfish = 1,
+	)
+	fish_counts = list(
+		/obj/item/reagent_containers/food/snacks/fish/carp = 6,
+		/obj/item/reagent_containers/food/snacks/fish/eel = 2,
+		/obj/item/reagent_containers/food/snacks/fish/angler = 1,
+		/obj/item/reagent_containers/food/snacks/fish/clownfish = 1,
+	)
+	fish_count_regen = list(
+		/obj/item/reagent_containers/food/snacks/fish/carp = 2 MINUTES,
+		/obj/item/reagent_containers/food/snacks/fish/eel = 4 MINUTES,
+		/obj/item/reagent_containers/food/snacks/fish/angler = 30 MINUTES,
+		/obj/item/reagent_containers/food/snacks/fish/clownfish = 20 MINUTES,
+	)
+	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS
+	associated_safe_turfs = list(/turf/open/water)
+	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 12
+
 /datum/fish_source/ocean
 	catalog_description = "Shallow Ocean"
 	background = "background_tray"
@@ -26,6 +51,7 @@
 	fish_table = list(
 		FISHING_DUD = 3,
 		/obj/item/reagent_containers/food/snacks/fish/angler = 6,
+		/obj/item/reagent_containers/food/snacks/fish/swordfish = 5,
 		/obj/item/reagent_containers/food/snacks/fish/carp = 2,
 		/obj/item/reagent_containers/food/snacks/fish/shrimp = 1,
 		/obj/item/reagent_containers/food/snacks/fish/eel = 2,

@@ -55,7 +55,7 @@
 	var/cleanliness_factor = 1 //related to hygiene for washing
 
 	/// Fishing element for this specific water tile
-	var/datum/fish_source/fishing_datum = /datum/fish_source/ocean
+	var/datum/fish_source/fishing_datum = /datum/fish_source/water
 	flags_1 = CONDUCT_1
 
 /turf/open/water/proc/set_watervolume(volume)
