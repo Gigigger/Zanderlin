@@ -259,7 +259,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 
 /datum/fish_trait/lubed/apply_to_fish(obj/item/reagent_containers/food/snacks/fish/fish)
 	. = ..()
-	fish.AddComponent(/datum/component/slippery, 8 SECONDS, SLIDE|GALOSHES_DONT_HELP)
+	fish.AddComponent(/datum/component/slippery, 1 SECONDS, SLIDE|GALOSHES_DONT_HELP)
 
 /datum/fish_trait/lubed/minigame_mod(obj/item/fishingrod/rod, mob/fisherman, datum/fishing_challenge/minigame)
 	minigame.reeling_velocity *= 1.4
@@ -295,7 +295,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	SIGNAL_HANDLER
 	if(source.status == FISH_DEAD || source.last_move + 5 SECONDS >= world.time)
 		return
-	source.alpha = max(source.alpha - 10 * seconds_per_tick, 10)
+	source.alpha = max(source.alpha - 10 * seconds_per_tick, 60)
 
 /datum/fish_trait/camouflage/proc/reset_alpha(obj/item/reagent_containers/food/snacks/fish/source)
 	SIGNAL_HANDLER
