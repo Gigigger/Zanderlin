@@ -17,6 +17,16 @@
 			catch_multiplier *= 0.5
 	return catch_multiplier
 
+/obj/effect/spawner/map_spawner/random_lure
+	lootmin = 3
+	lootmax = 5
+
+/obj/effect/spawner/map_spawner/random_lure/Initialize(mapload)
+	spawned = subtypesof(/obj/item/fishing/lure)
+	for(var/path in spawned)
+		spawned[path] = 1
+	. = ..()
+
 /obj/item/fishing/lure
 	name = "fishing lure"
 	desc = "It's just that, a plastic piece of fishing equipment, yet fish yearn with every last molecule of their bodies to take a bite of it."
@@ -276,7 +286,7 @@
 
 /obj/item/fishing/lure/grub
 	name = "\improper Twister Worm lure"
-	desc = "A soft plastic lure with the body of a grub and a twisting tail. Great for small fish, works on medium ones too."
+	desc = "A soft artifical lure with the body of a grub and a twisting tail. Great for small fish, works on medium ones too."
 	icon_state = "grub"
 	spin_frequency = list(1 SECONDS, 2.7 SECONDS)
 
