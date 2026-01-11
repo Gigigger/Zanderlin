@@ -1169,7 +1169,6 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	fishing_difficulty_modifier = 5
 	fish_movement_type = /datum/fish_movement/choppy
 	sellprice = 10
-	fish_traits = list(/datum/fish_trait/wary)
 
 /obj/item/reagent_containers/food/snacks/fish/clownfish
 	name = "clownfish"

@@ -67,4 +67,4 @@
 			FISH_BAIT_VALUE = VEGETABLES,
 		),
 	)
-	fish_traits = list(/datum/fish_trait/predator, /datum/fish_trait/carnivore, /datum/fish_trait/wary)
+	fish_traits = list(/datum/fish_trait/predator, /datum/fish_trait/carnivore)
