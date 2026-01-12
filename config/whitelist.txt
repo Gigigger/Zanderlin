@@ -3,3 +3,6 @@
 # Case is not important for ckey.                                                             #
 ###############################################################################################
 Vanaim
+Kaifaskain13
+2vitamin2
+Ivin_Slimes
