@@ -1,1 +1,2 @@
 Vanaim = Host
+Vanaim2 = Host
