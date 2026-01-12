@@ -1641,7 +1641,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						voice_color = sanitize_hexcolor(new_voice)
 
 				if("headshot")
-					to_chat(user, span_notice("Please use an image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or ANYTHING AI generated.</span>"]"))
+					to_chat(user, span_notice("Изображение должно показывать только область от головы до плеч, дабы сохранять иммерсивность. Также, ["<span class='bold'>не используйте реальные фото или нейроарты сомнительного качества</span>"]"))
 					to_chat(user, span_notice("If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser."))
 					to_chat(user, span_notice("Keep in mind that the photo will be downsized to 325x325 pixels, so the more square the photo, the better it will look."))
 					var/new_headshot_link = input(user, "Input the headshot link (https, hosts: gyazo, lensdump, imgbox, catbox):", "Headshot", headshot_link) as text|null
@@ -1720,7 +1720,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						accessory = "Nothing"
 
 				if("flavortext")
-					to_chat(user, span_notice("["<span class='bold'>Flavortext should not include nonphysical nonsensory attributes such as backstory or the character's internal thoughts. NSFW descriptions are prohibited.</span>"]"))
+					to_chat(user, span_notice("["<span class='bold'>Описание не должно содержать нефизические и неосязаемые атрибуты, такие как предыстория или внутренние мысли персонажа. NSFW описание наказуемо.</span>"]"))
 					var/new_flavortext = input(user, "Input your character description", "DESCRIBE YOURSELF", flavortext) as message|null // browser_input_text sanitizes in the box itself, which makes it look kind of ugly when editing A LOT of FTs
 					if(new_flavortext == null)
 						return
@@ -1737,7 +1737,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 					to_chat(user, span_notice("Successfully updated flavortext"))
 					log_game("[user] has set their flavortext'.")
 				if("ooc_notes")
-					to_chat(user, span_notice("["<span class='bold'>Do not put anything NSFW here. This feature is for stuff that wouldn't fit in the flavortext.</span>"]"))
+					to_chat(user, span_notice("["<span class='bold'>Не пишите сюда NSFW мусор. Данное поле преднозначено для всякой всячины, что не подходит для описания.</span>"]"))
 					var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", ooc_notes) as message|null
 					if(new_ooc_notes == null)
 						return
