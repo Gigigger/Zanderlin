@@ -25,11 +25,11 @@
 
 	antag_role = /datum/antagonist/bandit
 
-	exp_type = list(EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 900
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 900
+	//)
 /datum/job/advclass/bandit
 	exp_types_granted = list(EXP_TYPE_COMBAT)
 

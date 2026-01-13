@@ -917,7 +917,7 @@
 	var/prayer = SANITIZE_HEAR_MESSAGE(message)
 
 	for(var/profanity in profane_words)
-		if(findtext(prayer, profanity))
+		if(findtext_char(prayer, profanity))
 			//put this idiot SOMEWHERE
 			var/static/list/unsafe_turfs = list(
 				/turf/open/floor/underworld/space,
@@ -945,7 +945,7 @@
 		to_chat(damned, span_danger("My prayer was kinda short..."))
 		return
 
-	if(findtext(prayer, damned.patron.name))
+	if(findtext_char(prayer, damned.patron.name))
 		damned.playsound_local(damned, 'sound/misc/notice (2).ogg', 100, FALSE)
 		to_chat(damned, "<font color='yellow'>I, [damned.patron], have heard your prayer and yet cannot aid you.</font>")
 

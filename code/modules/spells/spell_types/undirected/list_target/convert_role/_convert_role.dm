@@ -41,7 +41,7 @@
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/cast(mob/living/carbon/human/cast_on)
 	. = ..()
-	owner.say(replacetext(recruitment_message, "%RECRUIT", "[cast_on]"), forced = "Convert spell ([src])")
+	owner.say(replacetext_char(recruitment_message, "%RECRUIT", "[cast_on]"), forced = "Convert spell ([src])")
 
 	var/answer = browser_alert(cast_on, "Do you wish to become a [new_role]?", "[recruitment_faction] recruitment.", DEFAULT_INPUT_CONFIRMATIONS)
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())

@@ -27,11 +27,11 @@
 	allowed_patrons = list(/datum/patron/divine/noc, /datum/patron/inhumen/zizo)
 	magic_user = TRUE
 
-	exp_type = list(EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_NOBLE)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 300
+	//)
 
 	jobstats = list(
 		STATKEY_STR = -1,

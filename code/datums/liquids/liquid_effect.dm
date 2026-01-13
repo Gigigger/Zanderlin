@@ -324,10 +324,10 @@
 			var/datum/reagent/reagent_type = liquid_group.reagents.reagent_list[1]
 			var/reagent_name = initial(reagent_type.name)
 			var/volume = round(reagent_type.volume / length(liquid_group.members), 0.01)
-			examine_list += span_notice("There is [replacetext(liquid_state_template, "$", "[UNIT_FORM_STRING(volume)] of [reagent_name]")] here.")
+			examine_list += span_notice("There is [replacetext_char(liquid_state_template, "$", "[UNIT_FORM_STRING(volume)] of [reagent_name]")] here.")
 		else
 			// Show each individual reagent
-			examine_list += "There is [replacetext(liquid_state_template, "$", "the following")] here:"
+			examine_list += "There is [replacetext_char(liquid_state_template, "$", "the following")] here:"
 
 			for(var/datum/reagent/reagent_type as anything in liquid_group.reagents.reagent_list)
 				var/reagent_name = initial(reagent_type.name)
@@ -338,7 +338,7 @@
 		return
 
 	// Otherwise, just show the total volume
-	examine_list += span_notice("There is [replacetext(liquid_state_template, "$", "liquid")] here.")
+	examine_list += span_notice("There is [replacetext_char(liquid_state_template, "$", "liquid")] here.")
 
 /obj/effect/temp_visual/liquid_splash
 	icon = 'icons/effects/splash.dmi'

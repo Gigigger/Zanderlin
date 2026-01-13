@@ -19,11 +19,11 @@
 	give_bank_account = 30
 	cmode_music = 'sound/music/cmode/garrison/CombatGarrison.ogg'
 
-	exp_type = list(EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 300
+	//)
 
 /datum/job/guardsman/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -47,7 +47,7 @@
 
 /datum/outfit/guardsman/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
-	if(H.cloak && !findtext(H.cloak.name, "([H.real_name])"))
+	if(H.cloak && !findtext_char(H.cloak.name, "([H.real_name])"))
 		H.cloak.name = "[H.cloak.name] ([H.real_name])"
 
 /datum/job/advclass/garrison

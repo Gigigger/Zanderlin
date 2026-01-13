@@ -16,13 +16,13 @@ $include plexora.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-SERVERNAME Vanderlin
+SERVERNAME [RU] Zanderlin: Age of Blight (get whitelisted: https://discord.gg/wYKX4Vwm)
 
 ## Server subtitle: This appears right after the server name in the BYOND hub.
-SERVERSUBTITLE Dark Medieval Fantasy Roleplay
+SERVERSUBTITLE Dark Medieval Fantasy Roleplay based on Vanderlin code
 
 ## Hosted By: Shows below
-HOSTEDBY Vanderlin
+HOSTEDBY Vanaim
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
@@ -31,7 +31,7 @@ HOSTEDBY Vanderlin
 STATIONNAME Vanderlin
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-#HUB
+HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 500
@@ -68,18 +68,18 @@ ENABLE_LOCALHOST_RANK
 #USE_ACCOUNT_AGE_FOR_JOBS
 
 ## Unhash this to track player playtime in the database. Requires database to be enabled.
-#USE_EXP_TRACKING
+USE_EXP_TRACKING
 ## Unhash this to enable playtime requirements for head jobs.
-#USE_EXP_RESTRICTIONS_HEADS
+USE_EXP_RESTRICTIONS_HEADS
 ## Unhash this to override head jobs' playtime requirements with this number of hours.
 ## Leave this commented out to use the values defined in the job datums. Values in the datums are stored as minutes.
 #USE_EXP_RESTRICTIONS_HEADS_HOURS 3
 ## Unhash this to change head jobs' playtime requirements so that they're based on department playtime, rather than crew playtime.
 #USE_EXP_RESTRICTIONS_HEADS_DEPARTMENT
 ## Unhash this to enable playtime requirements for certain non-head jobs, like Engineer and Scientist.
-#USE_EXP_RESTRICTIONS_OTHER
+USE_EXP_RESTRICTIONS_OTHER
 ## Allows admins to bypass job playtime requirements.
-#USE_EXP_RESTRICTIONS_ADMIN_BYPASS
+USE_EXP_RESTRICTIONS_ADMIN_BYPASS
 
 ## log OOC channel
 LOG_OOC
@@ -91,19 +91,19 @@ LOG_LOOC
 LOG_SAY
 
 ## log admin actions
-#LOG_ADMIN
+LOG_ADMIN
 
 ## log admin chat
 LOG_ADMINCHAT
 
 ## log client access (logon/logoff)
-#LOG_ACCESS
+LOG_ACCESS
 
 ## log game actions (start of round, results, etc.)
 LOG_GAME
 
 ## log player votes
-#LOG_VOTE
+LOG_VOTE
 
 ## log client Whisper
 LOG_WHISPER
@@ -121,10 +121,10 @@ LOG_ATTACK
 #LOG_TELECOMMS
 
 ## log prayers
-#LOG_PRAYER
+LOG_PRAYER
 
 ## log lawchanges
-#LOG_LAW
+LOG_LAW
 
 ## log crew manifest to seperate file
 #LOG_MANIFEST
@@ -155,10 +155,10 @@ LOG_JOB_DEBUG
 PICTURE_LOGGING_CAMERA
 
 ## period of time in seconds for players to be considered inactive
-# INACTIVITY_PERIOD 1200
+INACTIVITY_PERIOD 1200
 
 ## period of time in seconds for players to be considered afk and kickable
-# AFK_PERIOD 1500
+AFK_PERIOD 1500
 
 ## disconnect players who are considered afk
 # KICK_INACTIVE

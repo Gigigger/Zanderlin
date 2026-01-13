@@ -18,11 +18,11 @@
 	noble_income = 16
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 	job_bitflag = BITFLAG_ROYALTY
-	exp_type = list(EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_NOBLE)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 300
+	//)
 
 	jobstats = list(
 		STATKEY_STR = -2,

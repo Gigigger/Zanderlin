@@ -213,7 +213,7 @@
 			else
 				icon_html = "<img src='\ref['icons/effects/clan.dmi']?state=watch' alt=\"[node.name]\" />"
 
-		var/encoded_json = replacetext(node_data_json, "'", "&#39;")
+		var/encoded_json = replacetext_char(node_data_json, "'", "&#39;")
 		html += {"<div class="[node_classes]"
 			style="left: [node.node_x]px; top: [node.node_y]px;"
 			data-node-id="[research_type]"

@@ -226,7 +226,7 @@
 	var/list/path_parts = splittext(type_name, "/")
 	var/last_part = path_parts[length(path_parts)]
 
-	last_part = replacetext(last_part, "_", " ")
+	last_part = replacetext_char(last_part, "_", " ")
 	return capitalize(last_part)
 
 /atom/movable/screen/worker_inventory_slot/proc/get_bonus_description(bonus_key, bonus_value)

@@ -86,7 +86,7 @@
  * Called on an object when a tgui object is being created, allowing you to customise the html
  * For example: inserting a custom stylesheet that you need in the head
  *
- * For this purpose, some tags are available in the html, to be parsed out with replacetext
+ * For this purpose, some tags are available in the html, to be parsed out with replacetext_char
  * (customheadhtml) - Additions to the head tag
  *
  * required html the html base text
