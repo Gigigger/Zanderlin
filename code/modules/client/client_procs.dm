@@ -508,10 +508,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 						message_admins("<span class='danger'><B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)] (no longer logged in). </span>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(C)] (no longer logged in).")
 
-	show_popup_menus = FALSE
 
-	if(holder)
-		show_popup_menus = TRUE
 		set_right_click_menu_mode(TRUE)
 
 	var/reconnecting = FALSE
