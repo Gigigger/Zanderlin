@@ -855,9 +855,6 @@ SUBSYSTEM_DEF(plexora)
 /datum/client_interface/proc/set_macros()
 	return
 
-/datum/client_interface/proc/set_right_click_menu_mode()
-	return
-
 /datum/client_interface/proc/is_afk(duration)
 	return FALSE
 

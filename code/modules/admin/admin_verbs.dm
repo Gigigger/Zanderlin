@@ -387,10 +387,10 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 	if(show_popup_menus == FALSE)
 		show_popup_menus = TRUE
-		log_admin("[key_name(usr)] toggled context menu ON.")
+		log_admin("[key_name_admin(usr)] toggled context menu ON.")
 	else
 		show_popup_menus = FALSE
-		log_admin("[key_name(usr)] toggled context menu OFF.")
+		log_admin("[key_name_admin(usr)] toggled context menu OFF.")
 
 /client/proc/toggle_aghost_invis()
 	set category = "GameMaster"
