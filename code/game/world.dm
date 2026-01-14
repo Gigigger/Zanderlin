@@ -108,7 +108,8 @@ GLOBAL_PROTECT(tracy_init_reason)
 #endif
 
 	LoadVerbs(/datum/verbs/menu)
-	load_whitelist()
+	if(CONFIG_GET(flag/usewhitelist))
+		load_whitelist()
 
 	load_nameban()
 

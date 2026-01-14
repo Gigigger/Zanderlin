@@ -30,6 +30,18 @@ GLOBAL_VAR(last_connection)
 				log_access("Failed Login: [ckey] - PQ at -100")
 				return list("reason"="pqlow", "desc"="\nYou have completed the game!")
 
+	//Whitelist
+	if(!real_bans_only && !C && CONFIG_GET(flag/usewhitelist))
+		if(!check_whitelist(ckey))
+			if (admin)
+				log_admin("The admin [key] has been allowed to bypass the whitelist")
+				if (message)
+					message_admins(span_adminnotice("The admin [key] has been allowed to bypass the whitelist"))
+					addclientmessage(ckey,span_adminnotice("You have been allowed to bypass the whitelist"))
+			else
+				log_access("Failed Login: [key] - Not on whitelist")
+				return list("reason"="whitelist", "desc" = "\nReason: You are not on the white list for this server")
+
 	//Guest Checking
 	if(!real_bans_only && !C && IsGuestKey(key))
 		if (CONFIG_GET(flag/guest_ban))
