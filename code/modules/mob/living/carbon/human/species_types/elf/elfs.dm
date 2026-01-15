@@ -63,7 +63,7 @@
 		ORGAN_SLOT_GUTS = /obj/item/organ/guts,
 	)
 
-	swap_male_clothes = TRUE
+	swap_male_clothes_but_not_offsets = TRUE
 
 	soundpack_m = /datum/voicepack/male/elf
 	soundpack_f = /datum/voicepack/female/elf
