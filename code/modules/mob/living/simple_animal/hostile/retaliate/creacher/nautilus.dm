@@ -50,7 +50,7 @@
 	base_strength = 12
 	base_speed = 6
 	force_threshold = 15
-	armor = list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 30, "magic" = 0)
+	armor = new(blunt = 50, slash = 50, stab = 50, piercing = 50, fire = 0, acid = 30, magic = 0)
 
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	simple_detect_bonus = 20
@@ -78,7 +78,6 @@
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Initialize()
 	. = ..()
-	armor = getArmor(arglist(armor))
 	update_appearance(UPDATE_OVERLAYS)
 	ADD_TRAIT(src, TRAIT_NOHANDGRABS, ROUNDSTART_TRAIT)
 	ADD_TRAIT(src, TRAIT_STRONG_GRABBER, ROUNDSTART_TRAIT)
