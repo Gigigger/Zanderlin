@@ -71,11 +71,11 @@
 	AddComponent(/datum/component/obeys_commands, pet_commands) // here due to signal overridings from pet commands // due to signal overridings from pet commands
 	. = ..()
 	RegisterSignal(src, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, PROC_REF(on_pre_attack))
+	AddElement(/datum/element/ai_retaliate)
 
 	var/datum/component/generic_mob_hunger/hunger = GetComponent(/datum/component/generic_mob_hunger)
 	if(hunger)
 		hunger.hunger_drain = 4
-	AddElement(/datum/element/ai_retaliate)
 
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, ROUNDSTART_TRAIT)
 

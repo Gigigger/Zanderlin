@@ -5,6 +5,7 @@
 	icon_state = "nautilus"
 	icon_living = "nautilus"
 	icon_dead = "nautilus_dead"
+	var/icon_hiding = "nautilus_hide"
 	SET_BASE_PIXEL(-16, -8)
 
 	faction = list(FACTION_SEA)
@@ -32,8 +33,8 @@
 
 
 	gender = PLURAL
-	health = 600
-	maxHealth = 600
+	health = 800
+	maxHealth = 800
 	food_type = list(/obj/item/reagent_containers/food/snacks/meat,
 					/obj/item/reagent_containers/food/snacks/fish,
 					/obj/item/organ,
@@ -49,6 +50,7 @@
 	base_strength = 12
 	base_speed = 6
 	force_threshold = 15
+	armor = list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 30, "magic" = 0)
 
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	simple_detect_bonus = 20
@@ -56,6 +58,7 @@
 	minimum_distance = 0
 	deaggroprob = 0
 	d_intent = INTENT_PARRY
+	deflect_sound = list('sound/combat/hits/blunt/shovel_hit.ogg')
 	defprob = 25
 	defdrain = 10
 	del_on_deaggro = 999 SECONDS
@@ -75,11 +78,11 @@
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Initialize()
 	. = ..()
+	armor = getArmor(arglist(armor))
 	update_appearance(UPDATE_OVERLAYS)
 	ADD_TRAIT(src, TRAIT_NOHANDGRABS, ROUNDSTART_TRAIT)
 	ADD_TRAIT(src, TRAIT_STRONG_GRABBER, ROUNDSTART_TRAIT)
 	ADD_TRAIT(src, TRAIT_GOOD_SWIM, ROUNDSTART_TRAIT)
-	ADD_TRAIT(src, TRAIT_NOTIGHTGRABMESSAGE, ROUNDSTART_TRAIT)
 	//ai's not gonna use this so it doesnt need controller keys
 	var/datum/action/cooldown/mob_cooldown/nautilus_hide/hide = new()
 	hide.Grant(src)
@@ -89,23 +92,30 @@
 	emote("aggro")
 	return
 
+/mob/living/simple_animal/hostile/retaliate/nautilus/update_icon_state()
+	. = ..()
+	if(stat == DEAD)
+		icon_state = icon_dead
+		return
+	if(hiding)
+		icon_state = icon_hiding
+	else
+		icon_state = icon_living
+
+
 /mob/living/simple_animal/hostile/retaliate/nautilus/hide()
-	if(!hiding)
-		icon_state = "nautilus_hide"
-		update_appearance(UPDATE_ICON)
-		force_threshold = 80
-		hiding = TRUE
+	force_threshold = 80
+	hiding = TRUE
+	update_appearance(UPDATE_ICON_STATE)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/ambush()
-	if(hiding)
-		icon_state = "nautilus"
-		update_appearance(UPDATE_ICON)
-		force_threshold = 15
-		hiding = FALSE
+	force_threshold = 15
+	hiding = FALSE
+	update_appearance(UPDATE_ICON_STATE)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Move()
 	. = ..()
-	if(.)
+	if(. && hiding)
 		ambush()
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/AttackingTarget(mob/living/passed_target)
@@ -116,7 +126,7 @@
 		return
 	var/mob/living/L = target
 
-	if(!pulling && prob(40) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
+	if(!pulling && prob(75) && start_pulling(L, suppress_message = TRUE, accurate = TRUE))
 		L.visible_message(span_danger("[src] wraps their tentacles around [L]!"), \
 			span_userdanger("[src] wraps their tentacles around me!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE, src)
 		return
@@ -164,9 +174,17 @@
 		if("cidle")
 			return pick('sound/vo/mobs/troll/cidle1.ogg','sound/vo/mobs/nautilus/idle2.ogg')
 
+/mob/living/simple_animal/hostile/retaliate/nautilus/getarmor(def_zone, type, damage, armor_penetration, blade_dulling)
+	. = ..()
+	if(!.)
+		return
+	if(simple_limb_hit(def_zone) == "shell")
+		. *= 2
+	if(hiding)
+		. *= 2
+
+
 /mob/living/simple_animal/hostile/retaliate/nautilus/simple_limb_hit(zone)
-	if(!zone)
-		return ""
 	switch(zone)
 		if(BODY_ZONE_PRECISE_R_EYE)
 			return "eyestalk"
@@ -178,8 +196,6 @@
 			return "beak"
 		if(BODY_ZONE_HEAD)
 			return "beak"
-		if(BODY_ZONE_PRECISE_SKULL)
-			return "shell"
 		if(BODY_ZONE_PRECISE_EARS)
 			return "head"
 		if(BODY_ZONE_PRECISE_L_HAND)
@@ -209,7 +225,7 @@
 	blade_class = BCLASS_LASHING
 	hitsound = "smallslash"
 	chargetime = 0
-	penfactor = 10
+	penfactor = 20
 	canparry = FALSE
 	item_damage_type = "slash"
 

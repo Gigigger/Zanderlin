@@ -45,7 +45,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	melee_attack_cooldown = 2 SECONDS
-	blood_gulp = 30 // how much blood are we stealing per bite
+	blood_gulp = 50 // how much blood are we stealing per bite
 	retreat_health = 0.3
 
 	base_constitution = 8
@@ -66,7 +66,6 @@
 	dodgetime = 17
 	aggressive = 1
 	stat_attack = UNCONSCIOUS
-	remains_type = /obj/effect/decal/remains/wolf
 
 	ai_controller = /datum/ai_controller/lampreywolf
 	var/static/list/pet_commands = list(
@@ -230,8 +229,7 @@
 	is_pack_alpha = TRUE
 
 	melee_damage_lower = 10
-	melee_damage_upper = 15
-	blood_gulp = 50 //vampire tier
+	melee_damage_upper = 20
 	retreat_distance = 3
 	retreat_health = 0.2
 

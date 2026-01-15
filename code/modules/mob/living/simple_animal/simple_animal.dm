@@ -79,6 +79,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	///Attacking verb in present simple tense.
 	var/attack_verb_simple = "attack"
 	var/attack_sound = PUNCHWOOSH
+	///The sound made when a weapon bounces off a mob's force threshold
+	var/deflect_sound = list('sound/blank.ogg')
 	///Attacking, but without damage, verb in present continuous tense.
 	var/friendly_verb_continuous = "nuzzles"
 	///Attacking, but without damage, verb in present simple tense.

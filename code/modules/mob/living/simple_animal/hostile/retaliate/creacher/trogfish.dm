@@ -45,7 +45,6 @@
 	retreat_health = 0.3
 	aggressive = TRUE
 	stat_attack = UNCONSCIOUS
-	remains_type = /obj/effect/decal/remains/trogfish
 	body_eater = TRUE
 	gender = NEUTER
 	footstep_type = FOOTSTEP_MOB_SLIME
@@ -71,12 +70,6 @@
 		/datum/pet_command/calm,
 	)
 
-/obj/effect/decal/remains/trogfish
-	name = "remains"
-	gender = NEUTER
-	icon_state = "trogfish_dead"
-	icon = 'icons/roguetown/mob/monster/trogfish.dmi'
-
 /mob/living/simple_animal/hostile/retaliate/trogfish/Initialize()
 	AddComponent(/datum/component/obeys_commands, pet_commands) // here due to signal overridings from pet commands
 	. = ..()
@@ -94,6 +87,8 @@
 	animate(src, time = 40, transform = M, easing = SINE_EASING)
 
 /mob/living/simple_animal/hostile/retaliate/trogfish/gib(no_brain, no_organs, no_bodyparts, burst = FALSE, datum/looping_sound/sound_loop = null)
+	if(QDELETED(src))
+		return
 	var/turf/epicenter = get_turf(src)
 	if(epicenter && burst)
 		if(sound_loop)

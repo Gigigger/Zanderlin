@@ -27,7 +27,7 @@
 			playsound(src, punched_sound, 25, TRUE, -1)
 			var/damage = M.get_punch_dmg()
 			next_attack_msg.Cut()
-			attack_threshold_check(damage)
+			attack_threshold_check(damage, def_zone = M.zone_selected)
 			log_combat(M, src, "attacked")
 			updatehealth()
 			var/hitlim = simple_limb_hit(M.zone_selected)
@@ -116,7 +116,7 @@
 		playsound(src, punched_sound, 25, TRUE, -1)
 		var/damage = M.get_punch_dmg()
 		next_attack_msg.Cut()
-		attack_threshold_check(damage)
+		attack_threshold_check(damage, def_zone = M.zone_selected)
 		log_combat(M, src, "attacked")
 		updatehealth()
 		var/hitlim = simple_limb_hit(M.zone_selected)
@@ -130,7 +130,7 @@
 	if(..()) //successful monkey bite.
 		if(stat != DEAD)
 			var/damage = rand(1, 3)
-			attack_threshold_check(damage)
+			attack_threshold_check(damage, def_zone = M.zone_selected)
 			return 1
 	if (M.used_intent.type == INTENT_HELP)
 		if (health > 0)
@@ -146,7 +146,7 @@
 		next_attack_msg.Cut()
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
 		var/hitlim = simple_limb_hit(M.zone_selected)
-		attack_threshold_check(damage, M.melee_damage_type)
+		attack_threshold_check(damage, M.melee_damage_type, M.zone_selected)
 		simple_woundcritroll(M.a_intent.blade_class, damage, M, hitlim)
 		visible_message("<span class='danger'>\The [M] [pick(M.a_intent.attack_verb)] [src]![next_attack_msg.Join()]</span>", \
 					"<span class='danger'>\The [M] [pick(M.a_intent.attack_verb)] me![next_attack_msg.Join()]</span>", null, COMBAT_MESSAGE_RANGE)
@@ -192,7 +192,7 @@
 			target.mind.attackedme[user.real_name] = world.time
 		user.adjust_stamina(15)
 
-/mob/living/simple_animal/proc/attack_threshold_check(damage, damagetype = BRUTE, armorcheck = "blunt")
+/mob/living/simple_animal/proc/attack_threshold_check(damage, damagetype = BRUTE, armorcheck = "blunt", def_zone = BODY_ZONE_CHEST)
 	var/temp_damage = damage
 	if(!damage_coeff[damagetype])
 		temp_damage = 0
@@ -203,7 +203,7 @@
 		visible_message("<span class='warning'>[src] looks unharmed!</span>")
 		return FALSE
 	else
-		apply_damage(damage, damagetype, null, getarmor(null, armorcheck))
+		apply_damage(damage, damagetype, null, getarmor(def_zone, armorcheck))
 		return TRUE
 
 /mob/living/simple_animal/ex_act(severity, target, epicenter, devastation_range, heavy_impact_range, light_impact_range, flame_range)

@@ -22,7 +22,7 @@
 
 
 /mob/living/proc/getarmor(def_zone, type, damage, armor_penetration, blade_dulling)
-	return 0
+	return armor?.getRating(type) || 0 // mostly used for simple mobs or other things that would have root armor defined
 
 //this returns the mob's protection against eye damage (number between -1 and 2) from bright lights
 /mob/living/proc/get_eye_protection()
@@ -252,7 +252,7 @@
 		grab_to_update?.update_grab_intents()
 	if(HAS_TRAIT(user, TRAIT_NOHANDGRABS))
 		for(var/obj/item/grabbing/g in user.contents)
-			if(grabbing.grabbee == src)
+			if(g.grabbed == src)
 				g.grab_state = GRAB_AGGRESSIVE
 				g.update_grab_intents()
 

@@ -1,7 +1,7 @@
 /datum/ai_controller/megaleech
 	movement_delay = 0.7 SECONDS
 	blackboard = list(
-		BB_TARGET_BLOOD_THRESHOLD = BLOOD_VOLUME_BAD,
+		BB_TARGET_BLOOD_THRESHOLD = BLOOD_VOLUME_SURVIVE,
 		BB_TARGETTING_DATUM = new /datum/targetting_datum/basic/blooded(),
 		BB_PET_TARGETING_DATUM = new /datum/targetting_datum/basic/not_friends(),
 		BB_BASIC_MOB_FLEEING = TRUE,
