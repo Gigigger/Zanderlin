@@ -21,10 +21,10 @@
 			var/use_female_sprites = MALE_SPRITES
 			if(species)
 				if(species.sexes)
-					if(H.gender == FEMALE && !species.swap_female_clothes || H.gender == MALE && species.swap_male_clothes)
+					if(H.gender == FEMALE && !species.swap_female_clothes || H.gender == MALE && species.swap_male_clothes || H.gender == MALE && species.swap_male_clothes_but_not_offsets)
 						use_female_sprites = FEMALE_SPRITES
 
-				if(use_female_sprites)
+				if(use_female_sprites && !(H.gender == MALE && species.swap_male_clothes_but_not_offsets))
 					offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_f
 				else
 					offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_m
