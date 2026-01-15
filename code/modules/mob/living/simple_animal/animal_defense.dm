@@ -146,7 +146,7 @@
 		next_attack_msg.Cut()
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
 		var/hitlim = simple_limb_hit(M.zone_selected)
-		attack_threshold_check(damage, M.melee_damage_type, M.zone_selected)
+		attack_threshold_check(damage, M.melee_damage_type, def_zone = M.zone_selected)
 		simple_woundcritroll(M.a_intent.blade_class, damage, M, hitlim)
 		visible_message("<span class='danger'>\The [M] [pick(M.a_intent.attack_verb)] [src]![next_attack_msg.Join()]</span>", \
 					"<span class='danger'>\The [M] [pick(M.a_intent.attack_verb)] me![next_attack_msg.Join()]</span>", null, COMBAT_MESSAGE_RANGE)
