@@ -1,4 +1,4 @@
 <!-- Most valid html will work in here, excluding images. -->
-<center>Zanderlin Discord Server: <a href="https://discord.gg/ssSGGasF6R">https://discord.gg/ssSGGasF6R</a></center>
+<center>Zanderlin Discord Server: <a href="https://discord.gg/nruf7P9Beh">https://discord.gg/nruf7P9Beh</a></center>
 <center>* TECHNICAL DISPLAY PLAYTEST *</center>
 <!-- We're no longer so unstable, also it's shit advertising. -->
