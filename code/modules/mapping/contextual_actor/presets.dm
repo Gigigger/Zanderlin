@@ -6,7 +6,7 @@
 	if(!islist(text_to_replace_with))
 		text_to_replace_with = list(text_to_replace_with)
 	for(var/html_num in 1 to length(raw_html_to_pick_from))
-		raw_html_to_pick_from[html_num] = replacetext_char(raw_html_to_pick_from[html_num], "%TEXT_TO_REPLACE_WITH", pick(text_to_replace_with))
+		raw_html_to_pick_from[html_num] = replacetext(raw_html_to_pick_from[html_num], "%TEXT_TO_REPLACE_WITH", pick(text_to_replace_with))
 
 /obj/effect/contextual_actor/preset/flickering
 	raw_html_to_pick_from = \

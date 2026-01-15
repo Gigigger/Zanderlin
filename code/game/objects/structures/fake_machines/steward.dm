@@ -185,7 +185,7 @@
 				return
 			if(!isnum(newamount))
 				return
-			if(findtext_char(num2text(newamount), "."))
+			if(findtext(num2text(newamount), "."))
 				return
 			newamount = max(newamount, 0)
 			D.oversupply_amount = newamount
@@ -199,7 +199,7 @@
 				return
 			if(!isnum(newtax))
 				return
-			if(findtext_char(num2text(newtax), "."))
+			if(findtext(num2text(newtax), "."))
 				return
 			newtax = CLAMP(newtax, 0, 999)
 			D.oversupply_payout = newtax
@@ -213,7 +213,7 @@
 				return
 			if(!isnum(newtax))
 				return
-			if(findtext_char(num2text(newtax), "."))
+			if(findtext(num2text(newtax), "."))
 				return
 			newtax = CLAMP(newtax, 0, 999)
 			scom_announce("The bounty for [D.name] has been set to [newtax].")
@@ -223,7 +223,7 @@
 			if(newtax)
 				if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())
 					return
-				if(findtext_char(num2text(newtax), "."))
+				if(findtext(num2text(newtax), "."))
 					return
 				newtax = CLAMP(newtax, 1, 99)
 				if(newtax > D.payout_price)
@@ -238,7 +238,7 @@
 			if(newtax)
 				if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())
 					return
-				if(findtext_char(num2text(newtax), "."))
+				if(findtext(num2text(newtax), "."))
 					return
 				newtax = CLAMP(newtax, 0, 999)
 				D.withdraw_price = newtax
@@ -251,7 +251,7 @@
 				var/newtax = input(usr, "How much to give [X]", src) as null|num
 				if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())
 					return
-				if(findtext_char(num2text(newtax), "."))
+				if(findtext(num2text(newtax), "."))
 					return
 				if(!newtax)
 					return
@@ -269,7 +269,7 @@
 				var/newtax = input(usr, "How much to fine [X]", src) as null|num
 				if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())
 					return
-				if(findtext_char(num2text(newtax), "."))
+				if(findtext(num2text(newtax), "."))
 					return
 				if(!newtax)
 					return
@@ -296,7 +296,7 @@
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())
 			return
-		if(findtext_char(num2text(amount_to_pay), "."))
+		if(findtext(num2text(amount_to_pay), "."))
 			return
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/datum/job/job_check = H.mind?.assigned_role?.parent_job ? H.mind.assigned_role.parent_job : H.mind?.assigned_role

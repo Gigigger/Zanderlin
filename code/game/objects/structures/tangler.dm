@@ -164,7 +164,7 @@
 	var/message2recognize = SANITIZE_HEAR_MESSAGE(raw_message)
 
 	for(var/word in deactivation_words)
-		if(findtext_char(message2recognize, word))
+		if(findtext(message2recognize, word))
 			if(aggroed)
 				aggroed = 0
 				update_appearance(UPDATE_ICON_STATE | UPDATE_NAME)
@@ -173,7 +173,7 @@
 				return TRUE
 
 	for(var/word in activation_words)
-		if(findtext_char(message2recognize, word))
+		if(findtext(message2recognize, word))
 			if(!aggroed)
 				aggroed = world.time
 				last_eat = world.time

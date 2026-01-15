@@ -313,7 +313,7 @@
 	if (playlightning)
 		sound_to_playing_players('sound/blank.ogg')
 		sleep(80)
-	priority_announce(replacetext_char(announcement, "%STATION%", station_name()))
+	priority_announce(replacetext(announcement, "%STATION%", station_name()))
 	if (playlightning)
 		sleep(20)
 		sound_to_playing_players('sound/blank.ogg')

@@ -1,7 +1,7 @@
 /proc/get_mentor_stats(key)
 	if(!key)
 		return
-	var/json_file = file("data/player_saves/[copytext_char(key,1,2)]/[key]/mentor_stats.json")
+	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/mentor_stats.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 	var/list/json = json_decode(file2text(json_file))
@@ -24,7 +24,7 @@
 /proc/update_mentor_stat(key, field, amt, mob/mob_c)
 	if(!key || !field)
 		return
-	var/json_file = file("data/player_saves/[copytext_char(key,1,2)]/[key]/mentor_stats.json")
+	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/mentor_stats.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 	var/list/json = json_decode(file2text(json_file))
@@ -57,7 +57,7 @@
 	WRITE_FILE(json_file, json_encode(json))
 
 /proc/check_mentor_stats_menu(ckey)
-	if(!fexists("data/player_saves/[copytext_char(ckey,1,2)]/[ckey]/mentor_stats.json"))
+	if(!fexists("data/player_saves/[copytext(ckey,1,2)]/[ckey]/mentor_stats.json"))
 		to_chat(usr, "<span class='boldwarning'>User does not exist.</span>")
 
 

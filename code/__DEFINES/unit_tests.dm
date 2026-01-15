@@ -58,5 +58,5 @@
 	var/static/regex/directional_helper_regex
 	if(!directional_helper_regex)
 		directional_helper_regex = new(@"\/directional\/(north|south|east|west)$")
-	var/replaced = replacetext_char("[typepath]", directional_helper_regex, "")
+	var/replaced = replacetext("[typepath]", directional_helper_regex, "")
 	return text2path(replaced) || typepath

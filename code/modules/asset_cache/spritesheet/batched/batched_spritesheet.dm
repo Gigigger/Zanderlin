@@ -63,7 +63,7 @@
 		return CACHE_INVALID
 	if(isnull(cache_data) || isnull(cache_dmi_hashes_json))
 		cache_data = rustg_file_read("[ASSET_CROSS_ROUND_SMART_CACHE_DIRECTORY]/spritesheet_cache.[name].json")
-		if(!findtext_char(cache_data, "{", 1, 2)) // cache isn't valid JSON
+		if(!findtext(cache_data, "{", 1, 2)) // cache isn't valid JSON
 			log_asset("Cache for spritesheet_[name] was not valid JSON. This is abnormal. Likely tampered with or IO failure.")
 			return CACHE_INVALID
 		var/cache_json = json_decode(cache_data)
@@ -105,7 +105,7 @@
 		data_out = rustg_iconforge_cache_valid(cache_input_hash, cache_dmi_hashes_json, entries_json)
 	if (data_out == RUSTG_JOB_ERROR)
 		CRASH("Spritesheet [name] cache JOB PANIC")
-	else if(!findtext_char(data_out, "{", 1, 2))
+	else if(!findtext(data_out, "{", 1, 2))
 		rustg_file_write(cache_data, "[GLOB.log_directory]/spritesheet_cache_debug.[name].json")
 		rustg_file_write(entries_json, "[GLOB.log_directory]/spritesheet_debug_[name].json")
 		CRASH("Spritesheet [name] cache check UNKNOWN ERROR: [data_out]")
@@ -195,7 +195,7 @@
 		data_out = rustg_iconforge_generate("data/spritesheets/", name, entries_json, do_cache)
 	if (data_out == RUSTG_JOB_ERROR)
 		CRASH("Spritesheet [name] JOB PANIC")
-	else if(!findtext_char(data_out, "{", 1, 2))
+	else if(!findtext(data_out, "{", 1, 2))
 		rustg_file_write(entries_json, "[GLOB.log_directory]/spritesheet_debug_[name].json")
 		CRASH("Spritesheet [name] UNKNOWN ERROR: [data_out]")
 	var/data = json_decode(data_out)
@@ -228,7 +228,7 @@
 	fully_generated = TRUE
 	// If we were ever in there, remove ourselves
 	SSasset_loading.dequeue_asset(src)
-	if(data["error"] && !(ignore_dir_errors && findtext_char(data["error"], "is not in the set of valid dirs")))
+	if(data["error"] && !(ignore_dir_errors && findtext(data["error"], "is not in the set of valid dirs")))
 		CRASH("Error during spritesheet generation for [name]: [data["error"]]")
 
 /datum/asset/spritesheet_batched/queued_generation()

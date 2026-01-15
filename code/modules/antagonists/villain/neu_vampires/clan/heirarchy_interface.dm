@@ -194,7 +194,7 @@
 
 		var/node_data_json = json_encode(node_data)
 		// Escape single quotes in the JSON for HTML attribute safety
-		var/escaped_node_data_json = replacetext_char(node_data_json, "'", "&#39;")
+		var/escaped_node_data_json = replacetext(node_data_json, "'", "&#39;")
 
 		var/icon_html = ""
 		if(position.cloned_look)
@@ -560,7 +560,7 @@
 
 	// Generate updated HTML with modal open
 	var/updated_html = generate_hierarchy_html()
-	updated_html = replacetext_char(updated_html, "<!-- Dynamic content goes here -->", modal_content)
+	updated_html = replacetext(updated_html, "<!-- Dynamic content goes here -->", modal_content)
 
 	var/datum/clan_menu_interface/menu = user.clan_menu_interface
 	if(menu)
@@ -727,7 +727,7 @@
 
 	// Generate updated HTML with modal open
 	var/updated_html = generate_hierarchy_html()
-	updated_html = replacetext_char(updated_html, "<!-- Dynamic content goes here -->", modal_content) //AI Wishes it could replicate this level of thinking
+	updated_html = replacetext(updated_html, "<!-- Dynamic content goes here -->", modal_content) //AI Wishes it could replicate this level of thinking
 
 	var/datum/clan_menu_interface/menu = user.clan_menu_interface
 	if(menu)
@@ -785,7 +785,7 @@
 
 	// Generate updated HTML with modal open
 	var/updated_html = generate_hierarchy_html()
-	updated_html = replacetext_char(updated_html, "<!-- Dynamic content goes here -->", modal_content)
+	updated_html = replacetext(updated_html, "<!-- Dynamic content goes here -->", modal_content)
 
 	var/datum/clan_menu_interface/menu = user.clan_menu_interface
 	if(menu)

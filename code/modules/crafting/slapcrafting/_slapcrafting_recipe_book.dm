@@ -89,5 +89,5 @@
 		return craft_step.desc
 	// This step links to some recipe, linkify the description with a href
 	. = craft_step.desc
-	. = replacetext_char(., "%ENDLINK%", "</a>")
-	. = replacetext_char(., "%LINK%", "<a href='byond://?src=[REF(src)];preference=popup_recipe;recipe=[craft_step.recipe_link]'>")
+	. = replacetext(., "%ENDLINK%", "</a>")
+	. = replacetext(., "%LINK%", "<a href='byond://?src=[REF(src)];preference=popup_recipe;recipe=[craft_step.recipe_link]'>")

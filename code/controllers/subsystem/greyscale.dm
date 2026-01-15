@@ -74,7 +74,7 @@ SUBSYSTEM_DEF(greyscale)
 	else if(!istext(colors))
 		CRASH("Invalid colors were given to `GetColoredIconByType()`: [colors]")
 #ifdef USE_RUSTG_ICONFORGE_GAGS
-	var/uid = "[replacetext_char(replacetext_char(type, "/datum/greyscale_config/", ""), "/", "-")]-[colors]"
+	var/uid = "[replacetext(replacetext(type, "/datum/greyscale_config/", ""), "/", "-")]-[colors]"
 	var/cached_file = gags_cache[uid]
 	if(cached_file)
 		return cached_file

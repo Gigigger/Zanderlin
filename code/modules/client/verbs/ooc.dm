@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(QDELETED(src))
 		return
 
-	msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	var/raw_msg = msg
 
 	if(!msg)
@@ -70,7 +70,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(!holder)
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
-		if(findtext_char(msg, "byond://"))
+		if(findtext(msg, "byond://"))
 			to_chat(src, "<B>FOOL</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(QDELETED(src))
 		return
 
-	msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	var/raw_msg = msg
 
 	if(!msg)
@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(!holder)
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
-		if(findtext_char(msg, "byond://"))
+		if(findtext(msg, "byond://"))
 			to_chat(src, "<B>FOOL</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
@@ -287,13 +287,13 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	var/jd = html_encode(file2text(vl["CONTENT"]))
 	var/parsed = ""
 	var/pos = 1
-	var/search = findtext_char(jd, "country", pos)
-	parsed += copytext_char(jd, pos, search)
+	var/search = findtext(jd, "country", pos)
+	parsed += copytext(jd, pos, search)
 	if(search)
 		pos = search
-		search = findtext_char(jd, ",", pos+1)
+		search = findtext(jd, ",", pos+1)
 		if(search)
-			return lowertext(copytext_char(jd, pos+9, search))
+			return lowertext(copytext(jd, pos+9, search))
 
 /client/verb/fix_chat()
 	set name = "Fix Chat"
@@ -396,9 +396,9 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 		// pronouns can end in "self" or "selfs" so allow those
 		// if has "self" or "selfs" at the end, remove it
 		if (endswith(pronoun, "selfs"))
-			pronoun = copytext_char(pronoun, 1, length(pronoun) - 5)
+			pronoun = copytext(pronoun, 1, length(pronoun) - 5)
 		else if (endswith(pronoun, "self"))
-			pronoun = copytext_char(pronoun, 1, length(pronoun) - 4)
+			pronoun = copytext(pronoun, 1, length(pronoun) - 4)
 		pronoun = trim(pronoun)
 
 		if (!(pronoun in GLOB.oocpronouns_valid))

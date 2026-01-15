@@ -21,12 +21,12 @@
 
 	job_bitflag = BITFLAG_GARRISON
 
-	//exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_LIVING)
+	exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	//exp_requirements = list(
-	//	EXP_TYPE_LIVING = 300,
-	//	EXP_TYPE_GARRISON = 300
-	//)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 300,
+		EXP_TYPE_GARRISON = 300
+	)
 
 	traits = list(
 		TRAIT_STEELHEARTED,
@@ -48,7 +48,7 @@
 
 /datum/outfit/gatemaster/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
-	if(H.wear_armor && !findtext_char(H.wear_armor.name, "([H.real_name])"))
+	if(H.wear_armor && !findtext(H.wear_armor.name, "([H.real_name])"))
 		H.wear_armor.name = "[H.wear_armor.name] ([H.real_name])"
 
 /datum/job/advclass/gatemaster

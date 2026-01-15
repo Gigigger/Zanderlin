@@ -330,7 +330,7 @@ GLOBAL_LIST_INIT(visual_ui_id_to_type, list())
 
 	var/image/result = image(image_font,"")
 	for (var/i = 1 to length(string))
-		var/image/I = image(image_font,copytext_char(string,i,i+1))
+		var/image/I = image(image_font,copytext(string,i,i+1))
 		I.pixel_x = (i - 1) * spacing
 		result.overlays += I
 	result.color = _color

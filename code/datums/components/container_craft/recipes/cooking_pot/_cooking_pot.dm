@@ -178,7 +178,7 @@
 
 	// Update description to reflect quality
 	var/quality_desc = reagent.get_recipe_quality_desc()
-	if(reagent.description && !findtext_char(reagent.description, quality_desc))
+	if(reagent.description && !findtext(reagent.description, quality_desc))
 		reagent.description += " This appears to be [quality_desc]."
 
 /datum/container_craft/cooking/extra_html()

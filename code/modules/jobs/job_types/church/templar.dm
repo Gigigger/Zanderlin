@@ -19,12 +19,12 @@
 
 	job_bitflag = BITFLAG_CHURCH
 
-	//exp_type = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT)
+	exp_type = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
-	//exp_requirements = list(
-	//	EXP_TYPE_CHURCH = 900,
-	//	EXP_TYPE_COMBAT = 900
-	//)
+	exp_requirements = list(
+		EXP_TYPE_CHURCH = 900,
+		EXP_TYPE_COMBAT = 900
+	)
 
 	jobstats = list(
 		STATKEY_STR = 2,

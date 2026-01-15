@@ -297,7 +297,7 @@
 //example: add_zero_before_and_after(3.14, 3, 5) = "003.14000"
 /proc/add_zero_before_and_after(_string, beforeZeroes, afterZeroes)
 	var/string = "[_string]"
-	var/dot_pos = findtext_char(string, ".")
+	var/dot_pos = findtext(string, ".")
 	if (dot_pos)
 		dot_pos--
 		while (dot_pos < beforeZeroes)

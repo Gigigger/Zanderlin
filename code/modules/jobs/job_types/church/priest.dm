@@ -26,11 +26,11 @@
 		/datum/action/cooldown/spell/undirected/call_bird/priest,
 	)
 
-	//exp_type = list(EXP_TYPE_CHURCH)
+	exp_type = list(EXP_TYPE_CHURCH)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC, EXP_TYPE_LEADERSHIP)
-	//exp_requirements = list(
-	//	EXP_TYPE_CHURCH = 900,
-	//)
+	exp_requirements = list(
+		EXP_TYPE_CHURCH = 900,
+	)
 
 	jobstats = list(
 		STATKEY_STR = 1,

@@ -420,7 +420,7 @@
 
 	. = list()
 
-	var/var_found = findtext_char(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
+	var/var_found = findtext(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
 	if(var_found)
 		//Find var names
 
@@ -429,13 +429,13 @@
 		// jointext() --> "A dog said hi name]!"
 		// splittext() --> list("A","dog","said","hi","name]!")
 
-		t_string = replacetext_char(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
+		t_string = replacetext(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
 		var/list/list_value = splittext(t_string,"\[")
 		var/intermediate_stage = jointext(list_value, null)
 
 		list_value = splittext(intermediate_stage," ")
 		for(var/value in list_value)
-			if(findtext_char(value,"]"))
+			if(findtext(value,"]"))
 				value = splittext(value,"]") //"name]!" --> list("name","!")
 				for(var/A in value)
 					if(var_source.vars.Find(A))
@@ -445,9 +445,9 @@
 /proc/color_hex2num(A)
 	if(!A)
 		return 0
-	var/R = hex2num(copytext_char(A,2,4))
-	var/G = hex2num(copytext_char(A,4,6))
-	var/B = hex2num(copytext_char(A,6,0))
+	var/R = hex2num(copytext(A,2,4))
+	var/G = hex2num(copytext(A,4,6))
+	var/B = hex2num(copytext(A,6,0))
 	return R+G+B
 
 //word of warning: using a matrix like this as a color value will simplify it back to a string after being set
@@ -455,12 +455,12 @@
 	var/length = length(string)
 	if((length != 7 && length != 9) || length != length_char(string))
 		return color_matrix_identity()
-	var/r = hex2num(copytext_char(string, 2, 4))/255
-	var/g = hex2num(copytext_char(string, 4, 6))/255
-	var/b = hex2num(copytext_char(string, 6, 8))/255
+	var/r = hex2num(copytext(string, 2, 4))/255
+	var/g = hex2num(copytext(string, 4, 6))/255
+	var/b = hex2num(copytext(string, 6, 8))/255
 	var/a = 1
 	if(length == 9)
-		a = hex2num(copytext_char(string, 8, 10))/255
+		a = hex2num(copytext(string, 8, 10))/255
 	if(!isnum(r) || !isnum(g) || !isnum(b) || !isnum(a))
 		return color_matrix_identity()
 	return list(r,0,0,0, 0,g,0,0, 0,0,b,0, 0,0,0,a, 0,0,0,0)
@@ -484,7 +484,7 @@
 				return /atom
 			else
 				return /datum
-	return text2path(copytext_char(string_type, 1, last_slash))
+	return text2path(copytext(string_type, 1, last_slash))
 
 //returns a string the last bit of a type, without the preceeding '/'
 /proc/type2top(the_type)
@@ -505,7 +505,7 @@
 		if(/turf)
 			return "turf"
 		else //regex everything else (works for /proc too)
-			return lowertext(replacetext_char("[the_type]", "[type2parent(the_type)]/", ""))
+			return lowertext(replacetext("[the_type]", "[type2parent(the_type)]/", ""))
 
 /// Return html to load a url.
 /// for use inside of browse() calls to html assets that might be loaded on a cdn.

@@ -415,7 +415,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set name = "Display Initialize() Log"
 	set desc = ""
 
-	usr << browse(replacetext_char(SSatoms.InitLog(), "\n", "<br>"), "window=initlog")
+	usr << browse(replacetext(SSatoms.InitLog(), "\n", "<br>"), "window=initlog")
 
 /client/proc/debug_huds(i as num)
 	set category = "Debug"

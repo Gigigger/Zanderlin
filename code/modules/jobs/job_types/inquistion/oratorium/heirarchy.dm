@@ -603,7 +603,7 @@
 		)
 
 		var/node_data_json = json_encode(node_data)
-		var/escaped_node_data_json = replacetext_char(node_data_json, "'", "&#39;")
+		var/escaped_node_data_json = replacetext(node_data_json, "'", "&#39;")
 
 		var/icon_html = ""
 		if(position.cloned_look)
@@ -994,7 +994,7 @@
 	"}
 
 	var/updated_html = generate_hierarchy_html()
-	updated_html = replacetext_char(updated_html, "<!-- Dynamic content goes here -->", modal_content)
+	updated_html = replacetext(updated_html, "<!-- Dynamic content goes here -->", modal_content)
 	user << browse(updated_html, "window=inquisition_menu;size=1200x800")
 
 /datum/inquisition_hierarchy_interface/proc/generate_superior_position_options()

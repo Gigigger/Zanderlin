@@ -159,59 +159,59 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 /obj/structure/fake_machine/titan/proc/recognize_command(mob/living/carbon/human/user, message)
 	// message is already sanitized
-	if(findtext_char(message, "make announcement") && perform_check(user, FALSE))
+	if(findtext(message, "make announcement") && perform_check(user, FALSE))
 		say("All will hear your word.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_ANNOUNCEMENT)
 		return
-	if(findtext_char(message, "make decree") && perform_check(user))
+	if(findtext(message, "make decree") && perform_check(user))
 		say("Speak and they will obey.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_DECREE)
 		return
-	if(findtext_char(message, "make law") && perform_check(user))
+	if(findtext(message, "make law") && perform_check(user))
 		say("Speak and they will obey.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_LAW)
 		return
-	if(findtext_char(message, "declare outlaw") && perform_check(user))
+	if(findtext(message, "declare outlaw") && perform_check(user))
 		say("Who should be outlawed?")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_DECLARE_OUTLAW)
 		return
-	if(findtext_char(message, "pardon outlaw") && perform_check(user))
+	if(findtext(message, "pardon outlaw") && perform_check(user))
 		say("Who should be pardoned?")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_PARDON_OUTLAW)
 		return
-	if(findtext_char(message, "help") && is_valid_mob(user))
+	if(findtext(message, "help") && is_valid_mob(user))
 		help()
 		return
-	if(findtext_char(message, "summon crown") && is_valid_mob(user))
+	if(findtext(message, "summon crown") && is_valid_mob(user))
 		summon_crown(user)
 		return
-	if(findtext_char(message, "summon key") && perform_check(user, FALSE))
+	if(findtext(message, "summon key") && perform_check(user, FALSE))
 		summon_key(user)
 		return
-	if(findtext_char(message, "remove law") && perform_check(user))
+	if(findtext(message, "remove law") && perform_check(user))
 		remove_law(message)
 		return
-	if(findtext_char(message, "remove decree") && perform_check(user))
+	if(findtext(message, "remove decree") && perform_check(user))
 		remove_decree(message)
 		return
-	if(findtext_char(message, "purge laws") && perform_check(user))
+	if(findtext(message, "purge laws") && perform_check(user))
 		purge_laws()
 		return
-	if(findtext_char(message, "set taxes") && perform_check(user))
+	if(findtext(message, "set taxes") && perform_check(user))
 		set_taxes(user)
 		return
-	if(findtext_char(message, "change position") && perform_check(user))
+	if(findtext(message, "change position") && perform_check(user))
 		change_position(user)
 		return
-	if(findtext_char(message, "appoint regent") && perform_check(user))
+	if(findtext(message, "appoint regent") && perform_check(user))
 		appoint_regent(user)
 		return
-	if(findtext_char(message, "SILENCE!!") && perform_check(user))
+	if(findtext(message, "SILENCE!!") && perform_check(user))
 		silence_plebs(user)
 		return
 
@@ -297,7 +297,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 /// Removes a decree
 /obj/structure/fake_machine/titan/proc/remove_decree(message)
-	var/clean_message = replacetext_char(message, "remove decree", "")
+	var/clean_message = replacetext(message, "remove decree", "")
 	var/decree_index = text2num(clean_message) || 0
 	if(!decree_index || !GLOB.lord_decrees[decree_index])
 		say("That decree doesn't exist!")
@@ -321,7 +321,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 /// Removes a law
 /obj/structure/fake_machine/titan/proc/remove_law(message)
-	var/clean_message = replacetext_char(message, "remove law", "")
+	var/clean_message = replacetext(message, "remove law", "")
 	var/law_index = text2num(clean_message) || 0
 	if(!law_index || !GLOB.laws_of_the_land[law_index])
 		say("That law doesn't exist!")
@@ -391,7 +391,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 		if(!Adjacent(user))
 			reset_mode()
 			return
-		if(findtext_char(num2text(newtax), "."))
+		if(findtext(num2text(newtax), "."))
 			reset_mode()
 			return
 		newtax = CLAMP(newtax, 1, 99)
@@ -492,7 +492,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 	var/sanitized_message = SANITIZE_HEAR_MESSAGE(original_message)
 
-	if(findtext_char(sanitized_message, "nevermind") || findtext_char(sanitized_message, "cancel"))
+	if(findtext(sanitized_message, "nevermind") || findtext(sanitized_message, "cancel"))
 		reset_mode()
 		return
 	switch(mode)

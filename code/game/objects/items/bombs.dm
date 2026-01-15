@@ -87,7 +87,7 @@
 	to_chat(user, span_nicegreen("You hear a chant: \"Pie lesu domine, dona eis requiem.\""))
 
 /obj/item/holy_grenade/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, original_message)
-	if(findtext_char(html_decode(original_message), scripture_wanted))
+	if(findtext(html_decode(original_message), scripture_wanted))
 		scripture_heard++
 		if(scripture_heard > length(scripture_required))
 			lose_hearing_sensitivity()

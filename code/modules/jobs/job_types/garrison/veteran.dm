@@ -21,12 +21,12 @@
 	give_bank_account = 35
 	can_have_apprentices = FALSE
 	job_bitflag = BITFLAG_GARRISON
-	//exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
+	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
-	//exp_requirements = list(
-	//	EXP_TYPE_ADVENTURER = 300,
-	//	EXP_TYPE_COMBAT = 1500
-	//)
+	exp_requirements = list(
+		EXP_TYPE_ADVENTURER = 300,
+		EXP_TYPE_COMBAT = 1500
+	)
 
 	traits = list(
 		TRAIT_OLDPARTY
@@ -37,9 +37,9 @@
 	. = ..()
 	if(istype(spawned.cloak, /obj/item/clothing/cloak/half/vet))
 		var/obj/item/clothing/S = spawned.cloak
-		var/index = findtext_char(spawned.real_name, " ")
+		var/index = findtext(spawned.real_name, " ")
 		if(index)
-			index = copytext_char(spawned.real_name, 1, index)
+			index = copytext(spawned.real_name, 1, index)
 		if(!index)
 			index = spawned.real_name
 		S.name = "veteran cloak ([index])"

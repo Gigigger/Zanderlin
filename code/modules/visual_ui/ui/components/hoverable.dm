@@ -38,11 +38,11 @@
 			//this code corrects this extra offset.
 			var/list/modifiers = params2list(params)
 			var/screenloc = LAZYACCESS(modifiers, SCREEN_LOC)
-			var/x_index = findtext_char(screenloc, ":", 1, 0)
-			var/comma_index = findtext_char(screenloc,",", x_index, 0)
-			var/y_index = findtext_char(screenloc,":", comma_index, 0)
-			var/x_loc = text2num(copytext_char(screenloc, 1, x_index))
-			var/y_loc = text2num(copytext_char(screenloc, comma_index+1, y_index))
+			var/x_index = findtext(screenloc, ":", 1, 0)
+			var/comma_index = findtext(screenloc,",", x_index, 0)
+			var/y_index = findtext(screenloc,":", comma_index, 0)
+			var/x_loc = text2num(copytext(screenloc, 1, x_index))
+			var/y_loc = text2num(copytext(screenloc, comma_index+1, y_index))
 			if (x_loc <= 7)
 				x_loc = 7
 			else

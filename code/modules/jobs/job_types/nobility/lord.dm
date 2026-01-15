@@ -27,13 +27,13 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 	can_have_apprentices = FALSE
 	job_bitflag = BITFLAG_ROYALTY
-	//exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING, EXP_TYPE_LEADERSHIP)
+	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING, EXP_TYPE_LEADERSHIP)
 	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
-	//exp_requirements = list(
-	//	EXP_TYPE_LIVING = 1200,
-	//	EXP_TYPE_NOBLE = 900,
-	//	EXP_TYPE_LEADERSHIP = 300
-	//)
+	exp_requirements = list(
+		EXP_TYPE_LIVING = 1200,
+		EXP_TYPE_NOBLE = 900,
+		EXP_TYPE_LEADERSHIP = 300
+	)
 
 	jobstats = list(
 		STATKEY_STR = 1,

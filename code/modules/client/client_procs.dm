@@ -512,7 +512,8 @@ GLOBAL_LIST_EMPTY(respawncounts)
 
 	if(holder)
 		show_popup_menus = TRUE
-		set_right_click_menu_mode(TRUE)
+
+	set_right_click_menu_mode(TRUE)
 
 	var/reconnecting = FALSE
 	if(GLOB.player_details[ckey])
@@ -688,7 +689,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			winset(src, "[child]", "[entries[child]]")
 			if (!ispath(child, /datum/verbs/menu))
 				var/procpath/verbpath = child
-				if (copytext_char(verbpath.name,1,2) != "@")
+				if (copytext(verbpath.name,1,2) != "@")
 					new child(src)
 
 	for (var/thing in prefs.menuoptions)

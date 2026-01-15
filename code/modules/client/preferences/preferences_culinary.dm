@@ -500,11 +500,11 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 
 /proc/encode_special_chars(text)
 	. = text
-	. = replacetext_char(., "ü", "&uuml;")
-	. = replacetext_char(., "Ü", "&Uuml;")
-	. = replacetext_char(., "ö", "&ouml;")
-	. = replacetext_char(., "Ö", "&Ouml;")
-	. = replacetext_char(., "ä", "&auml;")
-	. = replacetext_char(., "Ä", "&Auml;")
-	. = replacetext_char(., "ß", "&szlig;")
+	. = replacetext(., "ü", "&uuml;")
+	. = replacetext(., "Ü", "&Uuml;")
+	. = replacetext(., "ö", "&ouml;")
+	. = replacetext(., "Ö", "&Ouml;")
+	. = replacetext(., "ä", "&auml;")
+	. = replacetext(., "Ä", "&Auml;")
+	. = replacetext(., "ß", "&szlig;")
 	return .

@@ -30,11 +30,11 @@
 	)
 	languages = list(/datum/language/oldpsydonic)
 
-	//exp_type = list(EXP_TYPE_INQUISITION)
+	exp_type = list(EXP_TYPE_INQUISITION)
 	exp_types_granted = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)
-	//exp_requirements = list(
-	//	EXP_TYPE_INQUISITION = 120
-	//)
+	exp_requirements = list(
+		EXP_TYPE_INQUISITION = 120
+	)
 
 /datum/job/orthodoxist/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

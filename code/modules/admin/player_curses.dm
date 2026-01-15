@@ -17,7 +17,7 @@
 /proc/get_player_curses(key)
 	if(!key)
 		return
-	var/json_file = file("data/player_saves/[copytext_char(key,1,2)]/[key]/curses.json")
+	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/curses.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 	var/list/json = json_decode(file2text(json_file))
@@ -29,7 +29,7 @@
 		return
 	if(!curse)
 		return
-	var/json_file = file("data/player_saves/[copytext_char(key,1,2)]/[key]/curses.json")
+	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/curses.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 	var/list/json = json_decode(file2text(json_file))
@@ -46,7 +46,7 @@
 		return
 	if(!curse)
 		return
-	var/json_file = file("data/player_saves/[copytext_char(key,1,2)]/[key]/curses.json")
+	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/curses.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 	var/list/json = json_decode(file2text(json_file))

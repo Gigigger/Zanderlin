@@ -707,8 +707,8 @@
 
 		if(INVOCATION_EMOTE)
 			invoker.visible_message(
-				capitalize(replace_pronouns(replacetext_char(used_invocation_message, "%CASTER", invoker.name), invoker)),
-				capitalize(replace_pronouns(replacetext_char(invocation_self_message, "%CASTER", invoker.name), invoker)),
+				capitalize(replace_pronouns(replacetext(used_invocation_message, "%CASTER", invoker.name), invoker)),
+				capitalize(replace_pronouns(replacetext(invocation_self_message, "%CASTER", invoker.name), invoker)),
 			)
 
 /// When we start charging the spell called from set_click_ability or start_casting

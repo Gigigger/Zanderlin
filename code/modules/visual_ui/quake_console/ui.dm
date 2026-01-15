@@ -180,7 +180,7 @@
 	var/current_arg = ""
 	var/in_quotes = FALSE
 
-	for(var/i = 1, i <= length_char(text), i++)
+	for(var/i = 1, i <= length(text), i++)
 		var/char = text[i]
 
 		// Handle quote character
@@ -195,7 +195,7 @@
 				current_arg = ""
 			continue
 
-		if(char == "\\" && i < length_char(text) && text[i+1] == "\"")
+		if(char == "\\" && i < length(text) && text[i+1] == "\"")
 			current_arg += "\""
 			i++
 			continue
@@ -220,7 +220,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in arg_list)
-		if(findtext_char(arg, "="))
+		if(findtext(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)
@@ -294,7 +294,7 @@
 			return null
 
 	// Check if it's a list (comma-separated)
-	if(findtext_char(arg, ","))
+	if(findtext(arg, ","))
 		var/list/result = list()
 		for(var/item in splittext(arg, ","))
 			result += convert_arg_type(trim(item), sender, marked)
@@ -422,7 +422,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in pre_parsed_args)
-		if(findtext_char(arg, "="))
+		if(findtext(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)
@@ -475,7 +475,7 @@
 	var/list/positional_args = list()
 
 	for(var/arg in pre_parsed_args)
-		if(findtext_char(arg, "="))
+		if(findtext(arg, "="))
 			var/list/key_val = splittext(arg, "=")
 			if(length(key_val) == 2)
 				named_args[key_val[1]] = convert_arg_type(key_val[2], current, current.client.holder?.marked_datum)
