@@ -19,7 +19,7 @@
 	var/obj/item/grabbing/arm_grab = check_arm_grabbed(active_hand_index)
 	if(arm_grab)
 		// to_chat(src, span_warning("Someone is grabbing my arm!"))
-		grab_counter_attack(arm_grab.grabbee)
+		resist_grab()
 		return TRUE
 
 	// Special glove functions:
@@ -457,8 +457,9 @@
 						record_featured_stat(FEATURED_STATS_THIEVES, U)
 						record_featured_stat(FEATURED_STATS_CRIMINALS, U)
 						record_round_statistic(STATS_ITEMS_PICKPOCKETED)
-					if(has_flaw(/datum/charflaw/addiction/kleptomaniac))
-						sate_addiction()
+						SEND_SIGNAL(src, COMSIG_PICKPOCKET_SUCCESS)
+					if(has_quirk(/datum/quirk/vice/kleptomaniac))
+						sate_addiction(/datum/quirk/vice/kleptomaniac)
 				else
 					exp_to_gain /= 2
 					to_chat(U, span_warning("I didn't find anything there. Perhaps I should look elsewhere."))
