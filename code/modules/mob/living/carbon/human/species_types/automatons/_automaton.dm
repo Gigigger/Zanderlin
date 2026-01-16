@@ -18,6 +18,8 @@
 	skin_tone_wording = "Brass Finish"
 	default_color = "B87333"
 
+	changesource_flags = WABBAJACK
+
 	no_equip = list(
 		ITEM_SLOT_SHIRT,
 		ITEM_SLOT_MASK,
