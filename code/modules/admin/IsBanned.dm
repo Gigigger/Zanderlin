@@ -40,7 +40,7 @@ GLOBAL_VAR(last_connection)
 					addclientmessage(ckey,span_adminnotice("You have been allowed to bypass the whitelist"))
 			else
 				log_access("Failed Login: [key] - Not on whitelist")
-				return list("reason"="whitelist", "desc" = "\nReason: You are not on the white list for this server")
+				return list("reason"="whitelist", "desc" = "\nReason: Stop right there, criminal scum! Get whitelisted here: https://discord.gg/AEVsMdc9am")
 
 	//Guest Checking
 	if(!real_bans_only && !C && IsGuestKey(key))
