@@ -32,11 +32,42 @@
 		ITEM_SLOT_BACK_L
 	)
 
-	species_traits = list(NO_UNDERWEAR, NOTRANSSTING, TRAIT_NOFALLDAMAGE1, TRAIT_RESISTCOLD, TRAIT_RESISTHEAT, TRAIT_NOBREATH)
-	inherent_traits = list(TRAIT_NOMOOD, TRAIT_NOMETABOLISM, TRAIT_NOHUNGER, TRAIT_EASYLIMBDISABLE, TRAIT_NOSTAMINA, TRAIT_EASYDISMEMBER, TRAIT_LIMBATTACHMENT)
+	species_traits = list(
+		NO_UNDERWEAR,
+		NOTRANSSTING,
+		TRAIT_NOFALLDAMAGE1,
+		TRAIT_RESISTCOLD,
+		TRAIT_RESISTHEAT,
+		TRAIT_NOBREATH
+	)
+	inherent_traits = list(
+		TRAIT_NOMOOD,
+		TRAIT_NOMETABOLISM,
+		TRAIT_NOHUNGER,
+		TRAIT_EASYLIMBDISABLE,
+		TRAIT_NOSTAMINA,
+		TRAIT_EASYDISMEMBER,
+		TRAIT_LIMBATTACHMENT
+	)
 
-	specstats_m = list(STATKEY_STR = 5, STATKEY_PER = 0, STATKEY_INT = -9, STATKEY_CON = 10, STATKEY_END = 10, STATKEY_SPD = -9, STATKEY_LCK = -3)
-	specstats_f = list(STATKEY_STR = 5, STATKEY_PER = 0, STATKEY_INT = -9, STATKEY_CON = 10, STATKEY_END = 10, STATKEY_SPD = -9, STATKEY_LCK = -3)
+	specstats_m = list(
+		STATKEY_STR = 5,
+		STATKEY_PER = 0,
+		STATKEY_INT = -9,
+		STATKEY_CON = 10,
+		STATKEY_END = 10,
+		STATKEY_SPD = -9,
+		STATKEY_LCK = -3
+	)
+	specstats_f = list(
+		STATKEY_STR = 5,
+		STATKEY_PER = 0,
+		STATKEY_INT = -9,
+		STATKEY_CON = 10,
+		STATKEY_END = 10,
+		STATKEY_SPD = -9,
+		STATKEY_LCK = -3
+	)
 
 	allowed_pronouns = PRONOUNS_LIST_IT_ONLY
 
@@ -75,6 +106,7 @@
 		/datum/action/manage_voice_actions
 	)
 
+	//lol
 	var/static/list/given_voices = list(
 		/mob/living/carbon/human/proc/voice_abyssorpraise,
 		/mob/living/carbon/human/proc/voice_againsttime,
