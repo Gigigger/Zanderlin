@@ -242,3 +242,4 @@ code/_compile_options.dm
 config/dbconfig.txt
 config/config.txt
 *.txt
+config/dbconfig.txt
