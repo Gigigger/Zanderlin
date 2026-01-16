@@ -130,6 +130,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_FAKEDEATH			"fakedeath" //Makes the owner appear as dead to most forms of medical examination
 /// "Magic" trait that blocks the mob from moving or interacting with anything. Used for transient stuff like mob transformations or incorporality in special cases.
 /// Will block movement, `Life()` (!!!), and other stuff based on the mob.
+#define TRAIT_NO_EXPERIENCE		"unlearning"
 #define TRAIT_HARDCORE_PROFANE	"hardcore_profane"
 #define TRAIT_NO_TRANSFORM "block_transformations"
 #define TRAIT_TORTURED			"tortured"
