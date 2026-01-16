@@ -16,7 +16,7 @@ $include plexora.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-SERVERNAME [RU] Zanderlin: Age of Blight (get whitelisted: https://discord.gg/QDkDeB3UmY)
+SERVERNAME [RU] Zanderlin: Age of Blight (get whitelisted: https://discord.gg/AEVsMdc9am)
 
 ## Server subtitle: This appears right after the server name in the BYOND hub.
 SERVERSUBTITLE Dark Medieval Fantasy Roleplay based on Vanderlin code
