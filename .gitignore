@@ -240,4 +240,3 @@ config/admins.txt
 code/_compile_options.dm
 *.m.dme
 config/dbconfig.txt
-/config
