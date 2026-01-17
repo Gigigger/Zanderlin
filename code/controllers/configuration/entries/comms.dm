@@ -14,7 +14,7 @@
 	if(.)
 		var/list/newv = list()
 		for(var/I in config_entry_value)
-			newv[replacetext(I, "+", " ")] = config_entry_value[I]
+			newv[replacetext_char(I, "+", " ")] = config_entry_value[I]
 		config_entry_value = newv
 
 /datum/config_entry/keyed_list/cross_server/ValidateListEntry(key_name, key_value)

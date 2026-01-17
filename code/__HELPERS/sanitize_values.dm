@@ -75,4 +75,4 @@
 
 /// Makes sure the input color is text with a # at the start followed by 6 hexadecimal characters. Examples: "#ff1234", "#A38321", COLOR_GREEN_GRAY
 /proc/sanitize_ooccolor(color)
-	return findtext(color, GLOB.is_color) ? color : GLOB.normal_ooc_colour
+	return findtext_char(color, GLOB.is_color) ? color : GLOB.normal_ooc_colour

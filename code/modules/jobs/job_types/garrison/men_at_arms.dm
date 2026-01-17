@@ -25,11 +25,11 @@
 
 	job_bitflag = BITFLAG_GARRISON
 
-	exp_type = list(EXP_TYPE_GARRISON)
+	//exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_GARRISON = 600
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_GARRISON = 600
+	//)
 
 /datum/job/men_at_arms/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -46,7 +46,7 @@
 
 /datum/outfit/watchman/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
-	if(H.cloak && !findtext(H.cloak.name, "([H.real_name])"))
+	if(H.cloak && !findtext_char(H.cloak.name, "([H.real_name])"))
 		H.cloak.name = "[H.cloak.name] ([H.real_name])"
 
 /datum/job/advclass/menatarms

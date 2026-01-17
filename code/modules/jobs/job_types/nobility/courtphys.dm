@@ -15,9 +15,9 @@
 	cmode_music = 'sound/music/cmode/nobility/combat_physician.ogg'
 	spells = list(/datum/action/cooldown/spell/diagnose)
 	job_bitflag = BITFLAG_ROYALTY
-	exp_type = list(EXP_TYPE_MEDICAL)
+	//exp_type = list(EXP_TYPE_MEDICAL)
 	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_MEDICAL)
-	exp_requirements = list(EXP_TYPE_MEDICAL = 900)
+	//exp_requirements = list(EXP_TYPE_MEDICAL = 900)
 
 	jobstats = list(
 		STATKEY_STR = -1,

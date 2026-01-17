@@ -96,24 +96,32 @@
 			zone_ace_mod = 1
 	return zone_ace_mod
 
-/proc/zone_simpmob_target(zone)
-	zone = pickweight(list(
-		BODY_ZONE_HEAD = 3,
-		BODY_ZONE_CHEST = 5,
-		BODY_ZONE_L_ARM = 2,
-		BODY_ZONE_R_ARM = 2,
-		BODY_ZONE_L_LEG = 4,
-		BODY_ZONE_R_LEG = 4,
-		BODY_ZONE_PRECISE_MOUTH = 1,
-		BODY_ZONE_PRECISE_NECK = 2,
-		BODY_ZONE_PRECISE_STOMACH = 3,
+/proc/zone_simpmob_target(mob/living/M)
+	var/list/weights = list(
+		BODY_ZONE_L_ARM = 3,
+		BODY_ZONE_R_ARM = 3,
+		BODY_ZONE_L_LEG = 3,
+		BODY_ZONE_R_LEG = 3,
 		BODY_ZONE_PRECISE_GROIN = 3,
 		BODY_ZONE_PRECISE_L_HAND = 1,
 		BODY_ZONE_PRECISE_R_HAND = 1,
-		BODY_ZONE_PRECISE_L_FOOT = 3,
-		BODY_ZONE_PRECISE_R_FOOT = 3,
-		))
-	return zone
+		BODY_ZONE_PRECISE_L_FOOT = 2,
+		BODY_ZONE_PRECISE_R_FOOT = 2)
+	if(M.body_position == STANDING_UP) // below stuff only if you're standing
+		weights |= list(
+			BODY_ZONE_PRECISE_STOMACH = 3,
+			BODY_ZONE_CHEST = 6)
+		if(!HAS_TRAIT(M, TRAIT_TINY)) // below stuff only if you're not tiny
+			weights |= list(
+			BODY_ZONE_HEAD = 4,
+			BODY_ZONE_PRECISE_MOUTH = 1,
+			BODY_ZONE_PRECISE_NECK = 3,
+			BODY_ZONE_PRECISE_R_EYE = 0.5,
+			BODY_ZONE_PRECISE_L_EYE = 0.5,
+			BODY_ZONE_PRECISE_SKULL = 1,
+			BODY_ZONE_PRECISE_NOSE = 1,
+			BODY_ZONE_PRECISE_EARS = 1)
+	return pickweight(weights)
 
 /proc/relative_angular_facing(mob/living/user, mob/living/target)
 	var/target_facing = dir2angle(target.dir)
@@ -225,8 +233,8 @@
 	n = length(n)
 
 	for(var/p = 1 to min(n,MAX_BROADCAST_LEN))
-		if ((copytext(te, p, p + 1) == " " || prob(pr)))
-			t = text("[][]", t, copytext(te, p, p + 1))
+		if ((copytext_char(te, p, p + 1) == " " || prob(pr)))
+			t = text("[][]", t, copytext_char(te, p, p + 1))
 		else
 			t = text("[]*", t)
 	if(n > MAX_BROADCAST_LEN)
@@ -242,7 +250,7 @@
 	var/newphrase=""
 	var/newletter=""
 	while(counter>=1)
-		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
+		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
 			if(lowertext(newletter)=="o")
 				newletter="u"
@@ -279,7 +287,7 @@
 	var/newphrase=""
 	var/newletter=""
 	while(counter>=1)
-		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
+		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,2)==2)
 			if(lowertext(newletter)=="o")
 				newletter="u"
@@ -323,7 +331,7 @@
 	var/p = null
 	p = 1//1 is the start of any word
 	while(p <= n)//while P, which starts at 1 is less or equal to N which is the length.
-		var/n_letter = copytext(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
+		var/n_letter = copytext_char(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
 		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z")))
 			if (prob(10))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]-[n_letter]")//replaces the current letter with this instead.
@@ -337,19 +345,19 @@
 						n_letter = text("[n_letter]-[n_letter]")
 		t = text("[t][n_letter]")//since the above is ran through for each letter, the text just adds up back to the original word.
 		p++//for each letter p is increased to find where the next letter will be.
-	return copytext(sanitize(t),1,MAX_MESSAGE_LEN)
+	return copytext_char(sanitize(t),1,MAX_MESSAGE_LEN)
 
 ///Convert a message to derpy speak
 /proc/derpspeech(message, stuttering)
-	message = replacetext(message, " am ", " ")
-	message = replacetext(message, " is ", " ")
-	message = replacetext(message, " are ", " ")
-	message = replacetext(message, "you", "u")
-	message = replacetext(message, "help", "halp")
-	message = replacetext(message, "grief", "grife")
-	message = replacetext(message, "space", "spess")
-	message = replacetext(message, "carp", "crap")
-	message = replacetext(message, "reason", "raisin")
+	message = replacetext_char(message, " am ", " ")
+	message = replacetext_char(message, " is ", " ")
+	message = replacetext_char(message, " are ", " ")
+	message = replacetext_char(message, "you", "u")
+	message = replacetext_char(message, "help", "halp")
+	message = replacetext_char(message, "grief", "grife")
+	message = replacetext_char(message, "space", "spess")
+	message = replacetext_char(message, "carp", "crap")
+	message = replacetext_char(message, "reason", "raisin")
 	if(prob(50))
 		message = uppertext(message)
 		message += "[stutter(pick("!", "!!", "!!!"))]"
@@ -364,7 +372,7 @@
  */
 /proc/Gibberish(text, replace_characters = FALSE, chance = 50)
 	. = ""
-	for(var/i in 1 to length(text))
+	for(var/i in 1 to length_char(text))
 		var/letter = text[i]
 		if(prob(chance))
 			if(replace_characters)

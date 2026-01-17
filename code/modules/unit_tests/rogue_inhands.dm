@@ -12,7 +12,7 @@
 	if(!directory_path)
 		directory_path = "icons/mob/inhands/"
 	for(var/file_path in flist(directory_path))
-		if(findtext(file_path, ".dmi"))
+		if(findtext_char(file_path, ".dmi"))
 			for(var/sprite_icon in icon_states("[directory_path][file_path]", 1)) //2nd arg = 1 enables 64x64+ icon support, otherwise you'll end up with "sword0_1" instead of "sword"
 				possible_icon_states[sprite_icon] += list("[directory_path][file_path]")
 		else

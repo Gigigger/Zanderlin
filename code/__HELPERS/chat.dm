@@ -73,10 +73,10 @@ it will be sent to all connected chats.
 /proc/send2adminchat(category, message, embed_links = FALSE)
 	set waitfor = FALSE
 
-	category = replacetext(replacetext(category, "\proper", ""), "\improper", "")
-	message = replacetext(replacetext(message, "\proper", ""), "\improper", "")
+	category = replacetext_char(replacetext_char(category, "\proper", ""), "\improper", "")
+	message = replacetext_char(replacetext_char(message, "\proper", ""), "\improper", "")
 	if(!embed_links)
-		message = GLOB.has_discord_embeddable_links.Replace(replacetext(message, "`", ""), " ```$1``` ")
+		message = GLOB.has_discord_embeddable_links.Replace(replacetext_char(message, "`", ""), " ```$1``` ")
 	world.TgsTargetedChatBroadcast(new /datum/tgs_message_content("[category] | [message]"), TRUE)
 
 /// Handles text formatting for item use hints in examine text

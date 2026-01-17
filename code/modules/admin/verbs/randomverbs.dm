@@ -336,7 +336,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(G_found.mind && !G_found.mind.active)	//mind isn't currently in use by someone/something
 
 		//check if they were a monkey
-		if(findtext(G_found.real_name,"monkey"))
+		if(findtext_char(G_found.real_name,"monkey"))
 			if(alert("This character appears to have been a monkey. Would you like to respawn them as such?",,"Yes","No")=="Yes")
 				var/mob/living/carbon/monkey/new_monkey = new
 				SSjob.SendToLateJoin(new_monkey)

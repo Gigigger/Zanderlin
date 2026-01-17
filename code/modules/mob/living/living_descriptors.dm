@@ -96,7 +96,7 @@
 	for(var/i in 1 to descs.len)
 		var/desc_type = descs[i]
 		var/datum/mob_descriptor/descriptor = MOB_DESCRIPTOR(desc_type)
-		string = replacetext(string, "%DESC[i]%", descriptor.get_coalesce_text(described, used_verbage))
+		string = replacetext_char(string, "%DESC[i]%", descriptor.get_coalesce_text(described, used_verbage))
 		var/used_verb = descriptor.get_verbage(described)
 		if(used_verb)
 			used_verbage |= used_verb
@@ -137,10 +137,10 @@
 				they_replace = "it"
 				man_replace = "thing"
 				him_replace = "it"
-	string = replacetext(string, "%THEY%", they_replace)
-	string = replacetext(string, "%HAVE%", "has")
-	string = replacetext(string, "%MAN%", man_replace)
-	string = replacetext(string, "%HIM%", him_replace)
+	string = replacetext_char(string, "%THEY%", they_replace)
+	string = replacetext_char(string, "%HAVE%", "has")
+	string = replacetext_char(string, "%MAN%", man_replace)
+	string = replacetext_char(string, "%HIM%", him_replace)
 	string = capitalize(string)
 	string += "."
 	return string

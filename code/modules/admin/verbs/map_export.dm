@@ -45,10 +45,10 @@
 
 /proc/hashtag_newlines_and_tabs(text, list/repl_chars = list("\n"="#","\t"="#"))
 	for(var/char in repl_chars)
-		var/index = findtext(text, char)
+		var/index = findtext_char(text, char)
 		while(index)
-			text = copytext(text, 1, index) + repl_chars[char] + copytext(text, index + length(char))
-			index = findtext(text, char, index + length(char))
+			text = copytext_char(text, 1, index) + repl_chars[char] + copytext_char(text, index + length(char))
+			index = findtext_char(text, char, index + length(char))
 	return text
 
 /proc/generate_uuid()

@@ -151,7 +151,7 @@
 			if(plant_type)
 				var/datum/plant_def/plant = new plant_type()
 				cell_class += " occupied"
-				cell_content = copytext(plant.name, 1, 4) // First 3 chars
+				cell_content = copytext_char(plant.name, 1, 4) // First 3 chars
 				qdel(plant)
 
 				// Generate detailed tooltip with nutrient analysis

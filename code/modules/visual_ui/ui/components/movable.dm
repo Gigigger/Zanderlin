@@ -14,7 +14,7 @@
 		var/icon/I = new(icon, icon_state)
 		I.Blend('icons/visual_ui/mind_ui.dmi', ICON_OVERLAY, I.Width()/2-16, I.Height()/2-16)
 		I.Scale(2* I.Width(),2* I.Height()) // doubling the size to account for players generally having more or less a 960x960 resolution
-		var/rgba = "#FFFFFF" + copytext(rgb(0,0,0,191), 8)
+		var/rgba = "#FFFFFF" + copytext_char(rgb(0,0,0,191), 8)
 		I.Blend(rgba, ICON_MULTIPLY)
 		movement = I
 

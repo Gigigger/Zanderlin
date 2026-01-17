@@ -51,8 +51,14 @@
 	if(mapload)//load objects into chest.
 		for(var/obj/item/I in loc)
 			I.forceMove(src)
-	icon_state = "mimic"
+	hide()
 	AddComponent(/datum/component/anti_magic, TRUE, TRUE, TRUE, null, null, FALSE)
+
+/mob/living/simple_animal/hostile/retaliate/mimic/hide()
+	icon_state = "mimic"
+
+/mob/living/simple_animal/hostile/retaliate/mimic/ambush()
+	icon_state = "mimicopen"
 
 /mob/living/simple_animal/hostile/retaliate/mimic/death()
 	icon_state = "[initial(icon_state)]dead"

@@ -508,12 +508,8 @@ GLOBAL_LIST_EMPTY(respawncounts)
 						message_admins("<span class='danger'><B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)] (no longer logged in). </span>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(C)] (no longer logged in).")
 
-	show_popup_menus = FALSE
 
-	if(holder)
-		show_popup_menus = TRUE
-
-	set_right_click_menu_mode(TRUE)
+		set_right_click_menu_mode(TRUE)
 
 	var/reconnecting = FALSE
 	if(GLOB.player_details[ckey])
@@ -689,7 +685,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			winset(src, "[child]", "[entries[child]]")
 			if (!ispath(child, /datum/verbs/menu))
 				var/procpath/verbpath = child
-				if (copytext(verbpath.name,1,2) != "@")
+				if (copytext_char(verbpath.name,1,2) != "@")
 					new child(src)
 
 	for (var/thing in prefs.menuoptions)

@@ -1,4 +1,4 @@
 <!-- Most valid html will work in here, excluding images. -->
-<center>Vanderlin/Monkestation Discord Server: <a href="https://discord.monkestation.com">https://discord.monkestation.com</a></center>
+<center>Zanderlin Discord Server: <a href="https://discord.gg/AEVsMdc9am">https://discord.gg/AEVsMdc9am</a></center>
 <center>* TECHNICAL DISPLAY PLAYTEST *</center>
 <!-- We're no longer so unstable, also it's shit advertising. -->

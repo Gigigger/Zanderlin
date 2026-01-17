@@ -9,9 +9,9 @@
 			. = VV_NUM
 
 	else if(istext(var_value))
-		if(findtext(var_value, "\n"))
+		if(findtext_char(var_value, "\n"))
 			. = VV_MESSAGE
-		else if(findtext(var_value, GLOB.is_color))
+		else if(findtext_char(var_value, GLOB.is_color))
 			. = VV_COLOR
 		else
 			. = VV_TEXT

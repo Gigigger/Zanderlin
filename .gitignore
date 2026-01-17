@@ -239,3 +239,9 @@ config/admins.txt
 /stonekeep.json
 code/_compile_options.dm
 *.m.dme
+config/dbconfig.txt
+config/config.txt
+*.txt
+config/dbconfig.txt
+config/dbconfig.txt
+config/config.txt

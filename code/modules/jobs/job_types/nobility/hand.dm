@@ -20,12 +20,12 @@
 	give_bank_account = 120
 	noble_income = 22
 	job_bitflag = BITFLAG_ROYALTY
-	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_NOBLE)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600,
-		EXP_TYPE_NOBLE = 300,
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 600,
+	//	EXP_TYPE_NOBLE = 300,
+	//)
 
 	mind_traits = list(
 		TRAIT_KNOW_KEEP_DOORS

@@ -68,6 +68,7 @@
 	ai_controller = /datum/ai_controller/troll
 
 
+	var/hiding = FALSE
 	var/range = 9
 
 /mob/living/simple_animal/hostile/retaliate/troll/slaved
@@ -113,15 +114,19 @@
 /mob/living/simple_animal/hostile/retaliate/troll/simple_limb_hit(zone)
 	return ..()
 
-/mob/living/simple_animal/hostile/retaliate/troll/proc/hide()
-	flick("troll_hiding", src)
-	sleep(1 SECONDS)
-	icon_state = "troll_hide"
+/mob/living/simple_animal/hostile/retaliate/troll/hide()
+	if(!hiding)
+		flick("troll_hiding", src)
+		sleep(1 SECONDS)
+		icon_state = "troll_hide"
+		hiding = TRUE
 
-/mob/living/simple_animal/hostile/retaliate/troll/proc/ambush()
-	flick("troll_ambush", src)
-	sleep(1 SECONDS)
-	icon_state = initial(icon_state)
+/mob/living/simple_animal/hostile/retaliate/troll/ambush()
+	if(hiding)
+		flick("troll_ambush", src)
+		sleep(1 SECONDS)
+		icon_state = initial(icon_state)
+		hiding = FALSE
 
 /obj/effect/decal/remains/troll
 	icon_state = "troll_dead"

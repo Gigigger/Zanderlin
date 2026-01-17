@@ -29,15 +29,15 @@ but should see their own spawn message even if the player already dropped as USC
 	var/style = "font-family: 'Fixedsys'; font-size: 6px; text-align: [text_alignment]; color: [text_color]; -dm-text-outline: 1 [outline_color];"
 	var/list/linebreaks = list() //Due to singular /'s making text disappear for a moment and for counting lines.
 
-	var/linebreak = findtext(message, "\n")
+	var/linebreak = findtext_char(message, "\n")
 	while(linebreak)
 		linebreak++ //Otherwise it picks up the character immediately before the linebreak.
 		linebreaks += linebreak
-		linebreak = findtext(message, "\n", linebreak)
+		linebreak = findtext_char(message, "\n", linebreak)
 
 	var/list/html_tags = list()
 	var/static/html_locate_regex = regex("<.*>")
-	var/tag_position = findtext(message, html_locate_regex)
+	var/tag_position = findtext_char(message, html_locate_regex)
 	var/reading_tag = TRUE
 	while(tag_position)
 		if(reading_tag)
@@ -48,7 +48,7 @@ but should see their own spawn message even if the player already dropped as USC
 				html_tags += tag_position
 			tag_position++
 		else
-			tag_position = findtext(message, html_locate_regex, tag_position)
+			tag_position = findtext_char(message, html_locate_regex, tag_position)
 			reading_tag = TRUE
 
 	var/atom/movable/screen/text/T = new()
@@ -84,7 +84,7 @@ but should see their own spawn message even if the player already dropped as USC
 			continue
 		if(i in html_tags)
 			continue
-		T.maptext = MAPTEXT("<span style=\"[style]\">[copytext(message, 1, i)]</span>")
+		T.maptext = MAPTEXT("<span style=\"[style]\">[copytext_char(message, 1, i)]</span>")
 		if(speed)
 			sleep(speed)
 

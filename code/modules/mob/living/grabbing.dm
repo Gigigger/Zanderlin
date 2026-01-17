@@ -92,7 +92,7 @@
 	/// The atom that is currently being grabbed by [var/grabbee].
 	var/atom/grabbed
 	/// The carbon that is grabbing [var/grabbed]
-	var/mob/living/carbon/grabbee
+	var/mob/living/grabbee
 	var/obj/item/bodypart/limb_grabbed		//ref to actual bodypart being grabbed if we're grabbing a carbo
 	var/sublimb_grabbed		//ref to what precise (sublimb) we are grabbing (if any) (text)
 	var/bleed_suppressing = 0.75 //multiplier for how much we suppress bleeding, can accumulate so two grabs means 25% bleeding
@@ -119,8 +119,10 @@
 	// We should be conscious to do this, first of all...
 	if(grabbee.stat < UNCONSCIOUS)
 		// Mouth grab while we're adjacent is good
-		if(grabbee.mouth == src && grabbee.Adjacent(grabbed))
-			return TRUE
+		if(iscarbon(grabbee))
+			var/mob/living/carbon/C = grabbee
+			if(C.mouth == src && C.Adjacent(grabbed))
+				return TRUE
 		// Other grab requires adjacency and pull status, unless we're grabbing ourselves
 		if(grabbee.Adjacent(grabbed) && (grabbee.pulling == grabbed || grabbee == grabbed))
 			return TRUE
@@ -227,10 +229,8 @@
 	var/skill_diff = 0
 	var/combat_modifier = positioning_mod // Start with positioning
 
-	if(user.mind)
-		skill_diff += (user.get_skill_level(/datum/skill/combat/wrestling))
-	if(M.mind)
-		skill_diff -= (M.get_skill_level(/datum/skill/combat/wrestling))
+	skill_diff += user.skills ? user.get_skill_level(/datum/skill/combat/wrestling) : 0
+	skill_diff -= M.skills ? M.get_skill_level(/datum/skill/combat/wrestling) : 0
 
 	if(M.surrendering)
 		combat_modifier *= 2

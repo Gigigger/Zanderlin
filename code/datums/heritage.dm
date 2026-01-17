@@ -739,15 +739,15 @@
 
 /datum/heritage/proc/SurnameFormatting(mob/living/carbon/human/person)
 	var/surname2use
-	var/index = findtext(person?.real_name, " ")
+	var/index = findtext_char(person?.real_name, " ")
 	person?.original_name = person?.real_name
 	if(!index)
 		surname2use = person?.dna?.species?.random_surname()
 	else
-		if(findtext(person?.real_name, " of ") || findtext(person?.real_name, " the "))
+		if(findtext_char(person?.real_name, " of ") || findtext_char(person?.real_name, " the "))
 			surname2use = person?.dna?.species?.random_surname()
 		else
-			surname2use = copytext(person?.real_name, index)
+			surname2use = copytext_char(person?.real_name, index)
 	return surname2use
 
 /datum/heritage/proc/ApplyUI(mob/living/carbon/human/iconer, toggle_true = FALSE)
