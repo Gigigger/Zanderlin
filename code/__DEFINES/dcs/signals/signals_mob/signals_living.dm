@@ -10,6 +10,11 @@
 ///from base of mob/living/set_buckled(): (new_buckled)
 #define COMSIG_LIVING_SET_BUCKLED "living_set_buckled"
 
+///mob holder signals to mob
+#define COMSIG_MOB_HOLDER_DEPOSIT "holder_deposit"
+#define COMSIG_MOB_HOLDER_RELEASE "mob_holder_release"
+#define COMSIG_MOB_HOLDER_EMBEDDED "mob_holder_embedded"
+
 ///Signal sent when a keybind is deactivated
 #define DEACTIVATE_KEYBIND(A) "[A]_DEACTIVATED"
 #define COMSIG_KB_LIVING_VIEW_PET_COMMANDS "keybinding_living_view_pet_commands"

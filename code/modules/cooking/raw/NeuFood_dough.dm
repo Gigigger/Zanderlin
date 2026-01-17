@@ -29,6 +29,17 @@
 	rotprocess = SHELFLIFE_LONG
 	slice_sound = TRUE
 
+/// If you would like to use this for actual cooking it needs a dough base, but since it's only being used for bait I'm skipping that.
+/obj/item/reagent_containers/food/snacks/blood_dough
+	name = "ball of blood-dough"
+	desc = "None but the inhumen would eat this."
+	icon_state = "dough_base"
+	w_class = WEIGHT_CLASS_NORMAL
+	rotprocess = SHELFLIFE_LONG
+	color = COLOR_MAROON
+	bitesize = 2
+	dropshrink = 0.8
+
 /*	.................   Smalldough   ................... */
 /obj/item/reagent_containers/food/snacks/dough_slice
 	name = "smalldough"

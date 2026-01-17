@@ -149,7 +149,6 @@
 
 //ACID
 
-
 /datum/reagent/toxin/acid
 	name = "Sulphuric acid"
 	description = "A strong mineral acid with the molecular formula H2SO4."
@@ -185,6 +184,15 @@
 		return
 	reac_volume = round(reac_volume,0.1)
 	T.acid_act(acidpwr, reac_volume)
+
+/datum/reagent/toxin/acid/trogfish
+	name = "Trog Bile"
+	description = "A strong acid produced within the gallbladder of a trogfish"
+	color = "#89bb2b"
+	acidpwr = 10
+	taste_description = "searing vomit"
+	taste_mult = 4
+	evaporation_rate = 10
 
 /datum/reagent/toxin/manabloom_juice
 	name = "Manabloom Juice"
