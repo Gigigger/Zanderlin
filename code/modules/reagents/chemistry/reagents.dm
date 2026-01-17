@@ -189,6 +189,10 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		data[data_item] = incoming_data[data_item]
 	if("custom_name" in data)
 		name = data["custom_name"]
+	if("custom_scent" in data)
+		scent_description = data["custom_scent"]
+	if("custom_tastes" in data)
+		taste_description = data["custom_tastes"]
 	return
 
 // Called when two reagents of the same are mixing.
@@ -214,6 +218,10 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		data[data_item] = incoming_data[data_item]
 	if("custom_name" in data)
 		name = data["custom_name"]
+	if("custom_scent" in data)
+		scent_description = data["custom_scent"]
+	if("custom_tastes" in data)
+		taste_description = data["custom_tastes"]
 	return
 
 /datum/reagent/proc/get_quality_metabolization_modifier()
