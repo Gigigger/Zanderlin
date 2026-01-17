@@ -147,6 +147,7 @@
 			else
 				extra_string += " and [ingredient.name]"
 		found_product.name += extra_string
+		found_product.add_data("custom_name", found_product.name)
 
 	// Optionally modify reagent properties based on quality
 	apply_quality_effects_to_reagent(found_product)
