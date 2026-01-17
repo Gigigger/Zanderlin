@@ -121,7 +121,7 @@ GLOBAL_LIST_INIT(automaton_voice_lines, list(
 	if(!istype(H.dna?.species, /datum/species/automaton))
 		return
 
-	var/choice = input(H, "Select a voice line to add/remove as an action:", "Voice Action Manager") as null|anything in GLOB.automaton_voice_lines
+	var/choice = browser_input_list(H, "Select a voice line to add/remove as an action:", "Voice Action Manager", GLOB.automaton_voice_lines)
 	if(!choice)
 		return
 
