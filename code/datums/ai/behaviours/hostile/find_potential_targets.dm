@@ -176,7 +176,8 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 		controller.CancelActions()
 		if(isanimal(controller.pawn))
 			var/mob/living/simple_animal/mob = controller.pawn
-			mob.ambush()
+			if(!mob.ckey)
+				mob.ambush()
 
 /datum/ai_behavior/find_potential_targets/ambush/hermitcrab
 	vision_range = 1
@@ -185,4 +186,4 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 	vision_range = 1
 
 /datum/ai_behavior/find_potential_targets/ambush/nautilus
-	vision_range = 4
+	vision_range = 3

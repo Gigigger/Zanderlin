@@ -47,7 +47,6 @@
 	stat_attack = UNCONSCIOUS
 	body_eater = TRUE
 	gender = NEUTER
-	footstep_type = FOOTSTEP_MOB_SLIME
 
 	ai_controller = /datum/ai_controller/trogfish
 

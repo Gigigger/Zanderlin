@@ -792,6 +792,7 @@
 #include "code\datums\ai\subtrees\putrid.dm"
 #include "code\datums\ai\subtrees\raccoon_fights.dm"
 #include "code\datums\ai\subtrees\random_speech.dm"
+#include "code\datums\ai\subtrees\resist.dm"
 #include "code\datums\ai\subtrees\retaliate_subtree.dm"
 #include "code\datums\ai\subtrees\self_recovery.dm"
 #include "code\datums\ai\subtrees\simple_find_priority.dm"

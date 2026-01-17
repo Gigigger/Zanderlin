@@ -55,7 +55,6 @@
 	retreat_health = 0.3
 	aggressive = TRUE
 	stat_attack = UNCONSCIOUS
-	remains_type = /obj/effect/decal/remains/hermitcrab
 
 	ai_controller = /datum/ai_controller/hermitcrab
 	food_type = list(
@@ -75,14 +74,6 @@
 		/datum/pet_command/aggressive,
 		/datum/pet_command/calm,
 	)
-
-	var/hiding = FALSE
-
-/obj/effect/decal/remains/hermitcrab
-	name = "remains"
-	gender = PLURAL
-	icon_state = "hermitcrab_dead"
-	icon = 'icons/roguetown/mob/monster/hermitcrab.dmi'
 
 
 /mob/living/simple_animal/hostile/retaliate/hermitcrab/Initialize()

@@ -105,11 +105,13 @@
 /mob/living/simple_animal/hostile/retaliate/nautilus/hide()
 	force_threshold = 80
 	hiding = TRUE
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, "hiding!")
 	update_appearance(UPDATE_ICON_STATE)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/ambush()
 	force_threshold = 15
 	hiding = FALSE
+	REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, "hiding!")
 	update_appearance(UPDATE_ICON_STATE)
 
 /mob/living/simple_animal/hostile/retaliate/nautilus/Move()
@@ -244,13 +246,11 @@
 	if(nauti.hiding)
 		nauti.visible_message(span_boldwarning("[nauti] bursts from within their shell!"))
 		nauti.ambush()
-		REMOVE_TRAIT(nauti, TRAIT_IMMOBILIZED, "[type]")
 	else
 		for(var/obj/item/grabbing/G in nauti.contents)
 			qdel(G)
 		nauti.visible_message(span_boldwarning("[nauti] starts to retreat into their shell!"))
 		if(do_after(nauti, 3 SECONDS))
 			nauti.hide()
-			ADD_TRAIT(nauti, TRAIT_IMMOBILIZED, "[type]")
 	StartCooldown()
 	return TRUE
