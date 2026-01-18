@@ -184,6 +184,5 @@
 		return FALSE
 	if(giving)
 		return hunger > 0 && target.blood_volume < BLOOD_VOLUME_NORMAL
-	else
-		return hunger < 100 && target.blood_volume > 0
+	return hunger < 100 && target.blood_volume > 0
 
