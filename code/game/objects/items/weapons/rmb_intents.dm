@@ -144,7 +144,7 @@
 		var/noBlood = L.blood_volume == 0
 		if(iscarbon(target))
 			var/mob/living/carbon/C = target
-			if(C.dna?.species && (NOBLOOD in C.dna.species.species_traits))
+			if(NOBLOOD in C.dna?.species?.species_traits)
 				noBlood = TRUE
 		if(noBlood)
 			to_chat(user, span_warning("They have no blood to drink."))
