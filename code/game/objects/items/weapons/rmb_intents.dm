@@ -177,7 +177,7 @@
 /datum/rmb_intent/simple/blood_leech/proc/can_feed(mob/living/user, mob/living/target, giving)
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
-		if(C.dna?.species && (NOBLOOD in C.dna.species.species_traits)) // if for some god damn reason you weren't earlier but are now... maybe you're a skeleton?
+		if(NOBLOOD in C.dna?.species?.species_traits) // if for some god damn reason you weren't earlier but are now... maybe you're a skeleton?
 			return FALSE
 	var/hunger = SEND_SIGNAL(user, COMSIG_MOB_RETURN_HUNGER)
 	if(hunger == null)
