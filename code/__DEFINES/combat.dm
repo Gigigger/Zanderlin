@@ -209,6 +209,7 @@
 #define BCLASS_BITE			"bite"
 #define BCLASS_BURN			"charring"
 #define BCLASS_LASHING		"lashing"
+#define BCLASS_CBT			"cbt" // for guaranteed cbt pick, only meant for passing directly to try_crit
 
 //Material class (what material is striking)
 #define MCLASS_GENERIC		1

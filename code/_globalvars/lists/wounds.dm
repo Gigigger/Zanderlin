@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(dislocation_bclasses, list(
 ))
 
 GLOBAL_LIST_INIT(cbt_classes, list(
-	"cbt", // for guaranteed cbt pick, do not use on other wound classes, only meant for passing directly to try_crit
+	BCLASS_CBT, // for guaranteed cbt pick, do not use on other wound classes, only meant for passing directly to try_crit
 	BCLASS_BLUNT,
 	BCLASS_SMASH,
 	BCLASS_CHOP,
