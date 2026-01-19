@@ -2,7 +2,7 @@
 	name = "Duke of the Deep"
 	desc = "An enormous, bloated deep one, pulsating with ancient power from the abyss."
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	faction = list(FACTION_SEA)
+	faction = list("deepone")
 	icon = 'icons/roguetown/mob/monster/pufferboss.dmi'
 	icon_state = "pufferman"
 	vision_range = 16

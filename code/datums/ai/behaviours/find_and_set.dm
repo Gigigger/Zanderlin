@@ -120,12 +120,17 @@ GLOBAL_LIST_INIT(find_and_set_interested_atoms, typecacheof(list(/obj/item, /mob
 		return null
 	return pick(found)
 
-/datum/ai_behavior/find_and_set/dead_bodies/ambush/finish_action(datum/ai_controller/controller, succeeded, ...)
+/datum/ai_behavior/find_and_set/dead_bodies/bog_troll/finish_action(datum/ai_controller/controller, succeeded, ...)
 	. = ..()
 	if(succeeded)
-		if(isanimal(controller.pawn))
-			var/mob/living/simple_animal/mob = controller.pawn
+		if(istype(controller.pawn, /mob/living/simple_animal/hostile/retaliate/troll))
+			var/mob/living/simple_animal/hostile/retaliate/troll/mob = controller.pawn
 			mob.ambush()
+
+/datum/ai_behavior/find_and_set/dead_bodies/mimic/finish_action(datum/ai_controller/controller, succeeded, ...)
+	. = ..()
+	if(succeeded)
+		controller.pawn.icon_state = "mimicopen"
 
 /datum/ai_behavior/find_and_set/nearest_wall
 	vision_range = 7

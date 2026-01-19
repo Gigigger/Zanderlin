@@ -56,10 +56,10 @@
 /datum/component/generic_mob_hunger/proc/on_fill_hunger()
 	current_hunger = max_hunger
 
-/datum/component/generic_mob_hunger/proc/on_drain_hunger(percent)
-	if(!percent)
+/datum/component/generic_mob_hunger/proc/on_drain_hunger(precent)
+	if(!precent)
 		return
-	current_hunger = max(current_hunger - (max_hunger * percent), 0)
+	current_hunger = max(current_hunger - (max_hunger * precent), 0)
 
 /datum/component/generic_mob_hunger/proc/on_feed(datum/source, atom/target, feed_amount, atom/came_from)
 	SIGNAL_HANDLER

@@ -3,8 +3,6 @@
 	var/last_move_diagonal = FALSE
 	var/vehicle_move_delay = 2 //tick delay between movements, lower = faster, higher = slower
 
-	var/override_move_to_delay = 0 // if higher than 0, uses this in place of move_to_delay on the base mob
-
 	var/slowed = FALSE
 	var/slowvalue = 1
 

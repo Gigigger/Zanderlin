@@ -74,6 +74,8 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 
 /datum/ai_behavior/find_potential_targets/proc/failed_to_find_anyone(datum/ai_controller/controller, target_key, targeting_strategy_key, hiding_location_key)
 	var/aggro_range = vision_range
+	// takes the larger between our range() input and our implicit hearers() input (world.view)
+	aggro_range = max(aggro_range, ROUND_UP(max(getviewsize(world.view)) / 2))
 	// Alright, here's the interesting bit
 	// We're gonna use this max range to hook into a proximity field so we can just await someone interesting to come along
 	// Rather then trying to check every few seconds
@@ -164,25 +166,28 @@ GLOBAL_LIST_INIT(target_interested_atoms, typecacheof(list(/mob)))
 /datum/ai_behavior/find_potential_targets/spider
 	vision_range = 5
 
+/datum/ai_behavior/find_potential_targets/mimic
+	vision_range = 1
+
+/datum/ai_behavior/find_potential_targets/mimic/finish_action(datum/ai_controller/controller, succeeded, ...)
+	. = ..()
+	if (succeeded)
+		controller.CancelActions()
+		controller.pawn.icon_state = "mimicopen"
+
+
 /datum/ai_behavior/find_potential_targets/mole
 	vision_range = 9
 
 /datum/ai_behavior/find_potential_targets/troll
 	vision_range = 7
 
-/datum/ai_behavior/find_potential_targets/ambush/finish_action(datum/ai_controller/controller, succeeded, ...)
+/datum/ai_behavior/find_potential_targets/bog_troll
+	vision_range = 3
+
+/datum/ai_behavior/find_potential_targets/bog_troll/finish_action(datum/ai_controller/controller, succeeded, ...)
 	. = ..()
-	if (succeeded)
-		controller.CancelActions()
-		if(isanimal(controller.pawn))
-			var/mob/living/simple_animal/mob = controller.pawn
+	if(succeeded)
+		if(istype(controller.pawn, /mob/living/simple_animal/hostile/retaliate/troll))
+			var/mob/living/simple_animal/hostile/retaliate/troll/mob = controller.pawn
 			mob.ambush()
-
-/datum/ai_behavior/find_potential_targets/ambush/hermitcrab
-	vision_range = 1
-
-/datum/ai_behavior/find_potential_targets/ambush/mimic
-	vision_range = 1
-
-/datum/ai_behavior/find_potential_targets/ambush/nautilus
-	vision_range = 4

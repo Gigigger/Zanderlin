@@ -71,7 +71,7 @@
 	//If you cant act and dont have a player stop moving.
 	if(!can_act && !client)
 		return FALSE
-	return ..()
+	..()
 
 /mob/living/simple_animal/hostile/retaliate/attack_hand(mob/living/carbon/human/M)
 	. = ..()

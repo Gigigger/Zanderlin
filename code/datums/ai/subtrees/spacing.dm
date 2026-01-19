@@ -36,21 +36,22 @@
 	var/mob/living/living_pawn = controller.pawn
 
 	if (!isliving(target))
-		return FALSE
+		return
 	if(need_los && !can_see(controller.pawn, target, view_distance)) //Chase into vision if need be. For ranged
-		return FALSE
+		return
 
 	var/range = get_dist(living_pawn, target)
 	var/ready_to_attack = living_pawn.next_move < world.time
 
 	if ((range < minimum_distance) || (!ready_to_attack)) // take a step back -- buy time till next attack
 		controller.queue_behavior(run_away_behavior, target_key, minimum_distance)
-		return TRUE
+		return
 	var/canReach = need_los || living_pawn.Adjacent(target) || living_pawn.CanReach(target)  //Check adjacency first because (probably) cheaper
 	if ((range > maximum_distance) || (ready_to_attack) || !canReach) // next attack ready or target too far for us
-		var/pursueDist = canReach ? minimum_distance : 1 //living_pawn.a_intent.reach if we can't reach then move into melee - possibly on a corner
-		controller.queue_behavior(/datum/ai_behavior/pursue_to_range, target_key, pursueDist)
-		return TRUE
+		if(!canReach) //living_pawn.a_intent.reach if we can't reach then move into melee - possibly on a corner
+			minimum_distance = 1
+		controller.queue_behavior(/datum/ai_behavior/pursue_to_range, target_key, minimum_distance)
+		return
 
 /datum/ai_planning_subtree/spacing/cover_minimum_distance
 	run_away_behavior = /datum/ai_behavior/cover_minimum_distance
