@@ -521,7 +521,6 @@
 			O.icon_state = zone_selected
 			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
 				O.forceMove(src)
-				src.contents += O
 			else
 				put_in_hands(O)
 				O.update_hands(src)
@@ -542,7 +541,6 @@
 
 			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
 				O.forceMove(src)
-				src.contents += O
 			else
 				put_in_hands(O)
 				O.update_hands(src)
@@ -564,7 +562,6 @@
 		O.grabbee = src
 		if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
 			O.forceMove(src)
-			src.contents += O
 		else
 			src.put_in_hands(O)
 			O.update_hands(src)

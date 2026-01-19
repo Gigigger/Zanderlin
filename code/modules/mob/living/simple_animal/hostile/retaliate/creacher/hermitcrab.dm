@@ -136,7 +136,7 @@
 /mob/living/simple_animal/hostile/retaliate/hermitcrab/proc/mob_holder_embedded(me, obj/item/clothing/head/mob_holder/m_holder, mob/living/victim, obj/item/bodypart/bodypart)
 	if(!istype(m_holder))
 		return
-	if((BODY_ZONE_PRECISE_GROIN in bodypart.subtargets) && prob(25 - victim.STALUC) && bodypart.try_crit("cbt", 250, src, zone_selected, crit_message = TRUE)) // should be about a 50% chance for the average individual on top of the previous chance
+	if((BODY_ZONE_PRECISE_GROIN in bodypart.subtargets) && prob(25 - victim.STALUC) && bodypart.try_crit(BCLASS_CBT, 250, src, zone_selected, crit_message = TRUE)) // should be about a 50% chance for the average individual on top of the previous chance
 		if(!HAS_TRAIT(victim, TRAIT_NOPAIN))
 			to_chat(victim, span_userdanger("MY GROIN!"))
 
