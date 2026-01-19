@@ -111,3 +111,17 @@
 	)
 	finished_smell = /datum/pollutant/food/borowiki_stew
 	crafting_time = 40 SECONDS
+
+/datum/container_craft/cooking/crab_bisque
+	name = "Crab Bisque"
+	created_reagent = /datum/reagent/consumable/soup/stew/crab
+	subtype_reagents_allowed = TRUE
+	reagent_requirements = list(
+		/datum/reagent/consumable/soup/stew/fish = 15,
+		/datum/reagent/consumable/milk = 5
+	)
+	wildcard_requirements = list(
+		/obj/item/reagent_containers/food/snacks/meat/mince/crab = 1
+	)
+	finished_smell = /datum/pollutant/food/crab
+	crafting_time = 35 SECONDS

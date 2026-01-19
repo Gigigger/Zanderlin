@@ -620,8 +620,8 @@
 	I.funny_attack_effects(src, user)
 	if(I.force)
 		var/newforce = get_complex_damage(I, user)
-		apply_damage(newforce, I.damtype, def_zone = hitlim)
-		if(I.damtype == BRUTE)
+		var/did_dmg = apply_damage(newforce, I.damtype, def_zone = hitlim, blocked = getarmor(user.zone_selected))
+		if(did_dmg && I.damtype == BRUTE)
 			next_attack_msg.Cut()
 			if(HAS_TRAIT(src, TRAIT_SIMPLE_WOUNDS))
 				var/datum/wound/crit_wound  = simple_woundcritroll(user.used_intent.blade_class, newforce, user, hitlim)
@@ -652,7 +652,7 @@
 
 /mob/living/simple_animal/attacked_by(obj/item/I, mob/living/user)
 	if(I.force < force_threshold || I.damtype == STAMINA)
-		playsound(src, 'sound/blank.ogg', I.get_clamped_volume(), TRUE, -1)
+		playsound(src, pick(deflect_sound), I.get_clamped_volume(), TRUE, -1)
 	else
 		. = ..()
 		I.do_special_attack_effect(user, null, null, src, null)

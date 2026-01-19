@@ -6,6 +6,7 @@
  * * * * * * * * * * * **/
 
 /obj/item/reagent_containers/food/snacks/veg
+	name = "sliced vegetable"
 	faretype = FARE_POOR
 
 /*	..................   Onion slice   ................... */

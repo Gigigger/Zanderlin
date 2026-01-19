@@ -139,7 +139,7 @@
 	requires_pointing = TRUE
 	callout_type = /datum/callout_option/attack
 	speech_commands = list("attack", "sic", "kill")
-	command_feedback = "growl"
+	command_feedback = "growls"
 	pointed_reaction = "and growls"
 	/// Balloon alert to display if providing an invalid target
 	var/refuse_reaction = "shakes head"

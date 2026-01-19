@@ -32,7 +32,7 @@
 	defprob = 50
 	defdrain = 20
 	speak_emote = list("burbles")
-	faction = list("deepone")
+	faction = list(FACTION_SEA)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
 
@@ -124,4 +124,4 @@
 	add_filter("elite_glow", 2, outline_filter(1, "#3366FF"))
 
 /mob/living/simple_animal/hostile/deepone/elite/boss
-	faction = list("deepone")
+	faction = list(FACTION_SEA)
