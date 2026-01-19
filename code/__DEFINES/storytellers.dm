@@ -123,7 +123,7 @@
 #define MUNDANE_MIN_POP 5
 #define MODERATE_MIN_POP 8
 #define MAJOR_MIN_POP 20
-#define CHARACTER_INJECTION_MIN_POP 0
+#define CHARACTER_INJECTION_MIN_POP 20
 #define OBJECTIVES_MIN_POP 20
 
 /// Defines for how much pop do we need to stop applying a pop scalling penalty to event frequency.
