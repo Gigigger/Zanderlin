@@ -1,3 +1,4 @@
+
 /obj/item/fishing/hook
 	attachtype = "hook"
 	/// A bitfield of traits that this fishing hook has, checked by fish traits and the minigame
@@ -43,26 +44,10 @@
 /obj/item/fishing/hook/proc/reason_we_cant_fish(datum/fish_source/target_fish_source)
 	return null
 
-/**
- * Helper proc to get the size ratio of a fish compared to its average
- * Returns a value like 0.8 (80% of average), 1.0 (average), 1.5 (150% of average)
- */
-/obj/item/fishing/hook/proc/get_fish_size_ratio(fish_type_or_instance)
-	if(!isfish(fish_type_or_instance))
-		return 1.0
-
-	var/obj/item/reagent_containers/food/snacks/fish/fish = fish_type_or_instance
-	var/average = fish.average_size
-
-	if(average <= 0)
-		return 1.0
-
-	return fish.size / average
-
 
 /obj/item/fishing/hook/wooden
 	name = "wooden fishing hook"
-	desc = "A fishing hook consisting of a small piece of wood, carved to points on both ends. More likely to fall out. Struggles with larger specimens."
+	desc = "A fishing hook consisting of a small piece of wood, carved to points on both ends. More likely to fall out."
 	icon_state = "gorgehook"
 	rod_overlay_icon_state = "hook_wooden_overlay"
 
@@ -72,18 +57,22 @@
 /obj/item/fishing/hook/wooden/get_hook_bonus_multiplicative(fish_type)
 	var/multiplier = ..()
 
-	if(!isfish(fish_type))
-		return multiplier
+	// Check if it's a fish and apply size penalties
+	if(ispath(fish_type, /obj/item/reagent_containers/food/snacks/fish) || isfish(fish_type))
+		var/obj/item/reagent_containers/food/snacks/fish/fish_instance
+		if(isfish(fish_type))
+			fish_instance = fish_type
+		else
+			fish_instance = new fish_type()
 
-	var/size_ratio = get_fish_size_ratio(fish_type)
+		// Apply size penalties: normal = -1, large = -1, prize = -1
+		if(fish_instance.size >= FISH_SIZE_NORMAL_MAX && fish_instance.size < FISH_SIZE_BULKY_MAX)
+			multiplier *= 0.75 // Normal size penalty
+		else if(fish_instance.size >= FISH_SIZE_BULKY_MAX)
+			multiplier *= 0.5 // Large/prize penalty
 
-	// Penalties for larger-than-average fish
-	// 100-130% of average: 0.75x
-	// 130%+ of average: 0.5x
-	if(size_ratio >= 1.3)
-		multiplier *= 0.5
-	else if(size_ratio >= 1.0)
-		multiplier *= 0.75
+		if(!isfish(fish_type))
+			qdel(fish_instance)
 
 	return multiplier
 
@@ -103,7 +92,7 @@
 
 /obj/item/fishing/hook/deluxe
 	name = "wooden lure"
-	desc = "A small wooden lure, painted to look like a small fish. Scares off smaller specimens but attracts larger ones."
+	desc = "A small wooden lure, painted to look like a small fish. Tends to scare off smaller fish."
 	icon_state = "deluxehook"
 	fishing_hook_traits = FISHING_HOOK_BIDIRECTIONAL
 	rod_overlay_icon_state = "hook_deluxe_overlay"
@@ -111,25 +100,24 @@
 /obj/item/fishing/hook/deluxe/get_hook_bonus_multiplicative(fish_type)
 	var/multiplier = ..()
 
-	if(!isfish(fish_type))
-		return multiplier
+	if(ispath(fish_type, /obj/item/reagent_containers/food/snacks/fish) || isfish(fish_type))
+		var/obj/item/reagent_containers/food/snacks/fish/fish_instance
+		if(isfish(fish_type))
+			fish_instance = fish_type
+		else
+			fish_instance = new fish_type()
 
-	var/size_ratio = get_fish_size_ratio(fish_type)
+		// Size modifiers: tiny = -3, small = -2, normal = -1, large = 1, prize = 1
+		if(fish_instance.size < FISH_SIZE_TINY_MAX)
+			multiplier *= 0.25 // Tiny penalty
+		else if(fish_instance.size < FISH_SIZE_SMALL_MAX)
+			multiplier *= 0.5 // Small penalty
+		else if(fish_instance.size < FISH_SIZE_NORMAL_MAX)
+			multiplier *= 0.75 // Normal penalty
+		else if(fish_instance.size >= FISH_SIZE_BULKY_MAX)
+			multiplier *= 1.5 // Large/prize bonus
 
-	// Penalties for smaller-than-average, bonuses for larger
-	// <60% of average: 0.25x (severe penalty for runts)
-	// 60-80% of average: 0.5x (penalty for small)
-	// 80-100% of average: 0.75x (mild penalty for below average)
-	// 100-130% of average: 1.0x (neutral)
-	// 130%+ of average: 1.5x (bonus for big specimens)
-
-	if(size_ratio < 0.6)
-		multiplier *= 0.25
-	else if(size_ratio < 0.8)
-		multiplier *= 0.5
-	else if(size_ratio < 1.0)
-		multiplier *= 0.75
-	else if(size_ratio >= 1.3)
-		multiplier *= 1.5
+		if(!isfish(fish_type))
+			qdel(fish_instance)
 
 	return multiplier

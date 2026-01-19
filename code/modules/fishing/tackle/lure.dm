@@ -17,16 +17,6 @@
 			catch_multiplier *= 0.5
 	return catch_multiplier
 
-/obj/effect/spawner/map_spawner/random_lure
-	lootmin = 3
-	lootmax = 5
-
-/obj/effect/spawner/map_spawner/random_lure/Initialize(mapload)
-	spawned = subtypesof(/obj/item/fishing/lure)
-	for(var/path in spawned)
-		spawned[path] = 1
-	. = ..()
-
 /obj/item/fishing/lure
 	name = "fishing lure"
 	desc = "It's just that, a plastic piece of fishing equipment, yet fish yearn with every last molecule of their bodies to take a bite of it."
@@ -85,20 +75,13 @@
 	desc = "A fishing lure that may attract small fish. Too tiny, too large, or too picky prey won't be interested in it, though."
 	icon_state = "minnow"
 
-/obj/item/fishing/lure/minnow/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Bonus for small fish (preferred target)
-	if(fish.size <= fish.average_size * 0.8)
-		multiplier *= 1.5
-
-	// Slight penalty for picky/vegan but still catchable
-	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater) & fish.fish_traits))
-		multiplier *= 0.7
-
-	return multiplier
+/obj/item/fishing/lure/minnow/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
+	var/intermediate_size = FISH_SIZE_SMALL_MAX + (FISH_SIZE_NORMAL_MAX - FISH_SIZE_SMALL_MAX)
+	if(!ISINRANGE(fish.size, FISH_SIZE_TINY_MAX * 0.5, intermediate_size))
+		return FALSE
+	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater, /datum/fish_trait/nocturnal, /datum/fish_trait/heavy) & fish.fish_traits))
+		return FALSE
+	return TRUE
 
 /obj/item/fishing/lure/plug
 	name = "artificial plug lure"
@@ -106,28 +89,11 @@
 	icon_state = "plug"
 
 /obj/item/fishing/lure/plug/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Base catchable: anything not tiny
-	if(fish.size < fish.average_size * 0.75)
+	if(fish.size <= FISH_SIZE_SMALL_MAX)
 		return FALSE
-	// Exclude only extreme specialists
-	if(/datum/fish_trait/heavy in fish.fish_traits)
+	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater, /datum/fish_trait/nocturnal, /datum/fish_trait/heavy) & fish.fish_traits))
 		return FALSE
 	return TRUE
-
-/obj/item/fishing/lure/plug/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Bonus for large fish (preferred target)
-	if(fish.size > FISH_SIZE_SMALL_MAX)
-		multiplier *= 1.5
-
-	// Slight penalty for picky/vegan but still catchable
-	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater) & fish.fish_traits))
-		multiplier *= 0.7
-
-	return multiplier
 
 /obj/item/fishing/lure/spoon
 	name = "\improper Indy spoon lure"
@@ -136,28 +102,16 @@
 	spin_frequency = list(1.25 SECONDS, 2.25 SECONDS)
 
 /obj/item/fishing/lure/spoon/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch anything that's not extreme
-	if(fish.size < fish.average_size * 0.5 || fish.size > fish.average_size * 1.7)
+	if(!ISINRANGE(fish.size, FISH_SIZE_TINY_MAX + 1, FISH_SIZE_NORMAL_MAX))
 		return FALSE
-	if(/datum/fish_trait/heavy in fish.fish_traits)
+	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater, /datum/fish_trait/nocturnal, /datum/fish_trait/heavy) & fish.fish_traits))
 		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/spoon/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Bonus for freshwater fish (preferred target)
 	var/fluid_type = fish.required_fluid_type
 	if(fluid_type == FISH_FLUID_FRESHWATER || fluid_type == FISH_FLUID_ANADROMOUS || fluid_type == FISH_FLUID_ANY_WATER)
-		multiplier *= 1.5
-
-	// Slight penalty for picky/vegan/nocturnal but still catchable
-	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater, /datum/fish_trait/nocturnal) & fish.fish_traits))
-		multiplier *= 0.8
-
-	return multiplier
+		return TRUE
+	if((/datum/fish_trait/amphibious in fish.fish_traits) && fluid_type == FISH_FLUID_AIR)
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/artificial_fly
 	name = "\improper Silkbuzz artificial fly"
@@ -166,26 +120,9 @@
 	spin_frequency = list(1.1 SECONDS, 2 SECONDS)
 
 /obj/item/fishing/lure/artificial_fly/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch most fish, excluding extremes
-	if(fish.size > fish.average_size * 1.6)
-		return FALSE
-	if(/datum/fish_trait/heavy in fish.fish_traits)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/artificial_fly/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for picky eaters (main target)
 	if(/datum/fish_trait/picky_eater in fish.fish_traits)
-		multiplier *= 2
-	else
-		// Mild penalty for non-picky fish
-		multiplier *= 0.6
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/led
 	name = "\improper glowing fishing lure"
@@ -210,19 +147,9 @@
 	REMOVE_TRAIT(rod, TRAIT_ROD_IGNORE_ENVIRONMENT, type)
 
 /obj/item/fishing/lure/led/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	return TRUE
-
-/obj/item/fishing/lure/led/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
 	if(length(list(/datum/fish_trait/nocturnal, /datum/fish_trait/heavy) & fish.fish_traits))
-		multiplier *= 1.8
-	else
-		multiplier *= 0.7
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/lucky_coin
 	name = "\improper Maneki-Coin lure"
@@ -239,24 +166,9 @@
 	REMOVE_TRAIT(rod, TRAIT_ROD_ATTRACT_SHINY_LOVERS, REF(src))
 
 /obj/item/fishing/lure/lucky_coin/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch most fish
-	if(fish.size > fish.average_size * 1.7)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/lucky_coin/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for shiny lovers (main target)
 	if(/datum/fish_trait/shiny_lover in fish.fish_traits)
-		multiplier *= 2
-	else
-		// Penalty for non-shiny lovers
-		multiplier *= 0.5
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/algae
 	name = "algae lure"
@@ -265,51 +177,22 @@
 	spin_frequency = list(3 SECONDS, 5 SECONDS)
 
 /obj/item/fishing/lure/algae/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch most fish, excluding extreme predators
-	if(/datum/fish_trait/predator in fish.fish_traits)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/algae/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for vegans (main target)
 	if(/datum/fish_trait/vegan in fish.fish_traits)
-		multiplier *= 2
-	else
-		// Lower success for non-vegans but still possible
-		multiplier *= 0.4
-	return multiplier
-
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/grub
 	name = "\improper Twister Worm lure"
-	desc = "A soft artifical lure with the body of a grub and a twisting tail. Great for small fish, works on medium ones too."
+	desc = "A soft plastic lure with the body of a grub and a twisting tail. Specialized for catching small fish, as long as they aren't herbivores, picky, or picky herbivores."
 	icon_state = "grub"
 	spin_frequency = list(1 SECONDS, 2.7 SECONDS)
 
 /obj/item/fishing/lure/grub/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch anything not huge
-	if(fish.size > fish.average_size * 1.1)
+	if(fish.size >= FISH_SIZE_SMALL_MAX)
+		return FALSE
+	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater) & fish.fish_traits))
 		return FALSE
 	return TRUE
-
-/obj/item/fishing/lure/grub/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Bonus for small fish (preferred target)
-	if(fish.size < fish.average_size * 0.75)
-		multiplier *= 1.5
-
-	// Penalty for vegans/picky but still catchable
-	if(length(list(/datum/fish_trait/vegan, /datum/fish_trait/picky_eater) & fish.fish_traits))
-		multiplier *= 0.6
-
-	return multiplier
 
 /obj/item/fishing/lure/buzzbait
 	name = "\improper Electric-Buzz lure"
@@ -318,23 +201,9 @@
 	spin_frequency = list(0.8 SECONDS, 1.7 SECONDS)
 
 /obj/item/fishing/lure/buzzbait/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Can catch anything not extreme
-	if(fish.size > fish.average_size * 1.7)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/buzzbait/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for electric fish (main target)
 	if(HAS_TRAIT(fish, TRAIT_FISH_ELECTROGENESIS))
-		multiplier *= 2
-	else
-		// Still decent for others due to vibrations
-		multiplier *= 0.7
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/spinnerbait
 	name = "spinnerbait lure"
@@ -343,57 +212,28 @@
 	spin_frequency = list(2 SECONDS, 4 SECONDS)
 
 /obj/item/fishing/lure/spinnerbait/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	if(fish.size > fish.average_size * 1.75)
+	if(!(/datum/fish_trait/predator in fish.fish_traits))
 		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/spinnerbait/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	var/is_predator = (/datum/fish_trait/predator in fish.fish_traits)
-	var/fluid_type = fish.required_fluid_type
-	var/is_freshwater = (fluid_type == FISH_FLUID_FRESHWATER || fluid_type == FISH_FLUID_ANADROMOUS || fluid_type == FISH_FLUID_ANY_WATER)
-
-	if(is_predator && is_freshwater)
-		multiplier *= 1.8
-	else if(is_predator || is_freshwater)
-		multiplier *= 1.2
-	else
-		multiplier *= 0.6
-
-	return multiplier
+	var/init_fluid_type = fish.required_fluid_type
+	if(init_fluid_type == FISH_FLUID_FRESHWATER || init_fluid_type == FISH_FLUID_ANADROMOUS || init_fluid_type == FISH_FLUID_ANY_WATER)
+		return TRUE
+	if((/datum/fish_trait/amphibious in fish.fish_traits) && init_fluid_type == FISH_FLUID_AIR) //fluid type is changed to freshwater on init
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/daisy_chain
 	name = "daisy chain lure"
-	desc = "A lure resembling a small school of fish. Best for saltwater predators, works on others."
+	desc = "A lure resembling a small school of fish. Saltwater predators love it, but not much else will."
 	icon_state = "daisy_chain"
 	spin_frequency = list(2 SECONDS, 4 SECONDS)
 
 /obj/item/fishing/lure/daisy_chain/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	if(fish.size > fish.average_size * 1.75)
+	if(!(/datum/fish_trait/predator in fish.fish_traits))
 		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/daisy_chain/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for saltwater predators (main target)
-	var/is_predator = (/datum/fish_trait/predator in fish.fish_traits)
-	var/fluid_type = fish.required_fluid_type
-	var/is_saltwater = (fluid_type == FISH_FLUID_SALTWATER || fluid_type == FISH_FLUID_ANADROMOUS || fluid_type == FISH_FLUID_ANY_WATER)
-
-	if(is_predator && is_saltwater)
-		multiplier *= 1.8
-	else if(is_predator || is_saltwater)
-		multiplier *= 1.2
-	else
-		multiplier *= 0.6
-
-	return multiplier
+	var/init_fluid_type = fish.required_fluid_type
+	if(init_fluid_type == FISH_FLUID_SALTWATER || init_fluid_type == FISH_FLUID_ANADROMOUS || init_fluid_type == FISH_FLUID_ANY_WATER)
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/meat
 	name = "red bait"
@@ -402,25 +242,12 @@
 	icon = 'icons/roguetown/items/fishing.dmi'
 	spin_frequency = list(2 SECONDS, 3 SECONDS)
 	consumable = TRUE
-	bait_flag = MEAT
 
 /obj/item/fishing/lure/meat/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	if(/datum/fish_trait/vegan in fish.fish_traits)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/meat/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
+	// Attracts eels primarily
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/eel))
-		multiplier *= 1.5
-
-	if(/datum/fish_trait/predator in fish.fish_traits)
-		multiplier *= 1.3
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/dough
 	name = "doughy bait"
@@ -430,29 +257,14 @@
 	icon = 'icons/roguetown/items/food.dmi'
 	spin_frequency = list(2 SECONDS, 3 SECONDS)
 	consumable = TRUE
-	bait_flag = GRAIN
 
 /obj/item/fishing/lure/dough/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	if(/datum/fish_trait/predator in fish.fish_traits)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/dough/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for carps and shrimp
+	// Attracts carps primarily, shrimp occasionally
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/carp))
-		multiplier *= 1.5
+		return TRUE
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/shrimp))
-		multiplier *= 1.4
-
-	// Bonus for vegans
-	if(/datum/fish_trait/vegan in fish.fish_traits)
-		multiplier *= 1.3
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/gray
 	name = "gray bait"
@@ -461,22 +273,16 @@
 	icon = 'icons/roguetown/items/fishing.dmi'
 	spin_frequency = list(2 SECONDS, 3 SECONDS)
 	consumable = TRUE
-	bait_flag = GRAIN | MEAT
 
-/obj/item/fishing/lure/gray/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return 1
-
-	// Good bonus for common fish
+/obj/item/fishing/lure/gray/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
+	// Attracts carps, eels, and shrimp
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/carp))
-		multiplier *= 1.3
+		return TRUE
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/eel))
-		multiplier *= 1.3
+		return TRUE
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/shrimp))
-		multiplier *= 1.3
-
-	return multiplier
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/speckled
 	name = "speckled bait"
@@ -485,36 +291,18 @@
 	icon_state = "speckledbait"
 	spin_frequency = list(2.5 SECONDS, 3.5 SECONDS)
 	consumable = TRUE
-	bait_flag = GRAIN | MEAT | FRUIT
 
 /obj/item/fishing/lure/speckled/is_catchable_fish(obj/item/reagent_containers/food/snacks/fish/fish, list/fish_properties)
-	// Catches most things, excluding tiny fish
-	if(fish.size < fish.average_size * 0.5)
-		return FALSE
-	return TRUE
-
-/obj/item/fishing/lure/speckled/check_bait(obj/item/reagent_containers/food/snacks/fish/fish)
-	var/multiplier = ..()
-	if(multiplier <= 0)
-		return multiplier
-
-	// Big bonus for specialty fish
-	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/angler))
-		multiplier *= 1.6
-	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/clownfish))
-		multiplier *= 1.6
-
-	// Good bonus for carps and eels
+	// Catches carps, eels, anglerfish, and clownfish
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/carp))
-		multiplier *= 1.4
+		return TRUE
 	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/eel))
-		multiplier *= 1.4
-
-	// Penalty for very small fish
-	if(fish.size < fish.average_size * 0.9)
-		multiplier *= 0.7
-
-	return multiplier
+		return TRUE
+	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/angler))
+		return TRUE
+	if(istype(fish, /obj/item/reagent_containers/food/snacks/fish/clownfish))
+		return TRUE
+	return FALSE
 
 /obj/item/fishing/lure/deluxe
 	name = "enchanted bait"
@@ -525,6 +313,7 @@
 	consumable = TRUE
 	/// Chance to catch a special variant fish
 	var/special_catch_chance = 20
+
 
 /obj/item/fishing/lure/deluxe/on_fishingrod_slotted(datum/source, obj/item/fishingrod/rod, slot)
 	. = ..()

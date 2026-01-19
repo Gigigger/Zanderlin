@@ -11618,7 +11618,7 @@
 /area/outdoors/town)
 "kdA" = (
 /obj/structure/closet/crate/chest/crate,
-/obj/effect/spawner/map_spawner/random_lure,
+/obj/item/fishing/lure,
 /turf/open/floor/wood,
 /area/indoors/town)
 "kdP" = (

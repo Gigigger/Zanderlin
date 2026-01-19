@@ -658,9 +658,6 @@ SUBSYSTEM_DEF(job)
 /// Gives the player the stuff they should have with their rank
 /datum/controller/subsystem/job/proc/EquipRank(mob/living/carbon/human/equipping, datum/job/job, client/player_client)
 	equipping.job = job.title
-	equipping.job_type = job.type
-	if(job.parent_job)
-		equipping.job_type = job.parent_job.type
 
 	SEND_SIGNAL(equipping, COMSIG_JOB_RECEIVED, job)
 
