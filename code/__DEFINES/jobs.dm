@@ -55,6 +55,7 @@
 #define FACTION_CABAL		"Cabal"
 #define FACTION_RATS		"Rats"
 #define FACTION_ORCS		"Orcs"
+#define FACTION_SEA			"Sea"
 #define FACTION_BUMS		"Bums"
 #define FACTION_MATTHIOS	"Matthios"
 

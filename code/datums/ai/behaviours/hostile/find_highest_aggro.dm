@@ -125,8 +125,6 @@
 
 /datum/ai_behavior/find_aggro_targets/proc/failed_to_find_anyone(datum/ai_controller/controller, target_key, targeting_strategy_key, hiding_location_key)
 	var/aggro_range = controller.blackboard[BB_AGGRO_RANGE] || 9
-	// takes the larger between our range() input and our implicit hearers() input (world.view)
-	aggro_range = max(aggro_range, ROUND_UP(max(getviewsize(world.view)) / 2))
 	// Set up proximity field to await someone interesting to come along
 	var/datum/proximity_monitor/advanced/ai_aggro_tracking/detection_field = new(
 		controller.pawn,
@@ -240,3 +238,15 @@
 	var/mob/living/pawn = controller.pawn
 	if(pawn)
 		pawn.cmode = FALSE
+
+/datum/ai_behavior/find_aggro_targets/ambush/finish_action(datum/ai_controller/controller, succeeded, ...)
+	. = ..()
+	if(succeeded && isanimal(controller.pawn))
+		var/mob/living/simple_animal/mob = controller.pawn
+		mob.ambush()
+
+/datum/ai_behavior/find_aggro_targets/ambush/failed_to_find_anyone(datum/ai_controller/controller, target_key, targeting_strategy_key, hiding_location_key)
+	. = ..()
+	if(isanimal(controller.pawn))
+		var/mob/living/simple_animal/mob = controller.pawn
+		mob.hide()

@@ -17,7 +17,7 @@
 /datum/ai_planning_subtree/simple_find_target/mimic
 
 /datum/ai_planning_subtree/simple_find_target/mimic/SelectBehaviors(datum/ai_controller/controller, delta_time)
-	controller.queue_behavior(/datum/ai_behavior/find_potential_targets/mimic, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)
+	controller.queue_behavior(/datum/ai_behavior/find_potential_targets/ambush/mimic, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)
 
 /datum/ai_planning_subtree/simple_find_target/mole
 
@@ -34,6 +34,15 @@
 
 /datum/ai_planning_subtree/aggro_find_target/SelectBehaviors(datum/ai_controller/controller, delta_time)
 	controller.queue_behavior(/datum/ai_behavior/find_aggro_targets, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)
+
+/datum/ai_planning_subtree/aggro_find_target/if_hungry
+	var/hunger_threshold = 50
+
+/datum/ai_planning_subtree/aggro_find_target/if_hungry/SelectBehaviors(datum/ai_controller/controller, delta_time)
+	if(istype(controller.pawn, /mob/living/simple_animal/hostile/retaliate))
+		var/mob/living/simple_animal/hostile/retaliate/mob = controller.pawn
+		if(SEND_SIGNAL(mob, COMSIG_MOB_RETURN_HUNGER) <= hunger_threshold)
+			controller.queue_behavior(/datum/ai_behavior/find_aggro_targets, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)
 
 
 /datum/ai_planning_subtree/aggro_find_target/bum
@@ -63,3 +72,9 @@
 
 /datum/ai_planning_subtree/aggro_find_target/species_hostile/SelectBehaviors(datum/ai_controller/controller, delta_time)
 	controller.queue_behavior(/datum/ai_behavior/find_aggro_targets/species_hostile, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)
+
+
+/datum/ai_planning_subtree/aggro_find_target/ambush
+
+/datum/ai_planning_subtree/aggro_find_target/ambush/SelectBehaviors(datum/ai_controller/controller, delta_time)
+	controller.queue_behavior(/datum/ai_behavior/find_aggro_targets/ambush, BB_BASIC_MOB_CURRENT_TARGET, BB_TARGETTING_DATUM, BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION)

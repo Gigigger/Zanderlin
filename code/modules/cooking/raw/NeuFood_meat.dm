@@ -68,6 +68,15 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/poultry
 	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/chickenleg
 
+/obj/item/reagent_containers/food/snacks/meat/crableg
+	name = "raw crab leg"
+	icon_state = "crableg"
+	ingredient_size = 2
+	slices_num = 2
+	slice_bclass = BCLASS_CHOP
+	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/crab
+	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/crableg
+
 /*	........   Fish sounds   ................ */
 /obj/item/reagent_containers/food/snacks/fish
 	chopping_sound = TRUE
@@ -138,6 +147,18 @@
 	rotprocess = SHELFLIFE_DECENT
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	color = "#a0655f"
+
+/obj/item/reagent_containers/food/snacks/meat/mince/crab
+	name = "minced crab"
+	icon_state = "crabmince"
+
+/obj/item/reagent_containers/food/snacks/meat/mince/crab/cooked
+	name = "cooked minced crab"
+	icon_state = "crabmince_cooked"
+	eat_effect = null
+	foodtype = MEAT
+	rotprocess = SHELFLIFE_DECENT
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 
 /obj/item/reagent_containers/food/snacks/meat/mince/poultry
 	name = "minced poultry"
