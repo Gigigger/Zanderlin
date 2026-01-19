@@ -213,12 +213,13 @@
 	icon_state = "pearlcross"
 	desc = "An amulet made of white pearls, usually worn by fishers or sailors."
 	sellprice = 80
+	dropshrink = 0.7
 
 /obj/item/clothing/neck/psycross/bpearl
-	name = "blue pearl amulet"
+	name = "cerulean pearl amulet"
 	icon_state = "bpearlcross"
-	desc = "An amulet made of rare blue pearls, usually worn by priests and worshippers of Abyssor, or as lucky charms for captains of ships."
-	sellprice = 220
+	desc = "An amulet made of rare blue pearls, usually worn by worshippers of Abyssor. Amulets such as these play an important role in traditional Triton marital practices."
+	sellprice = 200
 
 /obj/item/clothing/neck/psycross/shell
 	name = "oyster shell necklace"

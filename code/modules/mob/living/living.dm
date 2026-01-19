@@ -500,7 +500,7 @@
 					span_warning("I slip from [src]'s grab."))
 			log_combat(src, M, "tried grabbing", addition="passive grab")
 			stop_pulling()
-			return
+			return FALSE
 		log_combat(src, M, "grabbed", addition="passive grab")
 		playsound(src, 'sound/combat/shove.ogg', 50, TRUE, -1)
 		if(iscarbon(M))
@@ -519,8 +519,12 @@
 			else
 				O.sublimb_grabbed = used_limb
 			O.icon_state = zone_selected
-			put_in_hands(O)
-			O.update_hands(src)
+			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+				O.forceMove(src)
+				src.contents += O
+			else
+				put_in_hands(O)
+				O.update_hands(src)
 			if(state > GRAB_PASSIVE || (HAS_TRAIT(src, TRAIT_STRONG_GRABBER) && cmode) || item_override)
 				suppress_message = TRUE
 				C.grippedby(src)
@@ -535,8 +539,14 @@
 				O.sublimb_grabbed = item_override
 			else
 				O.sublimb_grabbed = M.simple_limb_hit(zone_selected)
-			put_in_hands(O)
-			O.update_hands(src)
+
+			if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+				O.forceMove(src)
+				src.contents += O
+			else
+				put_in_hands(O)
+				O.update_hands(src)
+
 			if(state > GRAB_PASSIVE || (HAS_TRAIT(src, TRAIT_STRONG_GRABBER) && cmode) || item_override)
 				suppress_message = TRUE
 				M.grippedby(src)
@@ -552,9 +562,13 @@
 		O.name = "[AM.name]"
 		O.grabbed = AM
 		O.grabbee = src
-		src.put_in_hands(O)
-		O.update_hands(src)
-		O.update_grab_intents()
+		if(HAS_TRAIT(src, TRAIT_NOHANDGRABS))
+			O.forceMove(src)
+			src.contents += O
+		else
+			src.put_in_hands(O)
+			O.update_hands(src)
+			O.update_grab_intents()
 
 	if(isliving(AM))
 		var/mob/living/living = AM
@@ -647,7 +661,7 @@
 /mob/living/stop_pulling(pulling_broke_free = FALSE)
 	if(pulling_broke_free && ismob(pulling) && grab_state >= GRAB_AGGRESSIVE)
 		var/wrestling_cooldown_reduction = 0
-		if(pulledby?.get_skill_level(/datum/skill/combat/wrestling))
+		if(pulledby?.skills)
 			wrestling_cooldown_reduction = 0.2 SECONDS * pulledby.get_skill_level(/datum/skill/combat/wrestling)
 		TIMER_COOLDOWN_START(src, "broke_free", max(0, 2 SECONDS - wrestling_cooldown_reduction)) // BUFF: Reduced cooldown
 
@@ -1319,15 +1333,8 @@
 	if(!mutual_grab)
 		return FALSE
 
-	var/my_wrestling = 0
-	var/their_wrestling = 0
-	if(mind)
-		my_wrestling = get_skill_level(/datum/skill/combat/wrestling)
-	if(pulledby.mind)
-		their_wrestling = pulledby.get_skill_level(/datum/skill/combat/wrestling)
-
 	var/break_chance = 15 // Base chance
-	break_chance += (my_wrestling - their_wrestling)
+	break_chance += (skills ? get_skill_level(/datum/skill/combat/wrestling) : 0) - (pulledby.skills ? pulledby.get_skill_level(/datum/skill/combat/wrestling) : 0)
 	break_chance += (STASTR - pulledby.STASTR) * 0.4
 
 	// Both parties get a chance to break free
@@ -1375,8 +1382,9 @@
 
 	var/counter_chance = 20 // Base chance
 
-	counter_chance += get_skill_level(/datum/skill/combat/wrestling) * 4
-	counter_chance += get_skill_level(/datum/skill/combat/unarmed) * 4
+	if(skills)
+		counter_chance += get_skill_level(/datum/skill/combat/wrestling) * 4
+		counter_chance += get_skill_level(/datum/skill/combat/unarmed) * 4
 
 	// Stat differences
 	counter_chance += (STASTR - attacker.STASTR) * 2
@@ -1532,7 +1540,6 @@
 
 	SEND_SIGNAL(src, COMSIG_LIVING_RESIST_GRAB, src, pulledby, moving_resist)
 
-	var/wrestling_diff = 0
 	var/resist_chance = BASE_GRAB_RESIST_CHANCE
 	var/mob/living/L = pulledby
 	var/combat_modifier = 1
@@ -1540,8 +1547,9 @@
 	// Modifier of pulledby against the resisting src
 	var/positioning_modifier = L.get_positioning_modifier(src)
 
-	wrestling_diff += (get_skill_level(/datum/skill/combat/wrestling))
-	wrestling_diff -= (L.get_skill_level(/datum/skill/combat/wrestling))
+	var/my_wrestling = skills ? get_skill_level(/datum/skill/combat/wrestling) : 0
+	var/their_wrestling = L.skills ? L.get_skill_level(/datum/skill/combat/wrestling) : 0
+	var/wrestling_diff = my_wrestling - their_wrestling
 
 	if(has_status_effect(/datum/status_effect/buff/oiled))
 		var/obj/item/grabbing/grabbed = L.get_active_held_item()
@@ -1619,7 +1627,11 @@
 						"<span class='notice'>I break free of [pulledby]'s grip![shitte]</span>", null, null, pulledby)
 		to_chat(pulledby, "<span class='danger'>[src] breaks free of my grip!</span>")
 		log_combat(pulledby, src, "broke grab")
-		pulledby.stop_pulling(pulling_broke_free = TRUE)
+		pulledby.stop_pulling()
+
+		var/wrestling_cooldown_reduction = 0.2 SECONDS * their_wrestling
+
+		TIMER_COOLDOWN_START(src, "broke_free", max(0, 2 SECONDS - wrestling_cooldown_reduction)) // BUFF: Reduced cooldown
 		playsound(src.loc, 'sound/combat/grabbreak.ogg', 50, TRUE, -1)
 		. = FALSE
 	else

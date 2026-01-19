@@ -22,7 +22,7 @@
 
 
 /mob/living/proc/getarmor(def_zone, type, damage, armor_penetration, blade_dulling)
-	return 0
+	return armor?.getRating(type) || 0 // mostly used for simple mobs or other things that would have root armor defined
 
 //this returns the mob's protection against eye damage (number between -1 and 2) from bright lights
 /mob/living/proc/get_eye_protection()
@@ -113,8 +113,13 @@
 		return 0
 
 /mob/living/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum, damage_type = "blunt")
+	var/obj/item/I
 	if(istype(AM, /obj/item))
-		var/obj/item/I = AM
+		I = AM
+	var/obj/item/clothing/head/mob_holder/MH = throwingdatum?.thrownthing
+	if(istype(MH) && MH.held_mob == AM)
+		I = throwingdatum.thrownthing
+	if(I)
 		var/zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
 		SEND_SIGNAL(I, COMSIG_MOVABLE_IMPACT_ZONE, src, zone)
 		if(!blocked)
@@ -185,10 +190,9 @@
 	user.changeNext_move(CLICK_CD_GRABBING)
 	var/skill_diff = 0
 	var/combat_modifier = 1
-	if(user.mind)
-		skill_diff += (user.get_skill_level(/datum/skill/combat/wrestling)) //NPCs don't use this
-	if(mind)
-		skill_diff -= (get_skill_level(/datum/skill/combat/wrestling))
+
+	skill_diff -= skills ? get_skill_level(/datum/skill/combat/wrestling) : 0 //my wrestling
+	skill_diff += user.skills ? user.get_skill_level(/datum/skill/combat/wrestling) : 0 //their wrestling
 
 	if(user == src)
 		instant = TRUE
@@ -246,6 +250,11 @@
 		var/obj/item/grabbing/grab_to_update = user.l_grab || user.r_grab
 		grab_to_update?.grab_state = GRAB_AGGRESSIVE
 		grab_to_update?.update_grab_intents()
+	if(HAS_TRAIT(user, TRAIT_NOHANDGRABS))
+		for(var/obj/item/grabbing/g in user.contents)
+			if(g.grabbed == src)
+				g.grab_state = GRAB_AGGRESSIVE
+				g.update_grab_intents()
 
 	var/add_log = ""
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
@@ -256,7 +265,7 @@
 			stop_pulling()
 		user.set_pull_offsets(src, user.grab_state)
 	log_combat(user, src, "grabbed", addition="aggressive grab[add_log]")
-	return 1
+	return TRUE
 
 /turf/proc/grabbedintents(mob/living/user, atom/grabbed)
 	//RTD up and down

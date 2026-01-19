@@ -18,12 +18,6 @@
 	if(!has_reagents)
 		return
 
-	//water turf eats reagents
-	if(istype(epicenter, /turf/open/water))
-		for(var/datum/reagents/R in reactants)
-			R.clear_reagents()
-		return
-
 	//splash down, not on open spaces.
 	while(istype(epicenter, /turf/open/transparent/openspace))
 		var/turf/downcheck = GET_TURF_BELOW(epicenter)
@@ -31,6 +25,12 @@
 			epicenter = downcheck
 		else
 			break
+
+	//turfs eats reagents. This should probably be expanded to a better check in the future
+	if(istype(epicenter, /turf/open/water) || istype(epicenter, /turf/open/lava) || istype(epicenter, /turf/open/dungeon_trap))
+		for(var/datum/reagents/R in reactants)
+			R.clear_reagents()
+		return
 
 	var/datum/reagents/splash_holder = new/datum/reagents(total_reagents*threatscale)
 	splash_holder.my_atom = epicenter // For some reason this is setting my_atom to null, and causing runtime errors.

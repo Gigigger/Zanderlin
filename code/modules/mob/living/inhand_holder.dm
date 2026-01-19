@@ -41,7 +41,7 @@
 	sellprice = L.sellprice
 	name = L.name
 	desc = L.desc
-
+	SEND_SIGNAL(held_mob, COMSIG_MOB_HOLDER_DEPOSIT, src)
 	if(length(L.stored_enchantments))
 		for(var/datum/enchantment/enchant as anything in L.stored_enchantments)
 			enchant(enchant)
@@ -59,19 +59,31 @@
 	appearance = L?.appearance
 	plane = ABOVE_HUD_PLANE
 
-/obj/item/clothing/head/mob_holder/proc/release(del_on_release = TRUE)
+/obj/item/clothing/head/mob_holder/proc/release(del_on_release = TRUE, silent = FALSE)
 	if(!held_mob)
 		if(del_on_release && !destroying)
 			qdel(src)
 		return FALSE
-	if(isliving(loc))
-		var/mob/living/L = loc
-		to_chat(L, "<span class='warning'>[held_mob] wriggles free!</span>")
+	var/mob/living/L = loc
+	if(is_embedded)
+		if(!istype(L))
+			try_fix_broken_embedding()
+		else if(iscarbon(L))
+			var/mob/living/carbon/C = L
+			C.remove_embedded_object(src)
+		else
+			L.simple_remove_embedded_object(src)
+	if(istype(L) && !is_embedded)
+		if(!silent)
+			to_chat(L, "<span class='warning'>[held_mob] wriggles free!</span>")
 		L.dropItemToGround(src)
 	held_mob?.forceMove(get_turf(held_mob))
 	held_mob?.reset_perspective()
 	held_mob?.setDir(SOUTH)
-	held_mob?.visible_message("<span class='warning'>[held_mob] uncurls!</span>")
+	if(!silent)
+		held_mob?.visible_message("<span class='warning'>[held_mob] uncurls!</span>")
+	if(held_mob)
+		SEND_SIGNAL(held_mob, COMSIG_MOB_HOLDER_RELEASE, src)
 	held_mob = null
 	if((del_on_release || !held_mob) && !destroying)
 		qdel(src)
@@ -82,3 +94,34 @@
 
 /obj/item/clothing/head/mob_holder/container_resist()
 	release()
+
+/obj/item/clothing/head/mob_holder/embedded(mob/living/embedded_target, obj/item/bodypart/bodypart)
+	. = ..()
+	// we're forced to override the forceMove from the bodyparts because they're not actually stored on the map anywhere! That's bad for clients!
+	forceMove(embedded_target)
+	if(held_mob)
+		SEND_SIGNAL(held_mob, COMSIG_MOB_HOLDER_EMBEDDED, src, embedded_target, bodypart)
+
+/// a catch case for if somehow, someone has managed to fuck this up and we can't tell how
+/obj/item/clothing/head/mob_holder/proc/try_fix_broken_embedding()
+	if(!is_embedded) // why did you even call this
+		return TRUE
+	var/fixed = FALSE
+	var/list/mobs = LAZYCOPY(GLOB.mob_living_list)
+	var/mob/living/L
+	while(length(mobs) && !fixed)
+		L = mobs[1]
+		if(iscarbon(L))
+			var/mob/living/carbon/C = L
+			fixed = C.remove_embedded_object(src)
+		else
+			fixed = L.simple_remove_embedded_object(src)
+		mobs -= L
+	if(fixed)
+		message_admins("[held_mob] in mob holder did not properly get unembedded from [L]. The issue was resolved, but coders should be notified.")
+		log_game("ERROR: [held_mob] in mob holder was somehow unembedded from [L] without calling the proper procs. This is expensive to fix during runtime and should be fixed.")
+		return TRUE
+	message_admins("[held_mob] in mob holder did not properly get unembedded from someone's body. The body they were in wasn't found. Message coders.")
+	log_game("ERROR: [held_mob] in mob holder was unembedded from someone's body without calling the proper procs. The body wasn't found.")
+	is_embedded = FALSE
+	return FALSE
