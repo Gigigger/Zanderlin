@@ -89,7 +89,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/saiga/update_overlays()
 	. = ..()
-	if(stat == DEAD)
+	if(stat <= DEAD)
 		return
 	if(ssaddle)
 		var/mutable_appearance/saddlet = mutable_appearance(icon, "saddle-f-above", 4.3)
@@ -226,7 +226,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/saigabuck/update_overlays()
 	. = ..()
-	if(stat == DEAD)
+	if(stat <= DEAD)
 		return
 	if(ssaddle)
 		var/mutable_appearance/saddlet = mutable_appearance(icon, "saddle-above", 4.3)

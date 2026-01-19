@@ -72,10 +72,6 @@
 	name = "rotten bird meat"
 	icon_state = "chickencutlet"
 
-/obj/item/reagent_containers/food/snacks/rotten/crableg
-	name = "rotten crab leg"
-	icon_state = "crableg"
-
 /obj/item/reagent_containers/food/snacks/rotten/breadslice
 	name = "moldy bread"
 	icon_state = "loaf_slice"
@@ -466,41 +462,28 @@
 	taste_mult = 4
 
 /datum/reagent/consumable/soup/stew/chicken
-	name = "chicken stew"
 	color = "#baa21c"
 	taste_description = "chicken"
 
 /datum/reagent/consumable/soup/stew/meat
-	name = "meat stew"
 	color = "#80432a"
 	taste_description = "meat stew"
 
 /datum/reagent/consumable/soup/stew/meat_meagre
-	name = "meagre meat stew"
 	color = "#80432a"
 	taste_description = "meagre meat stew"
 
 /datum/reagent/consumable/soup/stew/fish
-	name = "fish stew"
 	color = "#c7816e"
 	taste_description = "fish stew"
 
 /datum/reagent/consumable/soup/stew/truffle
-	name = "truffle stew"
 	color = "#5f4a0e"
 	taste_description = "rich truffles"
 
 /datum/reagent/consumable/soup/stew/borowiki
-	name = "borowiki stew"
 	color = "#7c6b75"
 	taste_description = "hearty borowiki"
-
-/datum/reagent/consumable/soup/stew/crab
-	name = "crab bisque"
-	color = "#bb843b"
-	taste_description = "creamy seafood"
-	quality = DRINK_VERYGOOD // for now. soups need a way to interact with food preference
-	nutriment_factor = 20 // fish stew + even more stuff. very filling!
 
 /datum/reagent/water/spicy // filler, not important
 	taste_description = "something spicy"
@@ -574,13 +557,7 @@
 	list_reagents = list(/datum/reagent/flour = 1)
 	volume = 1
 	sellprice = 0
-	var/reagent_added
-	/// What reagents can we mix with flour. Entries:
-	/// /datum/reagent = list("#wetcolorhex", /obj/item/reagent_containers/food/what_we_become)
-	var/list/reagent_results = list(
-		/datum/reagent/water = list("#d9d0cb", /obj/item/reagent_containers/food/snacks/dough_base),
-		/datum/reagent/blood = list("#d65e5e", /obj/item/reagent_containers/food/snacks/blood_dough)
-	)
+	var/water_added
 
 /datum/reagent/flour
 	name = "flour"
@@ -603,34 +580,28 @@
 	var/found_table = locate(/obj/structure/table) in (loc)
 	var/obj/item/reagent_containers/glass/R = I
 	if(isturf(loc)&& (found_table))
-		if(!istype(R) || (reagent_added))
+		if(!istype(R) || (water_added))
 			return ..()
-		for(var/acceptable in reagent_results)
-			if(R.reagents.has_reagent(acceptable))
-				if(!R.reagents.has_reagent(acceptable, 10)) // we have it, just not enough
-					to_chat(user, span_notice("Needs more liquid to work it."))
-					continue
-				to_chat(user, span_notice("Adding, now it's time to knead it..."))
-				playsound(user, 'sound/foley/splishy.ogg', 100, TRUE, -1)
-				if(do_after(user, 1.5 SECONDS, src))
-					name = "wet flour"
-					desc = "Destined for greatness, at your hands."
-					R.reagents.remove_reagent(acceptable, 10)
-					reagent_added = acceptable
-					color = reagent_results[acceptable][1]
-				break
+		if(!R.reagents.has_reagent(/datum/reagent/water, 10))
+			to_chat(user, span_notice("Needs more water to work it."))
+			return TRUE
+		to_chat(user, span_notice("Adding water, now it's time to knead it..."))
+		playsound(get_turf(user), 'sound/foley/splishy.ogg', 100, TRUE, -1)
+		if(do_after(user, 1.5 SECONDS, src))
+			name = "wet flour"
+			desc = "Destined for greatness, at your hands."
+			R.reagents.remove_reagent(/datum/reagent/water, 10)
+			water_added = TRUE
+			color = "#d9d0cb"
 	else
 		to_chat(user, span_warning("Put [src] on a table before working it!"))
 
 /obj/item/reagent_containers/powder/flour/attack_hand(mob/living/user)
-	if(reagent_added)
-		var/result = LAZYACCESSASSOC(reagent_results, reagent_added, 2)
-		if(!result) //wtf?
-			return ..()
+	if(water_added)
 		short_cooktime = (40 - ((user.get_skill_level(/datum/skill/craft/cooking))*5))
-		playsound(user, 'sound/foley/kneading_alt.ogg', 90, TRUE, -1)
+		playsound(get_turf(user), 'sound/foley/kneading_alt.ogg', 90, TRUE, -1)
 		if(do_after(user, short_cooktime, src))
-			var/obj/item/reagent_containers/food/base = new result(get_turf(src))
+			var/obj/item/reagent_containers/food/snacks/dough_base/base = new /obj/item/reagent_containers/food/snacks/dough_base(get_turf(src))
 			base.set_quality(recipe_quality)
 			user.mind.add_sleep_experience(/datum/skill/craft/cooking, (user.STAINT*0.5))
 			user.nobles_seen_servant_work()

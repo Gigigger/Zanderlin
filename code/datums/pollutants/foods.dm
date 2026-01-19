@@ -259,7 +259,3 @@
 /datum/pollutant/food/waddle
 	name = "meaty smell"
 	scent = "meaty smell"
-
-/datum/pollutant/food/crab
-	name = "crab"
-	scent = "crab"

@@ -20,9 +20,14 @@
 	if(victim.blood_volume <= 0)
 		to_chat(src, span_warning("Sigh. No blood."))
 		return
-	var/mob/living/carbon/human/human_victim
 	if(ishuman(victim))
-		human_victim = victim
+		var/mob/living/carbon/human/human_victim = victim
+		for(var/I in victim.contents)
+			if(SSenchantment.has_enchantment(I, /datum/enchantment/silver))
+				to_chat(src, span_userdanger("THEY ARE WEARING MY BANE! HISSS!!!"))
+				Paralyze(1)
+				return
+
 		human_victim.add_bite_animation()
 
 	last_drinkblood_use = world.time
@@ -39,12 +44,6 @@
 			if(victim.stat != DEAD)
 				zomwerewolf = victim.mind.has_antag_datum(/datum/antagonist/zombie)
 		if(VDrinker)
-			if(human_victim)
-				for(var/I in victim.contents)
-					if(SSenchantment.has_enchantment(I, /datum/enchantment/silver))
-						to_chat(src, span_userdanger("THEY ARE WEARING MY BANE! HISSS!!!"))
-						Paralyze(1)
-						return
 			if(zomwerewolf)
 				to_chat(src, span_danger("I'm going to puke..."))
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
@@ -66,6 +65,7 @@
 					blood_handle |= BLOOD_PREFERENCE_EUPHORIC
 
 				if(victim.bloodpool > 0)
+					victim.blood_volume = max(victim.blood_volume-45, 0)
 					if(ishuman(victim))
 						var/used_vitae = 150
 						if(victim.bloodpool < used_vitae)
@@ -95,18 +95,19 @@
 					if(!ishuman(victim))
 						if(victim.stat != DEAD)
 							victim.SetUnconscious(50 SECONDS)
-		else if(iscarbon(src)) // Don't larp as a vampire, kids.
+		else // Don't larp as a vampire, kids.
 			to_chat(src, span_warning("I'm going to puke..."))
 			addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 	else
 		if(mind) // We're drinking from a mob or a person who disconnected from the game
 			if(mind.has_antag_datum(/datum/antagonist/vampire))
+				victim.blood_volume = max(victim.blood_volume-45, 0)
 				if(victim.bloodpool >= 250)
 					src.adjust_bloodpool(250, 250)
 				else
 					to_chat(src, span_warning("And yet, not enough vitae can be extracted from them... Tsk."))
 
-	victim.blood_volume = max(victim.blood_volume-blood_gulp, 0)
+	victim.blood_volume = max(victim.blood_volume-5, 0)
 	victim.handle_blood()
 
 	playsound(src, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)

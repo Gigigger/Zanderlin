@@ -64,11 +64,19 @@
 		controller.clear_blackboard_key(target_key)
 
 
-/datum/ai_behavior/eat_dead_body/then_hide/finish_action(datum/ai_controller/controller, succeeded, target_key, targetting_datum_key, hiding_location_key)
+/datum/ai_behavior/eat_dead_body/bog_troll/finish_action(datum/ai_controller/controller, succeeded, target_key, targetting_datum_key, hiding_location_key)
 	. = ..()
-	if(!succeeded && isanimal(controller.pawn))
-		var/mob/living/simple_animal/mob = controller.pawn
-		mob.hide()
+	if(!succeeded)
+		controller.clear_blackboard_key(target_key)
+		if(istype(controller.pawn, /mob/living/simple_animal/hostile/retaliate/troll))
+			var/mob/living/simple_animal/hostile/retaliate/troll/mob = controller.pawn
+			mob.hide()
+
+/datum/ai_behavior/eat_dead_body/mimic/finish_action(datum/ai_controller/controller, succeeded, target_key, targetting_datum_key, hiding_location_key)
+	. = ..()
+	if(!succeeded)
+		controller.clear_blackboard_key(target_key)
+		controller.pawn.icon_state = "mimic"
 
 /datum/ai_behavior/eat_dead_body/proc/is_dead(mob/living/target)
 	return !QDELETED(target) && target.stat >= DEAD

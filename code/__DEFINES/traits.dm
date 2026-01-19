@@ -170,7 +170,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NODEATH			"nodeath"
 #define TRAIT_NOHARDCRIT		"nohardcrit"
 #define TRAIT_NOSOFTCRIT		"nosoftcrit"
-#define TRAIT_NOHANDGRABS		"nohandgrabs" //grab items are added to my contents instead of my hands. Needed for Simple mobs to grapple
 #define TRAIT_MINDSHIELD		"mindshield"
 #define TRAIT_DISSECTED			"dissected"
 #define TRAIT_SIXTHSENSE		"sixth_sense" //I can hear dead people

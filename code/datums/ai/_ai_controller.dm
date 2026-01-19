@@ -181,7 +181,10 @@ have ways of interacting with a specific atom and control it. They posses a blac
 	if(nextmove && living_pawn.next_move > world.time)
 		return FALSE
 
-	living_pawn.select_zone(zone_simpmob_target(living_pawn))
+	if(living_pawn.body_position == LYING_DOWN)
+		living_pawn.aimheight_change(rand(1,9))
+	else
+		living_pawn.aimheight_change(rand(10,19))
 
 	if(isnull(combat_mode))
 		SEND_SIGNAL(living_pawn, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, final_target)
@@ -309,13 +312,10 @@ have ways of interacting with a specific atom and control it. They posses a blac
 
 /**
  * Gets the AI status we expect the AI controller to be on at this current moment.
- * Returns AI_STATUS_OFF if the game is over, it's inhabited by a Client and shouldn't be, if it's dead and cannot act while dead, or is on a z level without clients.
+ * Returns AI_STATUS_OFF if it's inhabited by a Client and shouldn't be, if it's dead and cannot act while dead, or is on a z level without clients.
  * Returns AI_STATUS_ON otherwise.
  */
 /datum/ai_controller/proc/get_expected_ai_status()
-
-	if(SSticker.current_state == GAME_STATE_FINISHED)
-		return AI_STATUS_OFF
 
 	if (!ismob(pawn))
 		return AI_STATUS_ON

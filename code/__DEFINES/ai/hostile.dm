@@ -57,8 +57,6 @@
 #define BB_TARGET_WOUNDED_ONLY "BB_target_wounded_only"
 /// What typepath the holding object targeting strategy should look for
 #define BB_TARGET_HELD_ITEM "BB_target_held_item"
-/// How much blood should be remaining within a target to be chosen
-#define BB_TARGET_BLOOD_THRESHOLD "BB_target_blood_threshold"
 
 ///list of foods this mob likes
 #define BB_BASIC_FOODS "BB_basic_foods"

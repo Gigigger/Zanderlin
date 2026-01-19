@@ -83,6 +83,21 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass/yel,
 /area/outdoors)
+"ar" = (
+/obj/structure/lootable_structure/grain_barrel{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/structure/lootable_structure/powder_sack{
+	pixel_y = -6;
+	pixel_x = -10;
+	layer = 3.2
+	},
+/obj/structure/lootable_structure/mining_cache{
+	pixel_x = 3
+	},
+/turf/open/floor/grass/yel,
+/area/outdoors)
 "as" = (
 /turf/closed/basic,
 /area)
@@ -95,6 +110,10 @@
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/mountains/decap)
+"av" = (
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/grass/yel,
+/area/outdoors)
 "aw" = (
 /obj/structure/hotspring,
 /turf/open/floor/cobblerock,
@@ -150,6 +169,18 @@
 /obj/item/clothing/armor/gambeson,
 /obj/item/clothing/armor/gambeson,
 /obj/item/clothing/armor/gambeson,
+/turf/open/floor/carpet,
+/area/indoors)
+"aC" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/clothing/armor/chainmail/hauberk,
+/obj/item/clothing/armor/chainmail/hauberk,
+/obj/item/clothing/armor/chainmail/hauberk,
+/obj/item/clothing/armor/chainmail/hauberk,
+/obj/item/clothing/armor/chainmail/hauberk,
 /turf/open/floor/carpet,
 /area/indoors)
 "aD" = (
@@ -210,6 +241,15 @@
 	},
 /turf/closed/mineral/random/med,
 /area/outdoors/mountains/decap)
+"aK" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/clothing/head/helmet/heavy/crusader,
+/obj/item/clothing/head/helmet/heavy/crusader/t,
+/turf/open/floor/carpet,
+/area/indoors)
 "aL" = (
 /turf/open/floor/cobblerock,
 /area/outdoors/mountains/decap)
@@ -227,6 +267,10 @@
 /obj/item/clothing/head/helmet/sallet,
 /obj/item/clothing/head/helmet/sallet,
 /obj/item/clothing/head/helmet/sallet,
+/turf/open/floor/carpet,
+/area/indoors)
+"aP" = (
+/obj/machinery/light/fueled/firebowl,
 /turf/open/floor/carpet,
 /area/indoors)
 "aQ" = (
@@ -256,6 +300,13 @@
 /obj/item/clothing/pants/chainlegs,
 /turf/open/floor/carpet,
 /area/indoors)
+"aT" = (
+/obj/structure/lootable_structure/fish_barrel{
+	pixel_x = 11;
+	layer = 3.0
+	},
+/turf/closed/mineral/bedrock,
+/area/outdoors)
 "aU" = (
 /turf/open/floor/cobblerock/alt,
 /area/outdoors/mountains/decap)
@@ -340,6 +391,17 @@
 /obj/item/clothing/pants/tights,
 /turf/open/floor/carpet,
 /area/indoors)
+"bf" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/obj/item/clothing/neck/chaincoif,
+/turf/open/floor/carpet,
+/area/indoors)
 "bg" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -347,6 +409,18 @@
 	},
 /obj/item/clothing/ring/active/nomag,
 /obj/item/clothing/ring/active/nomag,
+/turf/open/floor/carpet,
+/area/indoors)
+"bh" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
 /turf/open/floor/carpet,
 /area/indoors)
 "bi" = (
@@ -665,6 +739,28 @@
 /obj/item/weapon/mace/steel,
 /turf/open/floor/cobble,
 /area/indoors)
+"bW" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/weapon/sword/long/greatsword,
+/obj/item/weapon/sword/long/greatsword,
+/obj/item/weapon/sword/long/greatsword,
+/obj/item/weapon/sword/long/greatsword,
+/obj/item/key/lord,
+/turf/open/floor/cobble,
+/area/indoors)
+"bX" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/weapon/flail/sflail,
+/obj/item/weapon/flail/sflail,
+/obj/item/key/lord,
+/turf/open/floor/cobble,
+/area/indoors)
 "bY" = (
 /obj/machinery/anvil,
 /turf/open/floor/cobblerock,
@@ -868,13 +964,6 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"cC" = (
-/obj/structure/bars/grille,
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32
-	},
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "cF" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/dirt,
@@ -903,6 +992,16 @@
 /area/outdoors/mountains/decap)
 "cM" = (
 /obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/cobble,
+/area/indoors)
+"cN" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood2";
+	dir = 10
+	},
+/obj/item/weapon/polearm/eaglebeak/lucerne,
+/obj/item/weapon/polearm/eaglebeak/lucerne,
+/obj/item/weapon/polearm/eaglebeak/lucerne,
 /turf/open/floor/cobble,
 /area/indoors)
 "cO" = (
@@ -1005,13 +1104,6 @@
 /obj/machinery/essence/harvester,
 /turf/open/floor/cobblerock,
 /area/outdoors)
-"ed" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "ef" = (
 /obj/structure/hotspring/border/five,
 /obj/structure/flora/hotspring_rocks{
@@ -1099,29 +1191,10 @@
 /obj/structure/flora/grass,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"fu" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "fz" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/wood,
 /area/indoors/town/manor)
-"fI" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/clothing/shoes/boots,
-/obj/item/clothing/shoes/boots,
-/obj/item/clothing/shoes/boots,
-/obj/item/clothing/shoes/boots,
-/obj/item/clothing/shoes/boots,
-/obj/machinery/light/fueled/wallfire/candle/r,
-/turf/open/floor/carpet,
-/area/indoors)
 "fQ" = (
 /obj/structure/bridge_stakes,
 /turf/open/floor/dirt/road,
@@ -1148,10 +1221,6 @@
 /obj/item/reagent_containers/glass/bucket/pot/copper,
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"gi" = (
-/obj/effect/landmark/start/adventurer,
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "gp" = (
 /obj/structure/hotspring,
 /obj/effect/lily_petal/two,
@@ -1188,9 +1257,6 @@
 	},
 /turf/open/floor/wood,
 /area/indoors)
-"gB" = (
-/turf/closed/wall/mineral/underbrick,
-/area/under/town/basement)
 "gE" = (
 /obj/structure/stairs{
 	dir = 8
@@ -1282,13 +1348,6 @@
 /obj/structure/hotspring/border/three,
 /turf/open/floor/dirt/road,
 /area/outdoors)
-"jp" = (
-/obj/structure/bars/grille,
-/obj/structure/wallladder{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "jq" = (
 /obj/structure/table/wood/plain,
 /obj/item/cooking/skewer{
@@ -1381,16 +1440,6 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/churchbrick,
 /area/indoors/town/manor)
-"ku" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/weapon/polearm/eaglebeak/lucerne,
-/obj/item/weapon/polearm/eaglebeak/lucerne,
-/obj/item/weapon/polearm/eaglebeak/lucerne,
-/turf/closed/wall/mineral/stone,
-/area/indoors)
 "kx" = (
 /obj/machinery/light/fueled/forge,
 /turf/open/floor/cobble,
@@ -1420,9 +1469,6 @@
 	dir = 8
 	},
 /area/outdoors/mountains/decap)
-"la" = (
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "lf" = (
 /obj/structure/flora/grass/bush/wall,
 /turf/open/floor/tile,
@@ -1446,10 +1492,6 @@
 /obj/structure/vertical_gearbox,
 /turf/open/floor/wood,
 /area/indoors)
-"lq" = (
-/obj/machinery/light/fueled/chand,
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "lt" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -1544,13 +1586,6 @@
 "mY" = (
 /turf/open/floor/wood,
 /area/indoors)
-"nd" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/floor/dirt,
-/area/under/town/basement)
 "ng" = (
 /obj/effect/waterfall,
 /turf/open/water/river,
@@ -1567,11 +1602,6 @@
 /area/indoors)
 "nm" = (
 /obj/effect/landmark/stall,
-/turf/open/floor/grass/yel,
-/area/outdoors)
-"nq" = (
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/grass/yel,
 /area/outdoors)
 "nz" = (
@@ -1625,10 +1655,6 @@
 /obj/structure/soil/debug_soil/random,
 /turf/open/floor/dirt/road,
 /area/outdoors)
-"oK" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "pc" = (
 /turf/open/floor/cobblerock,
 /area/indoors)
@@ -1636,13 +1662,6 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood,
 /area/outdoors)
-"pj" = (
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
-"pv" = (
-/obj/structure/fluff/railing/border,
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "pC" = (
 /obj/item/reagent_containers/food/snacks/produce/fruit/jacksberry{
 	pixel_y = -7;
@@ -1844,14 +1863,6 @@
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"pU" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/carpet,
-/area/indoors)
 "pW" = (
 /obj/structure/carpet/purple,
 /turf/open/floor/blocks,
@@ -1897,18 +1908,6 @@
 /obj/structure/carpet/green,
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"qo" = (
-/obj/structure/wallladder{
-	dir = 1
-	},
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
-"qu" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "qw" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/cobblerock,
@@ -1985,12 +1984,6 @@
 "ru" = (
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"rH" = (
-/obj/structure/wallladder{
-	dir = 4
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "rN" = (
 /obj/structure/redstone/dust,
 /turf/open/floor/cobblerock,
@@ -2010,13 +2003,6 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"sF" = (
-/obj/effect/landmark/hammer/dev_text{
-	name = "Free Use";
-	desc = "Fight area test. Put whatever you want in this area i dont care"
-	},
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "sG" = (
 /obj/structure/rack/shelf,
 /obj/structure/rack/shelf/biggest,
@@ -2185,19 +2171,22 @@
 /obj/structure/stockpile_storage,
 /turf/open/floor/cobblerock,
 /area/indoors/town/manor)
+"vv" = (
+/obj/effect/landmark/house_spot{
+	default_template = /datum/map_template/basic_nine;
+	template_x = 9;
+	template_y = 9;
+	template_z = 2;
+	save_id = "9x9_2";
+	property_id = "9x9_2"
+	},
+/turf/closed,
+/area/outdoors)
 "vB" = (
 /obj/structure/hotspring,
 /obj/effect/lily_petal/two,
 /turf/open/floor/dirt/road,
 /area/outdoors)
-"vP" = (
-/obj/structure/bars/grille,
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "vT" = (
 /obj/structure/carpet/green,
 /turf/open/floor/blocks,
@@ -2234,18 +2223,23 @@
 /obj/effect/falling_sakura,
 /turf/open/floor/grass/yel,
 /area/outdoors)
+"wZ" = (
+/obj/effect/landmark/house_spot{
+	template_y = 9;
+	template_x = 9;
+	template_z = 2;
+	default_template = /datum/map_template/basic_nine;
+	save_id = "9x9_2";
+	property_id = "9x9_1"
+	},
+/turf/closed,
+/area/outdoors)
 "xa" = (
 /obj/structure/chair/bench/couch/right{
 	dir = 8
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"xc" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32
-	},
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "xh" = (
 /obj/structure/waterwheel,
 /turf/open/water/river{
@@ -2261,10 +2255,6 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors/town/manor)
-"xo" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf/alpha,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "xp" = (
 /turf/open/water/river,
 /area/outdoors)
@@ -2296,15 +2286,6 @@
 /obj/item/key/lord,
 /turf/open/floor/churchbrick,
 /area/indoors/town/manor)
-"xI" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/weapon/flail/sflail,
-/obj/item/weapon/flail/sflail,
-/turf/open/floor/cobble,
-/area/indoors)
 "xK" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/blocks,
@@ -2313,9 +2294,6 @@
 /obj/structure/bridge_stakes,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"xQ" = (
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "yr" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/dirt/road,
@@ -2344,12 +2322,6 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/dirt/road,
 /area/indoors)
-"zd" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32
-	},
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "ze" = (
 /obj/structure/table/wood/counter/end{
 	dir = 1
@@ -2386,9 +2358,6 @@
 /obj/structure/water_vent,
 /turf/open/floor/carpet,
 /area/indoors)
-"zu" = (
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "zw" = (
 /obj/structure/redstone/repeater{
 	dir = 1;
@@ -2519,17 +2488,6 @@
 /obj/structure/water_pipe,
 /turf/closed/wall/mineral/wood,
 /area/indoors)
-"AV" = (
-/obj/effect/landmark/house_spot{
-	template_y = 9;
-	template_x = 9;
-	template_z = 2;
-	default_template = /datum/map_template/basic_nine;
-	save_id = "9x9_2";
-	property_id = "9x9_1"
-	},
-/turf/closed,
-/area/outdoors)
 "Be" = (
 /obj/structure/floordoor,
 /turf/open/floor/cobblerock,
@@ -2548,23 +2506,6 @@
 /obj/effect/landmark/bounty_location/warehouse,
 /turf/open/floor/wood,
 /area/indoors)
-"BK" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/clothing/head/helmet/heavy/crusader,
-/obj/item/clothing/head/helmet/heavy/crusader/t,
-/obj/machinery/light/fueled/wallfire/candle/l,
-/turf/open/floor/carpet,
-/area/indoors)
-"BL" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "BW" = (
 /obj/structure/flora/grass,
 /obj/structure/minecart_rail{
@@ -2572,17 +2513,6 @@
 	},
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"Ce" = (
-/obj/structure/fluff/railing/wood,
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
-"Cj" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "Cm" = (
 /obj/structure/gearbox,
 /turf/open/floor/blocks,
@@ -2591,10 +2521,6 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/cobblerock,
 /area/outdoors)
-"CQ" = (
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "Di" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -2761,19 +2687,6 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/churchbrick,
 /area/indoors/town/manor)
-"Es" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/clothing/armor/chainmail/hauberk,
-/obj/item/clothing/armor/chainmail/hauberk,
-/obj/item/clothing/armor/chainmail/hauberk,
-/obj/item/clothing/armor/chainmail/hauberk,
-/obj/item/clothing/armor/chainmail/hauberk,
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/carpet,
-/area/indoors)
 "Ev" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -2787,12 +2700,6 @@
 /obj/structure/gearbox,
 /turf/open/floor/cobblerock,
 /area/outdoors/mountains/decap)
-"EO" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "ER" = (
 /obj/structure/dungeon_descent,
 /turf/open/floor/cobblerock,
@@ -2812,10 +2719,6 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors)
-"EZ" = (
-/obj/structure/bars/grille,
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "Fc" = (
 /obj/structure/hotspring/border/seven,
 /obj/effect/falling_sakura,
@@ -2862,10 +2765,6 @@
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"FF" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf/alpha/tame,
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "FI" = (
 /obj/structure/door/fancy,
 /turf/open/floor/blocks,
@@ -2923,11 +2822,6 @@
 /obj/structure/gearbox,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"GK" = (
-/obj/structure/bars/grille,
-/obj/structure/bars/grille,
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "GO" = (
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood,
@@ -2966,13 +2860,6 @@
 /obj/machinery/essence/reservoir,
 /turf/open/floor/churchbrick,
 /area/indoors/town/manor)
-"Hu" = (
-/obj/structure/bars/grille,
-/obj/structure/wallladder{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "Hv" = (
 /obj/structure/table/wood/counter/end,
 /turf/open/floor/wood,
@@ -3002,25 +2889,6 @@
 	},
 /turf/open/floor/cobblerock,
 /area)
-"HV" = (
-/obj/structure/lootable_structure/grain_barrel{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/structure/lootable_structure/powder_sack{
-	pixel_y = -6;
-	pixel_x = -10;
-	layer = 3.2
-	},
-/obj/structure/lootable_structure/mining_cache{
-	pixel_x = 3
-	},
-/obj/structure/lootable_structure/fish_barrel{
-	pixel_x = 11;
-	layer = 3.0
-	},
-/turf/open/floor/grass/yel,
-/area/outdoors)
 "Id" = (
 /obj/structure/rotation_piece,
 /turf/open/floor/blocks,
@@ -3095,10 +2963,6 @@
 	},
 /turf/open/floor/tile/kitchen,
 /area/indoors/town/manor)
-"Jp" = (
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "JM" = (
 /obj/structure/well,
 /turf/open/floor/cobblerock,
@@ -3155,18 +3019,6 @@
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/manor)
-"Kz" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/obj/item/clothing/neck/chaincoif,
-/obj/machinery/light/fueled/wallfire/candle/l,
-/turf/open/floor/carpet,
-/area/indoors)
 "KG" = (
 /obj/effect/landmark/stall,
 /turf/open/floor/carpet,
@@ -3291,9 +3143,6 @@
 /obj/effect/falling_sakura,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"Oc" = (
-/turf/open/floor/dirt,
-/area/under/town/basement)
 "Of" = (
 /obj/structure/window/openclose{
 	dir = 8
@@ -3340,40 +3189,10 @@
 /obj/machinery/light/fueled/firebowl,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"PA" = (
-/obj/structure/bars/grille,
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = 0;
-	pixel_x = -32
-	},
-/turf/open/transparent/openspace,
-/area/under/town/basement)
-"PK" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = 0;
-	pixel_x = -32
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
-"PL" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf/alpha/tame/saddled,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "PV" = (
 /obj/structure/carpet,
 /turf/open/floor/tile/kitchen,
 /area/indoors/town/manor)
-"Qf" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood2";
-	dir = 10
-	},
-/obj/item/weapon/sword/long/greatsword,
-/obj/item/weapon/sword/long/greatsword,
-/obj/item/weapon/sword/long/greatsword,
-/obj/item/weapon/sword/long/greatsword,
-/turf/open/floor/cobble,
-/area/indoors)
 "Qi" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/grass/yel,
@@ -3382,10 +3201,6 @@
 /obj/structure/bars,
 /turf/open/floor/churchbrick,
 /area/indoors/town/manor)
-"Qr" = (
-/mob/living/simple_animal/hostile/retaliate/nautilus,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "QA" = (
 /obj/structure/water_pipe,
 /obj/structure/sprinkler,
@@ -3441,12 +3256,6 @@
 /obj/structure/minecart_rail,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"Sy" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "Sz" = (
 /obj/structure/bridge{
 	layer = 4;
@@ -3454,10 +3263,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/outdoors)
-"SD" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf/tame/saddled,
-/turf/open/floor/dirt/road,
-/area/under/town/basement)
 "SE" = (
 /obj/structure/hotspring/border/eleven,
 /obj/effect/lily_petal/three{
@@ -3523,11 +3328,6 @@
 	},
 /turf/open/floor/wood,
 /area/outdoors)
-"TC" = (
-/obj/effect/landmark/start/mercenary,
-/obj/effect/landmark/start/mercenarylate,
-/turf/open/floor/churchrough,
-/area/under/town/basement)
 "TD" = (
 /obj/structure/window/openclose,
 /obj/structure/rotation_piece,
@@ -3634,16 +3434,6 @@
 /obj/structure/flora/grass/herb/urtica,
 /turf/open/floor/grass/yel,
 /area/outdoors)
-"VU" = (
-/obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32
-	},
-/turf/open/floor/carpet,
-/area/indoors)
-"VV" = (
-/mob/living/simple_animal/hostile/retaliate/lampreywolf/tame,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "VW" = (
 /obj/structure/stairs/d{
 	dir = 4
@@ -3697,12 +3487,6 @@
 "WL" = (
 /turf/closed/wall/mineral/decorstone,
 /area/indoors/town/manor)
-"WN" = (
-/obj/structure/wallladder{
-	dir = 8
-	},
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "WP" = (
 /obj/structure/stairs{
 	dir = 4
@@ -3752,17 +3536,6 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors)
-"Yu" = (
-/obj/effect/landmark/house_spot{
-	default_template = /datum/map_template/basic_nine;
-	template_x = 9;
-	template_y = 9;
-	template_z = 2;
-	save_id = "9x9_2";
-	property_id = "9x9_2"
-	},
-/turf/closed,
-/area/outdoors)
 "Yv" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/grass,
@@ -3778,11 +3551,6 @@
 	},
 /turf/open/floor/cobblerock,
 /area)
-"Zq" = (
-/obj/structure/bars/grille,
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/transparent/openspace,
-/area/under/town/basement)
 "Zs" = (
 /turf/closed/wall/mineral/wood,
 /area/indoors)
@@ -3792,10 +3560,6 @@
 	},
 /turf/open/floor/carpet,
 /area/indoors)
-"Zy" = (
-/obj/structure/fluff/railing/wood,
-/turf/open/floor/cobblerock,
-/area/under/town/basement)
 "ZH" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -3806,10 +3570,6 @@
 	},
 /turf/open/floor/tile/kitchen,
 /area/indoors/town/manor)
-"ZJ" = (
-/obj/machinery/light/fueled/wallfire/candle/r,
-/turf/open/floor/carpet,
-/area/indoors)
 "ZT" = (
 /obj/structure/table/wood/plain,
 /obj/item/cooking/pan,
@@ -4024,29 +3784,29 @@ as
 as
 as
 as
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -4281,29 +4041,29 @@ as
 as
 as
 as
-gB
-WN
-pj
-pj
-pj
-PK
-pj
-pj
-pj
-pj
-PK
-Zy
-PK
-pj
-pj
-pj
-pj
-PK
-pj
-pj
-pj
-WN
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -4538,29 +4298,29 @@ as
 as
 as
 as
-gB
-pj
-zu
-zu
-pj
-pj
-pj
-Oc
-Oc
-pj
-pj
-Zy
-pj
-zu
-FF
-pj
-pj
-pj
-pj
-pj
-Oc
-pj
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -4795,29 +4555,29 @@ as
 as
 as
 as
-gB
-pj
-zu
-zu
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Zy
-pj
-pj
-zu
-pj
-pj
-zu
-pj
-pj
-pj
-pj
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -5052,29 +4812,29 @@ as
 as
 as
 as
-gB
-pj
-pj
-oK
-pj
-zu
-zu
-pj
-pj
-pj
-pj
-Ce
-pj
-pj
-PL
-pj
-pj
-zu
-pj
-pj
-zu
-zu
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -5309,29 +5069,29 @@ as
 as
 as
 as
-gB
-Jp
-pj
-pj
-pj
-pj
-zu
-pj
-pj
-pj
-zu
-Ce
-pj
-pj
-pj
-zu
-pj
-pj
-pj
-pj
-pj
-zd
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -5566,29 +5326,29 @@ as
 as
 as
 as
-gB
-pj
-pj
-pj
-pj
-pj
-xo
-pj
-zu
-zu
-zu
-Zy
-pj
-qu
-zu
-pj
-zu
-pj
-VV
-pj
-pj
-zu
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -5823,29 +5583,29 @@ as
 as
 as
 as
-gB
-pj
-pj
-oK
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Zy
-pv
-Qr
-fu
-zu
-pj
-pj
-zu
-pj
-pj
-zu
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -6080,29 +5840,29 @@ as
 as
 as
 as
-gB
-Oc
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Zy
-pj
-Sy
-pj
-zu
-pj
-pj
-SD
-pj
-pj
-zu
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -6337,29 +6097,29 @@ as
 as
 as
 as
-gB
-Oc
-pj
-zu
-zu
-pj
-pj
-pj
-pj
-pj
-Oc
-Zy
-pj
-pj
-pj
-pj
-pj
-zu
-zu
-pj
-pj
-pj
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -6594,29 +6354,29 @@ as
 as
 as
 as
-gB
-Jp
-pj
-pj
-pj
-zu
-zu
-zu
-pj
-pj
-Oc
-Zy
-zu
-pj
-pj
-pj
-zu
-zu
-pj
-pj
-pj
-EO
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -6851,29 +6611,29 @@ as
 as
 as
 as
-gB
-pj
-pj
-oK
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Zy
-pj
-pj
-pj
-pj
-zu
-pj
-pj
-pj
-Oc
-pj
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -7108,29 +6868,29 @@ as
 as
 as
 as
-gB
-zu
-pj
-pj
-pj
-pj
-pj
-pj
-zu
-pj
-pj
-Zy
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-zu
-pj
-gB
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -7365,34 +7125,34 @@ as
 as
 as
 as
-gB
-zu
-pj
-zu
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Zy
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-pj
-Oc
-zu
-gB
 as
 as
 as
 as
 as
+as
+as
+yP
+yP
+yP
+yP
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+ac
 ac
 ac
 ac
@@ -7622,29 +7382,29 @@ as
 as
 as
 as
-gB
-rH
-pj
-zu
-zu
-ed
-pj
-Oc
-pj
-pj
-BL
-Zy
-BL
-zu
-pj
-pj
-pj
-nd
-pj
-pj
-pj
-qo
-gB
+as
+as
+as
+as
+as
+yP
+yP
+yP
+cy
+aM
+yP
+yP
+yP
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -7879,29 +7639,29 @@ as
 as
 as
 as
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
+yP
+yP
+yP
+yP
+yP
+yP
+aM
+we
+Ts
+we
+we
+cy
+yP
+yP
+yP
+yP
+yP
+yP
+yP
+as
+as
+as
+as
 as
 as
 as
@@ -8137,23 +7897,23 @@ as
 as
 as
 yP
-yP
-yP
-yP
-yP
-yP
-aM
+co
+co
+qZ
+co
+co
+co
+co
 we
-Ts
 we
 we
-cy
-yP
-yP
-yP
-yP
-yP
-yP
+we
+we
+co
+co
+co
+qZ
+co
 yP
 as
 as
@@ -8396,30 +8156,30 @@ as
 yP
 co
 co
+co
+co
+co
+co
 qZ
-co
-co
-aM
+cy
 we
 we
 we
-we
-we
-we
+cy
 co
 co
 co
 qZ
 co
 yP
+yP
+yP
 as
 as
-as
-as
-as
-as
-as
-as
+yP
+yP
+yP
+yP
 ac
 ac
 ac
@@ -8654,28 +8414,28 @@ yP
 co
 co
 co
-co
+zk
+zk
+zk
 co
 co
 we
-cy
 we
-we
-we
-cy
-co
-co
-co
+Pd
 qZ
 co
+co
+co
+co
+co
+aL
+aL
 yP
 yP
 yP
-as
-as
 yP
-yP
-yP
+aw
+aw
 yP
 ac
 ac
@@ -8912,25 +8672,25 @@ co
 co
 co
 zk
-zk
-zk
-bv
-bv
-we
-we
-Pd
-qZ
+br
+TP
+co
+co
+co
+hP
+Hl
+co
 co
 co
 co
 co
 co
 aL
+JM
 aL
-yP
-yP
-yP
-yP
+bv
+QR
+hd
 aw
 aw
 yP
@@ -9166,27 +8926,27 @@ as
 as
 yP
 co
-co
+qZ
 co
 zk
-br
-TP
+zk
+su
 ah
-bv
-bv
+cu
 hP
-Hl
+hP
 co
 co
 co
 co
-co
-co
-aL
-JM
-aL
-bv
 QR
+bv
+co
+Mp
+aL
+aL
+aL
+cu
 hd
 aw
 aw
@@ -9422,33 +9182,33 @@ as
 as
 as
 yP
-co
 qZ
 co
-zk
-zk
-su
+co
+co
+qZ
+cw
+hi
+Ke
+Hl
+kS
+bo
+co
+qZ
+cS
+aL
 ah
-cu
-hP
-hP
-co
-co
-co
-co
-QR
+ah
 bv
-co
-Mp
+UY
+ah
 aL
 aL
-aL
-cu
 hd
 aw
 aw
 yP
-ac
+yP
 ac
 ac
 ac
@@ -9679,32 +9439,32 @@ as
 as
 as
 yP
-qZ
 co
 co
 co
-qZ
-cw
-hi
-Ke
-Hl
-kS
+ng
+cZ
+Wi
+ug
+cG
+hP
+hP
 bo
-co
-qZ
-cS
-aL
-ah
-ah
+cx
+cx
+jV
+cx
+DD
+bm
+EI
 bv
-UY
 ah
-aL
-aL
+cV
+cz
 hd
 aw
+Dz
 aw
-yP
 yP
 ac
 ac
@@ -9939,28 +9699,28 @@ yP
 co
 co
 co
-ng
-cZ
-Wi
-ug
-cG
-hP
-hP
-bo
-cx
-cx
-jV
-cx
-DD
-bm
-EI
-bv
+co
 ah
-cV
-cz
-hd
+Wi
+AI
+Fx
+hP
+bv
+bv
+bv
+bv
+Bv
+qZ
+co
+co
+cA
+ah
+bv
+aL
+aL
+An
+zn
 aw
-Dz
 aw
 yP
 ac
@@ -10196,27 +9956,27 @@ yP
 co
 co
 co
+AO
+Ub
+bv
+bv
+ff
+bv
+bv
+aL
+bn
 co
-ah
-Wi
-AI
-Fx
-hP
-bv
-bv
-bv
-bv
-Bv
-qZ
+co
+co
 co
 co
 cA
-ah
-bv
 aL
+cV
 aL
-An
-zn
+UY
+cr
+hd
 aw
 aw
 yP
@@ -10451,28 +10211,28 @@ as
 as
 yP
 co
+ti
 co
-co
-AO
-Ub
 bv
-bv
-ff
-bv
-bv
+ah
+ah
 aL
-bn
+mx
+aL
+bv
+aU
+TO
 co
 co
 co
-co
+qZ
 co
 cA
-aL
 cV
+bv
 aL
-UY
-cr
+bv
+aL
 hd
 aw
 aw
@@ -10707,29 +10467,29 @@ as
 as
 as
 yP
-co
-ti
-co
-bv
-ah
-ah
-aL
-mx
-aL
-bv
-aU
-TO
-co
-co
-co
+qZ
 qZ
 co
+hF
+aL
+aL
+vV
+ah
+bv
+aL
+bv
+bp
+co
+co
+co
+co
+co
 cA
-cV
 bv
-aL
-bv
-aL
+ah
+cO
+cS
+cz
 hd
 aw
 aw
@@ -10964,30 +10724,30 @@ as
 as
 as
 yP
-qZ
-qZ
 co
-hF
-aL
-aL
-vV
+aJ
+qZ
+aG
 ah
 bv
-aL
 bv
 bp
+bp
+aL
+bp
+aU
 co
 co
-co
-co
-co
+qZ
+qZ
+qZ
 cA
+cV
 bv
-ah
-cO
-cS
-cz
-hd
+au
+aL
+FX
+YR
 aw
 aw
 yP
@@ -11222,31 +10982,31 @@ as
 as
 yP
 co
-aJ
-qZ
-aG
-ah
+co
+co
+rm
 bv
 bv
 bp
-bp
-aL
-bp
+mj
+bn
 aU
+bR
+bp
+qZ
+cs
+cs
 co
 co
-qZ
-qZ
-qZ
-cA
-cV
-bv
+EI
+bm
+He
 au
-aL
-FX
-YR
-aw
-aw
+TJ
+hd
+wg
+Jj
+Jj
 yP
 ac
 ac
@@ -11481,29 +11241,29 @@ yP
 co
 co
 co
-rm
-bv
-bv
+qZ
 bp
-mj
-bn
+aU
 aU
 bR
+WA
+WA
 bp
-qZ
+bp
+cs
+cs
 cs
 cs
 co
-co
-EI
-bm
-He
+aL
+aL
+aL
 au
-TJ
+aL
 hd
-wg
-Jj
-Jj
+uL
+cQ
+bv
 yP
 ac
 ac
@@ -11738,29 +11498,29 @@ yP
 co
 co
 co
-qZ
+co
 bp
-aU
-aU
-bR
 WA
 WA
-bp
-bp
+WA
+WA
+WA
+WA
+WA
 cs
 cs
 cs
 cs
 co
 aL
-aL
-aL
+iE
+cV
 au
 aL
 hd
 uL
-cQ
-bv
+cS
+yP
 yP
 ac
 ac
@@ -11994,31 +11754,31 @@ as
 yP
 co
 co
-co
-co
+WA
+WA
+WA
+WA
+Lv
+bI
 bp
-WA
-WA
-WA
-WA
-WA
-WA
-WA
-cs
+aU
+uV
+co
 cs
 cs
 cs
 co
+co
 aL
-iE
 cV
+cS
 au
-aL
+cQ
 hd
 uL
-cS
+TJ
 yP
-yP
+ac
 ac
 ac
 ac
@@ -12251,29 +12011,29 @@ as
 yP
 co
 co
-WA
-WA
-WA
-WA
-Lv
-bI
-bp
-aU
-uV
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
 co
 cs
 cs
-cs
 co
 co
+cK
 aL
 cV
-cS
 au
-cQ
+aL
 hd
 uL
-TJ
+yP
 yP
 ac
 ac
@@ -12506,30 +12266,30 @@ jN
 jN
 jN
 yP
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-cs
-cs
-co
-co
-cK
+yP
+yP
+yP
+yP
+yP
+yP
+yP
+yP
+yP
+yP
+at
+at
+at
+at
+yP
+yP
+yP
+yP
 aL
-cV
+bv
 au
-aL
-hd
-uL
+cz
+ef
+yP
 yP
 yP
 ac
@@ -12762,30 +12522,30 @@ rb
 rb
 rb
 jN
-yP
-yP
-yP
-yP
-yP
-yP
-yP
-yP
-yP
-yP
-yP
+as
 at
 at
 at
 at
-yP
+at
+at
+at
+at
+at
+at
+at
+SS
+Hr
+at
+at
+at
 yP
 yP
 yP
 aL
-bv
-au
-cz
-ef
+lQ
+aL
+yP
 yP
 yP
 yP
@@ -13031,21 +12791,21 @@ at
 at
 at
 at
-SS
-Hr
+Wr
+ai
 at
 at
 at
-yP
-yP
-yP
-aL
-lQ
-aL
-yP
-yP
-yP
-yP
+at
+at
+at
+at
+at
+at
+at
+at
+at
+at
 ac
 ac
 ac
@@ -20994,7 +20754,7 @@ tA
 tA
 tA
 tA
-Yu
+vv
 Wr
 ai
 Wr
@@ -21006,7 +20766,7 @@ tA
 tA
 tA
 tA
-AV
+wZ
 QN
 ai
 ai
@@ -69560,29 +69320,29 @@ ac
 ac
 ac
 ac
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -69817,29 +69577,29 @@ ac
 ac
 ac
 ac
-gB
-Hu
-EZ
-EZ
-EZ
-PA
-EZ
-EZ
-EZ
-EZ
-PA
-EZ
-PA
-EZ
-EZ
-EZ
-EZ
-PA
-EZ
-EZ
-EZ
-Hu
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -70074,29 +69834,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-EZ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -70331,29 +70091,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -70588,29 +70348,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-lq
-xQ
-xQ
-xQ
-lq
-xQ
-xQ
-EZ
-xQ
-xQ
-lq
-xQ
-xQ
-xQ
-lq
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -70845,29 +70605,29 @@ ac
 ac
 ac
 ac
-gB
-Zq
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-cC
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -71102,29 +70862,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -71359,29 +71119,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -71616,29 +71376,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -71873,29 +71633,29 @@ ac
 ac
 ac
 ac
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -72130,29 +71890,29 @@ ac
 ac
 ac
 as
-gB
-Zq
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-cC
-gB
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -72387,29 +72147,29 @@ ac
 ac
 ac
 as
-gB
-EZ
-xQ
-xQ
-lq
-xQ
-xQ
-xQ
-lq
-xQ
-xQ
-EZ
-xQ
-xQ
-lq
-xQ
-xQ
-xQ
-lq
-xQ
-xQ
-EZ
-gB
+as
+as
+as
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -72644,41 +72404,41 @@ ac
 ac
 ac
 as
-gB
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-gB
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -72901,40 +72661,40 @@ ac
 ac
 ac
 as
-gB
-EZ
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-GK
-EZ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-xQ
-EZ
-EZ
-gB
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
-am
-am
-cM
-am
 ax
-bP
-bS
-bS
-bS
-ku
+ax
+ax
+ax
+ax
 ax
 ac
 ac
@@ -73158,40 +72918,40 @@ ac
 ac
 ac
 as
-gB
-jp
-EZ
-EZ
-EZ
-vP
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-EZ
-vP
-EZ
-EZ
-EZ
-jp
-gB
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
+ax
+ax
+ax
+ax
+ax
+bt
 am
-zZ
-bU
+cN
 am
-am
-am
-am
-am
-am
-Qf
+bW
 ax
 ac
 ac
@@ -73415,40 +73175,40 @@ ac
 ac
 ac
 as
-gB
-gB
-gB
-gB
-gB
-gB
-gB
-la
-la
-la
-la
-la
-la
-la
-la
-la
-gB
-gB
-gB
-gB
-gB
-gB
-gB
+as
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
 am
 am
-lV
+cM
 am
 ax
-bt
+bu
 am
 bK
 am
-xI
+bX
 ax
 ac
 ac
@@ -73678,30 +73438,30 @@ ac
 ac
 ac
 ac
-gB
-gi
-la
-la
-la
-la
-la
-la
-la
-la
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-bu
+am
+zZ
+am
+am
+am
+am
 am
 bL
 am
@@ -73935,33 +73695,33 @@ ac
 ac
 ac
 ac
-gB
-TC
-la
-la
-la
-la
-la
-la
-la
-xc
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
-aD
-aH
-BK
-aN
-aR
-aW
-ba
-Kz
-bi
-bl
+am
+am
+lV
+am
 ax
 bw
 am
 bM
-am
+bU
 ca
 ax
 ac
@@ -74192,33 +73952,33 @@ ac
 ac
 ac
 ac
-gB
-CQ
-la
-la
-la
-sF
-la
-la
-la
-la
-la
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ax
+ax
+ax
+ax
+ax
 ax
 bx
 am
 bN
-am
+bU
 cb
 ax
 ac
@@ -74449,28 +74209,28 @@ ac
 ac
 ac
 ac
-gB
-la
-la
-la
-la
-la
-la
-la
-la
-xc
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
-pU
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
-aI
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
+ax
 ax
 by
 am
@@ -74706,28 +74466,28 @@ ac
 ac
 ac
 ac
-gB
-la
-la
-la
-la
-la
-la
-la
-la
-la
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
 ay
-aI
-aD
-aD
-aI
-aI
-aD
-aD
-aI
-VU
+aH
+aK
+aN
+aR
+aW
+ba
+bf
+bi
+bl
 ax
 bz
 am
@@ -74963,26 +74723,26 @@ ac
 ac
 ac
 ac
-gB
-la
-la
-Cj
-la
-la
-la
-Cj
-la
-la
-gB
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ax
 az
 aI
-aD
-aD
 aI
 aI
-aD
-aD
+aI
+aI
+aI
+aI
 aI
 aI
 ax
@@ -75220,26 +74980,26 @@ ac
 ac
 ac
 ac
-gB
-gB
-gB
-gB
-la
-la
-la
-gB
-gB
-gB
-gB
+ac
+at
+at
+at
+at
+at
+at
+at
+at
+at
+at
 ax
 aA
 aI
-aD
-aD
 aI
 aI
-aX
-bj
+aI
+aI
+aI
+aI
 aI
 aI
 ax
@@ -75478,7 +75238,7 @@ as
 at
 at
 at
-QN
+at
 QN
 jC
 QN
@@ -75487,18 +75247,18 @@ Qi
 QN
 QN
 QN
-HV
+aT
 ax
 aB
 aI
-aD
-aD
 aI
 aI
+aI
+aX
 bb
 bg
-aI
-VU
+bj
+aP
 ax
 bC
 am
@@ -75744,9 +75504,9 @@ qc
 jC
 Qi
 QN
-QN
+ar
 ax
-Es
+aC
 aI
 aI
 aI
@@ -76261,13 +76021,13 @@ QN
 QN
 ax
 aE
-ZJ
 aI
-ZJ
+aI
+aP
 aS
 aY
 bc
-fI
+bh
 bk
 aD
 ax
@@ -76777,8 +76537,8 @@ QN
 QN
 yr
 Wr
-nq
-QN
+Qi
+av
 qc
 QN
 ky
@@ -78053,8 +77813,8 @@ QN
 rj
 QN
 QN
-QN
-QN
+eE
+SS
 QN
 QN
 QN
@@ -78310,8 +78070,8 @@ jC
 rj
 ky
 jC
-eE
-eE
+ss
+ss
 QN
 QN
 qc

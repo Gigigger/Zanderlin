@@ -13,7 +13,7 @@
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/mimic,
 
 		/datum/ai_planning_subtree/find_dead_bodies/mimic,
-		/datum/ai_planning_subtree/eat_dead_body/then_hide,
+		/datum/ai_planning_subtree/eat_dead_body/mimic,
 	)
 
 	idle_behavior = /datum/idle_behavior/nothing

@@ -213,19 +213,6 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = COOKED_MEAT_NUTRITION, /datum/reagent/berrypoison = 10)
 
 
-/*	.............   Crab leg   ................ */
-/obj/item/reagent_containers/food/snacks/cooked/crableg
-	name = "boiled crab leg"
-	desc = "A chunky claw from an oversized crab, steamed and ready to eat."
-	icon_state = "crableg_boiled"
-	base_icon_state = "crableg_boiled"
-	list_reagents = list(/datum/reagent/consumable/nutriment = COOKED_MEAT_NUTRITION) // raw meat nutrition but without getting sick
-	faretype = FARE_NEUTRAL
-	slices_num = 2
-	slice_bclass = BCLASS_CHOP
-	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/crab/cooked
-	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/crableg
-
 
 /*	.............   Frything   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/strange

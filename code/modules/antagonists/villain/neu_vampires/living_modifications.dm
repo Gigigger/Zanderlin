@@ -35,8 +35,6 @@
 	var/last_frenzy_check = 0
 	var/atom/frenzy_target = null
 
-	//how much blood we drink on a gulp
-	var/blood_gulp = 5
 	var/last_drinkblood_use = 0
 	var/last_bloodpower_click = 0
 	var/last_drinkblood_click = 0
