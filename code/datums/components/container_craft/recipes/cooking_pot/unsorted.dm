@@ -16,15 +16,6 @@
 	crafting_time = 10 SECONDS
 	required_chem_temp = 300 // it's sugar water
 
-/datum/container_craft/cooking/crablegs
-	name = "Crab Leg"
-	category = "Boiling"
-	output = /obj/item/reagent_containers/food/snacks/cooked/crableg
-	requirements = list(/obj/item/reagent_containers/food/snacks/meat/crableg = 1)
-	max_optionals = 0
-	finished_smell = /datum/pollutant/food/crab
-	crafting_time = 30 SECONDS
-
 /datum/container_craft/cooking/drugs/drukqs
 	name = "Drukqs"
 	created_reagent = /datum/reagent/druqks

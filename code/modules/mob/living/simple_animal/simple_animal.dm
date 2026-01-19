@@ -62,8 +62,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	///LETTING SIMPLE ANIMALS ATTACK? WHAT COULD GO WRONG. Defaults to zero so Ian can still be cuddly.
 	var/melee_damage_lower = 0
 	var/melee_damage_upper = 0
-	///Does the simple mob always hit the body zone they're aiming for in melee?
-	var/accurate = FALSE
 	///how much damage this simple animal does to objects, if any.
 	var/obj_damage = 0
 	///How much armour they ignore, as a flat reduction from the targets armour value.
@@ -79,8 +77,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	///Attacking verb in present simple tense.
 	var/attack_verb_simple = "attack"
 	var/attack_sound = PUNCHWOOSH
-	///The sound made when a weapon bounces off a mob's force threshold
-	var/deflect_sound = list('sound/blank.ogg')
 	///Attacking, but without damage, verb in present continuous tense.
 	var/friendly_verb_continuous = "nuzzles"
 	///Attacking, but without damage, verb in present simple tense.
@@ -784,7 +780,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/datum/component/riding/riding_datum = GetComponent(/datum/component/riding)
 	if(riding_datum)
 		var/time2mount = 12
-		riding_datum.vehicle_move_delay = riding_datum.override_move_to_delay > 0 ? riding_datum.override_move_to_delay : move_to_delay
+		riding_datum.vehicle_move_delay = move_to_delay
 		if(M.mind)
 			var/amt = M.get_skill_level(/datum/skill/misc/riding)
 			if(amt)
@@ -806,7 +802,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		M.adjust_experience(/datum/skill/misc/riding, M.STAINT, FALSE)
 		if(ssaddle)
 			playsound(src, 'sound/foley/saddlemount.ogg', 100, TRUE)
-		riding_datum.vehicle_move_delay = max(riding_datum.vehicle_move_delay, 1)
 	..()
 	update_appearance(UPDATE_OVERLAYS)
 
@@ -861,7 +856,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/datum/component/riding/riding_datum = GetComponent(/datum/component/riding)
 	if(tame && riding_datum)
 		if(riding_datum.handle_ride(user, direction))
-			riding_datum.vehicle_move_delay = riding_datum.override_move_to_delay > 0 ? riding_datum.override_move_to_delay : move_to_delay
+			riding_datum.vehicle_move_delay = move_to_delay
 			if(user.m_intent == MOVE_INTENT_RUN)
 				riding_datum.vehicle_move_delay -= 1
 				if(loc != oldloc)
@@ -897,7 +892,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 							L.Stun(50)
 							playsound(L, 'sound/foley/zfall.ogg', 100, FALSE)
 							L.visible_message(span_danger("[L] falls off [src]!"))
-			riding_datum.vehicle_move_delay = max(riding_datum.vehicle_move_delay, 1)
 
 /mob/living/simple_animal/buckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
 	. = ..()
@@ -936,13 +930,3 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 /mob/living/simple_animal/proc/eat_food_after(obj/item/reagent_containers/food/snacks/eaten)
 	qdel(eaten)
-
-/// To be used with AI controller
-/mob/living/simple_animal/proc/ambush()
-	return
-
-/// To be used with AI controller
-/mob/living/simple_animal/proc/hide()
-	return
-
-

@@ -55,7 +55,7 @@
 
 /obj/structure/coral_formation/Bumped(atom/movable/AM)
 	. = ..()
-	if(isliving(AM) && !(FACTION_SEA in AM:faction))
+	if(isliving(AM) && !("deepone" in AM:faction))
 		playsound(src, pick('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg'), 50, FALSE)
 		for(var/mob/living/mob in range(range, src))
 			mob.apply_damage(damage_on_contact, BRUTE)

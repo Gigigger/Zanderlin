@@ -88,21 +88,6 @@
 	node_purity_min = 30
 	node_purity_max = 55
 
-/// this shit isn't done yet
-/datum/chimeric_table/mollusc
-	name = "Mollusc"
-	compatible_blood_types = list(
-		/datum/blood_type/mollusc,
-	)
-	preferred_blood_types = list(
-		/datum/blood_type/mollusc,
-	)
-	incompatible_blood_types = list()
-	base_blood_cost = 0.4
-	node_tier = 1
-	node_purity_min = 30
-	node_purity_max = 60
-
 /datum/chimeric_table/putrid
 	name = "Putrid"
 	compatible_blood_types = list(

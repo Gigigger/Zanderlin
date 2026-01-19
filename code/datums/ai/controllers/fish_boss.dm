@@ -52,7 +52,7 @@
 			F.adjustHealth(-heal_amount)
 			if(prob(30))
 				new /obj/effect/temp_visual/heal(get_turf(F))
-		else if( !(FACTION_SEA in L.faction))
+		else if( !("deepone" in L.faction))
 			// Slow down players/non-deep ones
 			L.add_movespeed_modifier("deep_water", 2)
 
@@ -63,10 +63,10 @@
 
 /obj/effect/deep_water/Crossed(atom/movable/AM)
 	. = ..()
-	if(isliving(AM) && !(FACTION_SEA in AM:faction))
+	if(isliving(AM) && !("deepone" in AM:faction))
 		to_chat(AM, "<span class='warning'>The water is surprisingly deep and difficult to move through!</span>")
 
 /obj/effect/deep_water/Uncrossed(atom/movable/AM)
 	. = ..()
-	if(isliving(AM) && !(FACTION_SEA in AM:faction))
+	if(isliving(AM) && !("deepone" in AM:faction))
 		AM:remove_movespeed_modifier("deep_water", 2)

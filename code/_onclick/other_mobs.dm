@@ -673,9 +673,6 @@
 	if(dextrous && !ismob(A))
 		..()
 	else
-		if(LAZYACCESS(params2list(params), RIGHT_CLICK))
-			if(A.attack_hand_secondary(src, params) != SECONDARY_ATTACK_CALL_NORMAL)
-				return TRUE
 		AttackingTarget(A)
 
 

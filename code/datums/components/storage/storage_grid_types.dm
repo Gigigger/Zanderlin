@@ -305,7 +305,6 @@
 				/obj/item/reagent_containers/powder,
 				/obj/item/organ,
 				/obj/item/neuFarm/seed,
-				/obj/item/clothing/head/mob_holder, //...for cooking crabs...
 				)
 			),
 		)

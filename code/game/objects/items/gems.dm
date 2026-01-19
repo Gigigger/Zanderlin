@@ -218,23 +218,6 @@
 	attuned = /datum/attunement/fire
 	effect_template = /datum/gem_effect/rubor
 
-/obj/item/gem/pearl_blue
-	name = "cerulean pearl"
-	desc = "An iridescent pearl as blue as the sea it came from. An important symbol in Triton marriage rituals as trial of strength."
-	icon = 'icons/roguetown/items/pearl.dmi'
-	icon_state = "pearl_blue"
-	sellprice = 60
-	dropshrink = 0.6
-	attuned = /datum/attunement/blood
-
-/obj/item/gem/pearl
-	name = "pearl"
-	desc = "A shimmering pearl plucked from a mollusk. A plentiful gem said to bring good fortune to sailors."
-	icon = 'icons/roguetown/items/pearl.dmi'
-	icon_state = "pearl"
-	dropshrink = 0.6
-	sellprice = 20
-
 /obj/item/gem/onyxa
 	name = "raw onyxa"
 	desc = "A piece of fossilized spider honey that glimmers in the dark. It was once prized by the Drow, but it's significance to their culture has long been replaced by the more common saffira."
