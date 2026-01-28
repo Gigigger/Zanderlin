@@ -67,7 +67,7 @@
 /datum/crop_debug_system/proc/show_debug_menu(mob/user)
 	var/list/html_content = list()
 
-	html_content += "<html><head><title>Crop Nutrient Debug System</title>"
+	html_content += "<html><meta charset='UTF-8'><head><title>Crop Nutrient Debug System</title>"
 	html_content += "<style>"
 	html_content += "body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }"
 	html_content += ".container { max-width: 1400px; margin: 0 auto; }"
@@ -151,7 +151,7 @@
 			if(plant_type)
 				var/datum/plant_def/plant = new plant_type()
 				cell_class += " occupied"
-				cell_content = copytext(plant.name, 1, 4) // First 3 chars
+				cell_content = copytext_char(plant.name, 1, 4) // First 3 chars
 				qdel(plant)
 
 				// Generate detailed tooltip with nutrient analysis

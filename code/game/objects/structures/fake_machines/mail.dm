@@ -108,7 +108,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	P.mailedto = send2place
 	P.update_appearance()
 	if(findtext(send2place, "#"))
-		var/box2find = text2num(copytext(send2place, findtext(send2place, "#")+1))
+		var/box2find = text2num(copytext_char(send2place, findtext(send2place, "#")+1))
 		var/found = FALSE
 		for(var/obj/structure/fake_machine/mail/X in SSroguemachine.hermailers)
 			if(X.ournum == box2find)
@@ -584,7 +584,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 	// Handle box number sending
 	if(findtext(send_to, "#"))
-		var/box_num = text2num(copytext(send_to, findtext(send_to, "#")+1))
+		var/box_num = text2num(copytext_char(send_to, findtext(send_to, "#")+1))
 		var/found = FALSE
 
 		for(var/obj/structure/fake_machine/mail/mailbox in SSroguemachine.hermailers)

@@ -327,7 +327,7 @@ Delayed insert mode was removed in mysql 7 and only works with MyISAM type table
 				query_parts += ", "
 			if (has_question_mark[column])
 				var/name = "p[arguments.len]"
-				query_parts += replacetext(columns[column], "?", ":[name]")
+				query_parts += replacetext_char(columns[column], "?", ":[name]")
 				arguments[name] = row[column]
 			else
 				query_parts += columns[column]

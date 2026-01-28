@@ -373,11 +373,11 @@
 		var/weight = amount * (essence.tier + 1) // Higher tier essences have more color influence
 
 		total_weight += weight
-		var/color_val = hex2num(copytext(essence.color, 2, 4))
+		var/color_val = hex2num(copytext_char(essence.color, 2, 4))
 		r += color_val * weight
-		color_val = hex2num(copytext(essence.color, 4, 6))
+		color_val = hex2num(copytext_char(essence.color, 4, 6))
 		g += color_val * weight
-		color_val = hex2num(copytext(essence.color, 6, 8))
+		color_val = hex2num(copytext_char(essence.color, 6, 8))
 		b += color_val * weight
 
 		qdel(essence)

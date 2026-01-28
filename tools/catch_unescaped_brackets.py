@@ -121,7 +121,7 @@ def main():
 
     for dm_file in root.rglob("*.dm"):
         try:
-            src = dm_file.read_text(encoding="utf-8", errors="replace")
+            src = dm_file.read_text(encoding="UTF-8", errors="replace")
         except Exception as e:
             print(f"[ERROR] {dm_file}: {e}")
             continue

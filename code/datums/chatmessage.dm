@@ -161,7 +161,7 @@
 
 	// Get rid of any URL schemes that might cause BYOND to automatically wrap something in an anchor tag
 	var/static/regex/url_scheme = new(@"[A-Za-z][A-Za-z0-9+-\.]*:\/\/", "g")
-	text = replacetext(text, url_scheme, "")
+	text = replacetext_char(text, url_scheme, "")
 
 	// Reject whitespace
 	var/static/regex/whitespace = new(@"^\s*$")
@@ -258,28 +258,28 @@
 
 	while(current_pos <= text_length)
 		// Check if we're at the start of an HTML entity
-		if(copytext(text, current_pos, current_pos + 1) == "&")
+		if(copytext_char(text, current_pos, current_pos + 1) == "&")
 			var/entity_end = findtext(text, ";", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
-				var/entity = copytext(text, current_pos, entity_end + 1)
+				var/entity = copytext_char(text, current_pos, entity_end + 1)
 				result += entity
 				current_pos = entity_end + 1
 				continue
-		else if(copytext(text, current_pos, current_pos + 1) == "<")
+		else if(copytext_char(text, current_pos, current_pos + 1) == "<")
 			var/entity_end = findtext(text, ">", current_pos)
 			if(entity_end)
 				// Found a complete entity, add it as one unit
-				var/entity = copytext(text, current_pos, entity_end + 1)
+				var/entity = copytext_char(text, current_pos, entity_end + 1)
 				result += entity
 				current_pos = entity_end + 1
 				continue
-		else if(copytext(text, current_pos, current_pos + 1) == "�") // Should handle UTF-8 multi-byte characters
+		else if(copytext_char(text, current_pos, current_pos + 1) == "�") // Should handle UTF-8 multi-byte characters
 			var/offset = 1
 			var/failed = FALSE
 			var/entity
 			while(current_pos + offset <= text_length)
-				var/test_char = copytext(text, current_pos, current_pos + offset + 1)
+				var/test_char = copytext_char(text, current_pos, current_pos + offset + 1)
 				if(!findtext(test_char, "�")) // Valid character found
 					entity = test_char
 					break
@@ -293,7 +293,7 @@
 				continue
 
 		// Not an entity, add single character
-		result += copytext(text, current_pos, current_pos + 1)
+		result += copytext_char(text, current_pos, current_pos + 1)
 		current_pos++
 
 	return result

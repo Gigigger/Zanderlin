@@ -558,7 +558,7 @@
 
 	var/first_cat = TRUE
 	for(var/category in categories)
-		var/category_id = replacetext(category, " ", "-")
+		var/category_id = replacetext_char(category, " ", "-")
 		var/display_style = first_cat ? "grid" : "none"
 		dat += "<div class='recipe-category' id='category-[category_id]' style='display: [display_style]; grid-column: 1 / -1; display: contents;'>"
 		dat += "<div class='category-header' style='grid-column: 1 / -1;'>[category]</div>"

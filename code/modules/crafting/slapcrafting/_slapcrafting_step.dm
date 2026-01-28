@@ -144,9 +144,9 @@
 
 /// Text replacing for sending visibile messages when the steps are happening.
 /datum/slapcraft_step/proc/step_replace_text(msg, mob/living/user, obj/item/item, obj/item/slapcraft_assembly/assembly)
-	msg = replacetext(msg,"%USER%","[user]")
-	msg = replacetext(msg,"%ITEM%","\improper [item]")
-	msg = replacetext(msg,"%TARGET%","\improper \the [assembly]")
+	msg = replacetext_char(msg,"%USER%","[user]")
+	msg = replacetext_char(msg,"%ITEM%","\improper [item]")
+	msg = replacetext_char(msg,"%TARGET%","\improper \the [assembly]")
 	return msg
 
 /// Below are virtual procs I allow steps to override for their specific behaviours.

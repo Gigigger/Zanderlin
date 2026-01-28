@@ -18,7 +18,7 @@ import shlex
 
 
 def write_hook(fname, command):
-    with open(fname, 'w', encoding='utf-8', newline='\n') as f:
+    with open(fname, 'w', encoding='UTF-8', newline='\n') as f:
         print("#!/bin/sh", file=f)
         print("exec", command, file=f)
 

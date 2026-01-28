@@ -997,7 +997,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 				for(var/datum/job/job in available_jobs)
 					var/rank = job.title
 					var/used_name = (pronouns == SHE_HER && job.f_title) ? job.f_title : job.title
-					var/job_id = replacetext(rank, " ", "_")
+					var/job_id = replacetext_char(rank, " ", "_")
 
 					category_html += "<tr bgcolor='#000000'><td width='60%' align='right'>"
 
@@ -1641,9 +1641,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						voice_color = sanitize_hexcolor(new_voice)
 
 				if("headshot")
-					if(!donator)
-						to_chat(user, "This is a donator exclusive feature, your headshot link will be applied but others will only be able to view it if you are a Patreon supporter or Twitch subscriber.")
-
 					to_chat(user, span_notice("Please use an image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or ANYTHING AI generated.</span>"]"))
 					to_chat(user, span_notice("If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser."))
 					to_chat(user, span_notice("Keep in mind that the photo will be downsized to 325x325 pixels, so the more square the photo, the better it will look."))
@@ -1735,7 +1732,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 					flavortext = new_flavortext
 					var/ft = flavortext
 					ft = html_encode(ft)
-					ft = replacetext(parsemarkdown_basic(ft), "\n", "<BR>")
+					ft = replacetext_char(parsemarkdown_basic(ft), "\n", "<BR>")
 					flavortext_display = ft
 					to_chat(user, span_notice("Successfully updated flavortext"))
 					log_game("[user] has set their flavortext'.")
@@ -1753,7 +1750,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 					var/ooc = ooc_notes
 					ooc = html_encode(ooc)
-					ooc = replacetext(parsemarkdown_basic(ooc), "\n", "<BR>")
+					ooc = replacetext_char(parsemarkdown_basic(ooc), "\n", "<BR>")
 					ooc_notes_display = ooc
 					to_chat(user, span_notice("Successfully updated OOC notes."))
 					log_game("[user] has set their OOC notes'.")
@@ -1773,9 +1770,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 					popup.set_content(dat.Join())
 					popup.open(FALSE)
 				if("ooc_extra")
-					if(!donator)
-						to_chat(user, "This is a donator exclusive feature, your OOC Extra link will be applied but others will only be able to view it if you are a patreon supporter or Twitch Subscriber.")
-
 					to_chat(user, span_notice("Add a link from a suitable host (catbox, etc) to an mp3, mp4, or jpg / png file to have it embed at the bottom of your OOC notes."))
 					to_chat(user, span_notice("If the link doesn't show up properly in-game, ensure that it's a direct link that opens properly in a browser."))
 					to_chat(user, span_notice("Videos will be shrunk to a ~300x300 square. Keep this in mind."))
@@ -2407,7 +2401,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	// Extract domain from the URL
 	var/start_index = length("https://") + 1
 	var/end_index = findtext(value, "/", start_index)
-	var/domain = (end_index ? copytext(value, start_index, end_index) : copytext(value, start_index))
+	var/domain = (end_index ? copytext_char(value, start_index, end_index) : copytext_char(value, start_index))
 
 	// Check if domain is in the allowed list
 	if(!(domain in allowed_hosts))
@@ -2437,10 +2431,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 /datum/preferences/proc/set_loadout(mob/user, loadout_number, datum/loadout_item/loadout)
 	if(!loadout)
 		return
-	if(!donator)
-		to_chat(user, span_danger("This is a donator feature!"))
-		return FALSE
-
 	if(loadout == "None")
 		vars["loadout[loadout]"] = null
 		to_chat(user, span_notice("Who needs stuff anyway?"))

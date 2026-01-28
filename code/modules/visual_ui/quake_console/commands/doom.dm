@@ -17,7 +17,7 @@
 		<!DOCTYPE html>
 		<html>
 		<head>
-			<meta charset="utf-8">
+			<meta charset="UTF-8">
 			<title>DOOM in SS13</title>
 			<style>
 				html,body{

@@ -116,21 +116,21 @@
 		if(!L)
 			continue
 
-		var/firstchar = copytext(L, 1, 2)
+		var/firstchar = copytext_char(L, 1, 2)
 		if(firstchar == "#")
 			continue
 
 		var/lockthis = firstchar == "@"
 		if(lockthis)
-			L = copytext(L, 2)
+			L = copytext_char(L, 2)
 
 		var/pos = findtext(L, " ")
 		var/entry = null
 		var/value = null
 
 		if(pos)
-			entry = lowertext(copytext(L, 1, pos))
-			value = copytext(L, pos + 1)
+			entry = lowertext(copytext_char(L, 1, pos))
+			value = copytext_char(L, pos + 1)
 		else
 			entry = lowertext(L)
 
@@ -275,8 +275,8 @@ Example config:
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
-			data = copytext(t, pos + length(t[pos]))
+			command = lowertext(copytext_char(t, 1, pos))
+			data = copytext_char(t, pos + length(t[pos]))
 		else
 			command = lowertext(t)
 

@@ -94,7 +94,7 @@
 
 	var/perpage = 100
 	var/requested_page = 1
-	var/hub_url = replacetext(hub_address,".","/")
+	var/hub_url = replacetext_char(hub_address,".","/")
 	var/list/medal_data = list()
 	var/regex/datepart_regex = regex(@"[/\s]")
 	while(1)

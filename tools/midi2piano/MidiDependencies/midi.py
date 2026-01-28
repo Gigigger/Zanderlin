@@ -1116,7 +1116,7 @@ def _warn(s=''):
 
 def _some_text_event(which_kind=0x01, text='some_text'):
     # if which_kind == 0x7F:   # 6.1 sequencer_specific data can be 8-bit
-    data = bytes(text, encoding='ISO-8859-1')   # 6.2 and also text data!
+    data = bytes(text, encoding='UTF-8')   # 6.2 and also text data!
     # else:   data = bytes(text, encoding='ascii')
     return b'\xFF'+bytes((which_kind,))+_ber_compressed_int(len(data))+data
 
@@ -1256,7 +1256,7 @@ The options:
             elif command >= 0x01 and command <= 0x0f:   # Text events
                 # 6.2 take it in bytes; let the user get the right encoding.
                 # text_str = trackdata[0:length].decode('ascii','ignore')
-                text_str = trackdata[0:length].decode('ISO-8859-1')
+                text_str = trackdata[0:length].decode('UTF-8')
                 # Defined text events
                 if (command == 0x01):
                      E = ['text_event', time, text_str]
@@ -1314,10 +1314,10 @@ The options:
                  E = ['key_signature',time] + list(struct.unpack(">bB",trackdata[0:2]))
             elif (command == 0x7F):
                  E = ['sequencer_specific',time,
-                   trackdata[0:length].decode('ISO-8859-1')]   # 6.0
+                   trackdata[0:length].decode('UTF-8')]   # 6.0
             else:
                  E = ['raw_meta_event', time, command,
-                   trackdata[0:length].decode('ISO-8859-1')]   # 6.0
+                   trackdata[0:length].decode('UTF-8')]   # 6.0
                  #"[uninterpretable meta-event command of length length]"
                  # DTime, Command, Binary Data
                  # It's uninterpretable; record it as raw_data.
@@ -1340,10 +1340,10 @@ The options:
             #command = trackdata.pop(0)
             [length, trackdata] = _unshift_ber_int(trackdata)
             if first_byte == 0xF0:
-                # 20091008 added ISO-8859-1 to get an 8-bit str
-                E = ['sysex_f0', time, trackdata[0:length].decode('ISO-8859-1')]
+                # 20091008 added UTF-8 to get an 8-bit str
+                E = ['sysex_f0', time, trackdata[0:length].decode('UTF-8')]
             else:
-                E = ['sysex_f7', time, trackdata[0:length].decode('ISO-8859-1')]
+                E = ['sysex_f7', time, trackdata[0:length].decode('UTF-8')]
             trackdata = trackdata[length:]
 
         ######################################################################
@@ -1399,7 +1399,7 @@ The options:
 '''
         elif first_byte > 0xF0:  # Some unknown F-series event
             # Here we only produce a one-byte piece of raw data.
-            E = ['raw_data', time, trackdata[0].decode('ISO-8859-1')]
+            E = ['raw_data', time, trackdata[0].decode('UTF-8')]
             trackdata = trackdata[1:]
         else:  # Fallthru.
             _warn("Aborting track.  Command-byte first_byte="+hex(first_byte))
@@ -1608,10 +1608,10 @@ def _encode(events_lol, unknown_callback=None, never_add_eot=False,
             elif (event == 'sysex_f0'):
                  #event_data = struct.pack(">Bwa*", 0xF0, len(E[0]), E[0])
                  #B=bitstring w=BER-compressed-integer a=null-padded-ascii-str
-                 event_data = bytearray(b'\xF0')+_ber_compressed_int(len(E[0]))+bytearray(bytes(E[0],encoding='ISO-8859-1'))
+                 event_data = bytearray(b'\xF0')+_ber_compressed_int(len(E[0]))+bytearray(bytes(E[0],encoding='UTF-8'))
             elif (event == 'sysex_f7'):
                  #event_data = struct.pack(">Bwa*", 0xF7, len(E[0]), E[0])
-                 event_data = bytearray(b'\xF7')+_ber_compressed_int(len(E[0]))+bytearray(bytes(E[0],encoding='ISO-8859-1'))
+                 event_data = bytearray(b'\xF7')+_ber_compressed_int(len(E[0]))+bytearray(bytes(E[0],encoding='UTF-8'))
 
             elif (event == 'song_position'):
                  event_data = b"\xF2" + _write_14_bit( E[0] )

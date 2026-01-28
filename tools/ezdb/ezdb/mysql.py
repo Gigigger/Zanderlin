@@ -38,7 +38,7 @@ def execute_sql(sql: str):
             config["FEEDBACK_DATABASE"],
         ],
         input = sql,
-        encoding = "utf-8",
+        encoding = "UTF-8",
         check = True,
         stderr = subprocess.STDOUT,
     )

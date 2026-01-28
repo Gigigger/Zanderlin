@@ -205,7 +205,7 @@
 		return
 	var/message = hearing_args[HEARING_MESSAGE]
 	if(findtext(message, codeword))
-		hearing_args[HEARING_MESSAGE] = replacetext(message, codeword, "<span class='warning'>[codeword]</span>")
+		hearing_args[HEARING_MESSAGE] = replacetext_char(message, codeword, "<span class='warning'>[codeword]</span>")
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/brain_trauma/severe/split_personality, switch_personalities)), 10)
 
 /datum/brain_trauma/severe/split_personality/brainwashing/handle_speech(datum/source, list/speech_args)

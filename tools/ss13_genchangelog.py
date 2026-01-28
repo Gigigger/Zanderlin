@@ -80,11 +80,11 @@ for fileName in glob.glob(os.path.join(args.directory, "*.json")):
     monthFile = os.path.join(archiveDir, formattedDate + '.json')
     print('Reading {}...'.format(fileName))
     cl = {}
-    with open(fileName, 'r',encoding='utf-8-sig') as f:
+    with open(fileName, 'r',encoding='UTF-8-sig') as f:
         cl = json.load(f)
     currentEntries = {}
     if os.path.exists(monthFile):
-        with open(monthFile,'r',encoding='utf-8-sig') as f:
+        with open(monthFile,'r',encoding='UTF-8-sig') as f:
             currentEntries = json.load(f)
     if today_string not in currentEntries:
         currentEntries[today_string] = {}
@@ -108,5 +108,5 @@ for fileName in glob.glob(os.path.join(args.directory, "*.json")):
             print('  Deleting {0} (delete-after set)...'.format(fileName))
             os.remove(fileName)
 
-    with open(monthFile, 'w', encoding='utf-8') as f:
+    with open(monthFile, 'w', encoding='UTF-8') as f:
         json.dump(currentEntries, f, indent = 4)

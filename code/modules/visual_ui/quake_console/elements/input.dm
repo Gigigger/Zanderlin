@@ -95,7 +95,7 @@
 			if(showing_prediction && prediction_text)
 				display_text = display_text + "<span style='color:#006600;'>[prediction_text]</span>"
 		else
-			display_text = copytext(display_text, 1, cursor_position + 1) + "_" + copytext(display_text, cursor_position + 1)
+			display_text = copytext_char(display_text, 1, cursor_position + 1) + "_" + copytext_char(display_text, cursor_position + 1)
 	else
 		display_text = full_display
 
@@ -313,7 +313,7 @@
 		var/current_word = input_parts[1]
 		for(var/command in base_commands)
 			if(findtext(command, current_word, 1, length(current_word) + 1) == 1 && command != current_word)
-				prediction_text = copytext(command, length(current_word) + 1)
+				prediction_text = copytext_char(command, length(current_word) + 1)
 				showing_prediction = TRUE
 				break
 	else if(parts_count == 2)
@@ -323,7 +323,7 @@
 		var/list/possible_args = get_secondary_args(base_command)
 		for(var/arg in possible_args)
 			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
-				prediction_text = copytext(arg, length(current_word) + 1)
+				prediction_text = copytext_char(arg, length(current_word) + 1)
 				showing_prediction = TRUE
 				break
 	else if(parts_count >= 3)
@@ -334,7 +334,7 @@
 		var/list/possible_args = get_tertiary_args(base_command, secondary_arg)
 		for(var/arg in possible_args)
 			if(findtext(arg, current_word, 1, length(current_word) + 1) == 1 && arg != current_word)
-				prediction_text = copytext(arg, length(current_word) + 1)
+				prediction_text = copytext_char(arg, length(current_word) + 1)
 				showing_prediction = TRUE
 				break
 
@@ -395,14 +395,14 @@
 		if("Backspace", "Back")
 			special_key = TRUE
 			if(cursor_position > 0)
-				input_text = copytext(input_text, 1, cursor_position) + copytext(input_text, cursor_position + 1)
+				input_text = copytext_char(input_text, 1, cursor_position) + copytext_char(input_text, cursor_position + 1)
 				cursor_position--
 			reset_completion()
 			update_prediction()
 		if("Delete")
 			special_key = TRUE
 			if(cursor_position < length(input_text))
-				input_text = copytext(input_text, 1, cursor_position + 1) + copytext(input_text, cursor_position + 2)
+				input_text = copytext_char(input_text, 1, cursor_position + 1) + copytext_char(input_text, cursor_position + 2)
 			reset_completion()
 		if("Left", "West")
 			special_key = TRUE
@@ -495,7 +495,7 @@
 			if(ctrl_down && apply_prediction())
 				return TRUE
 
-		input_text = copytext(input_text, 1, cursor_position + 1) + char_to_add + copytext(input_text, cursor_position + 1)
+		input_text = copytext_char(input_text, 1, cursor_position + 1) + char_to_add + copytext_char(input_text, cursor_position + 1)
 		cursor_position++
 		reset_completion()
 		update_prediction()

@@ -1,6 +1,6 @@
 /datum/admins/proc/create_panel_helper(template)
-	var/final_html = replacetext(template, "/* ref src */", "[REF(src)];[HrefToken()]")
-	final_html = replacetext(final_html,"/* hreftokenfield */","[HrefTokenFormField()]")
+	var/final_html = replacetext_char(template, "/* ref src */", "[REF(src)];[HrefToken()]")
+	final_html = replacetext_char(final_html,"/* hreftokenfield */","[HrefTokenFormField()]")
 	return final_html
 
 /datum/admins/proc/create_object(mob/user)
@@ -9,7 +9,7 @@
 		var/objectjs = null
 		objectjs = jointext(typesof(/obj), ";")
 		create_object_html = file2text('html/create_object.html')
-		create_object_html = replacetext(create_object_html, "null /* object types */", "\"[objectjs]\"")
+		create_object_html = replacetext_char(create_object_html, "null /* object types */", "\"[objectjs]\"")
 
 	user << browse(create_panel_helper(create_object_html), "window=create_object;size=425x475")
 
@@ -25,8 +25,8 @@
 	if (!html_form)
 		var/objectjs = jointext(typesof(path), ";")
 		html_form = file2text('html/create_object.html')
-		html_form = replacetext(html_form, "Create Object", "Create [path]")
-		html_form = replacetext(html_form, "null /* object types */", "\"[objectjs]\"")
+		html_form = replacetext_char(html_form, "Create Object", "Create [path]")
+		html_form = replacetext_char(html_form, "null /* object types */", "\"[objectjs]\"")
 		create_object_forms[path] = html_form
 
 	user << browse(create_panel_helper(html_form), "window=qco[path];size=425x475")

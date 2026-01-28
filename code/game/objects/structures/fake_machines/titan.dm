@@ -297,7 +297,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 /// Removes a decree
 /obj/structure/fake_machine/titan/proc/remove_decree(message)
-	var/clean_message = replacetext(message, "remove decree", "")
+	var/clean_message = replacetext_char(message, "remove decree", "")
 	var/decree_index = text2num(clean_message) || 0
 	if(!decree_index || !GLOB.lord_decrees[decree_index])
 		say("That decree doesn't exist!")
@@ -321,7 +321,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 
 /// Removes a law
 /obj/structure/fake_machine/titan/proc/remove_law(message)
-	var/clean_message = replacetext(message, "remove law", "")
+	var/clean_message = replacetext_char(message, "remove law", "")
 	var/law_index = text2num(clean_message) || 0
 	if(!law_index || !GLOB.laws_of_the_land[law_index])
 		say("That law doesn't exist!")

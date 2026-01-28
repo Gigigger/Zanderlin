@@ -133,7 +133,7 @@
 
 
 /mob/proc/show_trade_tree_ui(datum/nation/debug_showcase/nation)
-	var/dat = "<html><head><title>Trade Tree</title></head><body>"
+	var/dat = "<html><meta charset='UTF-8'><head><title>Trade Tree</title></head><body>"
 	dat += "<style>"
 	dat += "body { background: #1a1a1a; color: #e0e0e0; font-family: monospace; margin: 0; padding: 0; overflow: hidden; }"
 	dat += ".viewport { width: 100vw; height: 100vh; overflow: hidden; position: relative; cursor: grab; }"

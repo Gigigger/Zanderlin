@@ -2687,7 +2687,7 @@ $(function() {
 					'</style></head><body>',
 					$messages.html(),
 					'</body>'
-				], { type: 'text/html;charset=utf-8' });
+				], { type: 'text/html;charset=UTF-8' });
 
 				if (window.navigator.msSaveBlob) {
 					window.navigator.msSaveBlob(blob, fname);

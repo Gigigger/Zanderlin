@@ -33,7 +33,7 @@
 /obj/item/talisman/examine(mob/user)
 	. = ..()
 	if (blood_text)
-		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
+		user << browse("<html><meta charset='UTF-8'><head><title>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
 		onclose(user, "[name]")
 		return
 
@@ -57,7 +57,7 @@
 
 /obj/item/talisman/attack_self(mob/living/user)
 	if (blood_text)
-		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
+		user << browse("<html><meta charset='UTF-8'><head><title>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
 		onclose(user, "[name]")
 		onclose(user, "[name]")
 		return
@@ -79,7 +79,7 @@
 		return
 
 	if (blood_text)
-		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
+		user << browse("<html><meta charset='UTF-8'><head><title>[name]</TITLE></HEAD><BODY text = #612014>[blood_text]</BODY></HTML>", "window = [name]")
 		onclose(user, "[name]")
 		return
 

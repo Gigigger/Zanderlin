@@ -54,8 +54,8 @@ GLOBAL_PROTECT(VVpixelmovement)
 		//	the type with the base type removed from the begaining
 		var/fancytype = types[D.type]
 		if (findtext(fancytype, types[type]))
-			fancytype = copytext(fancytype, length(types[type])+1)
-		var/shorttype = copytext("[D.type]", length("[type]")+1)
+			fancytype = copytext_char(fancytype, length(types[type])+1)
+		var/shorttype = copytext_char("[D.type]", length("[type]")+1)
 		if (length(shorttype) > length(fancytype))
 			shorttype = fancytype
 		if (!length(shorttype))
@@ -74,7 +74,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	if(class == VV_TEXT || class == VV_MESSAGE)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
-			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
+			var_value = replacetext_char(var_value,"\[[V]]","[O.vars[V]]")
 
 	return var_value
 
@@ -89,7 +89,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	if(class == VV_TEXT || class == VV_MESSAGE)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
-			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
+			var_value = replacetext_char(var_value,"\[[V]]","[O.vars[V]]")
 
 	if (O)
 		L = L.Copy()
@@ -256,7 +256,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 		if(VV_TEXT)
 			var/list/varsvars = vv_parse_text(O, new_var)
 			for(var/V in varsvars)
-				new_var = replacetext(new_var,"\[[V]]","[O.vars[V]]")
+				new_var = replacetext_char(new_var,"\[[V]]","[O.vars[V]]")
 
 
 	if(is_normal_list)
@@ -373,7 +373,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 		if(VV_TEXT)
 			var/list/varsvars = vv_parse_text(O, var_new)
 			for(var/V in varsvars)
-				var_new = replacetext(var_new,"\[[V]]","[O.vars[V]]")
+				var_new = replacetext_char(var_new,"\[[V]]","[O.vars[V]]")
 
 
 	if (O.vv_edit_var(variable, var_new) == FALSE)

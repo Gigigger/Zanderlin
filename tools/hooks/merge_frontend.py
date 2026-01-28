@@ -7,7 +7,7 @@ import collections
 import typing
 
 
-ENCODING = 'utf-8'
+ENCODING = 'UTF-8'
 
 
 class MergeReturn(typing.NamedTuple):

@@ -41,7 +41,7 @@ def hash_dmi(path):
     dmi = dmi.convert('RGBA')
     dmi.load()  # Needed only for .png EXIF data (see citation above)
     dmi_metadata = dmi.info['Description']
-    md5.update(dmi_metadata.encode('utf-8'))
+    md5.update(dmi_metadata.encode('UTF-8'))
 
     readable_metadata = dict(
         map(lambda entry: (entry[0], entry[1]),

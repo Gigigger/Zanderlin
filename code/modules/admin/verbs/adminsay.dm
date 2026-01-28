@@ -4,7 +4,7 @@
     set hidden = 0
     if(!check_rights(0))
         return
-    msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+    msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
     if(!msg)
         return
     SSplexora.relay_admin_say(src, html_decode(msg))

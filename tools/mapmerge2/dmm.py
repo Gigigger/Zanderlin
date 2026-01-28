@@ -6,7 +6,7 @@ import random
 from collections import namedtuple
 
 TGM_HEADER = "//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE"
-ENCODING = 'utf-8'
+ENCODING = 'UTF-8'
 
 Coordinate = namedtuple('Coordinate', ['x', 'y', 'z'])
 

@@ -128,9 +128,9 @@
 			continue
 
 		// Keep first and last letter, jumble the middle
-		var/first = copytext(word, 1, 2)
-		var/last = copytext(word, length(word), length(word) + 1)
-		var/middle = copytext(word, 2, length(word))
+		var/first = copytext_char(word, 1, 2)
+		var/last = copytext_char(word, length(word), length(word) + 1)
+		var/middle = copytext_char(word, 2, length(word))
 
 		if(length(middle) > 0)
 			var/list/middle_chars = splittext(middle, "")
@@ -173,7 +173,7 @@
 		say_mod = say_mod(input, message_mods)
 		say_mod = "[say_mod]," //acknowledge the comma
 
-	if(copytext(input, length(input) - 1) == "!!")
+	if(copytext_char(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
 
 	input = parsemarkdown_basic(input, limited = TRUE, barebones = TRUE)
@@ -188,7 +188,7 @@
 /atom/movable/proc/quoteless_say_quote(input, list/spans = list(speech_span), list/message_mods = list()) //what the fuck.
 	input = parsemarkdown_basic(input, limited = TRUE, barebones = TRUE)
 	var/pos = findtext(input, "*")
-	return pos ? copytext(input, pos + 1) : input
+	return pos ? copytext_char(input, pos + 1) : input
 
 /atom/movable/proc/check_language_hear(language)
 	return FALSE
@@ -209,7 +209,7 @@
 /* 	var/returntext = GLOB.reverseradiochannels["[freq]"]
 	if(returntext)
 		return returntext
-	return "[copytext("[freq]", 1, 4)].[copytext("[freq]", 4, 5)]" */
+	return "[copytext_char("[freq]", 1, 4)].[copytext_char("[freq]", 4, 5)]" */
 
 /proc/attach_spans(input, list/spans)
 	return "[message_spans_start(spans)][input]</span>"

@@ -245,7 +245,7 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 
 /datum/preferences/proc/show_culinary_ui(mob/user)
 	var/list/dat = list()
-	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"
+	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"
 	dat += print_culinary_page(user)
 	var/datum/browser/popup = new(user, "culinary_customization", "<div align='center'>Culinary Preferences</div>", 360, 365)
 	popup.set_content(dat.Join())
@@ -271,7 +271,7 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 		return
 
 	var/list/dat = list()
-	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"
+	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"
 	dat += "<style>"
 	dat += ".food-item { display: flex; align-items: center; margin-bottom: 5px; }"
 	dat += ".food-icon { vertical-align: middle; }"
@@ -306,7 +306,7 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 		return
 
 	var/list/dat = list()
-	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"
+	dat += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"
 	dat += "<style>"
 	dat += ".drink-item { display: flex; align-items: center; margin-bottom: 5px; }"
 	dat += ".drink-icon { vertical-align: middle; }"
@@ -495,11 +495,11 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 
 /proc/encode_special_chars(text)
 	. = text
-	. = replacetext(., "ü", "&uuml;")
-	. = replacetext(., "Ü", "&Uuml;")
-	. = replacetext(., "ö", "&ouml;")
-	. = replacetext(., "Ö", "&Ouml;")
-	. = replacetext(., "ä", "&auml;")
-	. = replacetext(., "Ä", "&Auml;")
-	. = replacetext(., "ß", "&szlig;")
+	. = replacetext_char(., "ü", "&uuml;")
+	. = replacetext_char(., "Ü", "&Uuml;")
+	. = replacetext_char(., "ö", "&ouml;")
+	. = replacetext_char(., "Ö", "&Ouml;")
+	. = replacetext_char(., "ä", "&auml;")
+	. = replacetext_char(., "Ä", "&Auml;")
+	. = replacetext_char(., "ß", "&szlig;")
 	return .

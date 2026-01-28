@@ -15,7 +15,7 @@
 				continue
 		path += choice
 
-		if(copytext(path,-1,0) != "/")		//didn't choose a directory, no need to iterate again
+		if(copytext_char(path,-1,0) != "/")		//didn't choose a directory, no need to iterate again
 			break
 	var/extensions
 	for(var/i in valid_extensions)
@@ -80,7 +80,7 @@
 	return filenames
 
 /proc/pathflatten(path)
-	return replacetext(path, "/", "_")
+	return replacetext_char(path, "/", "_")
 
 /// Returns the md5 of a file at a given path.
 /proc/md5filepath(path)

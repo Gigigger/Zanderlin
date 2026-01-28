@@ -721,8 +721,8 @@
 		if(!effect_text)
 			continue
 
-		var/new_text = replacetext(effect_text, "SUBJECTPRONOUN", pronoun_replacement)
-		new_text = replacetext(new_text, "[pronoun_replacement] is", "[pronoun_replacement] [p_are()]") //To make sure something become "They are" or "She is", not "They are" and "She are"
+		var/new_text = replacetext_char(effect_text, "SUBJECTPRONOUN", pronoun_replacement)
+		new_text = replacetext_char(new_text, "[pronoun_replacement] is", "[pronoun_replacement] [p_are()]") //To make sure something become "They are" or "She is", not "They are" and "She are"
 		examine_list += new_text
 
 	if(!length(examine_list))
