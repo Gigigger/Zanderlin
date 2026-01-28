@@ -81,7 +81,7 @@
 	return text
 
 /**
- * stuff like `copytext(input, length(input))` will trim the last character of the input,
+ * stuff like `copytext_char(input, length(input))` will trim the last character of the input,
  * because DM does it so it copies until the char BEFORE the `end` arg, so we need to bump `end` by 1 in these cases.
  */
 #define PREVENT_CHARACTER_TRIM_LOSS(integer) (integer + 1) //thank you gummie
@@ -179,7 +179,7 @@
 	return t_out
 
 //html_encode helper proc that returns the smallest non null of two numbers
-//or 0 if they're both null (needed because of findtext returning 0 when a value is not present)
+//or 0 if they're both null (needed because of findtext( returning 0 when a value is not present)
 /proc/non_zero_min(a, b)
 	if(!a)
 		return b
@@ -196,21 +196,21 @@
 /proc/dd_hasprefix(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtexttext, prefix, start, end)
+	return findtext(text, prefix, start, end)
 
 //Checks the beginning of a string for a specified sub-string. This proc is case sensitive
 //Returns the position of the substring or 0 if it was not found
 /proc/dd_hasprefix_case(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtextEx(text, prefix, start, end)
+	return findtext(Ex(text, prefix, start, end)
 
 //Checks the end of a string for a specified substring.
 //Returns the position of the substring or 0 if it was not found
 /proc/dd_hassuffix(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtexttext, suffix, start, null)
+		return findtext(text, suffix, start, null)
 	return
 
 //Checks the end of a string for a specified substring. This proc is case sensitive
@@ -218,19 +218,19 @@
 /proc/dd_hassuffix_case(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtextEx(text, suffix, start, null)
+		return findtext(Ex(text, suffix, start, null)
 
 //Checks if any of a given list of needles is in the haystack
 /proc/text_in_list(haystack, list/needle_list, start=1, end=0)
 	for(var/needle in needle_list)
-		if(findtexthaystack, needle, start, end))
+		if(findtext(haystack, needle, start, end))
 			return 1
 	return 0
 
 //Like above, but case sensitive
 /proc/text_in_list_case(haystack, list/needle_list, start=1, end=0)
 	for(var/needle in needle_list)
-		if(findtextEx(haystack, needle, start, end))
+		if(findtext(Ex(haystack, needle, start, end))
 			return 1
 	return 0
 
@@ -407,13 +407,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		. += copytext(into, start, end)
 
 //finds the first occurrence of one of the characters from needles argument inside haystack
-//it may appear this can be optimised, but it really can't. findtext) is so much faster than anything you can do in byondcode.
+//it may appear this can be optimised, but it really can't. findtext() is so much faster than anything you can do in byondcode.
 //stupid byond :(
 /proc/findchar(haystack, needles, start=1, end=0)
 	var/temp
 	var/len = length(needles)
 	for(var/i=1, i<=len, i++)
-		temp = findtextEx(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext()
+		temp = findtext(Ex(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext()
 		if(temp)
 			end = temp
 	return end
@@ -446,7 +446,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	if(!barebones)
 		var/regex/hexgex = regex(@"(?<=-=)(.{6})", "g")
 		while(hexgex.Find(t))
-			var/endblock = findtextt, "=-", hexgex.index)
+			var/endblock = findtext(t, "=-", hexgex.index)
 			if(!endblock)
 				break
 			t = replacetext(t, "=-", "</font>", hexgex.index, endblock+2)
@@ -470,7 +470,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		for(var/i = 1, i <= tlistlen, i++)
 			var/line = tlist[i]
 			var/count_asterisk = length(replacetext(line, regex("\[^\\*\]+", "g"), ""))
-			if(count_asterisk % 2 == 1 && findtextline, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
+			if(count_asterisk % 2 == 1 && findtext(line, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
 
 				var/count_w = length(replacetext(line, regex("^( *)\\*.*$", "g"), "$1")) // whitespace before asterisk
 				line = replacetext(line, regex("^ *(\\*.*)$", "g"), "$1")
@@ -631,25 +631,25 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 	var/list/accepted = list()
 	for(var/string in proposed)
-		if(findtextstring,GLOB.is_website) || findtextstring,GLOB.is_email) || findtextstring,all_invalid_symbols) || !findtextstring,GLOB.is_alphanumeric))
+		if(findtext(string,GLOB.is_website) || findtext(string,GLOB.is_email) || findtext(string,all_invalid_symbols) || !findtext(string,GLOB.is_alphanumeric))
 			continue
 		var/buffer = ""
 		var/early_culling = TRUE
 		for(var/pos = 1, pos <= length(string), pos++)
 			var/let = copytext(string, pos, (pos + 1) % length(string))
-			if(early_culling && !findtextlet,GLOB.is_alphanumeric))
+			if(early_culling && !findtext(let,GLOB.is_alphanumeric))
 				continue
 			early_culling = FALSE
 			buffer += let
-		if(!findtextbuffer,GLOB.is_alphanumeric))
+		if(!findtext(buffer,GLOB.is_alphanumeric))
 			continue
 		var/punctbuffer = ""
 		var/cutoff = length(buffer)
 		for(var/pos = length(buffer), pos >= 0, pos--)
 			var/let = copytext(buffer, pos, (pos + 1) % length(buffer))
-			if(findtextlet,GLOB.is_alphanumeric))
+			if(findtext(let,GLOB.is_alphanumeric))
 				break
-			if(findtextlet,GLOB.is_punctuation))
+			if(findtext(let,GLOB.is_punctuation))
 				punctbuffer = let + punctbuffer //Note this isn't the same thing as using +=
 				cutoff = pos
 		if(punctbuffer) //We clip down excessive punctuation to get the letter count lower and reduce repeats. It's not perfect but it helps.
@@ -658,11 +658,11 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			var/periods = 0
 			for(var/pos = length(punctbuffer), pos >= 0, pos--)
 				var/punct = copytext(punctbuffer, pos, (pos + 1) % length(punctbuffer))
-				if(!exclaim && findtextpunct,"!"))
+				if(!exclaim && findtext(punct,"!"))
 					exclaim = TRUE
-				if(!question && findtextpunct,"?"))
+				if(!question && findtext(punct,"?"))
 					question = TRUE
-				if(!exclaim && !question && findtextpunct,"."))
+				if(!exclaim && !question && findtext(punct,"."))
 					periods += 1
 			if(exclaim)
 				if(question)
@@ -677,7 +677,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 				else
 					punctbuffer = "" //Grammer nazis be damned
 			buffer = copytext(buffer, 1, cutoff) + punctbuffer
-		if(!findtextbuffer,GLOB.is_alphanumeric))
+		if(!findtext(buffer,GLOB.is_alphanumeric))
 			continue
 		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || (buffer in accepted))
 			continue
@@ -710,13 +710,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 //Used for applying byonds text macros to strings that are loaded at runtime
 /proc/apply_text_macros(string)
-	var/next_backslash = findtextstring, "\\")
+	var/next_backslash = findtext(string, "\\")
 	if(!next_backslash)
 		return string
 
 	var/leng = length(string)
 
-	var/next_space = findtextstring, " ", next_backslash + 1)
+	var/next_space = findtext(string, " ", next_backslash + 1)
 	if(!next_space)
 		next_space = leng - next_backslash
 
@@ -892,15 +892,15 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	input = trim(input)
 
 	var/static/list/bad_punctuation = list("!", "?", ".", "~", ";", ":", "-", "|", "+", "_", ",")
-	var/last_char = copytext(input, -1)
+	var/last_char = copytext_char(input, -1)
 	while(last_char in bad_punctuation)
-		input = copytext(input, 1, -1)
-		last_char = copytext(input, -1)
+		input = copytext_char(input, 1, -1)
+		last_char = copytext_char(input, -1)
 
-	var/first_char = copytext(input, 1, 2)
+	var/first_char = copytext_char(input, 1, 2)
 	while(first_char in bad_punctuation)
-		input = copytext(input, 2)
-		first_char = copytext(input, 1, 2)
+		input = copytext_char(input, 2)
+		first_char = copytext_char(input, 1, 2)
 
 	// one last trim so we wend up with "hey"
 	input = trim(input)
@@ -911,14 +911,14 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	// make sure we're not checking "hey - " for a hyphen
 	input = trim_right(input)
 
-	var/last_three = copytext(input, -3)
+	var/last_three = copytext_char(input, -3)
 	if(last_three == "...")
 		return last_three
-	var/last_two = copytext(input, -2)
+	var/last_two = copytext_char(input, -2)
 	switch(last_two)
 		if("!!", "??", "..", "?!", "!?")
 			return last_two
-	var/last_one = copytext(input, -1)
+	var/last_one = copytext_char(input, -1)
 	switch(last_one)
 		if("!", "?" ,".", "~", ";", ":", "-")
 			return last_one
@@ -928,11 +928,11 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 /// Checks if the passed string is all uppercase, ignoring punctuation and numbers and symbols
 /proc/is_uppercase(input)
 	for(var/i in 1 to length_char(input))
-		var/i_char = copytext(input, i, i + 1)
+		var/i_char = copytext_char(input, i, i + 1)
 		if(is_lowercase_character(i_char))
 			return FALSE
 	return TRUE
 
 /proc/endswith(input_text, ending)
 	var/input_length = LAZYLEN(ending)
-	return !!findtextinput_text, ending, -input_length)
+	return !!findtext(input_text, ending, -input_length)
