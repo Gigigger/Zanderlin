@@ -337,13 +337,13 @@
 	return A.loc
 
 /proc/GetRedPart(const/hexa)
-	return hex2num(copytext_char(hexa, 2, 4))
+	return hex2num(copytext(hexa, 2, 4))
 
 /proc/GetGreenPart(const/hexa)
-	return hex2num(copytext_char(hexa, 4, 6))
+	return hex2num(copytext(hexa, 4, 6))
 
 /proc/GetBluePart(const/hexa)
-	return hex2num(copytext_char(hexa, 6, 8))
+	return hex2num(copytext(hexa, 6, 8))
 
 
 // Find a obstruction free turf that's within the range of the center. Can also condition on if it is of a certain area type.
@@ -410,7 +410,7 @@ GLOBAL_LIST_EMPTY(fake_ckeys)
 
 		switch(word[1])
 			if("@")
-				var/stripped_word = ckey(copytext_char(word, 2))
+				var/stripped_word = ckey(copytext(word, 2))
 
 				// first we check if it's a ckey of an admin
 				var/client/client_check = GLOB.directory[stripped_word]
@@ -430,7 +430,7 @@ GLOBAL_LIST_EMPTY(fake_ckeys)
 				modified = TRUE
 
 			if("#") // check if we're linking a ticket
-				var/possible_ticket_id = text2num(copytext_char(word, 2))
+				var/possible_ticket_id = text2num(copytext(word, 2))
 				if(!possible_ticket_id)
 					continue
 

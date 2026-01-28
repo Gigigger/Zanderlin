@@ -10,13 +10,13 @@
 	var/x = 0
 	var/y = 0
 	// Time to parse for directional relative offsets
-	if(findtext_char(screen_loc, "EAST")) // If you're starting from the east, we start from the east too
+	if(findtextscreen_loc, "EAST")) // If you're starting from the east, we start from the east too
 		x += view_size[1]
-	if(findtext_char(screen_loc, "WEST")) // HHHHHHHHHHHHHHHHHHHHHH WEST is technically a 1 tile offset from the start. Shoot me please
+	if(findtextscreen_loc, "WEST")) // HHHHHHHHHHHHHHHHHHHHHH WEST is technically a 1 tile offset from the start. Shoot me please
 		x += world.icon_size
-	if(findtext_char(screen_loc, "NORTH"))
+	if(findtextscreen_loc, "NORTH"))
 		y += view_size[2]
-	if(findtext_char(screen_loc, "SOUTH"))
+	if(findtextscreen_loc, "SOUTH"))
 		y += world.icon_size
 
 	var/list/x_and_y = splittext(screen_loc, ",")
@@ -27,10 +27,10 @@
 	var/x_coord = x_pack[1]
 	var/y_coord = y_pack[1]
 
-	if (findtext_char(x_coord, "CENTER"))
+	if (findtextx_coord, "CENTER"))
 		x += view_size[1] / 2
 
-	if (findtext_char(y_coord, "CENTER"))
+	if (findtexty_coord, "CENTER"))
 		y += view_size[2] / 2
 
 	x_coord = text2num(cut_relative_direction(x_coord))

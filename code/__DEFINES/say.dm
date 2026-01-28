@@ -101,7 +101,7 @@
 #define MAX_BOOK_LEN			6000 // The maximum length of a player-generated book. It's what the database can support.
 
 // Is something in the IC chat filter? This is config dependent.
-#define CHAT_FILTER_CHECK(T) (config.ic_filter_regex && findtext_char(T, config.ic_filter_regex))
+#define CHAT_FILTER_CHECK(T) (config.ic_filter_regex && findtext(T, config.ic_filter_regex))
 
 // Audio/Visual Flags. Used to determine what sense are required to notice a message.
 #define MSG_VISUAL (1<<0)

@@ -420,7 +420,7 @@
 
 	. = list()
 
-	var/var_found = findtext_char(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
+	var/var_found = findtext(t_string,"\[") //Not the actual variables, just a generic "should we even bother" check
 	if(var_found)
 		//Find var names
 
@@ -435,7 +435,7 @@
 
 		list_value = splittext(intermediate_stage," ")
 		for(var/value in list_value)
-			if(findtext_char(value,"]"))
+			if(findtext(value,"]"))
 				value = splittext(value,"]") //"name]!" --> list("name","!")
 				for(var/A in value)
 					if(var_source.vars.Find(A))
