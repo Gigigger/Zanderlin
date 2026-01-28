@@ -15,7 +15,7 @@
 
     // Check for admin pings with @ or #
     var/list/pinged_admin_clients
-    if(findtext(msg, "@") || findtext(msg, "#"))
+    if(findtext_char(msg, "@") || findtext_char(msg, "#"))
         var/list/link_results = check_asay_links(msg)
         if(length(link_results))
             msg = link_results[ASAY_LINK_NEW_MESSAGE_INDEX]

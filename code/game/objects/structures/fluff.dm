@@ -1262,7 +1262,7 @@
 			else
 				surname = copytext_char(groom.real_name, surname_index, second_last_index)
 				groom.change_name(copytext_char(groom.real_name, 1, surname_index))
-		else if(findtext(groom.real_name, " the ") || findtext(groom.real_name, " of "))
+		else if(findtext_char(groom.real_name, " the ") || findtext_char(groom.real_name, " of "))
 			surname = " " + groom.dna.species.random_surname()
 		else
 			surname = copytext_char(groom.real_name, groom_name_index)
@@ -1281,7 +1281,7 @@
 			if((lowertext(second_last_word_bride) == "the" || lowertext(second_last_word_bride) == "of") && last_word_bride)
 				is_title_bride = TRUE
 
-		if(!is_title_bride && !findtext(bride.real_name, " the ") && !findtext(bride.real_name, " of "))
+		if(!is_title_bride && !findtext_char(bride.real_name, " the ") && !findtext_char(bride.real_name, " of "))
 			bride.change_name(copytext_char(bride.real_name, 1, bride_name_index))
 
 		bride_first_name = bride.real_name

@@ -249,9 +249,9 @@
 	while(locid < 15)	//hey whoever decided a while(1) was a good idea here, i hate you
 		var/istart = 0
 		if(links)
-			istart = findtext(info_links, "<span class=\"paper_field\">", laststart)
+			istart = findtext_char(info_links, "<span class=\"paper_field\">", laststart)
 		else
-			istart = findtext(info, "<span class=\"paper_field\">", laststart)
+			istart = findtext_char(info, "<span class=\"paper_field\">", laststart)
 
 		if(istart == 0)
 			return	//No field found with matching id
@@ -261,9 +261,9 @@
 		if(locid == id)
 			var/iend = 1
 			if(links)
-				iend = findtext(info_links, "</span>", istart)
+				iend = findtext_char(info_links, "</span>", istart)
 			else
-				iend = findtext(info, "</span>", istart)
+				iend = findtext_char(info, "</span>", istart)
 
 			//textindex = istart+26
 			textindex = iend
@@ -309,7 +309,7 @@
 	// Count the fields
 	var/laststart = 1
 	while(fields < 15)
-		var/i = findtext(t, "<span class=\"paper_field\">", laststart)
+		var/i = findtext_char(t, "<span class=\"paper_field\">", laststart)
 		if(i == 0)
 			break
 		laststart = i+1
@@ -321,7 +321,7 @@
 	fields = 0
 	var/laststart = 1
 	while(fields < 15)
-		var/i = findtext(info, "<span class=\"paper_field\">", laststart)
+		var/i = findtext_char(info, "<span class=\"paper_field\">", laststart)
 		if(i == 0)
 			break
 		laststart = i+1

@@ -23,7 +23,7 @@
 		fragment = replacetext_char(fragment, "%ADJECTIVE%", pick(GLOB.adjectives))
 	else
 		fragment = replacetext_char(fragment, "%ADJECTIVE% ", "")
-	if(findtext(fragment, "%A% "))
+	if(findtext_char(fragment, "%A% "))
 		fragment = "\a [replacetext_char(fragment, "%A% ", "")]"
 	dream_fragments += fragment
 
@@ -49,7 +49,7 @@
 		fragment = replacetext_char(fragment, "%ADJECTIVE%", pick(GLOB.adjectives))
 	else
 		fragment = replacetext_char(fragment, "%ADJECTIVE% ", "")
-	if(findtext(fragment, "%A% "))
+	if(findtext_char(fragment, "%A% "))
 		fragment = "\a [replacetext_char(fragment, "%A% ", "")]"
 	dream_fragments += fragment
 

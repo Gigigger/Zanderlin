@@ -196,7 +196,7 @@
 /proc/dd_hasprefix(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtext(text, prefix, start, end)
+	return findtext_char(text, prefix, start, end)
 
 //Checks the beginning of a string for a specified sub-string. This proc is case sensitive
 //Returns the position of the substring or 0 if it was not found
@@ -210,7 +210,7 @@
 /proc/dd_hassuffix(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtext(text, suffix, start, null)
+		return findtext_char(text, suffix, start, null)
 	return
 
 //Checks the end of a string for a specified substring. This proc is case sensitive
@@ -223,7 +223,7 @@
 //Checks if any of a given list of needles is in the haystack
 /proc/text_in_list(haystack, list/needle_list, start=1, end=0)
 	for(var/needle in needle_list)
-		if(findtext(haystack, needle, start, end))
+		if(findtext_char(haystack, needle, start, end))
 			return 1
 	return 0
 
@@ -407,7 +407,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		. += copytext_char(into, start, end)
 
 //finds the first occurrence of one of the characters from needles argument inside haystack
-//it may appear this can be optimised, but it really can't. findtext() is so much faster than anything you can do in byondcode.
+//it may appear this can be optimised, but it really can't. findtext_char() is so much faster than anything you can do in byondcode.
 //stupid byond :(
 /proc/findchar(haystack, needles, start=1, end=0)
 	var/temp
@@ -446,7 +446,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	if(!barebones)
 		var/regex/hexgex = regex(@"(?<=-=)(.{6})", "g")
 		while(hexgex.Find(t))
-			var/endblock = findtext(t, "=-", hexgex.index)
+			var/endblock = findtext_char(t, "=-", hexgex.index)
 			if(!endblock)
 				break
 			t = replacetext_char(t, "=-", "</font>", hexgex.index, endblock+2)
@@ -470,7 +470,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		for(var/i = 1, i <= tlistlen, i++)
 			var/line = tlist[i]
 			var/count_asterisk = length(replacetext_char(line, regex("\[^\\*\]+", "g"), ""))
-			if(count_asterisk % 2 == 1 && findtext(line, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
+			if(count_asterisk % 2 == 1 && findtext_char(line, regex("^\\s*\\*", "g"))) // there is an extra asterisk in the beggining
 
 				var/count_w = length(replacetext_char(line, regex("^( *)\\*.*$", "g"), "$1")) // whitespace before asterisk
 				line = replacetext_char(line, regex("^ *(\\*.*)$", "g"), "$1")
@@ -631,25 +631,25 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 	var/list/accepted = list()
 	for(var/string in proposed)
-		if(findtext(string,GLOB.is_website) || findtext(string,GLOB.is_email) || findtext(string,all_invalid_symbols) || !findtext(string,GLOB.is_alphanumeric))
+		if(findtext_char(string,GLOB.is_website) || findtext_char(string,GLOB.is_email) || findtext_char(string,all_invalid_symbols) || !findtext_char(string,GLOB.is_alphanumeric))
 			continue
 		var/buffer = ""
 		var/early_culling = TRUE
 		for(var/pos = 1, pos <= length(string), pos++)
 			var/let = copytext_char(string, pos, (pos + 1) % length(string))
-			if(early_culling && !findtext(let,GLOB.is_alphanumeric))
+			if(early_culling && !findtext_char(let,GLOB.is_alphanumeric))
 				continue
 			early_culling = FALSE
 			buffer += let
-		if(!findtext(buffer,GLOB.is_alphanumeric))
+		if(!findtext_char(buffer,GLOB.is_alphanumeric))
 			continue
 		var/punctbuffer = ""
 		var/cutoff = length(buffer)
 		for(var/pos = length(buffer), pos >= 0, pos--)
 			var/let = copytext_char(buffer, pos, (pos + 1) % length(buffer))
-			if(findtext(let,GLOB.is_alphanumeric))
+			if(findtext_char(let,GLOB.is_alphanumeric))
 				break
-			if(findtext(let,GLOB.is_punctuation))
+			if(findtext_char(let,GLOB.is_punctuation))
 				punctbuffer = let + punctbuffer //Note this isn't the same thing as using +=
 				cutoff = pos
 		if(punctbuffer) //We clip down excessive punctuation to get the letter count lower and reduce repeats. It's not perfect but it helps.
@@ -658,11 +658,11 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			var/periods = 0
 			for(var/pos = length(punctbuffer), pos >= 0, pos--)
 				var/punct = copytext_char(punctbuffer, pos, (pos + 1) % length(punctbuffer))
-				if(!exclaim && findtext(punct,"!"))
+				if(!exclaim && findtext_char(punct,"!"))
 					exclaim = TRUE
-				if(!question && findtext(punct,"?"))
+				if(!question && findtext_char(punct,"?"))
 					question = TRUE
-				if(!exclaim && !question && findtext(punct,"."))
+				if(!exclaim && !question && findtext_char(punct,"."))
 					periods += 1
 			if(exclaim)
 				if(question)
@@ -677,7 +677,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 				else
 					punctbuffer = "" //Grammer nazis be damned
 			buffer = copytext_char(buffer, 1, cutoff) + punctbuffer
-		if(!findtext(buffer,GLOB.is_alphanumeric))
+		if(!findtext_char(buffer,GLOB.is_alphanumeric))
 			continue
 		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || (buffer in accepted))
 			continue
@@ -710,13 +710,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 //Used for applying byonds text macros to strings that are loaded at runtime
 /proc/apply_text_macros(string)
-	var/next_backslash = findtext(string, "\\")
+	var/next_backslash = findtext_char(string, "\\")
 	if(!next_backslash)
 		return string
 
 	var/leng = length(string)
 
-	var/next_space = findtext(string, " ", next_backslash + 1)
+	var/next_space = findtext_char(string, " ", next_backslash + 1)
 	if(!next_space)
 		next_space = leng - next_backslash
 
@@ -935,4 +935,4 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 /proc/endswith(input_text, ending)
 	var/input_length = LAZYLEN(ending)
-	return !!findtext(input_text, ending, -input_length)
+	return !!findtext_char(input_text, ending, -input_length)

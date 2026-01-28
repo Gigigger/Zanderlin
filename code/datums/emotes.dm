@@ -192,11 +192,11 @@
 	return
 
 /datum/emote/proc/replace_pronoun(mob/user, message)
-	if(findtext(message, "their"))
+	if(findtext_char(message, "their"))
 		message = replacetext_char(message, "their", user.p_their())
-	if(findtext(message, "them"))
+	if(findtext_char(message, "them"))
 		message = replacetext_char(message, "them", user.p_them())
-	if(findtext(message, "%s"))
+	if(findtext_char(message, "%s"))
 		message = replacetext_char(message, "%s", user.p_s())
 	return message
 

@@ -70,7 +70,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(!holder)
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
-		if(findtext(msg, "byond://"))
+		if(findtext_char(msg, "byond://"))
 			to_chat(src, "<B>FOOL</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(!holder)
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
-		if(findtext(msg, "byond://"))
+		if(findtext_char(msg, "byond://"))
 			to_chat(src, "<B>FOOL</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
@@ -287,11 +287,11 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	var/jd = html_encode(file2text(vl["CONTENT"]))
 	var/parsed = ""
 	var/pos = 1
-	var/search = findtext(jd, "country", pos)
+	var/search = findtext_char(jd, "country", pos)
 	parsed += copytext_char(jd, pos, search)
 	if(search)
 		pos = search
-		search = findtext(jd, ",", pos+1)
+		search = findtext_char(jd, ",", pos+1)
 		if(search)
 			return lowertext(copytext_char(jd, pos+9, search))
 

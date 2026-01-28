@@ -50,7 +50,7 @@
 
 				temp = replacetext_char(temp, ";", "")	//general radio
 
-				if(findtext(trim_left(temp), ":", 6, 7))	//dept radio
+				if(findtext_char(trim_left(temp), ":", 6, 7))	//dept radio
 					temp = copytext_char(trim_left(temp), 8)
 					virgin = 0
 
@@ -58,10 +58,10 @@
 					temp = copytext_char(trim_left(temp), 6)	//normal speech
 					virgin = 0
 
-				while(findtext(trim_left(temp), ":", 1, 2))	//dept radio again (necessary)
+				while(findtext_char(trim_left(temp), ":", 1, 2))	//dept radio again (necessary)
 					temp = copytext_char(trim_left(temp), 3)
 
-				if(findtext(temp, "*", 1, 2))	//emotes
+				if(findtext_char(temp, "*", 1, 2))	//emotes
 					return
 
 				var/trimmed = trim_left(temp)

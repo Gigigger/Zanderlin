@@ -29,7 +29,7 @@
 
 	//prevent forceful emoting and whatnot
 	new_say = trim(copytext_char(sanitize(new_say), 1, MAX_MESSAGE_LEN))
-	if (findtext(new_say, "*"))
+	if (findtext_char(new_say, "*"))
 		to_chat(owner, span_danger("You can't force others to perform emotes!"))
 		return
 

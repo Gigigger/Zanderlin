@@ -2184,7 +2184,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 		save_character()
 
 	if(CONFIG_GET(flag/humans_need_surnames) && (pref_species.id == SPEC_ID_HUMEN))
-		var/firstspace = findtext(real_name, " ")
+		var/firstspace = findtext_char(real_name, " ")
 		var/name_length = length(real_name)
 		if(!firstspace)	//we need a surname
 			real_name += " [pick(GLOB.last_names)]"
@@ -2393,14 +2393,14 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 		return FALSE
 
 	// Ensure link starts with "https://"
-	if(findtext(value, "https://") != 1)
+	if(findtext_char(value, "https://") != 1)
 		if(!silent)
 			to_chat(user, "<span class='warning'>Your link must be https!</span>")
 		return FALSE
 
 	// Extract domain from the URL
 	var/start_index = length("https://") + 1
-	var/end_index = findtext(value, "/", start_index)
+	var/end_index = findtext_char(value, "/", start_index)
 	var/domain = (end_index ? copytext_char(value, start_index, end_index) : copytext_char(value, start_index))
 
 	// Check if domain is in the allowed list

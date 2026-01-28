@@ -63,7 +63,7 @@
 		var/list/new_filenames = flist(current_dir)
 		for(var/new_filename in new_filenames)
 			// if filename ends in / it is a directory, append to currdir
-			if(findtext(new_filename, "/", -1))
+			if(findtext_char(new_filename, "/", -1))
 				jobs += "[current_dir][new_filename]"
 				continue
 			// filename extension filtering

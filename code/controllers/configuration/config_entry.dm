@@ -149,7 +149,7 @@
 		return FALSE
 
 	str_val = trim(str_val)
-	var/key_pos = findtext(str_val, splitter)
+	var/key_pos = findtext_char(str_val, splitter)
 	var/key_name = null
 	var/key_value = null
 

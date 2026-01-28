@@ -24,7 +24,7 @@
 	if(!LAZYLEN(GLOB.slurs_all))
 		return
 	for(var/slur as anything in GLOB.slurs_all)
-		if(findtext(text, slur))
+		if(findtext_char(text, slur))
 			record_featured_object_stat(FEATURED_STATS_SLURS, capitalize(slur))
 			record_round_statistic(STATS_SLURS_SPOKEN)
 
@@ -32,7 +32,7 @@
 	if(!LAZYLEN(GLOB.slurs_all))
 		return
 	for(var/slur as anything in GLOB.slurs_all)
-		if(findtext(text, slur))
+		if(findtext_char(text, slur))
 			record_featured_object_stat(FEATURED_STATS_SLURS, capitalize(slur))
 			record_round_statistic(STATS_SLURS_SPOKEN)
 			if(!LAZYLEN(GLOB.slur_groups) || !dna?.species)
@@ -143,7 +143,7 @@
 	if(client)
 		last_words = message
 		record_featured_stat(FEATURED_STATS_SPEAKERS, src)
-		if(findtext(message, "abyssor"))
+		if(findtext_char(message, "abyssor"))
 			record_round_statistic(STATS_ABYSSOR_REMEMBERED)
 		INVOKE_ASYNC(src, PROC_REF(check_slur), message)
 

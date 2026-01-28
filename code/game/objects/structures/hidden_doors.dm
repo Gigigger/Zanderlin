@@ -85,7 +85,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 		return
 
 	var/message2recognize = SANITIZE_HEAR_MESSAGE(hearing_args[HEARING_RAW_MESSAGE])
-	if(findtext(message2recognize, open_phrase))
+	if(findtext_char(message2recognize, open_phrase))
 		if(source.door_opened)
 			source.force_closed()
 		else
@@ -102,11 +102,11 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 			return
 
 	var/say_string
-	if(findtext(message2recognize, "help"))
+	if(findtext_char(message2recognize, "help"))
 		say_string = "'say phrase'... 'set phrase'..."
-	else if(findtext(message2recognize, "say phrase"))
+	else if(findtext_char(message2recognize, "say phrase"))
 		say_string = "[open_phrase]..."
-	else if(speaker.client && findtext(message2recognize, "set phrase"))
+	else if(speaker.client && findtext_char(message2recognize, "set phrase"))
 		var/new_pass = stripped_input(speaker, "What should the new open phrase be?", max_length = 32)
 		if(!new_pass || QDELETED(speaker) || QDELETED(source) || QDELETED(src))
 			return

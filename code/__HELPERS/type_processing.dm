@@ -46,7 +46,7 @@
 	var/list/matches = new
 	for(var/key in L)
 		var/value = L[key]
-		if(findtext("[key]", filter) || findtext("[value]", filter))
+		if(findtext_char("[key]", filter) || findtext_char("[value]", filter))
 			matches[key] = value
 	return matches
 

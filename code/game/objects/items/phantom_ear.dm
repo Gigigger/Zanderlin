@@ -87,11 +87,11 @@
 		qdel(src)
 		return
 	if(speaker == owner)
-		if(findtext(raw_message, "deafen") && !muted)
+		if(findtext_char(raw_message, "deafen") && !muted)
 			to_chat(owner, span_notice("The voices in your head subside."))
 			muted = TRUE
 			return
-		else if(findtext(raw_message, "listen") && muted)
+		else if(findtext_char(raw_message, "listen") && muted)
 			to_chat(owner, span_notice("You are bombarded again with the voices of the world."))
 			muted = FALSE
 			return

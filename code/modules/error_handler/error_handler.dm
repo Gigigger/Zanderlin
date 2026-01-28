@@ -125,9 +125,9 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	var/list/desclines = list()
 	if(LAZYLEN(splitlines) > ERROR_USEFUL_LEN) // If there aren't at least three lines, there's no info
 		for(var/line in splitlines)
-			if(LAZYLEN(line) < 3 || findtext(line, "source file:") || findtext(line, "usr.loc:"))
+			if(LAZYLEN(line) < 3 || findtext_char(line, "source file:") || findtext_char(line, "usr.loc:"))
 				continue
-			if(findtext(line, "usr:"))
+			if(findtext_char(line, "usr:"))
 				if(usrinfo)
 					desclines.Add(usrinfo)
 					usrinfo = null
@@ -137,7 +137,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 				desclines += ("  " + line) // Pad any unpadded lines, so they look pretty
 			else
 				desclines += line
-			if(findtext(line, "src:") && isdatum(caller.src)) // append qdel info after this line
+			if(findtext_char(line, "src:") && isdatum(caller.src)) // append qdel info after this line
 				// jank
 				var/datum/caller_src = caller.src
 				desclines += "  src.gc_destroyed: [caller_src.gc_destroyed]"
@@ -198,8 +198,8 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	//! Parse DSN to extract components
 	//! Format: https://key@host/project_id
 	var/dsn_clean = replacetext_char(glitchtip_dsn, "https://", "")
-	var/at_pos = findtext(dsn_clean, "@")
-	var/slash_pos = findtext(dsn_clean, "/", at_pos)
+	var/at_pos = findtext_char(dsn_clean, "@")
+	var/slash_pos = findtext_char(dsn_clean, "/", at_pos)
 	if(!at_pos || !slash_pos)
 		log_runtime("Invalid Glitchtip DSN format")
 		return
@@ -251,7 +251,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 		if(p.proc)
 			proc_name = "[p.proc.type]"
 			// Clean up the proc name if it has path separators
-			var/slash_pos_inner = findtext(proc_name, "/", -1)
+			var/slash_pos_inner = findtext_char(proc_name, "/", -1)
 			if(slash_pos_inner && slash_pos_inner < length(proc_name))
 				proc_name = copytext_char(proc_name, slash_pos_inner + 1)
 
@@ -260,7 +260,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 			file_name = p.file
 			line_num = p.line || 0
 
-		if(findtext(file_name, "master.dm") && (proc_name == "Loop" || proc_name == "StartProcessing"))
+		if(findtext_char(file_name, "master.dm") && (proc_name == "Loop" || proc_name == "StartProcessing"))
 			break
 
 		var/list/frame = list()
@@ -293,7 +293,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 					else if(istext(arg_value))
 						// URL decode if it looks like URL-encoded data
 						var/decoded_value = arg_value
-						if(findtext(arg_value, "%") || findtext(arg_value, "&") || findtext(arg_value, "="))
+						if(findtext_char(arg_value, "%") || findtext_char(arg_value, "&") || findtext_char(arg_value, "="))
 							decoded_value = url_decode(arg_value)
 
 						if(length(decoded_value) > 200)
@@ -325,7 +325,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 									else if(istext(item))
 										// URL decode as a treat
 										var/decoded_item = item
-										if(findtext(item, "%") || findtext(item, "&") || findtext(item, "="))
+										if(findtext_char(item, "%") || findtext_char(item, "&") || findtext_char(item, "="))
 											decoded_item = url_decode(item)
 
 										if(length(decoded_item) > 50)
@@ -334,7 +334,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 											item_string = "\"[decoded_item]\""
 									else if(istype(item))
 										var/item_type_name = "[item.type]"
-										var/slash_pos_item = findtext(item_type_name, "/", -1)
+										var/slash_pos_item = findtext_char(item_type_name, "/", -1)
 										if(slash_pos_item && slash_pos_item < length(item_type_name))
 											item_type_name = copytext_char(item_type_name, slash_pos_item + 1)
 										item_string = "[item_type_name]([item])"
@@ -352,7 +352,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 							frame_vars["arg[i]_contents"] = contents_string
 					else if(istype(arg_value))
 						var/type_name = "[arg_value.type]"
-						var/slash_pos_obj = findtext(type_name, "/", -1)
+						var/slash_pos_obj = findtext_char(type_name, "/", -1)
 						if(slash_pos_obj && slash_pos_obj < length(type_name))
 							type_name = copytext_char(type_name, slash_pos_obj + 1)
 						arg_string = "[type_name]: [arg_value]"
