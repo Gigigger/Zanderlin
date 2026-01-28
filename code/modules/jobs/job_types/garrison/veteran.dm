@@ -21,12 +21,12 @@
 	give_bank_account = 35
 	can_have_apprentices = FALSE
 	job_bitflag = BITFLAG_GARRISON
-	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
+	//exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_COMBAT = 1500
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_ADVENTURER = 300,
+	//	EXP_TYPE_COMBAT = 1500
+	//)
 
 	traits = list(
 		TRAIT_OLDPARTY

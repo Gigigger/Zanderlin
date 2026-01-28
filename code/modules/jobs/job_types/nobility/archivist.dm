@@ -21,11 +21,11 @@
 	job_bitflag = BITFLAG_ROYALTY
 	allowed_patrons = list(/datum/patron/divine/noc)
 
-	exp_type = list(EXP_TYPE_LIVING)
+	//exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_NOBLE)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 300
+	//)
 
 	languages = list(
 		/datum/language/elvish,

@@ -27,14 +27,14 @@
 
 	spells = list(/datum/action/cooldown/spell/undirected/list_target/convert_role/mercenary)
 
-	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_RANGER, EXP_TYPE_MERCENARY)
+	//exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_RANGER, EXP_TYPE_MERCENARY)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_RANGER, EXP_TYPE_MERCENARY, EXP_TYPE_LEADERSHIP)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_RANGER = 300,
-		EXP_TYPE_MERCENARY = 120
-	)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 1200,
+	//	EXP_TYPE_ADVENTURER = 300,
+	//	EXP_TYPE_RANGER = 300,
+	//	EXP_TYPE_MERCENARY = 120
+	//)
 
 	jobstats = list(
 		STATKEY_SPD = 2,
