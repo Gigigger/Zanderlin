@@ -161,11 +161,11 @@
 		var/list/new_message = list()
 
 		for(var/word in message_split)
-			var/suffix = copytext_char(word,-1)
+			var/suffix = copytext(word,-1)
 
 			// Check if we have a suffix and break it out of the word
 			if(suffix in list("." , "," , ";" , "!" , ":" , "?"))
-				word = copytext_char(word,1,-1)
+				word = copytext(word,1,-1)
 			else
 				suffix = ""
 

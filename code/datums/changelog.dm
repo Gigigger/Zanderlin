@@ -33,7 +33,7 @@
 	<head>
 		<title>Vanderlin Changelog</title>
 		<link rel="stylesheet" type="text/css" href="[SSassets.transport.get_asset_url("changelog.css")]">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
 	<body>

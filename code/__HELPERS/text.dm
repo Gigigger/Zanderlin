@@ -81,7 +81,7 @@
 	return text
 
 /**
- * stuff like `copytext_char(input, length(input))` will trim the last character of the input,
+ * stuff like `copytext(input, length(input))` will trim the last character of the input,
  * because DM does it so it copies until the char BEFORE the `end` arg, so we need to bump `end` by 1 in these cases.
  */
 #define PREVENT_CHARACTER_TRIM_LOSS(integer) (integer + 1) //thank you gummie
@@ -203,7 +203,7 @@
 /proc/dd_hasprefix_case(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtext(Ex(text, prefix, start, end)
+	return findtextEx(text, prefix, start, end)
 
 //Checks the end of a string for a specified substring.
 //Returns the position of the substring or 0 if it was not found
@@ -218,7 +218,7 @@
 /proc/dd_hassuffix_case(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtext(Ex(text, suffix, start, null)
+		return findtextEx(text, suffix, start, null)
 
 //Checks if any of a given list of needles is in the haystack
 /proc/text_in_list(haystack, list/needle_list, start=1, end=0)
@@ -230,7 +230,7 @@
 //Like above, but case sensitive
 /proc/text_in_list_case(haystack, list/needle_list, start=1, end=0)
 	for(var/needle in needle_list)
-		if(findtext(Ex(haystack, needle, start, end))
+		if(findtextEx(haystack, needle, start, end))
 			return 1
 	return 0
 
@@ -413,7 +413,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	var/temp
 	var/len = length(needles)
 	for(var/i=1, i<=len, i++)
-		temp = findtext(Ex(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext()
+		temp = findtextEx(haystack, ascii2text(text2ascii(needles,i)), start, end)	//Note: ascii2text(text2ascii) is faster than copytext()
 		if(temp)
 			end = temp
 	return end
@@ -883,7 +883,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		return
 
 /proc/remove_all_spaces(text)
-	return replacetext(text, " ", "")
+	return replacetext_char(text, " ", "")
 
 
 /// Goes through the input and removes any punctuation from the start and end of the string.
@@ -894,12 +894,12 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	var/static/list/bad_punctuation = list("!", "?", ".", "~", ";", ":", "-", "|", "+", "_", ",")
 	var/last_char = copytext_char(input, -1)
 	while(last_char in bad_punctuation)
-		input = copytext_char(input, 1, -1)
+		input = copytext(input, 1, -1)
 		last_char = copytext_char(input, -1)
 
 	var/first_char = copytext_char(input, 1, 2)
 	while(first_char in bad_punctuation)
-		input = copytext_char(input, 2)
+		input = copytext(input, 2)
 		first_char = copytext_char(input, 1, 2)
 
 	// one last trim so we wend up with "hey"
