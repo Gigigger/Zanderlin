@@ -18,10 +18,10 @@
 
 	job_bitflag = BITFLAG_CONSTRUCTOR
 
-	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600
-	)
+	//exp_type = list(EXP_TYPE_LIVING)
+	//exp_requirements = list(
+	//	EXP_TYPE_LIVING = 600
+	//)
 
 	jobstats = list(
 		STATKEY_STR = 1,
