@@ -104,6 +104,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Bounty Board</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&display=swap');
@@ -707,6 +708,7 @@
 	</style>
 </head>
 <body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<div class="overlay-backdrop" id="overlay-backdrop" onclick="toggleCreateForm()"></div>
 
 	<div class="container">
