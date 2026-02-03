@@ -67,7 +67,7 @@
 /datum/crop_debug_system/proc/show_debug_menu(mob/user)
 	var/list/html_content = list()
 
-	html_content += "<html><head><title>Crop Nutrient Debug System</title>"
+	html_content += "<html><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><head><title>Crop Nutrient Debug System</title>"
 	html_content += "<style>"
 	html_content += "body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }"
 	html_content += ".container { max-width: 1400px; margin: 0 auto; }"

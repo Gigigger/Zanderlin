@@ -2336,6 +2336,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 			. = {"
 			<html>
+			<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 			<head>
 			  <style>
 			    body {
@@ -2363,6 +2364,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 			. = {"
 			<html>
+			<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 			<head>
 			  <style>
 			    body {

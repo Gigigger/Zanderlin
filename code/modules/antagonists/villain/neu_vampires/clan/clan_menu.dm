@@ -110,6 +110,7 @@
 	// shitcode
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			.hierarchy-container {
@@ -125,7 +126,7 @@
 				overflow: auto;
 				background: #1a1a1a;
 				height: calc(100% - 40px);
-				margin-bottom: 20px; 
+				margin-bottom: 20px;
 			}
 
 			.hierarchy-sidebar {

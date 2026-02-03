@@ -877,6 +877,7 @@
 
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body {
@@ -1401,6 +1402,7 @@
 
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
@@ -1540,6 +1542,7 @@
 
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
@@ -1645,6 +1648,7 @@
 
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body { font-family: Arial, sans-serif; margin: 20px; }

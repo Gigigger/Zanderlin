@@ -1023,7 +1023,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
     // Generate HTML form
 	var/dat = {"
-	<html><head><title>Create Custom Job</title></head><body>
+	<title>Create Custom Job</title></head><body>
 	<form name='job' action='byond://?src=[REF(src)];[HrefToken()]' method='get'>
 	<input type='hidden' name='src' value='[REF(src)]'>
 	[HrefTokenFormField()]
@@ -1354,7 +1354,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
     // Generate HTML form
 	var/dat = {"
-	<html><head><title>Edit Custom Wave</title></head><body>
+	<title>Edit Custom Wave</title></head><body>
 	<form name='wave' action='byond://?src=[REF(src)];[HrefToken()]' method='get'>
 	<input type='hidden' name='src' value='[REF(src)]'>
 	[HrefTokenFormField()]
@@ -1686,7 +1686,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
     // Generate HTML form
 	var/dat = {"
-	<html><head><title>Create Custom Wave</title></head><body>
+	<title>Create Custom Wave</title></head><body>
 	<form name='wave' action='byond://?src=[REF(src)];[HrefToken()]' method='get'>
 	<input type='hidden' name='src' value='[REF(src)]'>
 	[HrefTokenFormField()]
@@ -1823,7 +1823,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
     // Generate HTML form (mostly like create_wave)
 	var/dat = {"
-	<html><head><title>Edit Custom Wave</title></head><body>
+	<title>Edit Custom Wave</title></head><body>
 	<form name='wave' action='byond://?src=[REF(src)];[HrefToken()]' method='get'>
 	<input type='hidden' name='src' value='[REF(src)]'>
 	[HrefTokenFormField()]
@@ -2410,7 +2410,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
 
 	var/dat = {"
-	<html><head><title>Create Outfit</title></head><body>
+	<title>Create Outfit</title></head><body>
 	<form name="outfit" action="byond://?src=[REF(src)];[HrefToken()]" method="get">
 	<input type="hidden" name="src" value="[REF(src)]">
 	[HrefTokenFormField()]

@@ -128,6 +128,7 @@
 /datum/talent_interface/proc/generate_tree_selection_html()
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body {
@@ -221,6 +222,7 @@
 
 	var/html = {"
 	<html>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<head>
 		<style>
 			body {

@@ -123,6 +123,7 @@
 	var/html = {"
 		<!DOCTYPE html>
 		<html>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 		<head>
 			<link rel="stylesheet" type="text/css" href="slop_menustyle2.css">
 		</head>
